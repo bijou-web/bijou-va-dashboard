@@ -150,6 +150,7 @@ h1 span { color:var(--blue); }
     <button class="tab-btn" onclick="switchTab('flagged')">🚩 Flagged Issues (50)</button>
     <button class="tab-btn" onclick="switchTab('urgent')">🚨 Top Urgent Issues (20)</button>
     <button class="tab-btn" onclick="switchTab('review-removal')">⭐ Review Removal</button>
+    <button class="tab-btn" onclick="switchTab('closures')">✅ Yesterday's Closures (0)</button>
   </div>
 
   <div id="tab-dashboard" class="tab-content active">
@@ -1092,6 +1093,71 @@ h1 span { color:var(--blue); }
     </div>
 
     <div style="background:rgba(239,68,68,.08);border-left:4px solid #ef4444;border-radius:10px;padding:16px 20px;margin-bottom:20px"><span style="font-size:16px;font-weight:700;color:#ef4444">⚠️ 8 Flags Found</span></div>
+  </div>
+  <div id="tab-closures" class="tab-content">
+    <div style="margin-bottom:20px">
+      <h2 style="font-size:22px;font-weight:700;margin-bottom:6px">✅ Yesterday's Closures</h2>
+      <p style="color:var(--text2);font-size:13px">Items closed on <b>Apr 12</b> that were previously flagged (health check, pushers, zero-update) or listed in the Top Urgent Issues tab. Tracks whether VAs are working through their backlog.</p>
+    </div>
+    <div class="flagged-summary" style="margin-bottom:24px">
+      <div class="flagged-summary-card" style="border-left-color:#3b82f6"><div class="flagged-summary-count" style="color:#3b82f6">0</div><div class="flagged-summary-label">Nicolás (🚩0 flagged · 🚨0 urgent)</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#a855f7"><div class="flagged-summary-count" style="color:#a855f7">0</div><div class="flagged-summary-label">Aislynn (🚩0 flagged · 🚨0 urgent)</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#ec4899"><div class="flagged-summary-count" style="color:#ec4899">0</div><div class="flagged-summary-label">Luna (🚩0 flagged · 🚨0 urgent)</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#f97316"><div class="flagged-summary-count" style="color:#f97316">0</div><div class="flagged-summary-label">Baptiste (🚩0 flagged · 🚨0 urgent)</div></div>
+    </div>
+
+    <div class="va-flagged-section" style="border-left:4px solid #3b82f6">
+      <div class="va-flagged-header" style="border-left:none">
+        <div class="va-avatar" style="background:#3b82f6">N</div>
+        <div class="va-flagged-name" style="color:#3b82f6">Nicolás</div>
+        <div class="va-flagged-total">0 closed yesterday</div>
+        <div class="va-cat-badges" style="margin-left:auto">
+          <span class="va-cat-badge" style="color:#ef4444">🚩 0 flagged closed</span>
+          <span class="va-cat-badge" style="color:#f59e0b">🚨 0 urgent closed</span>
+        </div>
+      </div>
+      <div class="empty-state" style="padding:14px 24px">No closures recorded for this date — either no items were resolved or the audit has not yet populated closures data.</div>
+    </div>
+
+    <div class="va-flagged-section" style="border-left:4px solid #a855f7">
+      <div class="va-flagged-header" style="border-left:none">
+        <div class="va-avatar" style="background:#a855f7">A</div>
+        <div class="va-flagged-name" style="color:#a855f7">Aislynn</div>
+        <div class="va-flagged-total">0 closed yesterday</div>
+        <div class="va-cat-badges" style="margin-left:auto">
+          <span class="va-cat-badge" style="color:#ef4444">🚩 0 flagged closed</span>
+          <span class="va-cat-badge" style="color:#f59e0b">🚨 0 urgent closed</span>
+        </div>
+      </div>
+      <div class="empty-state" style="padding:14px 24px">No closures recorded for this date — either no items were resolved or the audit has not yet populated closures data.</div>
+    </div>
+
+    <div class="va-flagged-section" style="border-left:4px solid #ec4899">
+      <div class="va-flagged-header" style="border-left:none">
+        <div class="va-avatar" style="background:#ec4899">L</div>
+        <div class="va-flagged-name" style="color:#ec4899">Luna</div>
+        <div class="va-flagged-total">0 closed yesterday</div>
+        <div class="va-cat-badges" style="margin-left:auto">
+          <span class="va-cat-badge" style="color:#ef4444">🚩 0 flagged closed</span>
+          <span class="va-cat-badge" style="color:#f59e0b">🚨 0 urgent closed</span>
+        </div>
+      </div>
+      <div class="empty-state" style="padding:14px 24px">No closures recorded for this date — either no items were resolved or the audit has not yet populated closures data.</div>
+    </div>
+
+    <div class="va-flagged-section" style="border-left:4px solid #f97316">
+      <div class="va-flagged-header" style="border-left:none">
+        <div class="va-avatar" style="background:#f97316">B</div>
+        <div class="va-flagged-name" style="color:#f97316">Baptiste</div>
+        <div class="va-flagged-total">0 closed yesterday</div>
+        <div class="va-cat-badges" style="margin-left:auto">
+          <span class="va-cat-badge" style="color:#ef4444">🚩 0 flagged closed</span>
+          <span class="va-cat-badge" style="color:#f59e0b">🚨 0 urgent closed</span>
+        </div>
+      </div>
+      <div class="empty-state" style="padding:14px 24px">No closures recorded for this date — either no items were resolved or the audit has not yet populated closures data.</div>
+    </div>
+
   </div>
   <div class="footer">Bijou Getaways VA Performance Dashboard &middot; Auto-generated 2026-04-13 &middot; Ledger: 19 days &middot; Ranking: Health 40% + Rate 30% + Low Flagged 30%</div>
 </div>
