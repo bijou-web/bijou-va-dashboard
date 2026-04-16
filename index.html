@@ -147,7 +147,7 @@ h1 span { color:var(--blue); }
 
   <div class="tab-bar">
     <button class="tab-btn active" onclick="switchTab('dashboard')">📊 Dashboard</button>
-    <button class="tab-btn" onclick="switchTab('flagged')">🚩 Flagged Issues (5)</button>
+    <button class="tab-btn" onclick="switchTab('flagged')">🚩 Flagged Issues (3)</button>
     <button class="tab-btn" onclick="switchTab('urgent')">🚨 Top Urgent Issues (12)</button>
     <button class="tab-btn" onclick="switchTab('daily-progress')">📈 Daily Progress (5✅ / 13 open)</button>
     <button class="tab-btn" onclick="switchTab('review-removal')">⭐ Review Removal</button>
@@ -201,10 +201,10 @@ h1 span { color:var(--blue); }
         <div class="change-card-name" style="color:#a855f7">Aislynn</div>
         <div class="change-card-alert" style="background:rgba(245,158,11,.12);color:#f59e0b">DECLINING</div>
         <div class="change-card-metrics">
-          Composite: <span class="val">64.9</span> → <span class="val">51.1</span> <span class="delta delta-bad">↓13.8</span><br>
+          Composite: <span class="val">64.9</span> → <span class="val">54.1</span> <span class="delta delta-bad">↓10.8</span><br>
           Health: <span class="val">64</span> → <span class="val">34</span> <span class="delta delta-bad">↓30</span><br>
           Rate: <span class="val">56%</span> → <span class="val">50%</span> <span class="delta delta-bad">↓6%</span><br>
-          Flagged: <span class="val">5</span> <span class="delta flat">—</span>
+          Flagged: <span class="val">5</span> → <span class="val">3</span> <span class="delta delta-good">↓2</span>
         </div>
       </div>
     </div>
@@ -232,15 +232,15 @@ h1 span { color:var(--blue); }
     <div class="podium-card" style="border-color:#64748b">
       <div class="podium-medal" style="background:rgba(100,116,139,0.12);color:#64748b">4️⃣ 4th</div>
       <div class="podium-name" style="color:#a855f7">4️⃣ Aislynn</div>
-      <div class="podium-score">51.1<span class="podium-score-label">pts</span></div>
-      <div class="podium-breakdown">Health 34 &middot; Rate 50% &middot; Flagged 5</div>
+      <div class="podium-score">54.1<span class="podium-score-label">pts</span></div>
+      <div class="podium-breakdown">Health 34 &middot; Rate 50% &middot; Flagged 3</div>
     </div>
   </div>
 
   <div class="summary-bar">
     <div class="summary-item"><div class="summary-val" style="color:var(--yellow)">159</div><div class="summary-lbl">Open Issues</div></div>
     <div class="summary-item"><div class="summary-val" style="color:var(--green)">159</div><div class="summary-lbl">Closed Issues</div></div>
-    <div class="summary-item"><div class="summary-val" style="color:var(--red)">5</div><div class="summary-lbl">Total Flagged</div></div>
+    <div class="summary-item"><div class="summary-val" style="color:var(--red)">3</div><div class="summary-lbl">Total Flagged</div></div>
     <div class="summary-item"><div class="summary-val" style="color:var(--green)">16</div><div class="summary-lbl">Completed (Apr 15)</div></div>
   </div>
 
@@ -450,7 +450,7 @@ h1 span { color:var(--blue); }
           <div class="va-avatar" style="background:#a855f7">A</div>
           <div>
             <h2 class="va-name" style="color:#a855f7">4️⃣ Aislynn</h2>
-            <div class="va-subtitle">151 total items &middot; Composite: 51.1 pts</div>
+            <div class="va-subtitle">151 total items &middot; Composite: 54.1 pts</div>
           </div>
         </div>
         <div class="va-kpis">
@@ -462,7 +462,7 @@ h1 span { color:var(--blue); }
           <div class="kpi-col" title="Items currently open"><span class="kpi-val" style="color:#f59e0b">76</span><span class="kpi-lbl">Open</span><span class="delta delta-good">↓1</span></div>
           <div class="kpi-col" title="Items marked Complete/Completed"><span class="kpi-val" style="color:#10b981">75</span><span class="kpi-lbl">Closed</span><span class="delta delta-bad">↓23</span></div>
           <div class="kpi-col" title="Completion Rate = Closed &divide; Total"><span class="kpi-val" style="color:#a855f7">50%</span><span class="kpi-lbl">Rate</span><span class="delta delta-bad">↓6</span></div>
-          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">5</span><span class="kpi-lbl">Flagged</span><span class="delta flat">—</span></div>
+          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">3</span><span class="kpi-lbl">Flagged</span><span class="delta delta-good">↓2</span></div>
           <div class="kpi-col" title="Items with Needs Review or No Status"><span class="kpi-val" style="color:#a855f7">2</span><span class="kpi-lbl">Review / No Status</span><span class="delta delta-bad">↑2</span></div>
           <div class="kpi-col" title="Open bad review issues assigned"><span class="kpi-val" style="color:#ec4899">0</span><span class="kpi-lbl">Bad Reviews</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Average days to complete closed items"><span class="kpi-val" style="color:#06b6d4">0d</span><span class="kpi-lbl">Avg Complete</span><span class="delta flat">—</span></div>
@@ -477,7 +477,7 @@ h1 span { color:var(--blue); }
       <tr><td class="metric-label">Open</td><td class="cell-metric">77</td><td class="cell-metric">76</td><td><span class="delta delta-good">↓1</span></td></tr>
       <tr><td class="metric-label">Closed</td><td class="cell-metric">98</td><td class="cell-metric">75</td><td><span class="delta delta-bad">↓23</span></td></tr>
       <tr><td class="metric-label">Rate</td><td class="cell-metric">56%</td><td class="cell-metric">50%</td><td><span class="delta delta-bad">↓6%</span></td></tr>
-      <tr><td class="metric-label">Flagged</td><td class="cell-metric">5</td><td class="cell-metric">5</td><td><span class="delta flat">—</span></td></tr>
+      <tr><td class="metric-label">Flagged</td><td class="cell-metric">5</td><td class="cell-metric">3</td><td><span class="delta delta-good">↓2</span></td></tr>
       <tr><td class="metric-label">Completed (Day)</td><td class="cell-metric">15</td><td class="cell-metric">3</td><td><span class="delta delta-bad">↓12</span></td></tr>
       <tr><td class="metric-label">Review / No Status</td><td class="cell-metric">0</td><td class="cell-metric">2</td><td><span class="delta delta-bad">↑2</span></td></tr>
       <tr><td class="metric-label">Bad Reviews Open</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
