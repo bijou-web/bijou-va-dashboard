@@ -147,7 +147,7 @@ h1 span { color:var(--blue); }
 
   <div class="tab-bar">
     <button class="tab-btn active" onclick="switchTab('dashboard')">📊 Dashboard</button>
-    <button class="tab-btn" onclick="switchTab('flagged')">🚩 Flagged Issues (72)</button>
+    <button class="tab-btn" onclick="switchTab('flagged')">🚩 Flagged Issues (17)</button>
     <button class="tab-btn" onclick="switchTab('urgent')">🚨 Top Urgent Issues (8)</button>
     <button class="tab-btn" onclick="switchTab('daily-progress')">📈 Daily Progress (6✅ / 12 open)</button>
     <button class="tab-btn" onclick="switchTab('review-removal')">⭐ Review Removal</button>
@@ -167,6 +167,36 @@ h1 span { color:var(--blue); }
   <div class="change-banner">
     <div class="change-banner-title">📊 Day-over-Day Changes &mdash; Apr 16 → Apr 17</div>
     <div class="change-cards">
+      <div class="change-card" style="border-left-color:#10b981">
+        <div class="change-card-name" style="color:#3b82f6">Nicolas</div>
+        <div class="change-card-alert" style="background:rgba(16,185,129,.12);color:#10b981">IMPROVING</div>
+        <div class="change-card-metrics">
+          Composite: <span class="val">80.2</span> → <span class="val">92.5</span> <span class="delta delta-good">↑12.3</span><br>
+          Health: <span class="val">85</span> → <span class="val">100</span> <span class="delta delta-good">↑15</span><br>
+          Rate: <span class="val">69%</span> → <span class="val">75%</span> <span class="delta delta-good">↑6%</span><br>
+          Flagged: <span class="val">3</span> → <span class="val">0</span> <span class="delta delta-good">↓3</span>
+        </div>
+      </div>
+      <div class="change-card" style="border-left-color:#10b981">
+        <div class="change-card-name" style="color:#ec4899">Luna</div>
+        <div class="change-card-alert" style="background:rgba(16,185,129,.12);color:#10b981">IMPROVING</div>
+        <div class="change-card-metrics">
+          Composite: <span class="val">67.0</span> → <span class="val">71.6</span> <span class="delta delta-good">↑4.6</span><br>
+          Health: <span class="val">82</span> → <span class="val">92</span> <span class="delta delta-good">↑10</span><br>
+          Rate: <span class="val">29%</span> → <span class="val">46%</span> <span class="delta delta-good">↑17%</span><br>
+          Flagged: <span class="val">3</span> → <span class="val">6</span> <span class="delta delta-bad">↑3</span>
+        </div>
+      </div>
+      <div class="change-card" style="border-left-color:#10b981">
+        <div class="change-card-name" style="color:#a855f7">Aislynn</div>
+        <div class="change-card-alert" style="background:rgba(16,185,129,.12);color:#10b981">IMPROVING</div>
+        <div class="change-card-metrics">
+          Composite: <span class="val">40.6</span> → <span class="val">70.7</span> <span class="delta delta-good">↑30.1</span><br>
+          Health: <span class="val">34</span> → <span class="val">98</span> <span class="delta delta-good">↑64</span><br>
+          Rate: <span class="val">50%</span> <span class="delta flat">—</span><br>
+          Flagged: <span class="val">12</span> → <span class="val">9</span> <span class="delta delta-good">↓3</span>
+        </div>
+      </div>
       <div class="change-card" style="border-left-color:#f59e0b">
         <div class="change-card-name" style="color:#f97316">Baptiste</div>
         <div class="change-card-alert" style="background:rgba(245,158,11,.12);color:#f59e0b">DECLINING</div>
@@ -177,79 +207,281 @@ h1 span { color:var(--blue); }
           Flagged: <span class="val">0</span> → <span class="val">2</span> <span class="delta delta-bad">↑2</span>
         </div>
       </div>
-      <div class="change-card" style="border-left-color:#ef4444">
-        <div class="change-card-name" style="color:#3b82f6">Nicolas</div>
-        <div class="change-card-alert" style="background:rgba(239,68,68,.12);color:#ef4444">CRITICAL DROP</div>
-        <div class="change-card-metrics">
-          Composite: <span class="val">80.2</span> → <span class="val">50.5</span> <span class="delta delta-bad">↓29.7</span><br>
-          Health: <span class="val">85</span> → <span class="val">40</span> <span class="delta delta-bad">↓45</span><br>
-          Rate: <span class="val">69%</span> → <span class="val">75%</span> <span class="delta delta-good">↑6%</span><br>
-          Flagged: <span class="val">3</span> → <span class="val">12</span> <span class="delta delta-bad">↑9</span>
-        </div>
-      </div>
-      <div class="change-card" style="border-left-color:#ef4444">
-        <div class="change-card-name" style="color:#a855f7">Aislynn</div>
-        <div class="change-card-alert" style="background:rgba(239,68,68,.12);color:#ef4444">CRITICAL DROP</div>
-        <div class="change-card-metrics">
-          Composite: <span class="val">40.6</span> → <span class="val">15.0</span> <span class="delta delta-bad">↓25.6</span><br>
-          Health: <span class="val">34</span> → <span class="val">0</span> <span class="delta delta-bad">↓34</span><br>
-          Rate: <span class="val">50%</span> <span class="delta flat">—</span><br>
-          Flagged: <span class="val">12</span> → <span class="val">33</span> <span class="delta delta-bad">↑21</span>
-        </div>
-      </div>
-      <div class="change-card" style="border-left-color:#ef4444">
-        <div class="change-card-name" style="color:#ec4899">Luna</div>
-        <div class="change-card-alert" style="background:rgba(239,68,68,.12);color:#ef4444">CRITICAL DROP</div>
-        <div class="change-card-metrics">
-          Composite: <span class="val">67.0</span> → <span class="val">13.8</span> <span class="delta delta-bad">↓53.2</span><br>
-          Health: <span class="val">82</span> → <span class="val">0</span> <span class="delta delta-bad">↓82</span><br>
-          Rate: <span class="val">29%</span> → <span class="val">46%</span> <span class="delta delta-good">↑17%</span><br>
-          Flagged: <span class="val">3</span> → <span class="val">27</span> <span class="delta delta-bad">↑24</span>
-        </div>
-      </div>
     </div>
   </div>
 
   <div class="podium">
     <div class="podium-card" style="border-color:#fbbf24">
       <div class="podium-medal" style="background:rgba(251,191,36,0.12);color:#fbbf24">🥇 Gold</div>
-      <div class="podium-name" style="color:#f97316">🥇 Baptiste</div>
-      <div class="podium-score">61.8<span class="podium-score-label">pts</span></div>
-      <div class="podium-breakdown">Health 87 &middot; Rate 0% &middot; Flagged 2</div>
+      <div class="podium-name" style="color:#3b82f6">🥇 Nicolas</div>
+      <div class="podium-score">92.5<span class="podium-score-label">pts</span></div>
+      <div class="podium-breakdown">Health 100 &middot; Rate 75% &middot; Flagged 0</div>
     </div>
     <div class="podium-card" style="border-color:#94a3b8">
       <div class="podium-medal" style="background:rgba(148,163,184,0.12);color:#94a3b8">🥈 Silver</div>
-      <div class="podium-name" style="color:#3b82f6">🥈 Nicolas</div>
-      <div class="podium-score">50.5<span class="podium-score-label">pts</span></div>
-      <div class="podium-breakdown">Health 40 &middot; Rate 75% &middot; Flagged 12</div>
+      <div class="podium-name" style="color:#ec4899">🥈 Luna</div>
+      <div class="podium-score">71.6<span class="podium-score-label">pts</span></div>
+      <div class="podium-breakdown">Health 92 &middot; Rate 46% &middot; Flagged 6</div>
     </div>
     <div class="podium-card" style="border-color:#cd7f32">
       <div class="podium-medal" style="background:rgba(205,127,50,0.12);color:#cd7f32">🥉 Bronze</div>
       <div class="podium-name" style="color:#a855f7">🥉 Aislynn</div>
-      <div class="podium-score">15.0<span class="podium-score-label">pts</span></div>
-      <div class="podium-breakdown">Health 0 &middot; Rate 50% &middot; Flagged 33</div>
+      <div class="podium-score">70.7<span class="podium-score-label">pts</span></div>
+      <div class="podium-breakdown">Health 98 &middot; Rate 50% &middot; Flagged 9</div>
     </div>
     <div class="podium-card" style="border-color:#64748b">
       <div class="podium-medal" style="background:rgba(100,116,139,0.12);color:#64748b">4️⃣ 4th</div>
-      <div class="podium-name" style="color:#ec4899">4️⃣ Luna</div>
-      <div class="podium-score">13.8<span class="podium-score-label">pts</span></div>
-      <div class="podium-breakdown">Health 0 &middot; Rate 46% &middot; Flagged 27</div>
+      <div class="podium-name" style="color:#f97316">4️⃣ Baptiste</div>
+      <div class="podium-score">61.8<span class="podium-score-label">pts</span></div>
+      <div class="podium-breakdown">Health 87 &middot; Rate 0% &middot; Flagged 2</div>
     </div>
   </div>
 
   <div class="summary-bar">
     <div class="summary-item"><div class="summary-val" style="color:var(--yellow)">148</div><div class="summary-lbl">Open Issues</div></div>
     <div class="summary-item"><div class="summary-val" style="color:var(--green)">193</div><div class="summary-lbl">Closed Issues</div></div>
-    <div class="summary-item"><div class="summary-val" style="color:var(--red)">74</div><div class="summary-lbl">Total Flagged</div></div>
+    <div class="summary-item"><div class="summary-val" style="color:var(--red)">17</div><div class="summary-lbl">Total Flagged</div></div>
     <div class="summary-item"><div class="summary-val" style="color:var(--green)">34</div><div class="summary-lbl">Completed (Apr 16)</div></div>
   </div>
+
+    <div class="va-section" style="border-color:rgba(59,130,246,0.25)">
+      <div class="va-header" style="background:rgba(59,130,246,0.08)">
+        <div class="va-identity">
+          <div class="va-avatar" style="background:#3b82f6">N</div>
+          <div>
+            <h2 class="va-name" style="color:#3b82f6">🥇 Nicolas</h2>
+            <div class="va-subtitle">109 total items &middot; Composite: 92.5 pts</div>
+          </div>
+        </div>
+        <div class="va-kpis">
+          <div class="mini-ring" title="Health Score">
+            <svg viewBox="0 0 80 80" width="64" height="64"><circle cx="40" cy="40" r="34" fill="none" stroke="#334155" stroke-width="7"/><circle cx="40" cy="40" r="34" fill="none" stroke="#10b981" stroke-width="7" stroke-dasharray="213.63" stroke-dashoffset="0" stroke-linecap="round" style="transform:rotate(-90deg);transform-origin:center"/></svg>
+            <span class="mini-score" style="color:#10b981">100</span>
+            <span class="mini-delta"><span class="delta delta-good">↑15</span></span>
+          </div>
+          <div class="kpi-col" title="Items currently open"><span class="kpi-val" style="color:#f59e0b">27</span><span class="kpi-lbl">Open</span><span class="delta flat">—</span></div>
+          <div class="kpi-col" title="Items marked Complete/Completed"><span class="kpi-val" style="color:#10b981">82</span><span class="kpi-lbl">Closed</span><span class="delta delta-good">↑21</span></div>
+          <div class="kpi-col" title="Completion Rate = Closed &divide; Total"><span class="kpi-val" style="color:#3b82f6">75%</span><span class="kpi-lbl">Rate</span><span class="delta delta-good">↑6</span></div>
+          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">0</span><span class="kpi-lbl">Flagged</span><span class="delta delta-good">↓3</span></div>
+          <div class="kpi-col" title="Items with Needs Review or No Status"><span class="kpi-val" style="color:#a855f7">0</span><span class="kpi-lbl">Review / No Status</span><span class="delta flat">—</span></div>
+          <div class="kpi-col" title="Open bad review issues assigned"><span class="kpi-val" style="color:#ec4899">0</span><span class="kpi-lbl">Bad Reviews</span><span class="delta flat">—</span></div>
+          <div class="kpi-col" title="Average days to complete closed items"><span class="kpi-val" style="color:#06b6d4">0d</span><span class="kpi-lbl">Avg Complete</span><span class="delta flat">—</span></div>
+          <div class="kpi-col" title="Average aging days of open items"><span class="kpi-val" style="color:#f97316">0d</span><span class="kpi-lbl">Avg Aging</span><span class="delta flat">—</span></div>
+        </div>
+      </div>
+<div class="trend-section">
+    <div class="trend-title">📈 Daily Performance Ledger</div>
+    <table class="trend-table">
+      <tr><th>Metric</th><th>Apr 16</th><th>Apr 17</th><th>Change</th></tr>
+      <tr><td class="metric-label">Health Score</td><td class="cell-metric">85</td><td class="cell-metric">100</td><td><span class="delta delta-good">↑15</span></td></tr>
+      <tr><td class="metric-label">Open</td><td class="cell-metric">27</td><td class="cell-metric">27</td><td><span class="delta flat">—</span></td></tr>
+      <tr><td class="metric-label">Closed</td><td class="cell-metric">61</td><td class="cell-metric">82</td><td><span class="delta delta-good">↑21</span></td></tr>
+      <tr><td class="metric-label">Rate</td><td class="cell-metric">69%</td><td class="cell-metric">75%</td><td><span class="delta delta-good">↑6%</span></td></tr>
+      <tr><td class="metric-label">Flagged</td><td class="cell-metric">3</td><td class="cell-metric">0</td><td><span class="delta delta-good">↓3</span></td></tr>
+      <tr><td class="metric-label">Completed (Day)</td><td class="cell-metric">3</td><td class="cell-metric">21</td><td><span class="delta delta-good">↑18</span></td></tr>
+      <tr><td class="metric-label">Review / No Status</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
+      <tr><td class="metric-label">Bad Reviews Open</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
+      <tr><td class="metric-label">Avg Days to Complete</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
+      <tr><td class="metric-label">Avg Aging (Open)</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
+    </table>
+  </div>
+<div class="reports-grid">
+  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge ok">0 flagged</span></div>
+    <div class="empty-state">✅ No flagged items — all clear!</div>
+  </div>
+  <div class="report-block"><div class="report-header"><span>🔄 Timeline Pushers</span><span class="count-badge ok">0</span></div>
+    <div class="empty-state">✅ No deadline extensions (3+)</div>
+  </div>
+  <div class="report-block"><div class="report-header"><span>✅ Completed (Apr 16)</span><span class="count-badge ok">21</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11675097043" target="_blank">Dena P. reported that walking to Cruz Bay is dangerous because the property is …</a><span class="badge board">Bad Review Issues*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11674331278" target="_blank">Dena — Listing Accuracy: "Walk to Cruz Bay" claim vs dangerous road with no sid…</a><span class="badge board">Bad Review Issues*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11704579630" target="_blank">Robert reported treacherous, dimly lit steps</a><span class="badge board">Bad Review Issues*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11406213357" target="_blank">Cracks in the floor that need addressing (tiles)</a><span class="badge board">Bad Review Issues*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11512976151" target="_blank">Susan reported the presence of ripped rugs</a><span class="badge board">Bad Review Issues*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11620567754" target="_blank">Guest expressed extreme displeasure with the lack of lighting and signage, whic…</a><span class="badge board">Maintenance*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11739913129" target="_blank">Amanda Geurts remote is not working</a><span class="badge board">Maintenance*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11559138045" target="_blank">Cracked tiles in unit #4</a><span class="badge board">Maintenance*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11764509031" target="_blank">Flickering lights reported in Carlos's unit indicating a potential electrical i…</a><span class="badge board">Maintenance*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11710960319" target="_blank">Kelli Palm reported cabinets falling off the hinges.</a><span class="badge board">Maintenance*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11658467971" target="_blank">The bed frame in the master bedroom is partially broken underneath, affecting i…</a><span class="badge board">Maintenance*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11768292635" target="_blank">Ring Camera Laundry USVI offline</a><span class="badge board">Maintenance*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11682863031" target="_blank">Have the ACCURATE date for smoke detector in each USVI unit</a><span class="badge board">Maintenance*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11707255091" target="_blank">Kelli Palm reported the bedroom door to the porch lock unable to close</a><span class="badge board">Maintenance*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11578188807" target="_blank">The door is barely opening, indicating a potential maintenance issue with the d…</a><span class="badge board">Maintenance*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11578177537" target="_blank">The lights are flickering, which could indicate electrical problems.</a><span class="badge board">Maintenance*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11770089919" target="_blank">Installations of dispensers for USVI</a><span class="badge board">Maintenance*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11751016899" target="_blank">The guest reports a smoke smell in the unit, suggesting a violation of the non-…</a><span class="badge board">Cleaning*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11714808946" target="_blank">Purchasing of the dispenser for USVI</a><span class="badge board">Cleaning*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11764481180" target="_blank">Request for a cooler to enhance guest comfort during their stay.</a><span class="badge board">Reservation*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11616336219" target="_blank">Charles Cachil would like the forgotten shorts to be sent to him</a><span class="badge board">Reservation*</span></div>
+  </div>
+  <div class="report-block"><div class="report-header"><span>🗑️ All Deleted/Archived Items</span><span class="count-badge ok">0 total</span></div>
+    <div class="empty-state">✅ No deletions on record</div>
+  </div>
+  <div class="report-block"><div class="report-header"><span>🔇 Zero-Update Completions</span><span class="count-badge ok">0</span></div>
+    <div class="empty-state">✅ No zero-update completions</div>
+  </div>
+  <div class="report-block"><div class="report-header"><span>🔍 Needs Review / No Status</span><span class="count-badge ok">0</span></div>
+    <div class="empty-state">✅ No items awaiting review</div>
+  </div>
+</div>
+    </div>
+
+    <div class="va-section" style="border-color:rgba(236,72,153,0.25)">
+      <div class="va-header" style="background:rgba(236,72,153,0.08)">
+        <div class="va-identity">
+          <div class="va-avatar" style="background:#ec4899">L</div>
+          <div>
+            <h2 class="va-name" style="color:#ec4899">🥈 Luna</h2>
+            <div class="va-subtitle">79 total items &middot; Composite: 71.6 pts</div>
+          </div>
+        </div>
+        <div class="va-kpis">
+          <div class="mini-ring" title="Health Score">
+            <svg viewBox="0 0 80 80" width="64" height="64"><circle cx="40" cy="40" r="34" fill="none" stroke="#334155" stroke-width="7"/><circle cx="40" cy="40" r="34" fill="none" stroke="#10b981" stroke-width="7" stroke-dasharray="196.54" stroke-dashoffset="0" stroke-linecap="round" style="transform:rotate(-90deg);transform-origin:center"/></svg>
+            <span class="mini-score" style="color:#10b981">92</span>
+            <span class="mini-delta"><span class="delta delta-good">↑10</span></span>
+          </div>
+          <div class="kpi-col" title="Items currently open"><span class="kpi-val" style="color:#f59e0b">43</span><span class="kpi-lbl">Open</span><span class="delta delta-good">↓13</span></div>
+          <div class="kpi-col" title="Items marked Complete/Completed"><span class="kpi-val" style="color:#10b981">36</span><span class="kpi-lbl">Closed</span><span class="delta delta-good">↑13</span></div>
+          <div class="kpi-col" title="Completion Rate = Closed &divide; Total"><span class="kpi-val" style="color:#ec4899">46%</span><span class="kpi-lbl">Rate</span><span class="delta delta-good">↑17</span></div>
+          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">6</span><span class="kpi-lbl">Flagged</span><span class="delta delta-bad">↑3</span></div>
+          <div class="kpi-col" title="Items with Needs Review or No Status"><span class="kpi-val" style="color:#a855f7">1</span><span class="kpi-lbl">Review / No Status</span><span class="delta delta-bad">↑1</span></div>
+          <div class="kpi-col" title="Open bad review issues assigned"><span class="kpi-val" style="color:#ec4899">0</span><span class="kpi-lbl">Bad Reviews</span><span class="delta flat">—</span></div>
+          <div class="kpi-col" title="Average days to complete closed items"><span class="kpi-val" style="color:#06b6d4">0d</span><span class="kpi-lbl">Avg Complete</span><span class="delta flat">—</span></div>
+          <div class="kpi-col" title="Average aging days of open items"><span class="kpi-val" style="color:#f97316">0d</span><span class="kpi-lbl">Avg Aging</span><span class="delta flat">—</span></div>
+        </div>
+      </div>
+<div class="trend-section">
+    <div class="trend-title">📈 Daily Performance Ledger</div>
+    <table class="trend-table">
+      <tr><th>Metric</th><th>Apr 16</th><th>Apr 17</th><th>Change</th></tr>
+      <tr><td class="metric-label">Health Score</td><td class="cell-metric">82</td><td class="cell-metric">92</td><td><span class="delta delta-good">↑10</span></td></tr>
+      <tr><td class="metric-label">Open</td><td class="cell-metric">56</td><td class="cell-metric">43</td><td><span class="delta delta-good">↓13</span></td></tr>
+      <tr><td class="metric-label">Closed</td><td class="cell-metric">23</td><td class="cell-metric">36</td><td><span class="delta delta-good">↑13</span></td></tr>
+      <tr><td class="metric-label">Rate</td><td class="cell-metric">29%</td><td class="cell-metric">46%</td><td><span class="delta delta-good">↑17%</span></td></tr>
+      <tr><td class="metric-label">Flagged</td><td class="cell-metric">3</td><td class="cell-metric">6</td><td><span class="delta delta-bad">↑3</span></td></tr>
+      <tr><td class="metric-label">Completed (Day)</td><td class="cell-metric">10</td><td class="cell-metric">13</td><td><span class="delta delta-good">↑3</span></td></tr>
+      <tr><td class="metric-label">Review / No Status</td><td class="cell-metric">0</td><td class="cell-metric">1</td><td><span class="delta delta-bad">↑1</span></td></tr>
+      <tr><td class="metric-label">Bad Reviews Open</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
+      <tr><td class="metric-label">Avg Days to Complete</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
+      <tr><td class="metric-label">Avg Aging (Open)</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
+    </table>
+  </div>
+<div class="reports-grid">
+  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge warn">1 flagged</span></div>
+    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11771341925" target="_blank">The guest is missing adequate towels and sufficient shampoo for their stay.</a><span class="badge board">Reservation Issues</span></div>
+  </div>
+  <div class="report-block"><div class="report-header"><span>🔄 Timeline Pushers</span><span class="count-badge warn">4</span></div>
+    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11564540959" target="_blank">John Snee It appears he smoked during his stay and left a trash can with burn ma</a><span class="badge sev-red">5x</span><span class="badge board">Reservation</span></div>
+    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11672806662" target="_blank">Steven Scott left the unit as he claim is 3 people and is only one bed.</a><span class="badge sev-red">4x</span><span class="badge board">Reservation</span></div>
+    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11391301063" target="_blank">Cristian reported something brown on the wall by the kitchen</a><span class="badge sev-yellow">3x</span><span class="badge board">Cleaning</span></div>
+    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11675064306" target="_blank">Kevin Trinka is asking for the update of his refund request.</a><span class="badge sev-yellow">3x</span><span class="badge board">Reservation</span></div>
+  </div>
+  <div class="report-block"><div class="report-header"><span>✅ Completed (Apr 16)</span><span class="count-badge ok">13</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11774025340" target="_blank">AC minisplit filters cleaning</a><span class="badge board">Maintenance*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11770811297" target="_blank">The TV remote in the living room is not functioning, preventing the guest from …</a><span class="badge board">Maintenance*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11736755142" target="_blank">The screen for the sliding glass door has a tear, which is a maintenance issue …</a><span class="badge board">Maintenance*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11721871100" target="_blank">Preventive maintenance for all filters for AC for all units (1) replacement fil…</a><span class="badge board">Maintenance*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11770920723" target="_blank">the remote for the TV in the living room is not working</a><span class="badge board">Maintenance*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11729256794" target="_blank">Stains on the Facetub unit 466</a><span class="badge board">Maintenance*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11773089238" target="_blank">Tub Patches needs to be replaced</a><span class="badge board">Maintenance*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11762423124" target="_blank">Replace lightbulb in unit 49</a><span class="badge board">Maintenance*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11727398851" target="_blank">The floors need a good mopping as they appear clean but are not.</a><span class="badge board">Cleaning*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11736783755" target="_blank">The overall feel of the unit was dirty, which suggests a need for improved clea…</a><span class="badge board">Cleaning*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11717294640" target="_blank">The floor has dark stains and possibly pest presence, indicating a need for cle…</a><span class="badge board">Cleaning*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11497413278" target="_blank">Emergency cleaning backup team</a><span class="badge board">Cleaning*</span></div>
+    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11748786950" target="_blank">Carol asking about availability of washer/dryer during her stay</a><span class="badge board">Reservation*</span></div>
+  </div>
+  <div class="report-block"><div class="report-header"><span>🗑️ All Deleted/Archived Items</span><span class="count-badge ok">0 total</span></div>
+    <div class="empty-state">✅ No deletions on record</div>
+  </div>
+  <div class="report-block"><div class="report-header"><span>🔇 Zero-Update Completions</span><span class="count-badge ok">0</span></div>
+    <div class="empty-state">✅ No zero-update completions</div>
+  </div>
+  <div class="report-block"><div class="report-header"><span>🔍 Needs Review / No Status</span><span class="count-badge warn">1</span></div>
+    <div class="item-row">🔍 <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11770794122" target="_blank">Inquiry about whether guests need to handle the sheets and trash upon checkout, </a><span class="badge board">Cleaning Issues</span></div>
+  </div>
+</div>
+    </div>
+
+    <div class="va-section" style="border-color:rgba(168,85,247,0.25)">
+      <div class="va-header" style="background:rgba(168,85,247,0.08)">
+        <div class="va-identity">
+          <div class="va-avatar" style="background:#a855f7">A</div>
+          <div>
+            <h2 class="va-name" style="color:#a855f7">🥉 Aislynn</h2>
+            <div class="va-subtitle">151 total items &middot; Composite: 70.7 pts</div>
+          </div>
+        </div>
+        <div class="va-kpis">
+          <div class="mini-ring" title="Health Score">
+            <svg viewBox="0 0 80 80" width="64" height="64"><circle cx="40" cy="40" r="34" fill="none" stroke="#334155" stroke-width="7"/><circle cx="40" cy="40" r="34" fill="none" stroke="#10b981" stroke-width="7" stroke-dasharray="209.36" stroke-dashoffset="0" stroke-linecap="round" style="transform:rotate(-90deg);transform-origin:center"/></svg>
+            <span class="mini-score" style="color:#10b981">98</span>
+            <span class="mini-delta"><span class="delta delta-good">↑64</span></span>
+          </div>
+          <div class="kpi-col" title="Items currently open"><span class="kpi-val" style="color:#f59e0b">76</span><span class="kpi-lbl">Open</span><span class="delta flat">—</span></div>
+          <div class="kpi-col" title="Items marked Complete/Completed"><span class="kpi-val" style="color:#10b981">75</span><span class="kpi-lbl">Closed</span><span class="delta flat">—</span></div>
+          <div class="kpi-col" title="Completion Rate = Closed &divide; Total"><span class="kpi-val" style="color:#a855f7">50%</span><span class="kpi-lbl">Rate</span><span class="delta flat">—</span></div>
+          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">9</span><span class="kpi-lbl">Flagged</span><span class="delta delta-good">↓3</span></div>
+          <div class="kpi-col" title="Items with Needs Review or No Status"><span class="kpi-val" style="color:#a855f7">0</span><span class="kpi-lbl">Review / No Status</span><span class="delta flat">—</span></div>
+          <div class="kpi-col" title="Open bad review issues assigned"><span class="kpi-val" style="color:#ec4899">0</span><span class="kpi-lbl">Bad Reviews</span><span class="delta flat">—</span></div>
+          <div class="kpi-col" title="Average days to complete closed items"><span class="kpi-val" style="color:#06b6d4">0d</span><span class="kpi-lbl">Avg Complete</span><span class="delta flat">—</span></div>
+          <div class="kpi-col" title="Average aging days of open items"><span class="kpi-val" style="color:#f97316">0d</span><span class="kpi-lbl">Avg Aging</span><span class="delta flat">—</span></div>
+        </div>
+      </div>
+<div class="trend-section">
+    <div class="trend-title">📈 Daily Performance Ledger</div>
+    <table class="trend-table">
+      <tr><th>Metric</th><th>Apr 16</th><th>Apr 17</th><th>Change</th></tr>
+      <tr><td class="metric-label">Health Score</td><td class="cell-metric">34</td><td class="cell-metric">98</td><td><span class="delta delta-good">↑64</span></td></tr>
+      <tr><td class="metric-label">Open</td><td class="cell-metric">76</td><td class="cell-metric">76</td><td><span class="delta flat">—</span></td></tr>
+      <tr><td class="metric-label">Closed</td><td class="cell-metric">75</td><td class="cell-metric">75</td><td><span class="delta flat">—</span></td></tr>
+      <tr><td class="metric-label">Rate</td><td class="cell-metric">50%</td><td class="cell-metric">50%</td><td><span class="delta flat">—</span></td></tr>
+      <tr><td class="metric-label">Flagged</td><td class="cell-metric">12</td><td class="cell-metric">9</td><td><span class="delta delta-good">↓3</span></td></tr>
+      <tr><td class="metric-label">Completed (Day)</td><td class="cell-metric">3</td><td class="cell-metric">0</td><td><span class="delta delta-bad">↓3</span></td></tr>
+      <tr><td class="metric-label">Review / No Status</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
+      <tr><td class="metric-label">Bad Reviews Open</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
+      <tr><td class="metric-label">Avg Days to Complete</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
+      <tr><td class="metric-label">Avg Aging (Open)</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
+    </table>
+  </div>
+<div class="reports-grid">
+  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge ok">0 flagged</span></div>
+    <div class="empty-state">✅ No flagged items — all clear!</div>
+  </div>
+  <div class="report-block"><div class="report-header"><span>🔄 Timeline Pushers</span><span class="count-badge danger">9</span></div>
+    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11635562321" target="_blank">Walter reported cracked corner guard on the wall</a><span class="badge sev-red">4x</span><span class="badge board">Bad Review Issues</span></div>
+    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11455870257" target="_blank">Michael reported that the room needed a little "tlc" (tender loving care)</a><span class="badge sev-yellow">3x</span><span class="badge board">Bad Review Issues</span></div>
+    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11551751438" target="_blank">Kevin reported a total lack of communication from the staff during a storm.</a><span class="badge sev-yellow">3x</span><span class="badge board">Bad Review Issues</span></div>
+    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11567633743" target="_blank">Thierry reported that there were no instructions provided for the operation of t</a><span class="badge sev-yellow">3x</span><span class="badge board">Bad Review Issues</span></div>
+    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11707047817" target="_blank">Michael Venneri reported the dish washer was stucked</a><span class="badge sev-yellow">3x</span><span class="badge board">Bad Review Issues</span></div>
+    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11567640922" target="_blank">Thierry reported that the kitchen lacked a cooking pot, providing only four fryi</a><span class="badge sev-yellow">3x</span><span class="badge board">Bad Review Issues</span></div>
+    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11456697635" target="_blank">Angela reported that the kitchen had dirty utensils in the drawers</a><span class="badge sev-yellow">3x</span><span class="badge board">Bad Review Issues</span></div>
+    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11441455894" target="_blank">Angela Blanket is a Costco throw (not proper bedding)</a><span class="badge sev-yellow">3x</span><span class="badge board">Bad Review Issues</span></div>
+    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11441446730" target="_blank">Angela reported Shampoo not enough</a><span class="badge sev-yellow">3x</span><span class="badge board">Bad Review Issues</span></div>
+  </div>
+  <div class="report-block"><div class="report-header"><span>✅ Completed (Apr 16)</span><span class="count-badge ok">0</span></div>
+    <div class="empty-state">✅ No completions yesterday</div>
+  </div>
+  <div class="report-block"><div class="report-header"><span>🗑️ All Deleted/Archived Items</span><span class="count-badge ok">0 total</span></div>
+    <div class="empty-state">✅ No deletions on record</div>
+  </div>
+  <div class="report-block"><div class="report-header"><span>🔇 Zero-Update Completions</span><span class="count-badge ok">0</span></div>
+    <div class="empty-state">✅ No zero-update completions</div>
+  </div>
+  <div class="report-block"><div class="report-header"><span>🔍 Needs Review / No Status</span><span class="count-badge ok">0</span></div>
+    <div class="empty-state">✅ No items awaiting review</div>
+  </div>
+</div>
+    </div>
 
     <div class="va-section" style="border-color:rgba(249,115,22,0.25)">
       <div class="va-header" style="background:rgba(249,115,22,0.08)">
         <div class="va-identity">
           <div class="va-avatar" style="background:#f97316">B</div>
           <div>
-            <h2 class="va-name" style="color:#f97316">🥇 Baptiste</h2>
+            <h2 class="va-name" style="color:#f97316">4️⃣ Baptiste</h2>
             <div class="va-subtitle">2 total items &middot; Composite: 61.8 pts</div>
           </div>
         </div>
@@ -308,255 +540,12 @@ h1 span { color:var(--blue); }
 </div>
     </div>
 
-    <div class="va-section" style="border-color:rgba(59,130,246,0.25)">
-      <div class="va-header" style="background:rgba(59,130,246,0.08)">
-        <div class="va-identity">
-          <div class="va-avatar" style="background:#3b82f6">N</div>
-          <div>
-            <h2 class="va-name" style="color:#3b82f6">🥈 Nicolas</h2>
-            <div class="va-subtitle">109 total items &middot; Composite: 50.5 pts</div>
-          </div>
-        </div>
-        <div class="va-kpis">
-          <div class="mini-ring" title="Health Score">
-            <svg viewBox="0 0 80 80" width="64" height="64"><circle cx="40" cy="40" r="34" fill="none" stroke="#334155" stroke-width="7"/><circle cx="40" cy="40" r="34" fill="none" stroke="#ef4444" stroke-width="7" stroke-dasharray="85.45" stroke-dashoffset="0" stroke-linecap="round" style="transform:rotate(-90deg);transform-origin:center"/></svg>
-            <span class="mini-score" style="color:#ef4444">40</span>
-            <span class="mini-delta"><span class="delta delta-bad">↓45</span></span>
-          </div>
-          <div class="kpi-col" title="Items currently open"><span class="kpi-val" style="color:#f59e0b">27</span><span class="kpi-lbl">Open</span><span class="delta flat">—</span></div>
-          <div class="kpi-col" title="Items marked Complete/Completed"><span class="kpi-val" style="color:#10b981">82</span><span class="kpi-lbl">Closed</span><span class="delta delta-good">↑21</span></div>
-          <div class="kpi-col" title="Completion Rate = Closed &divide; Total"><span class="kpi-val" style="color:#3b82f6">75%</span><span class="kpi-lbl">Rate</span><span class="delta delta-good">↑6</span></div>
-          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">12</span><span class="kpi-lbl">Flagged</span><span class="delta delta-bad">↑9</span></div>
-          <div class="kpi-col" title="Items with Needs Review or No Status"><span class="kpi-val" style="color:#a855f7">0</span><span class="kpi-lbl">Review / No Status</span><span class="delta flat">—</span></div>
-          <div class="kpi-col" title="Open bad review issues assigned"><span class="kpi-val" style="color:#ec4899">0</span><span class="kpi-lbl">Bad Reviews</span><span class="delta flat">—</span></div>
-          <div class="kpi-col" title="Average days to complete closed items"><span class="kpi-val" style="color:#06b6d4">0d</span><span class="kpi-lbl">Avg Complete</span><span class="delta flat">—</span></div>
-          <div class="kpi-col" title="Average aging days of open items"><span class="kpi-val" style="color:#f97316">0d</span><span class="kpi-lbl">Avg Aging</span><span class="delta flat">—</span></div>
-        </div>
-      </div>
-<div class="trend-section">
-    <div class="trend-title">📈 Daily Performance Ledger</div>
-    <table class="trend-table">
-      <tr><th>Metric</th><th>Apr 16</th><th>Apr 17</th><th>Change</th></tr>
-      <tr><td class="metric-label">Health Score</td><td class="cell-metric">85</td><td class="cell-metric">40</td><td><span class="delta delta-bad">↓45</span></td></tr>
-      <tr><td class="metric-label">Open</td><td class="cell-metric">27</td><td class="cell-metric">27</td><td><span class="delta flat">—</span></td></tr>
-      <tr><td class="metric-label">Closed</td><td class="cell-metric">61</td><td class="cell-metric">82</td><td><span class="delta delta-good">↑21</span></td></tr>
-      <tr><td class="metric-label">Rate</td><td class="cell-metric">69%</td><td class="cell-metric">75%</td><td><span class="delta delta-good">↑6%</span></td></tr>
-      <tr><td class="metric-label">Flagged</td><td class="cell-metric">3</td><td class="cell-metric">12</td><td><span class="delta delta-bad">↑9</span></td></tr>
-      <tr><td class="metric-label">Completed (Day)</td><td class="cell-metric">3</td><td class="cell-metric">21</td><td><span class="delta delta-good">↑18</span></td></tr>
-      <tr><td class="metric-label">Review / No Status</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
-      <tr><td class="metric-label">Bad Reviews Open</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
-      <tr><td class="metric-label">Avg Days to Complete</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
-      <tr><td class="metric-label">Avg Aging (Open)</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
-    </table>
-  </div>
-<div class="reports-grid">
-  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge danger">12 flagged</span></div>
-    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11566186998" target="_blank">Broken beach chair from unit #5</a><span class="badge board">Maintenance Issues</span></div>
-    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11619625608" target="_blank">Replace tube for PT Device for unit #5 as it's damaged.</a><span class="badge board">Maintenance Issues</span></div>
-    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11682937863" target="_blank">Have the ACCURATE date and photo for lockbox</a><span class="badge board">Maintenance Issues</span></div>
-    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11682582022" target="_blank">Get Tesla Quote with 6 months meter readinfs from Erwan</a><span class="badge board">Maintenance Issues</span></div>
-    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11559147804" target="_blank">Cracks in the floor that need addressing (tiles)</a><span class="badge board">Maintenance Issues</span></div>
-    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11440249591" target="_blank">Need to inspect and potential repair foundation</a><span class="badge board">Maintenance Issues</span></div>
-    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11669439246" target="_blank">Inspection of the villa | Big Time Inspection</a><span class="badge board">Maintenance Issues</span></div>
-    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11609448471" target="_blank">Termite Schedule</a><span class="badge board">Maintenance Issues</span></div>
-    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11560062730" target="_blank">DECK - INADEQUATE STRUCTURAL COMPONENT</a><span class="badge board">Maintenance Issues</span></div>
-    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11559391391" target="_blank">DECK - WOOD ROT</a><span class="badge board">Maintenance Issues</span></div>
-    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11666731004" target="_blank">Zofia #1 dispute her $4700 credit card payment it was was taken automatically fr</a><span class="badge board">Reservation Issues</span></div>
-    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11711124742" target="_blank">Listing updates for Expedia and BDC regards neighborhood and water tap not drink</a><span class="badge board">Reservation Issues</span></div>
-  </div>
-  <div class="report-block"><div class="report-header"><span>🔄 Timeline Pushers</span><span class="count-badge ok">0</span></div>
-    <div class="empty-state">✅ No deadline extensions (3+)</div>
-  </div>
-  <div class="report-block"><div class="report-header"><span>✅ Completed (Apr 16)</span><span class="count-badge ok">21</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11675097043" target="_blank">Dena P. reported that walking to Cruz Bay is dangerous because the property is …</a><span class="badge board">Bad Review Issues*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11674331278" target="_blank">Dena — Listing Accuracy: "Walk to Cruz Bay" claim vs dangerous road with no sid…</a><span class="badge board">Bad Review Issues*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11704579630" target="_blank">Robert reported treacherous, dimly lit steps</a><span class="badge board">Bad Review Issues*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11406213357" target="_blank">Cracks in the floor that need addressing (tiles)</a><span class="badge board">Bad Review Issues*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11512976151" target="_blank">Susan reported the presence of ripped rugs</a><span class="badge board">Bad Review Issues*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11620567754" target="_blank">Guest expressed extreme displeasure with the lack of lighting and signage, whic…</a><span class="badge board">Maintenance*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11739913129" target="_blank">Amanda Geurts remote is not working</a><span class="badge board">Maintenance*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11559138045" target="_blank">Cracked tiles in unit #4</a><span class="badge board">Maintenance*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11764509031" target="_blank">Flickering lights reported in Carlos's unit indicating a potential electrical i…</a><span class="badge board">Maintenance*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11710960319" target="_blank">Kelli Palm reported cabinets falling off the hinges.</a><span class="badge board">Maintenance*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11658467971" target="_blank">The bed frame in the master bedroom is partially broken underneath, affecting i…</a><span class="badge board">Maintenance*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11768292635" target="_blank">Ring Camera Laundry USVI offline</a><span class="badge board">Maintenance*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11682863031" target="_blank">Have the ACCURATE date for smoke detector in each USVI unit</a><span class="badge board">Maintenance*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11707255091" target="_blank">Kelli Palm reported the bedroom door to the porch lock unable to close</a><span class="badge board">Maintenance*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11578188807" target="_blank">The door is barely opening, indicating a potential maintenance issue with the d…</a><span class="badge board">Maintenance*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11578177537" target="_blank">The lights are flickering, which could indicate electrical problems.</a><span class="badge board">Maintenance*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11770089919" target="_blank">Installations of dispensers for USVI</a><span class="badge board">Maintenance*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11751016899" target="_blank">The guest reports a smoke smell in the unit, suggesting a violation of the non-…</a><span class="badge board">Cleaning*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11714808946" target="_blank">Purchasing of the dispenser for USVI</a><span class="badge board">Cleaning*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11764481180" target="_blank">Request for a cooler to enhance guest comfort during their stay.</a><span class="badge board">Reservation*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11616336219" target="_blank">Charles Cachil would like the forgotten shorts to be sent to him</a><span class="badge board">Reservation*</span></div>
-  </div>
-  <div class="report-block"><div class="report-header"><span>🗑️ All Deleted/Archived Items</span><span class="count-badge ok">0 total</span></div>
-    <div class="empty-state">✅ No deletions on record</div>
-  </div>
-  <div class="report-block"><div class="report-header"><span>🔇 Zero-Update Completions</span><span class="count-badge ok">0</span></div>
-    <div class="empty-state">✅ No zero-update completions</div>
-  </div>
-  <div class="report-block"><div class="report-header"><span>🔍 Needs Review / No Status</span><span class="count-badge ok">0</span></div>
-    <div class="empty-state">✅ No items awaiting review</div>
-  </div>
-</div>
-    </div>
-
-    <div class="va-section" style="border-color:rgba(168,85,247,0.25)">
-      <div class="va-header" style="background:rgba(168,85,247,0.08)">
-        <div class="va-identity">
-          <div class="va-avatar" style="background:#a855f7">A</div>
-          <div>
-            <h2 class="va-name" style="color:#a855f7">🥉 Aislynn</h2>
-            <div class="va-subtitle">151 total items &middot; Composite: 15.0 pts</div>
-          </div>
-        </div>
-        <div class="va-kpis">
-          <div class="mini-ring" title="Health Score">
-            <svg viewBox="0 0 80 80" width="64" height="64"><circle cx="40" cy="40" r="34" fill="none" stroke="#334155" stroke-width="7"/><circle cx="40" cy="40" r="34" fill="none" stroke="#ef4444" stroke-width="7" stroke-dasharray="0.0" stroke-dashoffset="0" stroke-linecap="round" style="transform:rotate(-90deg);transform-origin:center"/></svg>
-            <span class="mini-score" style="color:#ef4444">0</span>
-            <span class="mini-delta"><span class="delta delta-bad">↓34</span></span>
-          </div>
-          <div class="kpi-col" title="Items currently open"><span class="kpi-val" style="color:#f59e0b">76</span><span class="kpi-lbl">Open</span><span class="delta flat">—</span></div>
-          <div class="kpi-col" title="Items marked Complete/Completed"><span class="kpi-val" style="color:#10b981">75</span><span class="kpi-lbl">Closed</span><span class="delta flat">—</span></div>
-          <div class="kpi-col" title="Completion Rate = Closed &divide; Total"><span class="kpi-val" style="color:#a855f7">50%</span><span class="kpi-lbl">Rate</span><span class="delta flat">—</span></div>
-          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">33</span><span class="kpi-lbl">Flagged</span><span class="delta delta-bad">↑21</span></div>
-          <div class="kpi-col" title="Items with Needs Review or No Status"><span class="kpi-val" style="color:#a855f7">0</span><span class="kpi-lbl">Review / No Status</span><span class="delta flat">—</span></div>
-          <div class="kpi-col" title="Open bad review issues assigned"><span class="kpi-val" style="color:#ec4899">0</span><span class="kpi-lbl">Bad Reviews</span><span class="delta flat">—</span></div>
-          <div class="kpi-col" title="Average days to complete closed items"><span class="kpi-val" style="color:#06b6d4">0d</span><span class="kpi-lbl">Avg Complete</span><span class="delta flat">—</span></div>
-          <div class="kpi-col" title="Average aging days of open items"><span class="kpi-val" style="color:#f97316">0d</span><span class="kpi-lbl">Avg Aging</span><span class="delta flat">—</span></div>
-        </div>
-      </div>
-<div class="trend-section">
-    <div class="trend-title">📈 Daily Performance Ledger</div>
-    <table class="trend-table">
-      <tr><th>Metric</th><th>Apr 16</th><th>Apr 17</th><th>Change</th></tr>
-      <tr><td class="metric-label">Health Score</td><td class="cell-metric">34</td><td class="cell-metric">0</td><td><span class="delta delta-bad">↓34</span></td></tr>
-      <tr><td class="metric-label">Open</td><td class="cell-metric">76</td><td class="cell-metric">76</td><td><span class="delta flat">—</span></td></tr>
-      <tr><td class="metric-label">Closed</td><td class="cell-metric">75</td><td class="cell-metric">75</td><td><span class="delta flat">—</span></td></tr>
-      <tr><td class="metric-label">Rate</td><td class="cell-metric">50%</td><td class="cell-metric">50%</td><td><span class="delta flat">—</span></td></tr>
-      <tr><td class="metric-label">Flagged</td><td class="cell-metric">12</td><td class="cell-metric">33</td><td><span class="delta delta-bad">↑21</span></td></tr>
-      <tr><td class="metric-label">Completed (Day)</td><td class="cell-metric">3</td><td class="cell-metric">0</td><td><span class="delta delta-bad">↓3</span></td></tr>
-      <tr><td class="metric-label">Review / No Status</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
-      <tr><td class="metric-label">Bad Reviews Open</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
-      <tr><td class="metric-label">Avg Days to Complete</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
-      <tr><td class="metric-label">Avg Aging (Open)</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
-    </table>
-  </div>
-<div class="reports-grid">
-  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge danger">24 flagged</span></div>
-    <div class="item-row" style="color:var(--text2);font-size:12px;">24 flagged items — see Flagged Issues tab for full clickable list</div>
-  </div>
-  <div class="report-block"><div class="report-header"><span>🔄 Timeline Pushers</span><span class="count-badge danger">9</span></div>
-    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11635562321" target="_blank">Walter reported cracked corner guard on the wall</a><span class="badge sev-red">4x</span><span class="badge board">Bad Review Issues</span></div>
-    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11455870257" target="_blank">Michael reported that the room needed a little "tlc" (tender loving care)</a><span class="badge sev-yellow">3x</span><span class="badge board">Bad Review Issues</span></div>
-    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11551751438" target="_blank">Kevin reported a total lack of communication from the staff during a storm.</a><span class="badge sev-yellow">3x</span><span class="badge board">Bad Review Issues</span></div>
-    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11567633743" target="_blank">Thierry reported that there were no instructions provided for the operation of t</a><span class="badge sev-yellow">3x</span><span class="badge board">Bad Review Issues</span></div>
-    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11707047817" target="_blank">Michael Venneri reported the dish washer was stucked</a><span class="badge sev-yellow">3x</span><span class="badge board">Bad Review Issues</span></div>
-    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11567640922" target="_blank">Thierry reported that the kitchen lacked a cooking pot, providing only four fryi</a><span class="badge sev-yellow">3x</span><span class="badge board">Bad Review Issues</span></div>
-    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11456697635" target="_blank">Angela reported that the kitchen had dirty utensils in the drawers</a><span class="badge sev-yellow">3x</span><span class="badge board">Bad Review Issues</span></div>
-    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11441455894" target="_blank">Angela Blanket is a Costco throw (not proper bedding)</a><span class="badge sev-yellow">3x</span><span class="badge board">Bad Review Issues</span></div>
-    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11441446730" target="_blank">Angela reported Shampoo not enough</a><span class="badge sev-yellow">3x</span><span class="badge board">Bad Review Issues</span></div>
-  </div>
-  <div class="report-block"><div class="report-header"><span>✅ Completed (Apr 16)</span><span class="count-badge ok">0</span></div>
-    <div class="empty-state">✅ No completions yesterday</div>
-  </div>
-  <div class="report-block"><div class="report-header"><span>🗑️ All Deleted/Archived Items</span><span class="count-badge ok">0 total</span></div>
-    <div class="empty-state">✅ No deletions on record</div>
-  </div>
-  <div class="report-block"><div class="report-header"><span>🔇 Zero-Update Completions</span><span class="count-badge ok">0</span></div>
-    <div class="empty-state">✅ No zero-update completions</div>
-  </div>
-  <div class="report-block"><div class="report-header"><span>🔍 Needs Review / No Status</span><span class="count-badge ok">0</span></div>
-    <div class="empty-state">✅ No items awaiting review</div>
-  </div>
-</div>
-    </div>
-
-    <div class="va-section" style="border-color:rgba(236,72,153,0.25)">
-      <div class="va-header" style="background:rgba(236,72,153,0.08)">
-        <div class="va-identity">
-          <div class="va-avatar" style="background:#ec4899">L</div>
-          <div>
-            <h2 class="va-name" style="color:#ec4899">4️⃣ Luna</h2>
-            <div class="va-subtitle">79 total items &middot; Composite: 13.8 pts</div>
-          </div>
-        </div>
-        <div class="va-kpis">
-          <div class="mini-ring" title="Health Score">
-            <svg viewBox="0 0 80 80" width="64" height="64"><circle cx="40" cy="40" r="34" fill="none" stroke="#334155" stroke-width="7"/><circle cx="40" cy="40" r="34" fill="none" stroke="#ef4444" stroke-width="7" stroke-dasharray="0.0" stroke-dashoffset="0" stroke-linecap="round" style="transform:rotate(-90deg);transform-origin:center"/></svg>
-            <span class="mini-score" style="color:#ef4444">0</span>
-            <span class="mini-delta"><span class="delta delta-bad">↓82</span></span>
-          </div>
-          <div class="kpi-col" title="Items currently open"><span class="kpi-val" style="color:#f59e0b">43</span><span class="kpi-lbl">Open</span><span class="delta delta-good">↓13</span></div>
-          <div class="kpi-col" title="Items marked Complete/Completed"><span class="kpi-val" style="color:#10b981">36</span><span class="kpi-lbl">Closed</span><span class="delta delta-good">↑13</span></div>
-          <div class="kpi-col" title="Completion Rate = Closed &divide; Total"><span class="kpi-val" style="color:#ec4899">46%</span><span class="kpi-lbl">Rate</span><span class="delta delta-good">↑17</span></div>
-          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">27</span><span class="kpi-lbl">Flagged</span><span class="delta delta-bad">↑24</span></div>
-          <div class="kpi-col" title="Items with Needs Review or No Status"><span class="kpi-val" style="color:#a855f7">1</span><span class="kpi-lbl">Review / No Status</span><span class="delta delta-bad">↑1</span></div>
-          <div class="kpi-col" title="Open bad review issues assigned"><span class="kpi-val" style="color:#ec4899">0</span><span class="kpi-lbl">Bad Reviews</span><span class="delta flat">—</span></div>
-          <div class="kpi-col" title="Average days to complete closed items"><span class="kpi-val" style="color:#06b6d4">0d</span><span class="kpi-lbl">Avg Complete</span><span class="delta flat">—</span></div>
-          <div class="kpi-col" title="Average aging days of open items"><span class="kpi-val" style="color:#f97316">0d</span><span class="kpi-lbl">Avg Aging</span><span class="delta flat">—</span></div>
-        </div>
-      </div>
-<div class="trend-section">
-    <div class="trend-title">📈 Daily Performance Ledger</div>
-    <table class="trend-table">
-      <tr><th>Metric</th><th>Apr 16</th><th>Apr 17</th><th>Change</th></tr>
-      <tr><td class="metric-label">Health Score</td><td class="cell-metric">82</td><td class="cell-metric">0</td><td><span class="delta delta-bad">↓82</span></td></tr>
-      <tr><td class="metric-label">Open</td><td class="cell-metric">56</td><td class="cell-metric">43</td><td><span class="delta delta-good">↓13</span></td></tr>
-      <tr><td class="metric-label">Closed</td><td class="cell-metric">23</td><td class="cell-metric">36</td><td><span class="delta delta-good">↑13</span></td></tr>
-      <tr><td class="metric-label">Rate</td><td class="cell-metric">29%</td><td class="cell-metric">46%</td><td><span class="delta delta-good">↑17%</span></td></tr>
-      <tr><td class="metric-label">Flagged</td><td class="cell-metric">3</td><td class="cell-metric">27</td><td><span class="delta delta-bad">↑24</span></td></tr>
-      <tr><td class="metric-label">Completed (Day)</td><td class="cell-metric">10</td><td class="cell-metric">13</td><td><span class="delta delta-good">↑3</span></td></tr>
-      <tr><td class="metric-label">Review / No Status</td><td class="cell-metric">0</td><td class="cell-metric">1</td><td><span class="delta delta-bad">↑1</span></td></tr>
-      <tr><td class="metric-label">Bad Reviews Open</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
-      <tr><td class="metric-label">Avg Days to Complete</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
-      <tr><td class="metric-label">Avg Aging (Open)</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
-    </table>
-  </div>
-<div class="reports-grid">
-  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge danger">24 flagged</span></div>
-    <div class="item-row" style="color:var(--text2);font-size:12px;">24 flagged items — see Flagged Issues tab for full clickable list</div>
-  </div>
-  <div class="report-block"><div class="report-header"><span>🔄 Timeline Pushers</span><span class="count-badge warn">4</span></div>
-    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11564540959" target="_blank">John Snee It appears he smoked during his stay and left a trash can with burn ma</a><span class="badge sev-red">5x</span><span class="badge board">Reservation</span></div>
-    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11672806662" target="_blank">Steven Scott left the unit as he claim is 3 people and is only one bed.</a><span class="badge sev-red">4x</span><span class="badge board">Reservation</span></div>
-    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11391301063" target="_blank">Cristian reported something brown on the wall by the kitchen</a><span class="badge sev-yellow">3x</span><span class="badge board">Cleaning</span></div>
-    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11675064306" target="_blank">Kevin Trinka is asking for the update of his refund request.</a><span class="badge sev-yellow">3x</span><span class="badge board">Reservation</span></div>
-  </div>
-  <div class="report-block"><div class="report-header"><span>✅ Completed (Apr 16)</span><span class="count-badge ok">13</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11774025340" target="_blank">AC minisplit filters cleaning</a><span class="badge board">Maintenance*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11770811297" target="_blank">The TV remote in the living room is not functioning, preventing the guest from …</a><span class="badge board">Maintenance*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11736755142" target="_blank">The screen for the sliding glass door has a tear, which is a maintenance issue …</a><span class="badge board">Maintenance*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11721871100" target="_blank">Preventive maintenance for all filters for AC for all units (1) replacement fil…</a><span class="badge board">Maintenance*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11770920723" target="_blank">the remote for the TV in the living room is not working</a><span class="badge board">Maintenance*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11729256794" target="_blank">Stains on the Facetub unit 466</a><span class="badge board">Maintenance*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11773089238" target="_blank">Tub Patches needs to be replaced</a><span class="badge board">Maintenance*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11762423124" target="_blank">Replace lightbulb in unit 49</a><span class="badge board">Maintenance*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11727398851" target="_blank">The floors need a good mopping as they appear clean but are not.</a><span class="badge board">Cleaning*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11736783755" target="_blank">The overall feel of the unit was dirty, which suggests a need for improved clea…</a><span class="badge board">Cleaning*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11717294640" target="_blank">The floor has dark stains and possibly pest presence, indicating a need for cle…</a><span class="badge board">Cleaning*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11497413278" target="_blank">Emergency cleaning backup team</a><span class="badge board">Cleaning*</span></div>
-    <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11748786950" target="_blank">Carol asking about availability of washer/dryer during her stay</a><span class="badge board">Reservation*</span></div>
-  </div>
-  <div class="report-block"><div class="report-header"><span>🗑️ All Deleted/Archived Items</span><span class="count-badge ok">0 total</span></div>
-    <div class="empty-state">✅ No deletions on record</div>
-  </div>
-  <div class="report-block"><div class="report-header"><span>🔇 Zero-Update Completions</span><span class="count-badge ok">0</span></div>
-    <div class="empty-state">✅ No zero-update completions</div>
-  </div>
-  <div class="report-block"><div class="report-header"><span>🔍 Needs Review / No Status</span><span class="count-badge warn">1</span></div>
-    <div class="item-row">🔍 <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11770794122" target="_blank">Inquiry about whether guests need to handle the sheets and trash upon checkout, </a><span class="badge board">Cleaning Issues</span></div>
-  </div>
-</div>
-    </div>
-
   </div>
 
   <div id="tab-flagged" class="tab-content">
     <div class="flagged-summary">
       <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">1</div><div class="flagged-summary-label">Past Deadline</div></div>
-      <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">60</div><div class="flagged-summary-label">No Update (7+ Days)</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">1</div><div class="flagged-summary-label">No Update (7+ Days)</div></div>
       <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">2</div><div class="flagged-summary-label">Missing Timeline</div></div>
       <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">13</div><div class="flagged-summary-label">Timeline Pushers (3+)</div></div>
       <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">0</div><div class="flagged-summary-label">Zero-Update Completions</div></div>
@@ -565,185 +554,16 @@ h1 span { color:var(--blue); }
 
     <div class="va-filter-bar">
       <button class="va-filter-btn active" onclick="filterVA('all', this)">All VAs</button>
-      <button class="va-filter-btn" style="--va-color:#3b82f6" onclick="filterVA('Nicolás', this)">Nicolás (12)</button>
-      <button class="va-filter-btn" style="--va-color:#a855f7" onclick="filterVA('Aislynn', this)">Aislynn (33)</button>
-      <button class="va-filter-btn" style="--va-color:#ec4899" onclick="filterVA('Luna', this)">Luna (27)</button>
+      <button class="va-filter-btn" style="--va-color:#a855f7" onclick="filterVA('Aislynn', this)">Aislynn (9)</button>
+      <button class="va-filter-btn" style="--va-color:#ec4899" onclick="filterVA('Luna', this)">Luna (6)</button>
       <button class="va-filter-btn" style="--va-color:#f97316" onclick="filterVA('Baptiste', this)">Baptiste (2)</button>
-    </div>
-
-    <div class="va-flagged-section" data-va="Nicolás">
-      <div class="va-flagged-header" style="border-left-color:#3b82f6">
-        <span class="va-flagged-name" style="color:#3b82f6">Nicolás</span>
-        <span class="va-flagged-total">12 flagged items</span>
-        <span class="va-cat-badges"><span class="va-cat-badge" style="color:#f59e0b">🔇 12</span></span>
-      </div>
-      <div class="flagged-category" style="margin:0 16px 12px 16px">
-        <div class="flagged-cat-header" style="padding:10px 16px">
-          <div class="flagged-cat-title" style="font-size:14px">🔇 No Update (7+ Days)</div>
-          <span class="flagged-cat-count" style="background:rgba(245,158,11,.15);color:#f59e0b;font-size:12px">12</span>
-        </div>
-        <div class="flagged-cat-body" style="padding:8px 16px">
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11566186998" target="_blank">Broken beach chair from unit #5</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11619625608" target="_blank">Replace tube for PT Device for unit #5 as it's damaged.</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11682937863" target="_blank">Have the ACCURATE date and photo for lockbox</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11682582022" target="_blank">Get Tesla Quote with 6 months meter readinfs from Erwan</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11559147804" target="_blank">Cracks in the floor that need addressing (tiles)</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11440249591" target="_blank">Need to inspect and potential repair foundation</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11669439246" target="_blank">Inspection of the villa | Big Time Inspection</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11609448471" target="_blank">Termite Schedule</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11560062730" target="_blank">DECK - INADEQUATE STRUCTURAL COMPONENT</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11559391391" target="_blank">DECK - WOOD ROT</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11666731004" target="_blank">Zofia #1 dispute her $4700 credit card payment it was was taken automatically fr</a>
-            <span class="badge board">Reservation Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11711124742" target="_blank">Listing updates for Expedia and BDC regards neighborhood and water tap not drink</a>
-            <span class="badge board">Reservation Issues</span>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div class="va-flagged-section" data-va="Aislynn">
       <div class="va-flagged-header" style="border-left-color:#a855f7">
         <span class="va-flagged-name" style="color:#a855f7">Aislynn</span>
-        <span class="va-flagged-total">33 flagged items</span>
-        <span class="va-cat-badges"><span class="va-cat-badge" style="color:#f59e0b">🔇 24</span><span class="va-cat-badge" style="color:#ef4444">🔄 9</span></span>
-      </div>
-      <div class="flagged-category" style="margin:0 16px 12px 16px">
-        <div class="flagged-cat-header" style="padding:10px 16px">
-          <div class="flagged-cat-title" style="font-size:14px">🔇 No Update (7+ Days)</div>
-          <span class="flagged-cat-count" style="background:rgba(245,158,11,.15);color:#f59e0b;font-size:12px">24</span>
-        </div>
-        <div class="flagged-cat-body" style="padding:8px 16px">
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11707895471" target="_blank">The guest expressed that the bedding provided was of lower quality than expected</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11533925188" target="_blank">URGENT Repair for Leak Damage – Unit P109 reported by Justin church</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11391419307" target="_blank">Cristian reported the Spectrum remote is broken</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11533883439" target="_blank">Closet door locked. 4112 Hawaii</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11620577505" target="_blank">The couch has a slightly worn appearance, which may require maintenance to addre</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11440261143" target="_blank">Fan remote doesn't have any back cover</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11454391683" target="_blank">Oksana reported that the screen door lock appears damaged and may need replaceme</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11707219705" target="_blank">Pantry below the sink needs attention. rusty and stained</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11376907626" target="_blank">Cold water shut-off valve installation</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11475726367" target="_blank">Oksana reported that two hand towels, one beach towel, and two pillowcases need </a>
-            <span class="badge board">Cleaning Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11686555351" target="_blank">There is a noticeable smell of humidity in the unit, indicating a potential issu</a>
-            <span class="badge board">Cleaning Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11379187708" target="_blank">The sofa covers are heavily soiled and cannot be cleaned through regular cleanin</a>
-            <span class="badge board">Cleaning Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11391296819" target="_blank">Cristian reported the bathtub bottom is brown from accumulated dirt</a>
-            <span class="badge board">Cleaning Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11698202536" target="_blank">Request for linens for the fold-out sofa prior to guest arrival.</a>
-            <span class="badge board">Cleaning Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11620550075" target="_blank">The mattress shows noticeable stains that indicate it may require cleaning or re</a>
-            <span class="badge board">Cleaning Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11620557482" target="_blank">User mentioned cleanliness issues with the sofa bed, highlighting a cleaning-rel</a>
-            <span class="badge board">Cleaning Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11635515658" target="_blank">The rug in the living room feels dirty and filmy, suggesting inadequate cleaning</a>
-            <span class="badge board">Cleaning Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11616336043" target="_blank">The presence of a centipede indicates a potential pest issue</a>
-            <span class="badge board">Cleaning Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11377456992" target="_blank">Extra Wide 100"  Blackout Curtain P109A</a>
-            <span class="badge board">Cleaning Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11391289073" target="_blank">Cristian reported the bedroom carpet is stained and needs shampooing</a>
-            <span class="badge board">Cleaning Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11391301063" target="_blank">Cristian reported something brown on the wall by the kitchen</a>
-            <span class="badge board">Cleaning Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11622855227" target="_blank">Order sugar for oksana</a>
-            <span class="badge board">Cleaning Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11675064306" target="_blank">Kevin Trinka is asking for the update of his refund request.</a>
-            <span class="badge board">Reservation Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11393239156" target="_blank">Follow-up VRBO pm support re Lisa Vrazel as a no-show</a>
-            <span class="badge board">Reservation Issues</span>
-          </div>
-        </div>
+        <span class="va-flagged-total">9 flagged items</span>
+        <span class="va-cat-badges"><span class="va-cat-badge" style="color:#ef4444">🔄 9</span></span>
       </div>
       <div class="flagged-category" style="margin:0 16px 12px 16px">
         <div class="flagged-cat-header" style="padding:10px 16px">
@@ -803,108 +623,8 @@ h1 span { color:var(--blue); }
     <div class="va-flagged-section" data-va="Luna">
       <div class="va-flagged-header" style="border-left-color:#ec4899">
         <span class="va-flagged-name" style="color:#ec4899">Luna</span>
-        <span class="va-flagged-total">27 flagged items</span>
-        <span class="va-cat-badges"><span class="va-cat-badge" style="color:#f59e0b">🔇 23</span><span class="va-cat-badge" style="color:#f59e0b">❌ 1</span><span class="va-cat-badge" style="color:#ef4444">🔄 4</span><span class="va-cat-badge" style="color:#a855f7">🔍 1</span></span>
-      </div>
-      <div class="flagged-category" style="margin:0 16px 12px 16px">
-        <div class="flagged-cat-header" style="padding:10px 16px">
-          <div class="flagged-cat-title" style="font-size:14px">🔇 No Update (7+ Days)</div>
-          <span class="flagged-cat-count" style="background:rgba(245,158,11,.15);color:#f59e0b;font-size:12px">23</span>
-        </div>
-        <div class="flagged-cat-body" style="padding:8px 16px">
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11674297164" target="_blank">Get 3 NEW handymen in Napa by 4/10 *(validated = give them a job)</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11033517236" target="_blank">Henrietta Dunmore (No urgent) Burn mark on the faucet</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11507261568" target="_blank">Maria reported 491 and 489 needs to be painting from the outside</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11452566662" target="_blank">Marc Dunn bugs are entering the property when the door is opened, indicating a p</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11477588531" target="_blank">The pools were dirty and had no chairs, lounge chairs, table, etc.</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/10768199914" target="_blank">Diamond Report (Not urgent) cabin inside needs painting</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11686612991" target="_blank">The sink is very slow and needs some sort of drain service</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11454955204" target="_blank">Diamond reported lamp with broken cable, needs to be removed unit 489</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11674288607" target="_blank">Schedule mold remediation company for 489 (bathroom)</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11404416629" target="_blank">Bryon Joganich Damage patio door The handle moves but the internal mechanism doe</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11564524783" target="_blank">Maria reported that the window screen has a small hole.</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/10940538734" target="_blank">Moran report (Not urgent) chair needs to be replaced</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11564524758" target="_blank">Maria reported a burnt trash can.</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/10655383287" target="_blank">Robert Seliga (Not urgent) Walls need patch</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11674288853" target="_blank">Preventive maintenance for all filters for AC for all units (1) replacement filt</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/10633073711" target="_blank">Cinde Baron Erickson (No urgent) Watermarks on the edge of the floor</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11686618884" target="_blank">Buy new pillos for 489,466,491,465 Maria</a>
-            <span class="badge board">Cleaning Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11405818229" target="_blank">Bryon Joganich report dirty, moldy curtain</a>
-            <span class="badge board">Cleaning Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11455423271" target="_blank">Danielle Frankie wants a solution (September 2025 ) on a refund request</a>
-            <span class="badge board">Reservation Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11672806662" target="_blank">Steven Scott left the unit as he claim is 3 people and is only one bed.</a>
-            <span class="badge board">Reservation Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11455515358" target="_blank">Check listing changes for shared units in Napa (648/649)</a>
-            <span class="badge board">Reservation Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11562291407" target="_blank">Brita cancelled claiming the listing is described as a "Condo" but it is actuall</a>
-            <span class="badge board">Reservation Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11564540959" target="_blank">John Snee It appears he smoked during his stay and left a trash can with burn ma</a>
-            <span class="badge board">Reservation Issues</span>
-          </div>
-        </div>
+        <span class="va-flagged-total">6 flagged items</span>
+        <span class="va-cat-badges"><span class="va-cat-badge" style="color:#f59e0b">❌ 1</span><span class="va-cat-badge" style="color:#ef4444">🔄 4</span><span class="va-cat-badge" style="color:#a855f7">🔍 1</span></span>
       </div>
       <div class="flagged-category" style="margin:0 16px 12px 16px">
         <div class="flagged-cat-header" style="padding:10px 16px">
