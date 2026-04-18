@@ -137,6 +137,7 @@ h1 span { color:var(--blue); }
 .va-flagged-section.hidden { display:none; }
 
 </style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -1342,6 +1343,54 @@ h1 span { color:var(--blue); }
         <div style="height:100%;width:8%;background:var(--green);border-radius:4px;transition:width .4s"></div>
       </div>
     </div>
+    <div style="background:var(--surface);border-radius:14px;padding:20px 24px;margin-bottom:24px;border:1px solid var(--surface2)">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:14px">
+        <div>
+          <div style="font-size:16px;font-weight:800">📉 Per-VA Progress Trend</div>
+          <div style="font-size:12px;color:var(--text2)">Flagged items and Top Urgent issues per VA at each 3-hour check (4 snapshots)</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+        <div style="background:var(--bg);border-radius:10px;padding:14px;min-height:260px">
+          <div style="font-size:13px;font-weight:700;margin-bottom:8px;color:var(--text)">🚩 Flagged Items per VA</div>
+          <div style="position:relative;height:240px"><canvas id="progressFlaggedChart"></canvas></div>
+        </div>
+        <div style="background:var(--bg);border-radius:10px;padding:14px;min-height:260px">
+          <div style="font-size:13px;font-weight:700;margin-bottom:8px;color:var(--text)">🚨 Top Urgent Issues per VA</div>
+          <div style="position:relative;height:240px"><canvas id="progressUrgentChart"></canvas></div>
+        </div>
+      </div>
+    </div>
+    <script>
+    (function() {
+      if (typeof Chart === "undefined") return;
+      const labels = ["10:09 AM", "1:09 PM", "4:09 PM", "7:09 PM"];
+      const commonOpts = {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: "index", intersect: false },
+        plugins: {
+          legend: { position: "bottom", labels: { color: "#cbd5e1", font: { size: 11 } } },
+          tooltip: { backgroundColor: "#0b1120", titleColor: "#fff", bodyColor: "#e2e8f0", borderColor: "#334155", borderWidth: 1 }
+        },
+        scales: {
+          x: { ticks: { color: "#94a3b8" }, grid: { color: "rgba(148,163,184,.12)" } },
+          y: { beginAtZero: true, ticks: { color: "#94a3b8", precision: 0 }, grid: { color: "rgba(148,163,184,.12)" } }
+        }
+      };
+      new Chart(document.getElementById("progressFlaggedChart"), {
+        type: "line",
+        data: { labels: labels, datasets: [{"label": "Nicolas", "data": [12, 10, 8, 6], "borderColor": "#3b82f6", "backgroundColor": "#3b82f6", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Aislynn", "data": [5, 4, 3, 3], "borderColor": "#a855f7", "backgroundColor": "#a855f7", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Luna", "data": [4, 4, 2, 1], "borderColor": "#ec4899", "backgroundColor": "#ec4899", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Baptiste", "data": [3, 3, 2, 2], "borderColor": "#f97316", "backgroundColor": "#f97316", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}] },
+        options: commonOpts
+      });
+      new Chart(document.getElementById("progressUrgentChart"), {
+        type: "line",
+        data: { labels: labels, datasets: [{"label": "Nicolas", "data": [3, 2, 2, 1], "borderColor": "#3b82f6", "backgroundColor": "#3b82f6", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Aislynn", "data": [1, 1, 0, 0], "borderColor": "#a855f7", "backgroundColor": "#a855f7", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Luna", "data": [0, 0, 0, 0], "borderColor": "#ec4899", "backgroundColor": "#ec4899", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Baptiste", "data": [1, 1, 1, 1], "borderColor": "#f97316", "backgroundColor": "#f97316", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}] },
+        options: commonOpts
+      });
+    })();
+    </script>
+
     <div style="background:var(--surface);border-radius:14px;margin-bottom:20px;overflow:hidden;border:1px solid var(--surface2)">
       <div style="padding:16px 24px;border-bottom:1px solid var(--surface2);display:flex;align-items:center;gap:14px;flex-wrap:wrap">
         <div style="width:40px;height:40px;border-radius:50%;background:#3b82f6;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;flex-shrink:0">N</div>
