@@ -150,7 +150,7 @@ h1 span { color:var(--blue); }
     <button class="tab-btn active" onclick="switchTab('dashboard')">📊 Dashboard</button>
     <button class="tab-btn" onclick="switchTab('flagged')">🚩 Flagged Issues (80)</button>
     <button class="tab-btn" onclick="switchTab('urgent')">🚨 Top Urgent Issues (9)</button>
-    <button class="tab-btn" onclick="switchTab('daily-progress')">📈 Daily Progress (2✅ / 80 open)</button>
+    <button class="tab-btn" onclick="switchTab('daily-progress')">📈 Daily Progress (4✅ / 80 open)</button>
     <button class="tab-btn" onclick="switchTab('review-removal')">⭐ Review Removal</button>
     <button class="tab-btn" onclick="switchTab('closures')">✅ Yesterday's Closures (19)</button>
   </div>
@@ -1315,14 +1315,14 @@ h1 span { color:var(--blue); }
   <div id="tab-daily-progress" class="tab-content">
     <div style="background:var(--surface);border-radius:14px;padding:20px 24px;margin-bottom:20px;border:1px solid var(--surface2)">
       <div style="font-size:18px;font-weight:800;margin-bottom:6px">📈 Daily Progress vs Morning Baseline — 2026-04-18</div>
-      <div style="font-size:13px;color:var(--text2);margin-bottom:16px">Last updated 13:10 PST &middot; Baseline set at 5:00 AM PST</div>
+      <div style="font-size:13px;color:var(--text2);margin-bottom:16px">Last updated 8:38 PM PST &middot; Baseline set at 5:00 AM PST</div>
       <div style="display:flex;gap:20px;flex-wrap:wrap">
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
-          <div style="font-size:32px;font-weight:800;color:var(--text2)">26</div>
+          <div style="font-size:32px;font-weight:800;color:var(--text2)">30</div>
           <div style="font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.4px">Morning Baseline</div>
         </div>
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
-          <div style="font-size:32px;font-weight:800;color:var(--green)">2</div>
+          <div style="font-size:32px;font-weight:800;color:var(--green)">4</div>
           <div style="font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.4px">Resolved ✅</div>
         </div>
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
@@ -1330,24 +1330,24 @@ h1 span { color:var(--blue); }
           <div style="font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.4px">Still Open 🔓</div>
         </div>
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
-          <div style="font-size:32px;font-weight:800;color:var(--red)">8%</div>
+          <div style="font-size:32px;font-weight:800;color:var(--red)">13%</div>
           <div style="font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.4px">Day Progress</div>
         </div>
       </div>
     </div>
     <div style="background:var(--surface);border-radius:10px;padding:14px 20px;margin-bottom:24px;border:1px solid var(--surface2)">
       <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin-bottom:6px">
-        <span>Resolution progress</span><span style="font-weight:700;color:var(--text)">2/26 items closed</span>
+        <span>Resolution progress</span><span style="font-weight:700;color:var(--text)">4/30 items closed</span>
       </div>
       <div style="height:8px;background:var(--bg);border-radius:4px;overflow:hidden">
-        <div style="height:100%;width:8%;background:var(--green);border-radius:4px;transition:width .4s"></div>
+        <div style="height:100%;width:13%;background:var(--green);border-radius:4px;transition:width .4s"></div>
       </div>
     </div>
     <div style="background:var(--surface);border-radius:14px;padding:20px 24px;margin-bottom:24px;border:1px solid var(--surface2)">
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:14px">
         <div>
           <div style="font-size:16px;font-weight:800">📉 Per-VA Progress Trend</div>
-          <div style="font-size:12px;color:var(--text2)">Flagged items and Top Urgent issues per VA at each 3-hour check (4 snapshots)</div>
+          <div style="font-size:12px;color:var(--text2)">Flagged items and Top Urgent issues per VA at each 3-hour check (1 snapshot)</div>
         </div>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
@@ -1364,7 +1364,7 @@ h1 span { color:var(--blue); }
     <script>
     (function() {
       if (typeof Chart === "undefined") return;
-      const labels = ["10:09 AM", "1:09 PM", "4:09 PM", "7:09 PM"];
+      const labels = ["8:38 PM"];
       const commonOpts = {
         responsive: true,
         maintainAspectRatio: false,
@@ -1380,12 +1380,12 @@ h1 span { color:var(--blue); }
       };
       new Chart(document.getElementById("progressFlaggedChart"), {
         type: "line",
-        data: { labels: labels, datasets: [{"label": "Nicolas", "data": [12, 10, 8, 6], "borderColor": "#3b82f6", "backgroundColor": "#3b82f6", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Aislynn", "data": [5, 4, 3, 3], "borderColor": "#a855f7", "backgroundColor": "#a855f7", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Luna", "data": [4, 4, 2, 1], "borderColor": "#ec4899", "backgroundColor": "#ec4899", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Baptiste", "data": [3, 3, 2, 2], "borderColor": "#f97316", "backgroundColor": "#f97316", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}] },
+        data: { labels: labels, datasets: [{"label": "Nicolas", "data": [0], "borderColor": "#3b82f6", "backgroundColor": "#3b82f6", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Aislynn", "data": [6], "borderColor": "#a855f7", "backgroundColor": "#a855f7", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Luna", "data": [4], "borderColor": "#ec4899", "backgroundColor": "#ec4899", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Baptiste", "data": [16], "borderColor": "#f97316", "backgroundColor": "#f97316", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}] },
         options: commonOpts
       });
       new Chart(document.getElementById("progressUrgentChart"), {
         type: "line",
-        data: { labels: labels, datasets: [{"label": "Nicolas", "data": [3, 2, 2, 1], "borderColor": "#3b82f6", "backgroundColor": "#3b82f6", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Aislynn", "data": [1, 1, 0, 0], "borderColor": "#a855f7", "backgroundColor": "#a855f7", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Luna", "data": [0, 0, 0, 0], "borderColor": "#ec4899", "backgroundColor": "#ec4899", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Baptiste", "data": [1, 1, 1, 1], "borderColor": "#f97316", "backgroundColor": "#f97316", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}] },
+        data: { labels: labels, datasets: [{"label": "Nicolas", "data": [1], "borderColor": "#3b82f6", "backgroundColor": "#3b82f6", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Aislynn", "data": [4], "borderColor": "#a855f7", "backgroundColor": "#a855f7", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Luna", "data": [3], "borderColor": "#ec4899", "backgroundColor": "#ec4899", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Baptiste", "data": [0], "borderColor": "#f97316", "backgroundColor": "#f97316", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}] },
         options: commonOpts
       });
     })();
@@ -1424,15 +1424,15 @@ h1 span { color:var(--blue); }
         </div>
         <div style="margin-left:auto;display:flex;gap:16px;align-items:center">
           <div style="text-align:center">
-            <div style="font-size:22px;font-weight:800;color:var(--green)">2</div>
+            <div style="font-size:22px;font-weight:800;color:var(--green)">4</div>
             <div style="font-size:10px;color:var(--text2);text-transform:uppercase">Resolved</div>
           </div>
           <div style="text-align:center">
-            <div style="font-size:22px;font-weight:800;color:var(--red)">8</div>
+            <div style="font-size:22px;font-weight:800;color:var(--red)">7</div>
             <div style="font-size:10px;color:var(--text2);text-transform:uppercase">Still Open</div>
           </div>
           <div style="text-align:center">
-            <div style="font-size:22px;font-weight:800;color:var(--red)">20%</div>
+            <div style="font-size:22px;font-weight:800;color:var(--red)">40%</div>
             <div style="font-size:10px;color:var(--text2);text-transform:uppercase">Progress</div>
           </div>
         </div>
@@ -1449,22 +1449,25 @@ h1 span { color:var(--blue); }
           <span class="badge board" style="margin-left:6px">Reservation Issues</span>
           <div style='font-size:11px;color:var(--text2);margin-top:3px'>↳ Not an issue — guest confirmed arrival after 2:00 PM (Apr 18)</div>
         </div>
+        <div style="padding:8px 0;border-bottom:1px solid rgba(16,185,129,.15);font-size:13px">
+          <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11751034803" target="_blank" style="color:var(--green);text-decoration:none;font-weight:600">✅ Guest is currently sick and is allowing the A/C maintenance</a>
+          <span class="badge board" style="margin-left:6px">Maintenance Issues</span>
+          <div style='font-size:11px;color:var(--text2);margin-top:3px'>↳ Marked Completed at 2026-04-18T23:16:16Z (live check)</div>
+        </div>
+        <div style="padding:8px 0;border-bottom:1px solid rgba(16,185,129,.15);font-size:13px">
+          <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11441265547" target="_blank" style="color:var(--green);text-decoration:none;font-weight:600">✅ Angela reported that the cooking pans are dangerously old</a>
+          <span class="badge board" style="margin-left:6px">Bad Review Issues</span>
+          <div style='font-size:11px;color:var(--text2);margin-top:3px'>↳ Marked Complete at 2026-04-18T22:39 (Oksana installed pans today as promised)</div>
+        </div>
       </div>
       <div style="padding:12px 24px 16px">
-        <div style="font-size:13px;font-weight:700;color:var(--red);margin-bottom:8px">🔓 Still Open (8)</div>
+        <div style="font-size:13px;font-weight:700;color:var(--red);margin-bottom:8px">🔓 Still Open (7)</div>
         <div style="padding:8px 0;border-bottom:1px solid rgba(51,65,85,.5);font-size:13px">
           <div style="display:flex;align-items:flex-start;gap:6px;flex-wrap:wrap">
             <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11707895471" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500;flex:1;min-width:200px">🔓 Guest expressed that the bedding provided was of low quality</a>
             <span class="badge board">Maintenance Issues</span><span style="font-size:10px;font-weight:700;padding:1px 6px;border-radius:4px;background:rgba(239,68,68,.12);color:#ef4444;margin-left:4px">⚠️ Past Deadline</span>
           </div>
           <div style='font-size:11px;color:var(--text2);margin-top:3px;font-style:italic'>↳ @Aislynn — confirm if guest refund for purchased mattress pad/pillows is approved (Apr 16)</div>
-        </div>
-        <div style="padding:8px 0;border-bottom:1px solid rgba(51,65,85,.5);font-size:13px">
-          <div style="display:flex;align-items:flex-start;gap:6px;flex-wrap:wrap">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11751034803" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500;flex:1;min-width:200px">🔓 Guest is currently sick and is allowing the A/C maintenance</a>
-            <span class="badge board">Maintenance Issues</span><span style="font-size:10px;font-weight:700;padding:1px 6px;border-radius:4px;background:rgba(239,68,68,.12);color:#ef4444;margin-left:4px">⚠️ Past Deadline</span>
-          </div>
-          <div style='font-size:11px;color:var(--text2);margin-top:3px;font-style:italic'>↳ Visit scheduled for Friday Apr 17 with Russell at 11:00am (Apr 16)</div>
         </div>
         <div style="padding:8px 0;border-bottom:1px solid rgba(51,65,85,.5);font-size:13px">
           <div style="display:flex;align-items:flex-start;gap:6px;flex-wrap:wrap">
@@ -1515,7 +1518,7 @@ h1 span { color:var(--blue); }
         <div style="width:40px;height:40px;border-radius:50%;background:#ec4899;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;flex-shrink:0">L</div>
         <div>
           <div style="font-size:18px;font-weight:800;color:#ec4899">Luna</div>
-          <div style="font-size:12px;color:var(--text2)">1 flagged this morning &middot; Napa</div>
+          <div style="font-size:12px;color:var(--text2)">4 flagged this morning &middot; Napa</div>
         </div>
         <div style="margin-left:auto;display:flex;gap:16px;align-items:center">
           <div style="text-align:center">
@@ -1523,7 +1526,7 @@ h1 span { color:var(--blue); }
             <div style="font-size:10px;color:var(--text2);text-transform:uppercase">Resolved</div>
           </div>
           <div style="text-align:center">
-            <div style="font-size:22px;font-weight:800;color:var(--red)">1</div>
+            <div style="font-size:22px;font-weight:800;color:var(--red)">4</div>
             <div style="font-size:10px;color:var(--text2);text-transform:uppercase">Still Open</div>
           </div>
           <div style="text-align:center">
@@ -1533,13 +1536,34 @@ h1 span { color:var(--blue); }
         </div>
       </div>
       <div style="padding:12px 24px 16px">
-        <div style="font-size:13px;font-weight:700;color:var(--red);margin-bottom:8px">🔓 Still Open (1)</div>
+        <div style="font-size:13px;font-weight:700;color:var(--red);margin-bottom:8px">🔓 Still Open (4)</div>
         <div style="padding:8px 0;border-bottom:1px solid rgba(51,65,85,.5);font-size:13px">
           <div style="display:flex;align-items:flex-start;gap:6px;flex-wrap:wrap">
             <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11454955204" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500;flex:1;min-width:200px">🔓 Diamond reported lamp with broken cable, needs replacement</a>
             <span class="badge board">Maintenance Issues</span><span style="font-size:10px;font-weight:700;padding:1px 6px;border-radius:4px;background:rgba(239,68,68,.12);color:#ef4444;margin-left:4px">⚠️ Past Deadline</span>
           </div>
           <div style='font-size:11px;color:var(--text2);margin-top:3px;font-style:italic'>↳ Rescheduled to be removed Apr 18 (update posted today)</div>
+        </div>
+        <div style="padding:8px 0;border-bottom:1px solid rgba(51,65,85,.5);font-size:13px">
+          <div style="display:flex;align-items:flex-start;gap:6px;flex-wrap:wrap">
+            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11788069861" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500;flex:1;min-width:200px">🔓 The guest has arrived, but the unit is still being cleaned and is not ready for check-in.</a>
+            <span class="badge board">Cleaning Issues</span>
+          </div>
+          <div style='font-size:11px;color:var(--text2);margin-top:3px;font-style:italic'>↳ New issue synced from #guest-issues this cycle</div>
+        </div>
+        <div style="padding:8px 0;border-bottom:1px solid rgba(51,65,85,.5);font-size:13px">
+          <div style="display:flex;align-items:flex-start;gap:6px;flex-wrap:wrap">
+            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11787961794" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500;flex:1;min-width:200px">🔓 Kaylei is seeking a room closer to parking due to a recent injury.</a>
+            <span class="badge board">Reservation Issues</span>
+          </div>
+          <div style='font-size:11px;color:var(--text2);margin-top:3px;font-style:italic'>↳ New issue synced from #guest-issues this cycle</div>
+        </div>
+        <div style="padding:8px 0;border-bottom:1px solid rgba(51,65,85,.5);font-size:13px">
+          <div style="display:flex;align-items:flex-start;gap:6px;flex-wrap:wrap">
+            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11787973174" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500;flex:1;min-width:200px">🔓 The guest reports that the bathroom was not cleaned before their arrival.</a>
+            <span class="badge board">Cleaning Issues</span>
+          </div>
+          <div style='font-size:11px;color:var(--text2);margin-top:3px;font-style:italic'>↳ New issue synced from #guest-issues this cycle</div>
         </div>
       </div>
     </div>
@@ -1548,7 +1572,7 @@ h1 span { color:var(--blue); }
         <div style="width:40px;height:40px;border-radius:50%;background:#f97316;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;flex-shrink:0">B</div>
         <div>
           <div style="font-size:18px;font-weight:800;color:#f97316">Baptiste</div>
-          <div style="font-size:12px;color:var(--text2)">15 flagged this morning &middot; Miami, France</div>
+          <div style="font-size:12px;color:var(--text2)">16 flagged this morning &middot; Miami, France</div>
         </div>
         <div style="margin-left:auto;display:flex;gap:16px;align-items:center">
           <div style="text-align:center">
@@ -1556,7 +1580,7 @@ h1 span { color:var(--blue); }
             <div style="font-size:10px;color:var(--text2);text-transform:uppercase">Resolved</div>
           </div>
           <div style="text-align:center">
-            <div style="font-size:22px;font-weight:800;color:var(--red)">15</div>
+            <div style="font-size:22px;font-weight:800;color:var(--red)">16</div>
             <div style="font-size:10px;color:var(--text2);text-transform:uppercase">Still Open</div>
           </div>
           <div style="text-align:center">
@@ -1566,7 +1590,7 @@ h1 span { color:var(--blue); }
         </div>
       </div>
       <div style="padding:12px 24px 16px">
-        <div style="font-size:13px;font-weight:700;color:var(--red);margin-bottom:8px">🔓 Still Open (15)</div>
+        <div style="font-size:13px;font-weight:700;color:var(--red);margin-bottom:8px">🔓 Still Open (16)</div>
         <div style="padding:8px 0;border-bottom:1px solid rgba(51,65,85,.5);font-size:13px">
           <div style="display:flex;align-items:flex-start;gap:6px;flex-wrap:wrap">
             <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11723450827" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500;flex:1;min-width:200px">🔓 Change the camera battery</a>
@@ -1672,6 +1696,13 @@ h1 span { color:var(--blue); }
           </div>
           <div style='font-size:11px;color:var(--text2);margin-top:3px;font-style:italic'>↳ Auto-logged: Guest Hanna Friedrich requesting cleaning fee reduction for France - Rosiers (Apr 17)</div>
         </div>
+        <div style="padding:8px 0;border-bottom:1px solid rgba(51,65,85,.5);font-size:13px">
+          <div style="display:flex;align-items:flex-start;gap:6px;flex-wrap:wrap">
+            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11787969179" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500;flex:1;min-width:200px">🔓 The guest reported that the bed sheets were dirty upon arrival, with coffee stains and mak</a>
+            <span class="badge board">Cleaning Issues</span>
+          </div>
+          <div style='font-size:11px;color:var(--text2);margin-top:3px;font-style:italic'>↳ New issue synced from #guest-issues this cycle</div>
+        </div>
       </div>
     </div>
     <div style="background:var(--surface);border-radius:14px;margin-bottom:20px;overflow:hidden;border:1px solid rgba(239,68,68,.3)">
@@ -1708,18 +1739,6 @@ h1 span { color:var(--blue); }
           <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
             <div style="font-size:16px;font-weight:800;color:#ef4444;min-width:28px">#3</div>
             <div style="flex:1;min-width:200px">
-              <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11441265547" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🔴 Angela reported that the cooking pans are dangerously old</a>
-              <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
-              <span class="badge board" style="margin-left:4px">Bad Review Issues</span>
-              <span class="flagged-person person-aislynn" style="margin-left:4px">Aislynn</span>
-            </div>
-          </div>
-          <div style='font-size:11px;color:var(--text2);margin-top:4px;font-style:italic'>↳ Safety issue. New pans received by Oksana. Installation confirmed for today Apr 18 (check-out day). Deadline Apr 21.</div>
-        </div>
-        <div style="padding:10px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px">
-          <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
-            <div style="font-size:16px;font-weight:800;color:#ef4444;min-width:28px">#4</div>
-            <div style="flex:1;min-width:200px">
               <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11533925188" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🔴 URGENT Repair for Leak Damage – Unit P109 reported by Justin church</a>
               <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
               <span class="badge board" style="margin-left:4px">Maintenance Issues</span>
@@ -1730,7 +1749,7 @@ h1 span { color:var(--blue); }
         </div>
         <div style="padding:10px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px">
           <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
-            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#5</div>
+            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#4</div>
             <div style="flex:1;min-width:200px">
               <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11674288607" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 Schedule mold remediation company for 489 (bathroom)</a>
               <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
@@ -1742,7 +1761,7 @@ h1 span { color:var(--blue); }
         </div>
         <div style="padding:10px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px">
           <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
-            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#6</div>
+            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#5</div>
             <div style="flex:1;min-width:200px">
               <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11455302031" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 Jane reported that the advertising photos made the apartment appear better than reality</a>
               <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
@@ -1754,7 +1773,7 @@ h1 span { color:var(--blue); }
         </div>
         <div style="padding:10px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px">
           <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
-            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#7</div>
+            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#6</div>
             <div style="flex:1;min-width:200px">
               <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11551717990" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 Kevin reported that the property is not as nice as it was advertised.</a>
               <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
@@ -1766,7 +1785,7 @@ h1 span { color:var(--blue); }
         </div>
         <div style="padding:10px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px">
           <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
-            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#8</div>
+            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#7</div>
             <div style="flex:1;min-width:200px">
               <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11562309397" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 Sabrena reported Listing says it has a washer and dryer but it did not</a>
               <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
@@ -1778,7 +1797,7 @@ h1 span { color:var(--blue); }
         </div>
         <div style="padding:10px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px">
           <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
-            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#9</div>
+            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#8</div>
             <div style="flex:1;min-width:200px">
               <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11635551926" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 Walter reported the listing fails to mention golf course guest privileges</a>
               <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
