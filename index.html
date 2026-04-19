@@ -172,10 +172,10 @@ h1 span { color:var(--blue); }
         <div class="change-card-name" style="color:#3b82f6">Nicolas</div>
         <div class="change-card-alert" style="background:rgba(16,185,129,.12);color:#10b981">IMPROVING</div>
         <div class="change-card-metrics">
-          Composite: <span class="val">92.5</span> → <span class="val">98.2</span> <span class="delta delta-good">↑5.7</span><br>
+          Composite: <span class="val">92.5</span> → <span class="val">96.7</span> <span class="delta delta-good">↑4.2</span><br>
           Health: <span class="val">100</span> <span class="delta flat">—</span><br>
           Rate: <span class="val">75%</span> → <span class="val">94%</span> <span class="delta delta-good">↑19%</span><br>
-          Flagged: <span class="val">0</span> <span class="delta flat">—</span>
+          Flagged: <span class="val">0</span> → <span class="val">1</span> <span class="delta delta-bad">↑1</span>
         </div>
       </div>
       <div class="change-card" style="border-left-color:#f59e0b">
@@ -215,8 +215,8 @@ h1 span { color:var(--blue); }
     <div class="podium-card" style="border-color:#fbbf24">
       <div class="podium-medal" style="background:rgba(251,191,36,0.12);color:#fbbf24">🥇 Gold</div>
       <div class="podium-name" style="color:#3b82f6">🥇 Nicolas</div>
-      <div class="podium-score">98.2<span class="podium-score-label">pts</span></div>
-      <div class="podium-breakdown">Health 100 &middot; Rate 94% &middot; Flagged 0</div>
+      <div class="podium-score">96.7<span class="podium-score-label">pts</span></div>
+      <div class="podium-breakdown">Health 100 &middot; Rate 94% &middot; Flagged 1</div>
     </div>
     <div class="podium-card" style="border-color:#94a3b8">
       <div class="podium-medal" style="background:rgba(148,163,184,0.12);color:#94a3b8">🥈 Silver</div>
@@ -241,7 +241,7 @@ h1 span { color:var(--blue); }
   <div class="summary-bar">
     <div class="summary-item"><div class="summary-val" style="color:var(--yellow)">147</div><div class="summary-lbl">Open Issues</div></div>
     <div class="summary-item"><div class="summary-val" style="color:var(--green)">591</div><div class="summary-lbl">Closed Issues</div></div>
-    <div class="summary-item"><div class="summary-val" style="color:var(--red)">72</div><div class="summary-lbl">Total Flagged</div></div>
+    <div class="summary-item"><div class="summary-val" style="color:var(--red)">73</div><div class="summary-lbl">Total Flagged</div></div>
     <div class="summary-item"><div class="summary-val" style="color:var(--green)">21</div><div class="summary-lbl">Completed (Apr 17)</div></div>
   </div>
 
@@ -251,7 +251,7 @@ h1 span { color:var(--blue); }
           <div class="va-avatar" style="background:#3b82f6">N</div>
           <div>
             <h2 class="va-name" style="color:#3b82f6">🥇 Nicolas</h2>
-            <div class="va-subtitle">287 total items &middot; Composite: 98.2 pts</div>
+            <div class="va-subtitle">287 total items &middot; Composite: 96.7 pts</div>
           </div>
         </div>
         <div class="va-kpis">
@@ -263,7 +263,7 @@ h1 span { color:var(--blue); }
           <div class="kpi-col" title="Items currently open"><span class="kpi-val" style="color:#f59e0b">16</span><span class="kpi-lbl">Open</span><span class="delta delta-good">↓11</span></div>
           <div class="kpi-col" title="Items marked Complete/Completed"><span class="kpi-val" style="color:#10b981">271</span><span class="kpi-lbl">Closed</span><span class="delta delta-good">↑189</span></div>
           <div class="kpi-col" title="Completion Rate = Closed &divide; Total"><span class="kpi-val" style="color:#3b82f6">94%</span><span class="kpi-lbl">Rate</span><span class="delta delta-good">↑19</span></div>
-          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">0</span><span class="kpi-lbl">Flagged</span><span class="delta flat">—</span></div>
+          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">1</span><span class="kpi-lbl">Flagged</span><span class="delta delta-bad">↑1</span></div>
           <div class="kpi-col" title="Items with Needs Review or No Status"><span class="kpi-val" style="color:#a855f7">0</span><span class="kpi-lbl">Review / No Status</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Open bad review issues assigned"><span class="kpi-val" style="color:#ec4899">0</span><span class="kpi-lbl">Bad Reviews</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Average days to complete closed items"><span class="kpi-val" style="color:#06b6d4">0d</span><span class="kpi-lbl">Avg Complete</span><span class="delta flat">—</span></div>
@@ -278,7 +278,7 @@ h1 span { color:var(--blue); }
       <tr><td class="metric-label">Open</td><td class="cell-metric">27</td><td class="cell-metric">16</td><td><span class="delta delta-good">↓11</span></td></tr>
       <tr><td class="metric-label">Closed</td><td class="cell-metric">82</td><td class="cell-metric">271</td><td><span class="delta delta-good">↑189</span></td></tr>
       <tr><td class="metric-label">Rate</td><td class="cell-metric">75%</td><td class="cell-metric">94%</td><td><span class="delta delta-good">↑19%</span></td></tr>
-      <tr><td class="metric-label">Flagged</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
+      <tr><td class="metric-label">Flagged</td><td class="cell-metric">0</td><td class="cell-metric">1</td><td><span class="delta delta-bad">↑1</span></td></tr>
       <tr><td class="metric-label">Completed (Day)</td><td class="cell-metric">21</td><td class="cell-metric">11</td><td><span class="delta delta-bad">↓10</span></td></tr>
       <tr><td class="metric-label">Review / No Status</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
       <tr><td class="metric-label">Bad Reviews Open</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
