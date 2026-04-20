@@ -143,16 +143,16 @@ h1 span { color:var(--blue); }
 <div class="container">
   <header>
     <h1><span>Bijou Getaways</span> &mdash; VA Performance Dashboard</h1>
-    <div class="header-meta">4 boards scanned &middot; 3 VAs &middot; Generated 2026-04-20 &middot; Ledger: 26 days (2026-03-25 to 2026-04-20)</div>
+    <div class="header-meta">4 boards scanned &middot; 4 VAs &middot; Generated 2026-04-20 &middot; Ledger: 26 days (2026-03-25 to 2026-04-20)</div>
   </header>
 
   <div class="tab-bar">
     <button class="tab-btn active" onclick="switchTab('dashboard')">📊 Dashboard</button>
     <button class="tab-btn" onclick="switchTab('flagged')">🚩 Flagged Issues (93)</button>
     <button class="tab-btn" onclick="switchTab('urgent')">🚨 Top Urgent Issues (8)</button>
-    <button class="tab-btn" onclick="switchTab('daily-progress')">📈 Daily Progress (0✅ / 93 open)</button>
+    <button class="tab-btn" onclick="switchTab('daily-progress')">📈 Daily Progress (4✅ / 93 open)</button>
     <button class="tab-btn" onclick="switchTab('review-removal')">⭐ Review Removal</button>
-    <button class="tab-btn" onclick="switchTab('closures')">✅ Yesterday's Closures (19)</button>
+    <button class="tab-btn" onclick="switchTab('closures')">✅ Yesterday's Closures (4)</button>
   </div>
 
   <div id="tab-dashboard" class="tab-content active">
@@ -1320,7 +1320,7 @@ h1 span { color:var(--blue); }
           <div style="font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.4px">Morning Baseline</div>
         </div>
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
-          <div style="font-size:32px;font-weight:800;color:var(--green)">0</div>
+          <div style="font-size:32px;font-weight:800;color:var(--green)">4</div>
           <div style="font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.4px">Resolved ✅</div>
         </div>
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
@@ -1335,7 +1335,7 @@ h1 span { color:var(--blue); }
     </div>
     <div style="background:var(--surface);border-radius:10px;padding:14px 20px;margin-bottom:24px;border:1px solid var(--surface2)">
       <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin-bottom:6px">
-        <span>Resolution progress</span><span style="font-weight:700;color:var(--text)">0/0 items closed</span>
+        <span>Resolution progress</span><span style="font-weight:700;color:var(--text)">4/0 items closed</span>
       </div>
       <div style="height:8px;background:var(--bg);border-radius:4px;overflow:hidden">
         <div style="height:100%;width:0%;background:var(--green);border-radius:4px;transition:width .4s"></div>
@@ -1393,12 +1393,12 @@ h1 span { color:var(--blue); }
   <div id="tab-closures" class="tab-content">
     <div style="margin-bottom:20px">
       <h2 style="font-size:22px;font-weight:700;margin-bottom:6px">✅ Yesterday's Closures</h2>
-      <p style="color:var(--text2);font-size:13px">Items closed on <b>Apr 13</b> that were previously flagged (health check, pushers, zero-update) or listed in the Top Urgent Issues tab. Tracks whether VAs are working through their backlog.</p>
+      <p style="color:var(--text2);font-size:13px">Items closed on <b>Apr 20</b> that were previously flagged (health check, pushers, zero-update) or listed in the Top Urgent Issues tab. Tracks whether VAs are working through their backlog.</p>
     </div>
     <div class="flagged-summary" style="margin-bottom:24px">
-      <div class="flagged-summary-card" style="border-left-color:#3b82f6"><div class="flagged-summary-count" style="color:#3b82f6">13</div><div class="flagged-summary-label">Nicolás (🚩13 flagged · 🚨0 urgent)</div></div>
-      <div class="flagged-summary-card" style="border-left-color:#a855f7"><div class="flagged-summary-count" style="color:#a855f7">5</div><div class="flagged-summary-label">Aislynn (🚩5 flagged · 🚨0 urgent)</div></div>
-      <div class="flagged-summary-card" style="border-left-color:#ec4899"><div class="flagged-summary-count" style="color:#ec4899">1</div><div class="flagged-summary-label">Luna (🚩1 flagged · 🚨0 urgent)</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#3b82f6"><div class="flagged-summary-count" style="color:#3b82f6">1</div><div class="flagged-summary-label">Nicolás (🚩1 flagged · 🚨0 urgent)</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#a855f7"><div class="flagged-summary-count" style="color:#a855f7">2</div><div class="flagged-summary-label">Aislynn (🚩0 flagged · 🚨2 urgent)</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#ec4899"><div class="flagged-summary-count" style="color:#ec4899">1</div><div class="flagged-summary-label">Luna (🚩0 flagged · 🚨1 urgent)</div></div>
       <div class="flagged-summary-card" style="border-left-color:#f97316"><div class="flagged-summary-count" style="color:#f97316">0</div><div class="flagged-summary-label">Baptiste (🚩0 flagged · 🚨0 urgent)</div></div>
     </div>
 
@@ -1406,140 +1406,6 @@ h1 span { color:var(--blue); }
       <div class="va-flagged-header" style="border-left:none">
         <div class="va-avatar" style="background:#3b82f6">N</div>
         <div class="va-flagged-name" style="color:#3b82f6">Nicolás</div>
-        <div class="va-flagged-total">13 closed yesterday</div>
-        <div class="va-cat-badges" style="margin-left:auto">
-          <span class="va-cat-badge" style="color:#ef4444">🚩 13 flagged closed</span>
-          <span class="va-cat-badge" style="color:#f59e0b">🚨 0 urgent closed</span>
-        </div>
-      </div>
-      <div style="padding:0 24px 16px">
-        <div class="sub-label" style="margin-top:12px;font-size:13px;color:#ef4444">🚩 Flagged Issues Closed (13)</div>
-        <table style="width:100%;border-collapse:collapse;font-size:12.5px;margin-top:6px">
-          <thead><tr style="text-align:left;color:var(--text2);font-size:11px;text-transform:uppercase;letter-spacing:.3px;background:rgba(239,68,68,.06)">
-            <th style="padding:7px 10px">Item</th><th style="padding:7px 10px">Board</th><th style="padding:7px 10px">Was Flagged For</th>
-          </tr></thead>
-          <tbody>
-            <tr style="border-top:1px solid rgba(239,68,68,.15)">
-              <td style="padding:8px 10px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11728777049" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">Black mold remediation</a></td>
-              <td style="padding:8px 10px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
-              <td style="padding:8px 10px;color:#f59e0b;font-size:11.5px">flagged</td>
-            </tr>
-            <tr style="border-top:1px solid rgba(239,68,68,.15)">
-              <td style="padding:8px 10px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11676227083" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">Laundry machine offline</a></td>
-              <td style="padding:8px 10px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
-              <td style="padding:8px 10px;color:#f59e0b;font-size:11.5px">flagged</td>
-            </tr>
-            <tr style="border-top:1px solid rgba(239,68,68,.15)">
-              <td style="padding:8px 10px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11729089333" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">Securing loose item</a></td>
-              <td style="padding:8px 10px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
-              <td style="padding:8px 10px;color:#f59e0b;font-size:11.5px">flagged</td>
-            </tr>
-            <tr style="border-top:1px solid rgba(239,68,68,.15)">
-              <td style="padding:8px 10px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11734209146" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">Water issue unit #6</a></td>
-              <td style="padding:8px 10px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
-              <td style="padding:8px 10px;color:#f59e0b;font-size:11.5px">flagged</td>
-            </tr>
-            <tr style="border-top:1px solid rgba(239,68,68,.15)">
-              <td style="padding:8px 10px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11734203744" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">Water issue unit #5</a></td>
-              <td style="padding:8px 10px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
-              <td style="padding:8px 10px;color:#f59e0b;font-size:11.5px">flagged</td>
-            </tr>
-            <tr style="border-top:1px solid rgba(239,68,68,.15)">
-              <td style="padding:8px 10px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11739760256" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">Ceiling fan blade</a></td>
-              <td style="padding:8px 10px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
-              <td style="padding:8px 10px;color:#f59e0b;font-size:11.5px">flagged</td>
-            </tr>
-            <tr style="border-top:1px solid rgba(239,68,68,.15)">
-              <td style="padding:8px 10px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11729057560" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">Screen door lock repair</a></td>
-              <td style="padding:8px 10px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
-              <td style="padding:8px 10px;color:#f59e0b;font-size:11.5px">flagged</td>
-            </tr>
-            <tr style="border-top:1px solid rgba(239,68,68,.15)">
-              <td style="padding:8px 10px"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11666320755" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">Purchasing additional towels</a></td>
-              <td style="padding:8px 10px;color:var(--text2);font-size:11.5px">Cleaning Issues</td>
-              <td style="padding:8px 10px;color:#f59e0b;font-size:11.5px">flagged</td>
-            </tr>
-            <tr style="border-top:1px solid rgba(239,68,68,.15)">
-              <td style="padding:8px 10px"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11710976312" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">Stained sheets replaced</a></td>
-              <td style="padding:8px 10px;color:var(--text2);font-size:11.5px">Cleaning Issues</td>
-              <td style="padding:8px 10px;color:#f59e0b;font-size:11.5px">flagged</td>
-            </tr>
-            <tr style="border-top:1px solid rgba(239,68,68,.15)">
-              <td style="padding:8px 10px"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11675552958" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">Clean tiles</a></td>
-              <td style="padding:8px 10px;color:var(--text2);font-size:11.5px">Cleaning Issues</td>
-              <td style="padding:8px 10px;color:#f59e0b;font-size:11.5px">flagged</td>
-            </tr>
-            <tr style="border-top:1px solid rgba(239,68,68,.15)">
-              <td style="padding:8px 10px"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11671292425" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">Videos documentation</a></td>
-              <td style="padding:8px 10px;color:var(--text2);font-size:11.5px">Cleaning Issues</td>
-              <td style="padding:8px 10px;color:#f59e0b;font-size:11.5px">flagged</td>
-            </tr>
-            <tr style="border-top:1px solid rgba(239,68,68,.15)">
-              <td style="padding:8px 10px"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11671292387" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">Dispenser inventory check</a></td>
-              <td style="padding:8px 10px;color:var(--text2);font-size:11.5px">Cleaning Issues</td>
-              <td style="padding:8px 10px;color:#f59e0b;font-size:11.5px">flagged</td>
-            </tr>
-            <tr style="border-top:1px solid rgba(239,68,68,.15)">
-              <td style="padding:8px 10px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11673819280" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">Wm Jeffrey Timmons Issue</a></td>
-              <td style="padding:8px 10px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
-              <td style="padding:8px 10px;color:#f59e0b;font-size:11.5px">flagged</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="va-flagged-section" style="border-left:4px solid #a855f7">
-      <div class="va-flagged-header" style="border-left:none">
-        <div class="va-avatar" style="background:#a855f7">A</div>
-        <div class="va-flagged-name" style="color:#a855f7">Aislynn</div>
-        <div class="va-flagged-total">5 closed yesterday</div>
-        <div class="va-cat-badges" style="margin-left:auto">
-          <span class="va-cat-badge" style="color:#ef4444">🚩 5 flagged closed</span>
-          <span class="va-cat-badge" style="color:#f59e0b">🚨 0 urgent closed</span>
-        </div>
-      </div>
-      <div style="padding:0 24px 16px">
-        <div class="sub-label" style="margin-top:12px;font-size:13px;color:#ef4444">🚩 Flagged Issues Closed (5)</div>
-        <table style="width:100%;border-collapse:collapse;font-size:12.5px;margin-top:6px">
-          <thead><tr style="text-align:left;color:var(--text2);font-size:11px;text-transform:uppercase;letter-spacing:.3px;background:rgba(239,68,68,.06)">
-            <th style="padding:7px 10px">Item</th><th style="padding:7px 10px">Board</th><th style="padding:7px 10px">Was Flagged For</th>
-          </tr></thead>
-          <tbody>
-            <tr style="border-top:1px solid rgba(239,68,68,.15)">
-              <td style="padding:8px 10px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11707871782" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">Dishwasher repair</a></td>
-              <td style="padding:8px 10px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
-              <td style="padding:8px 10px;color:#f59e0b;font-size:11.5px">flagged</td>
-            </tr>
-            <tr style="border-top:1px solid rgba(239,68,68,.15)">
-              <td style="padding:8px 10px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11674075630" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">Q401 pest control</a></td>
-              <td style="padding:8px 10px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
-              <td style="padding:8px 10px;color:#f59e0b;font-size:11.5px">flagged</td>
-            </tr>
-            <tr style="border-top:1px solid rgba(239,68,68,.15)">
-              <td style="padding:8px 10px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11729805327" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">Cot request fulfilled</a></td>
-              <td style="padding:8px 10px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
-              <td style="padding:8px 10px;color:#f59e0b;font-size:11.5px">❌ Missing timeline</td>
-            </tr>
-            <tr style="border-top:1px solid rgba(239,68,68,.15)">
-              <td style="padding:8px 10px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11730079283" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">Shampoo request fulfilled</a></td>
-              <td style="padding:8px 10px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
-              <td style="padding:8px 10px;color:#f59e0b;font-size:11.5px">❌ Missing timeline</td>
-            </tr>
-            <tr style="border-top:1px solid rgba(239,68,68,.15)">
-              <td style="padding:8px 10px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11739862891" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">Toilet tissue request fulfilled</a></td>
-              <td style="padding:8px 10px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
-              <td style="padding:8px 10px;color:#f59e0b;font-size:11.5px">flagged</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="va-flagged-section" style="border-left:4px solid #ec4899">
-      <div class="va-flagged-header" style="border-left:none">
-        <div class="va-avatar" style="background:#ec4899">L</div>
-        <div class="va-flagged-name" style="color:#ec4899">Luna</div>
         <div class="va-flagged-total">1 closed yesterday</div>
         <div class="va-cat-badges" style="margin-left:auto">
           <span class="va-cat-badge" style="color:#ef4444">🚩 1 flagged closed</span>
@@ -1554,9 +1420,68 @@ h1 span { color:var(--blue); }
           </tr></thead>
           <tbody>
             <tr style="border-top:1px solid rgba(239,68,68,.15)">
-              <td style="padding:8px 10px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11728777049" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">Black mold remediation</a></td>
+              <td style="padding:8px 10px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11791911125" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">CAMERA Offline</a></td>
               <td style="padding:8px 10px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
               <td style="padding:8px 10px;color:#f59e0b;font-size:11.5px">flagged</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="va-flagged-section" style="border-left:4px solid #a855f7">
+      <div class="va-flagged-header" style="border-left:none">
+        <div class="va-avatar" style="background:#a855f7">A</div>
+        <div class="va-flagged-name" style="color:#a855f7">Aislynn</div>
+        <div class="va-flagged-total">2 closed yesterday</div>
+        <div class="va-cat-badges" style="margin-left:auto">
+          <span class="va-cat-badge" style="color:#ef4444">🚩 0 flagged closed</span>
+          <span class="va-cat-badge" style="color:#f59e0b">🚨 2 urgent closed</span>
+        </div>
+      </div>
+      <div style="padding:0 24px 16px">
+        <div class="sub-label" style="margin-top:16px;font-size:13px;color:#f59e0b">🚨 Top Urgent Issues Closed (2)</div>
+        <table style="width:100%;border-collapse:collapse;font-size:12.5px;margin-top:6px">
+          <thead><tr style="text-align:left;color:var(--text2);font-size:11px;text-transform:uppercase;letter-spacing:.3px;background:rgba(245,158,11,.06)">
+            <th style="padding:7px 10px;width:70px">Score</th><th style="padding:7px 10px">Item</th><th style="padding:7px 10px">Board</th>
+          </tr></thead>
+          <tbody>
+            <tr style="border-top:1px solid rgba(245,158,11,.15)">
+              <td style="padding:8px 10px;font-size:18px;font-weight:800;color:#ef4444;text-align:center">99</td>
+              <td style="padding:8px 10px"><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11551717990" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">Kevin reported that the property is not as nice as it was advertised.</a></td>
+              <td style="padding:8px 10px;color:var(--text2);font-size:11.5px">Bad Review Issues</td>
+            </tr>
+            <tr style="border-top:1px solid rgba(245,158,11,.15)">
+              <td style="padding:8px 10px;font-size:18px;font-weight:800;color:#ef4444;text-align:center">99</td>
+              <td style="padding:8px 10px"><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11455302031" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">Jane reported that the advertising photos made the apartment appear significantl</a></td>
+              <td style="padding:8px 10px;color:var(--text2);font-size:11.5px">Bad Review Issues</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="va-flagged-section" style="border-left:4px solid #ec4899">
+      <div class="va-flagged-header" style="border-left:none">
+        <div class="va-avatar" style="background:#ec4899">L</div>
+        <div class="va-flagged-name" style="color:#ec4899">Luna</div>
+        <div class="va-flagged-total">1 closed yesterday</div>
+        <div class="va-cat-badges" style="margin-left:auto">
+          <span class="va-cat-badge" style="color:#ef4444">🚩 0 flagged closed</span>
+          <span class="va-cat-badge" style="color:#f59e0b">🚨 1 urgent closed</span>
+        </div>
+      </div>
+      <div style="padding:0 24px 16px">
+        <div class="sub-label" style="margin-top:16px;font-size:13px;color:#f59e0b">🚨 Top Urgent Issues Closed (1)</div>
+        <table style="width:100%;border-collapse:collapse;font-size:12.5px;margin-top:6px">
+          <thead><tr style="text-align:left;color:var(--text2);font-size:11px;text-transform:uppercase;letter-spacing:.3px;background:rgba(245,158,11,.06)">
+            <th style="padding:7px 10px;width:70px">Score</th><th style="padding:7px 10px">Item</th><th style="padding:7px 10px">Board</th>
+          </tr></thead>
+          <tbody>
+            <tr style="border-top:1px solid rgba(245,158,11,.15)">
+              <td style="padding:8px 10px;font-size:18px;font-weight:800;color:#ef4444;text-align:center">99</td>
+              <td style="padding:8px 10px"><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11562309397" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">Sabrena reported Listing says it has a washer and dryer but it did not</a></td>
+              <td style="padding:8px 10px;color:var(--text2);font-size:11.5px">Bad Review Issues</td>
             </tr>
           </tbody>
         </table>
