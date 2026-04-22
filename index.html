@@ -1189,10 +1189,10 @@ h1 span { color:var(--blue); }
   <div id="tab-daily-progress" class="tab-content">
     <div style="background:var(--surface);border-radius:14px;padding:20px 24px;margin-bottom:20px;border:1px solid var(--surface2)">
       <div style="font-size:18px;font-weight:800;margin-bottom:6px">📈 Daily Progress vs Morning Baseline — 2026-04-21</div>
-      <div style="font-size:13px;color:var(--text2);margin-bottom:16px">Last updated 2026-04-21T17:15:00Z &middot; Baseline set at 5:00 AM PST</div>
+      <div style="font-size:13px;color:var(--text2);margin-bottom:16px">Last updated 2026-04-21T20:28:00-07:00 &middot; Baseline set at 5:00 AM PST</div>
       <div style="display:flex;gap:20px;flex-wrap:wrap">
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
-          <div style="font-size:32px;font-weight:800;color:var(--text2)">52</div>
+          <div style="font-size:32px;font-weight:800;color:var(--text2)">0</div>
           <div style="font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.4px">Morning Baseline</div>
         </div>
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
@@ -1211,7 +1211,7 @@ h1 span { color:var(--blue); }
     </div>
     <div style="background:var(--surface);border-radius:10px;padding:14px 20px;margin-bottom:24px;border:1px solid var(--surface2)">
       <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin-bottom:6px">
-        <span>Resolution progress</span><span style="font-weight:700;color:var(--text)">0/52 items closed</span>
+        <span>Resolution progress</span><span style="font-weight:700;color:var(--text)">0/0 items closed</span>
       </div>
       <div style="height:8px;background:var(--bg);border-radius:4px;overflow:hidden">
         <div style="height:100%;width:0%;background:var(--green);border-radius:4px;transition:width .4s"></div>
@@ -1221,7 +1221,7 @@ h1 span { color:var(--blue); }
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:14px">
         <div>
           <div style="font-size:16px;font-weight:800">📉 Per-VA Progress Trend</div>
-          <div style="font-size:12px;color:var(--text2)">Flagged items and Top Urgent issues per VA at each 3-hour check (1 snapshot)</div>
+          <div style="font-size:12px;color:var(--text2)">Flagged items and Top Urgent issues per VA at each 3-hour check (2 snapshots)</div>
         </div>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
@@ -1238,7 +1238,7 @@ h1 span { color:var(--blue); }
     <script>
     (function() {
       if (typeof Chart === "undefined") return;
-      const labels = ["10:15 AM"];
+      const labels = ["10:15 AM", "8:28 PM"];
       const commonOpts = {
         responsive: true,
         maintainAspectRatio: false,
@@ -1254,12 +1254,12 @@ h1 span { color:var(--blue); }
       };
       new Chart(document.getElementById("progressFlaggedChart"), {
         type: "line",
-        data: { labels: labels, datasets: [{"label": "Nicolas", "data": [5], "borderColor": "#3b82f6", "backgroundColor": "#3b82f6", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Aislynn", "data": [9], "borderColor": "#a855f7", "backgroundColor": "#a855f7", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Luna", "data": [27], "borderColor": "#ec4899", "backgroundColor": "#ec4899", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Baptiste", "data": [11], "borderColor": "#f97316", "backgroundColor": "#f97316", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}] },
+        data: { labels: labels, datasets: [{"label": "Nicolas", "data": [5, 1], "borderColor": "#3b82f6", "backgroundColor": "#3b82f6", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Aislynn", "data": [9, 1], "borderColor": "#a855f7", "backgroundColor": "#a855f7", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Luna", "data": [27, 0], "borderColor": "#ec4899", "backgroundColor": "#ec4899", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Baptiste", "data": [11, 0], "borderColor": "#f97316", "backgroundColor": "#f97316", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}] },
         options: commonOpts
       });
       new Chart(document.getElementById("progressUrgentChart"), {
         type: "line",
-        data: { labels: labels, datasets: [{"label": "Nicolas", "data": [3], "borderColor": "#3b82f6", "backgroundColor": "#3b82f6", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Aislynn", "data": [2], "borderColor": "#a855f7", "backgroundColor": "#a855f7", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Luna", "data": [1], "borderColor": "#ec4899", "backgroundColor": "#ec4899", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Baptiste", "data": [1], "borderColor": "#f97316", "backgroundColor": "#f97316", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}] },
+        data: { labels: labels, datasets: [{"label": "Nicolas", "data": [3, 4], "borderColor": "#3b82f6", "backgroundColor": "#3b82f6", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Aislynn", "data": [2, 1], "borderColor": "#a855f7", "backgroundColor": "#a855f7", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Luna", "data": [1, 1], "borderColor": "#ec4899", "backgroundColor": "#ec4899", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Baptiste", "data": [1, 0], "borderColor": "#f97316", "backgroundColor": "#f97316", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}] },
         options: commonOpts
       });
     })();
@@ -1275,7 +1275,7 @@ h1 span { color:var(--blue); }
           <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
             <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#1</div>
             <div style="flex:1;min-width:200px">
-              <a href="https://bijougetaways.monday.com/boards/18401058709" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 Hawaii P109 — Full Property Mold & Disrepair Cluster (8 open items + guest left on arrival</a>
+              <a href="#" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 Hawaii P109 — Mold & Disrepair Cluster (3 items still open)</a>
               <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
               <span class="badge board" style="margin-left:4px"></span>
               <span class="flagged-person person-aislynn" style="margin-left:4px">Aislynn</span>
@@ -1287,10 +1287,10 @@ h1 span { color:var(--blue); }
           <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
             <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#2</div>
             <div style="flex:1;min-width:200px">
-              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11806553912" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 Hawaii G110A — Recurring Electricity Loss (confirmed recurring — new item Apr 21)</a>
+              <a href="#" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 USVI Villa — Deck Structural Failure + Foundation (4 items, deadline May 4)</a>
               <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
               <span class="badge board" style="margin-left:4px"></span>
-              <span class="flagged-person person-aislynn" style="margin-left:4px">Aislynn</span>
+              <span class="flagged-person person-nicolas" style="margin-left:4px">Nicolas</span>
             </div>
           </div>
           
@@ -1299,7 +1299,7 @@ h1 span { color:var(--blue); }
           <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
             <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#3</div>
             <div style="flex:1;min-width:200px">
-              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11560062730" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 USVI Villa — Deck Structural Failure + Foundation (4 items, liability risk)</a>
+              <a href="#" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 USVI #1 — $4,700 Chargeback OVERDUE + Property Disrepair</a>
               <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
               <span class="badge board" style="margin-left:4px"></span>
               <span class="flagged-person person-nicolas" style="margin-left:4px">Nicolas</span>
@@ -1311,7 +1311,7 @@ h1 span { color:var(--blue); }
           <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
             <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#4</div>
             <div style="flex:1;min-width:200px">
-              <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11666731004" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 USVI #1 — $4,700 Chargeback OVERDUE + Property Disrepair + Listing Mismatch</a>
+              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11774235241" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 USVI #3 — Sliding Glass Door Lock Broken (deadline TOMORROW Apr 23)</a>
               <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
               <span class="badge board" style="margin-left:4px"></span>
               <span class="flagged-person person-nicolas" style="margin-left:4px">Nicolas</span>
@@ -1323,7 +1323,7 @@ h1 span { color:var(--blue); }
           <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
             <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#5</div>
             <div style="flex:1;min-width:200px">
-              <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11808193415" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 USVI #5 — NEW: Mold in 2nd Bedroom & Bathroom (current guest Shannon DeNoble)</a>
+              <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11674331278" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 USVI — Listing 'Walk to Cruz Bay' Over Dangerous Road (deadline TODAY Apr 22)</a>
               <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
               <span class="badge board" style="margin-left:4px"></span>
               <span class="flagged-person person-nicolas" style="margin-left:4px">Nicolas</span>
@@ -1347,10 +1347,22 @@ h1 span { color:var(--blue); }
           <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
             <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#7</div>
             <div style="flex:1;min-width:200px">
-              <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11785395395" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 France VF — Only 1 Towel (current guest, near-certain bad review)</a>
+              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11771718688" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 USVI Unit #7 — Smoke Detector Battery Missing (deadline Apr 24)</a>
               <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
               <span class="badge board" style="margin-left:4px"></span>
-              <span class="flagged-person person-baptiste" style="margin-left:4px">Baptiste</span>
+              <span class="flagged-person person-nicolas" style="margin-left:4px">Nicolas</span>
+            </div>
+          </div>
+          
+        </div>
+        <div style="padding:10px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px">
+          <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
+            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#8</div>
+            <div style="flex:1;min-width:200px">
+              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11682582022" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 USVI — Tesla Quote + Meter Readings (extended to Apr 27)</a>
+              <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
+              <span class="badge board" style="margin-left:4px"></span>
+              <span class="flagged-person person-nicolas" style="margin-left:4px">Nicolas</span>
             </div>
           </div>
           
