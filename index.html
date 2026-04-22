@@ -148,9 +148,9 @@ h1 span { color:var(--blue); }
 
   <div class="tab-bar">
     <button class="tab-btn active" onclick="switchTab('dashboard')">📊 Dashboard</button>
-    <button class="tab-btn" onclick="switchTab('flagged')">🚩 Flagged Issues (20)</button>
-    <button class="tab-btn" onclick="switchTab('urgent')">🚨 Top Urgent Issues (10)</button>
-    <button class="tab-btn" onclick="switchTab('daily-progress')">📈 Daily Progress (0✅ / 0 open)</button>
+    <button class="tab-btn" onclick="switchTab('flagged')">🚩 Flagged Issues (19)</button>
+    <button class="tab-btn" onclick="switchTab('urgent')">🚨 Top Urgent Issues (8)</button>
+    <button class="tab-btn" onclick="switchTab('daily-progress')">📈 Daily Progress (0✅ / 19 open)</button>
     <button class="tab-btn" onclick="switchTab('review-removal')">⭐ Review Removal</button>
     <button class="tab-btn" onclick="switchTab('closures')">✅ Yesterday's Closures (4)</button>
   </div>
@@ -172,20 +172,20 @@ h1 span { color:var(--blue); }
         <div class="change-card-name" style="color:#3b82f6">Nicolas</div>
         <div class="change-card-alert" style="background:rgba(16,185,129,.12);color:#10b981">IMPROVING</div>
         <div class="change-card-metrics">
-          Composite: <span class="val">81.5</span> → <span class="val">95.2</span> <span class="delta delta-good">↑13.7</span><br>
+          Composite: <span class="val">81.5</span> → <span class="val">96.7</span> <span class="delta delta-good">↑15.2</span><br>
           Health: <span class="val">74</span> → <span class="val">100</span> <span class="delta delta-good">↑26</span><br>
           Rate: <span class="val">93%</span> → <span class="val">89%</span> <span class="delta delta-bad">↓4%</span><br>
-          Flagged: <span class="val">4</span> → <span class="val">1</span> <span class="delta delta-good">↓3</span>
+          Flagged: <span class="val">4</span> → <span class="val">0</span> <span class="delta delta-good">↓4</span>
         </div>
       </div>
       <div class="change-card" style="border-left-color:#10b981">
         <div class="change-card-name" style="color:#f97316">Baptiste</div>
         <div class="change-card-alert" style="background:rgba(16,185,129,.12);color:#10b981">IMPROVING</div>
         <div class="change-card-metrics">
-          Composite: <span class="val">50.4</span> → <span class="val">90.7</span> <span class="delta delta-good">↑40.3</span><br>
+          Composite: <span class="val">50.4</span> → <span class="val">92.2</span> <span class="delta delta-good">↑41.8</span><br>
           Health: <span class="val">42</span> → <span class="val">100</span> <span class="delta delta-good">↑58</span><br>
           Rate: <span class="val">67%</span> → <span class="val">74%</span> <span class="delta delta-good">↑7%</span><br>
-          Flagged: <span class="val">11</span> → <span class="val">1</span> <span class="delta delta-good">↓10</span>
+          Flagged: <span class="val">11</span> → <span class="val">0</span> <span class="delta delta-good">↓11</span>
         </div>
       </div>
       <div class="change-card" style="border-left-color:#10b981">
@@ -198,14 +198,14 @@ h1 span { color:var(--blue); }
           Flagged: <span class="val">27</span> → <span class="val">3</span> <span class="delta delta-good">↓24</span>
         </div>
       </div>
-      <div class="change-card" style="border-left-color:#10b981">
+      <div class="change-card" style="border-left-color:#f59e0b">
         <div class="change-card-name" style="color:#a855f7">Aislynn</div>
-        <div class="change-card-alert" style="background:rgba(16,185,129,.12);color:#10b981">STEADY</div>
+        <div class="change-card-alert" style="background:rgba(245,158,11,.12);color:#f59e0b">DECLINING</div>
         <div class="change-card-metrics">
-          Composite: <span class="val">62.5</span> → <span class="val">60.2</span> <span class="delta delta-bad">↓2.3</span><br>
+          Composite: <span class="val">62.5</span> → <span class="val">58.7</span> <span class="delta delta-bad">↓3.8</span><br>
           Health: <span class="val">55</span> → <span class="val">59</span> <span class="delta delta-good">↑4</span><br>
           Rate: <span class="val">80%</span> → <span class="val">97%</span> <span class="delta delta-good">↑17%</span><br>
-          Flagged: <span class="val">9</span> → <span class="val">15</span> <span class="delta delta-bad">↑6</span>
+          Flagged: <span class="val">9</span> → <span class="val">16</span> <span class="delta delta-bad">↑7</span>
         </div>
       </div>
     </div>
@@ -215,14 +215,14 @@ h1 span { color:var(--blue); }
     <div class="podium-card" style="border-color:#fbbf24">
       <div class="podium-medal" style="background:rgba(251,191,36,0.12);color:#fbbf24">🥇 Gold</div>
       <div class="podium-name" style="color:#3b82f6">🥇 Nicolas</div>
-      <div class="podium-score">95.2<span class="podium-score-label">pts</span></div>
-      <div class="podium-breakdown">Health 100 &middot; Rate 89% &middot; Flagged 1</div>
+      <div class="podium-score">96.7<span class="podium-score-label">pts</span></div>
+      <div class="podium-breakdown">Health 100 &middot; Rate 89% &middot; Flagged 0</div>
     </div>
     <div class="podium-card" style="border-color:#94a3b8">
       <div class="podium-medal" style="background:rgba(148,163,184,0.12);color:#94a3b8">🥈 Silver</div>
       <div class="podium-name" style="color:#f97316">🥈 Baptiste</div>
-      <div class="podium-score">90.7<span class="podium-score-label">pts</span></div>
-      <div class="podium-breakdown">Health 100 &middot; Rate 74% &middot; Flagged 1</div>
+      <div class="podium-score">92.2<span class="podium-score-label">pts</span></div>
+      <div class="podium-breakdown">Health 100 &middot; Rate 74% &middot; Flagged 0</div>
     </div>
     <div class="podium-card" style="border-color:#cd7f32">
       <div class="podium-medal" style="background:rgba(205,127,50,0.12);color:#cd7f32">🥉 Bronze</div>
@@ -233,15 +233,15 @@ h1 span { color:var(--blue); }
     <div class="podium-card" style="border-color:#64748b">
       <div class="podium-medal" style="background:rgba(100,116,139,0.12);color:#64748b">4️⃣ 4th</div>
       <div class="podium-name" style="color:#a855f7">4️⃣ Aislynn</div>
-      <div class="podium-score">60.2<span class="podium-score-label">pts</span></div>
-      <div class="podium-breakdown">Health 59 &middot; Rate 97% &middot; Flagged 15</div>
+      <div class="podium-score">58.7<span class="podium-score-label">pts</span></div>
+      <div class="podium-breakdown">Health 59 &middot; Rate 97% &middot; Flagged 16</div>
     </div>
   </div>
 
   <div class="summary-bar">
     <div class="summary-item"><div class="summary-val" style="color:var(--yellow)">134</div><div class="summary-lbl">Open Issues</div></div>
     <div class="summary-item"><div class="summary-val" style="color:var(--green)">681</div><div class="summary-lbl">Closed Issues</div></div>
-    <div class="summary-item"><div class="summary-val" style="color:var(--red)">20</div><div class="summary-lbl">Total Flagged</div></div>
+    <div class="summary-item"><div class="summary-val" style="color:var(--red)">19</div><div class="summary-lbl">Total Flagged</div></div>
     <div class="summary-item"><div class="summary-val" style="color:var(--green)">21</div><div class="summary-lbl">Completed (Apr 21)</div></div>
   </div>
 
@@ -251,7 +251,7 @@ h1 span { color:var(--blue); }
           <div class="va-avatar" style="background:#3b82f6">N</div>
           <div>
             <h2 class="va-name" style="color:#3b82f6">🥇 Nicolas</h2>
-            <div class="va-subtitle">344 total items &middot; Composite: 95.2 pts</div>
+            <div class="va-subtitle">344 total items &middot; Composite: 96.7 pts</div>
           </div>
         </div>
         <div class="va-kpis">
@@ -263,8 +263,8 @@ h1 span { color:var(--blue); }
           <div class="kpi-col" title="Items currently open"><span class="kpi-val" style="color:#f59e0b">37</span><span class="kpi-lbl">Open</span><span class="delta delta-bad">↑15</span></div>
           <div class="kpi-col" title="Items marked Complete/Completed"><span class="kpi-val" style="color:#10b981">307</span><span class="kpi-lbl">Closed</span><span class="delta delta-good">↑3</span></div>
           <div class="kpi-col" title="Completion Rate = Closed &divide; Total"><span class="kpi-val" style="color:#3b82f6">89%</span><span class="kpi-lbl">Rate</span><span class="delta delta-bad">↓4</span></div>
-          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">1</span><span class="kpi-lbl">Flagged</span><span class="delta delta-good">↓3</span></div>
-          <div class="kpi-col" title="Items with Needs Review or No Status"><span class="kpi-val" style="color:#a855f7">1</span><span class="kpi-lbl">Review / No Status</span><span class="delta delta-bad">↑1</span></div>
+          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">0</span><span class="kpi-lbl">Flagged</span><span class="delta delta-good">↓4</span></div>
+          <div class="kpi-col" title="Items with Needs Review or No Status"><span class="kpi-val" style="color:#a855f7">0</span><span class="kpi-lbl">Review / No Status</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Open bad review issues assigned"><span class="kpi-val" style="color:#ec4899">0</span><span class="kpi-lbl">Bad Reviews</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Average days to complete closed items"><span class="kpi-val" style="color:#06b6d4">0d</span><span class="kpi-lbl">Avg Complete</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Average aging days of open items"><span class="kpi-val" style="color:#f97316">0d</span><span class="kpi-lbl">Avg Aging</span><span class="delta flat">—</span></div>
@@ -278,17 +278,17 @@ h1 span { color:var(--blue); }
       <tr><td class="metric-label">Open</td><td class="cell-metric">22</td><td class="cell-metric">37</td><td><span class="delta delta-bad">↑15</span></td></tr>
       <tr><td class="metric-label">Closed</td><td class="cell-metric">304</td><td class="cell-metric">307</td><td><span class="delta delta-good">↑3</span></td></tr>
       <tr><td class="metric-label">Rate</td><td class="cell-metric">93%</td><td class="cell-metric">89%</td><td><span class="delta delta-bad">↓4%</span></td></tr>
-      <tr><td class="metric-label">Flagged</td><td class="cell-metric">4</td><td class="cell-metric">1</td><td><span class="delta delta-good">↓3</span></td></tr>
+      <tr><td class="metric-label">Flagged</td><td class="cell-metric">4</td><td class="cell-metric">0</td><td><span class="delta delta-good">↓4</span></td></tr>
       <tr><td class="metric-label">Completed (Day)</td><td class="cell-metric">5</td><td class="cell-metric">3</td><td><span class="delta delta-bad">↓2</span></td></tr>
-      <tr><td class="metric-label">Review / No Status</td><td class="cell-metric">0</td><td class="cell-metric">1</td><td><span class="delta delta-bad">↑1</span></td></tr>
+      <tr><td class="metric-label">Review / No Status</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
       <tr><td class="metric-label">Bad Reviews Open</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
       <tr><td class="metric-label">Avg Days to Complete</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
       <tr><td class="metric-label">Avg Aging (Open)</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
     </table>
   </div>
 <div class="reports-grid">
-  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge warn">1 flagged</span></div>
-    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11818805625" target="_blank">Guest feels unsafe walking with stroller - requesting private taxi info</a><span class="badge board">Reservation Issues</span></div>
+  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge ok">0 flagged</span></div>
+    <div class="empty-state">✅ No flagged items — all clear!</div>
   </div>
   <div class="report-block"><div class="report-header"><span>🔄 Timeline Pushers</span><span class="count-badge ok">0</span></div>
     <div class="empty-state">✅ No deadline extensions (3+)</div>
@@ -304,8 +304,8 @@ h1 span { color:var(--blue); }
   <div class="report-block"><div class="report-header"><span>🔇 Zero-Update Completions</span><span class="count-badge ok">0</span></div>
     <div class="empty-state">✅ No zero-update completions</div>
   </div>
-  <div class="report-block"><div class="report-header"><span>🔍 Needs Review / No Status</span><span class="count-badge warn">1</span></div>
-    <div class="item-row">🔍 <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11818805625" target="_blank">Guest feels unsafe walking with stroller - requesting private taxi info</a><span class="badge board">Reservation Issues</span></div>
+  <div class="report-block"><div class="report-header"><span>🔍 Needs Review / No Status</span><span class="count-badge ok">0</span></div>
+    <div class="empty-state">✅ No items awaiting review</div>
   </div>
 </div>
     </div>
@@ -316,7 +316,7 @@ h1 span { color:var(--blue); }
           <div class="va-avatar" style="background:#f97316">B</div>
           <div>
             <h2 class="va-name" style="color:#f97316">🥈 Baptiste</h2>
-            <div class="va-subtitle">43 total items &middot; Composite: 90.7 pts</div>
+            <div class="va-subtitle">43 total items &middot; Composite: 92.2 pts</div>
           </div>
         </div>
         <div class="va-kpis">
@@ -328,7 +328,7 @@ h1 span { color:var(--blue); }
           <div class="kpi-col" title="Items currently open"><span class="kpi-val" style="color:#f59e0b">11</span><span class="kpi-lbl">Open</span><span class="delta delta-good">↓2</span></div>
           <div class="kpi-col" title="Items marked Complete/Completed"><span class="kpi-val" style="color:#10b981">32</span><span class="kpi-lbl">Closed</span><span class="delta delta-good">↑6</span></div>
           <div class="kpi-col" title="Completion Rate = Closed &divide; Total"><span class="kpi-val" style="color:#f97316">74%</span><span class="kpi-lbl">Rate</span><span class="delta delta-good">↑7</span></div>
-          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">1</span><span class="kpi-lbl">Flagged</span><span class="delta delta-good">↓10</span></div>
+          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">0</span><span class="kpi-lbl">Flagged</span><span class="delta delta-good">↓11</span></div>
           <div class="kpi-col" title="Items with Needs Review or No Status"><span class="kpi-val" style="color:#a855f7">0</span><span class="kpi-lbl">Review / No Status</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Open bad review issues assigned"><span class="kpi-val" style="color:#ec4899">0</span><span class="kpi-lbl">Bad Reviews</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Average days to complete closed items"><span class="kpi-val" style="color:#06b6d4">0d</span><span class="kpi-lbl">Avg Complete</span><span class="delta flat">—</span></div>
@@ -343,7 +343,7 @@ h1 span { color:var(--blue); }
       <tr><td class="metric-label">Open</td><td class="cell-metric">13</td><td class="cell-metric">11</td><td><span class="delta delta-good">↓2</span></td></tr>
       <tr><td class="metric-label">Closed</td><td class="cell-metric">26</td><td class="cell-metric">32</td><td><span class="delta delta-good">↑6</span></td></tr>
       <tr><td class="metric-label">Rate</td><td class="cell-metric">67%</td><td class="cell-metric">74%</td><td><span class="delta delta-good">↑7%</span></td></tr>
-      <tr><td class="metric-label">Flagged</td><td class="cell-metric">11</td><td class="cell-metric">1</td><td><span class="delta delta-good">↓10</span></td></tr>
+      <tr><td class="metric-label">Flagged</td><td class="cell-metric">11</td><td class="cell-metric">0</td><td><span class="delta delta-good">↓11</span></td></tr>
       <tr><td class="metric-label">Completed (Day)</td><td class="cell-metric">0</td><td class="cell-metric">6</td><td><span class="delta delta-good">↑6</span></td></tr>
       <tr><td class="metric-label">Review / No Status</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
       <tr><td class="metric-label">Bad Reviews Open</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
@@ -352,8 +352,8 @@ h1 span { color:var(--blue); }
     </table>
   </div>
 <div class="reports-grid">
-  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge warn">1 flagged</span></div>
-    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11818843609" target="_blank">Anna is inquiring about the kitchen amenities in her condo</a><span class="badge board">Reservation Issues</span></div>
+  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge ok">0 flagged</span></div>
+    <div class="empty-state">✅ No flagged items — all clear!</div>
   </div>
   <div class="report-block"><div class="report-header"><span>🔄 Timeline Pushers</span><span class="count-badge ok">0</span></div>
     <div class="empty-state">✅ No deadline extensions (3+)</div>
@@ -397,7 +397,7 @@ h1 span { color:var(--blue); }
           <div class="kpi-col" title="Items marked Complete/Completed"><span class="kpi-val" style="color:#10b981">104</span><span class="kpi-lbl">Closed</span><span class="delta delta-good">↑10</span></div>
           <div class="kpi-col" title="Completion Rate = Closed &divide; Total"><span class="kpi-val" style="color:#ec4899">57%</span><span class="kpi-lbl">Rate</span><span class="delta delta-bad">↓5</span></div>
           <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">3</span><span class="kpi-lbl">Flagged</span><span class="delta delta-good">↓24</span></div>
-          <div class="kpi-col" title="Items with Needs Review or No Status"><span class="kpi-val" style="color:#a855f7">1</span><span class="kpi-lbl">Review / No Status</span><span class="delta delta-bad">↑1</span></div>
+          <div class="kpi-col" title="Items with Needs Review or No Status"><span class="kpi-val" style="color:#a855f7">0</span><span class="kpi-lbl">Review / No Status</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Open bad review issues assigned"><span class="kpi-val" style="color:#ec4899">0</span><span class="kpi-lbl">Bad Reviews</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Average days to complete closed items"><span class="kpi-val" style="color:#06b6d4">0d</span><span class="kpi-lbl">Avg Complete</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Average aging days of open items"><span class="kpi-val" style="color:#f97316">0d</span><span class="kpi-lbl">Avg Aging</span><span class="delta flat">—</span></div>
@@ -413,7 +413,7 @@ h1 span { color:var(--blue); }
       <tr><td class="metric-label">Rate</td><td class="cell-metric">62%</td><td class="cell-metric">57%</td><td><span class="delta delta-bad">↓5%</span></td></tr>
       <tr><td class="metric-label">Flagged</td><td class="cell-metric">27</td><td class="cell-metric">3</td><td><span class="delta delta-good">↓24</span></td></tr>
       <tr><td class="metric-label">Completed (Day)</td><td class="cell-metric">1</td><td class="cell-metric">10</td><td><span class="delta delta-good">↑9</span></td></tr>
-      <tr><td class="metric-label">Review / No Status</td><td class="cell-metric">0</td><td class="cell-metric">1</td><td><span class="delta delta-bad">↑1</span></td></tr>
+      <tr><td class="metric-label">Review / No Status</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
       <tr><td class="metric-label">Bad Reviews Open</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
       <tr><td class="metric-label">Avg Days to Complete</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
       <tr><td class="metric-label">Avg Aging (Open)</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
@@ -457,7 +457,7 @@ h1 span { color:var(--blue); }
           <div class="va-avatar" style="background:#a855f7">A</div>
           <div>
             <h2 class="va-name" style="color:#a855f7">4️⃣ Aislynn</h2>
-            <div class="va-subtitle">245 total items &middot; Composite: 60.2 pts</div>
+            <div class="va-subtitle">245 total items &middot; Composite: 58.7 pts</div>
           </div>
         </div>
         <div class="va-kpis">
@@ -469,7 +469,7 @@ h1 span { color:var(--blue); }
           <div class="kpi-col" title="Items currently open"><span class="kpi-val" style="color:#f59e0b">7</span><span class="kpi-lbl">Open</span><span class="delta delta-good">↓51</span></div>
           <div class="kpi-col" title="Items marked Complete/Completed"><span class="kpi-val" style="color:#10b981">238</span><span class="kpi-lbl">Closed</span><span class="delta delta-good">↑2</span></div>
           <div class="kpi-col" title="Completion Rate = Closed &divide; Total"><span class="kpi-val" style="color:#a855f7">97%</span><span class="kpi-lbl">Rate</span><span class="delta delta-good">↑17</span></div>
-          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">15</span><span class="kpi-lbl">Flagged</span><span class="delta delta-bad">↑6</span></div>
+          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">16</span><span class="kpi-lbl">Flagged</span><span class="delta delta-bad">↑7</span></div>
           <div class="kpi-col" title="Items with Needs Review or No Status"><span class="kpi-val" style="color:#a855f7">0</span><span class="kpi-lbl">Review / No Status</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Open bad review issues assigned"><span class="kpi-val" style="color:#ec4899">0</span><span class="kpi-lbl">Bad Reviews</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Average days to complete closed items"><span class="kpi-val" style="color:#06b6d4">0d</span><span class="kpi-lbl">Avg Complete</span><span class="delta flat">—</span></div>
@@ -484,7 +484,7 @@ h1 span { color:var(--blue); }
       <tr><td class="metric-label">Open</td><td class="cell-metric">58</td><td class="cell-metric">7</td><td><span class="delta delta-good">↓51</span></td></tr>
       <tr><td class="metric-label">Closed</td><td class="cell-metric">236</td><td class="cell-metric">238</td><td><span class="delta delta-good">↑2</span></td></tr>
       <tr><td class="metric-label">Rate</td><td class="cell-metric">80%</td><td class="cell-metric">97%</td><td><span class="delta delta-good">↑17%</span></td></tr>
-      <tr><td class="metric-label">Flagged</td><td class="cell-metric">9</td><td class="cell-metric">15</td><td><span class="delta delta-bad">↑6</span></td></tr>
+      <tr><td class="metric-label">Flagged</td><td class="cell-metric">9</td><td class="cell-metric">16</td><td><span class="delta delta-bad">↑7</span></td></tr>
       <tr><td class="metric-label">Completed (Day)</td><td class="cell-metric">14</td><td class="cell-metric">2</td><td><span class="delta delta-bad">↓12</span></td></tr>
       <tr><td class="metric-label">Review / No Status</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
       <tr><td class="metric-label">Bad Reviews Open</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
@@ -493,8 +493,8 @@ h1 span { color:var(--blue); }
     </table>
   </div>
 <div class="reports-grid">
-  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge ok">0 flagged</span></div>
-    <div class="empty-state">✅ No flagged items — all clear!</div>
+  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge warn">1 flagged</span></div>
+    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11819920523" target="_blank">Guest frustrated about additional cleaning fee charged for stay extension in sam</a><span class="badge board">Cleaning Issues</span></div>
   </div>
   <div class="report-block"><div class="report-header"><span>🔄 Timeline Pushers</span><span class="count-badge danger">15</span></div>
     <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11707047817" target="_blank">Michael Venneri reported the dish washer was stucked</a><span class="badge sev-red">4x</span><span class="badge board">Bad Review Issues</span></div>
@@ -511,7 +511,7 @@ h1 span { color:var(--blue); }
     <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11698011947" target="_blank">Kenneth reported that the "spa" mentioned in the listing is actually just a hot </a><span class="badge sev-yellow">3x</span><span class="badge board">Bad Review Issues</span></div>
     <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11440261143" target="_blank">Fan remote doesn't have any back cover</a><span class="badge sev-yellow">3x</span><span class="badge board">Maintenance Issues</span></div>
     <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11391301063" target="_blank">Cristian reported something brown on the wall by the kitchen</a><span class="badge sev-yellow">3x</span><span class="badge board">Cleaning Issues</span></div>
-    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11725332533" target="_blank">Property Condition Dispute – Gregory Kuykendall – Hawaii Q401</a><span class="badge sev-yellow">3x</span><span class="badge board">Reservation Issues</span></div>
+    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11725332533" target="_blank">Property Condition Dispute — Gregory Kuykendall — Hawaii Q401</a><span class="badge sev-yellow">3x</span><span class="badge board">Reservation Issues</span></div>
   </div>
   <div class="report-block"><div class="report-header"><span>✅ Completed (Apr 21)</span><span class="count-badge ok">2</span></div>
     <div class="item-row">✅ <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11686555351" target="_blank">There is a noticeable smell of humidity in the unit, indicating a potential issu</a><span class="badge board">Cleaning Issues</span></div>
@@ -535,25 +535,23 @@ h1 span { color:var(--blue); }
     <div class="flagged-summary">
       <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">0</div><div class="flagged-summary-label">Past Deadline</div></div>
       <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">0</div><div class="flagged-summary-label">No Update (7+ Days)</div></div>
-      <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">3</div><div class="flagged-summary-label">Missing Timeline</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">2</div><div class="flagged-summary-label">Missing Timeline</div></div>
       <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">17</div><div class="flagged-summary-label">Timeline Pushers (3+)</div></div>
       <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">0</div><div class="flagged-summary-label">Zero-Update Completions</div></div>
-      <div class="flagged-summary-card" style="border-left-color:#a855f7"><div class="flagged-summary-count" style="color:#a855f7">1</div><div class="flagged-summary-label">Needs Review / No Status</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#a855f7"><div class="flagged-summary-count" style="color:#a855f7">0</div><div class="flagged-summary-label">Needs Review / No Status</div></div>
     </div>
 
     <div class="va-filter-bar">
       <button class="va-filter-btn active" onclick="filterVA('all', this)">All VAs</button>
-      <button class="va-filter-btn" style="--va-color:#3b82f6" onclick="filterVA('Nicolás', this)">Nicolás (1)</button>
-      <button class="va-filter-btn" style="--va-color:#a855f7" onclick="filterVA('Aislynn', this)">Aislynn (15)</button>
+      <button class="va-filter-btn" style="--va-color:#a855f7" onclick="filterVA('Aislynn', this)">Aislynn (16)</button>
       <button class="va-filter-btn" style="--va-color:#ec4899" onclick="filterVA('Luna', this)">Luna (3)</button>
-      <button class="va-filter-btn" style="--va-color:#f97316" onclick="filterVA('Baptiste', this)">Baptiste (1)</button>
     </div>
 
-    <div class="va-flagged-section" data-va="Nicolás">
-      <div class="va-flagged-header" style="border-left-color:#3b82f6">
-        <span class="va-flagged-name" style="color:#3b82f6">Nicolás</span>
-        <span class="va-flagged-total">1 flagged items</span>
-        <span class="va-cat-badges"><span class="va-cat-badge" style="color:#f59e0b">❌ 1</span><span class="va-cat-badge" style="color:#a855f7">🔍 1</span></span>
+    <div class="va-flagged-section" data-va="Aislynn">
+      <div class="va-flagged-header" style="border-left-color:#a855f7">
+        <span class="va-flagged-name" style="color:#a855f7">Aislynn</span>
+        <span class="va-flagged-total">16 flagged items</span>
+        <span class="va-cat-badges"><span class="va-cat-badge" style="color:#f59e0b">❌ 1</span><span class="va-cat-badge" style="color:#ef4444">🔄 15</span></span>
       </div>
       <div class="flagged-category" style="margin:0 16px 12px 16px">
         <div class="flagged-cat-header" style="padding:10px 16px">
@@ -562,31 +560,10 @@ h1 span { color:var(--blue); }
         </div>
         <div class="flagged-cat-body" style="padding:8px 16px">
           <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11818805625" target="_blank">Guest feels unsafe walking with stroller - requesting private taxi info</a>
-            <span class="badge board">Reservation Issues</span>
+            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11819920523" target="_blank">Guest frustrated about additional cleaning fee charged for stay extension in sam</a>
+            <span class="badge board">Cleaning Issues</span>
           </div>
         </div>
-      </div>
-      <div class="flagged-category" style="margin:0 16px 12px 16px">
-        <div class="flagged-cat-header" style="padding:10px 16px">
-          <div class="flagged-cat-title" style="font-size:14px">🔍 Needs Review / No Status</div>
-          <span class="flagged-cat-count" style="background:rgba(168,85,247,.15);color:#a855f7;font-size:12px">1</span>
-        </div>
-        <div class="flagged-cat-body" style="padding:8px 16px">
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11818805625" target="_blank">Guest feels unsafe walking with stroller - requesting private taxi info</a>
-            <span class="badge board">Reservation Issues</span>
-            <span class="flagged-meta">Review / No Status</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="va-flagged-section" data-va="Aislynn">
-      <div class="va-flagged-header" style="border-left-color:#a855f7">
-        <span class="va-flagged-name" style="color:#a855f7">Aislynn</span>
-        <span class="va-flagged-total">15 flagged items</span>
-        <span class="va-cat-badges"><span class="va-cat-badge" style="color:#ef4444">🔄 15</span></span>
       </div>
       <div class="flagged-category" style="margin:0 16px 12px 16px">
         <div class="flagged-cat-header" style="padding:10px 16px">
@@ -665,7 +642,7 @@ h1 span { color:var(--blue); }
             <span class="flagged-meta">3x pushed</span>
           </div>
           <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11725332533" target="_blank">Property Condition Dispute – Gregory Kuykendall – Hawaii Q401</a>
+            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11725332533" target="_blank">Property Condition Dispute — Gregory Kuykendall — Hawaii Q401</a>
             <span class="badge board">Reservation Issues</span>
             <span class="flagged-meta">3x pushed</span>
           </div>
@@ -711,32 +688,12 @@ h1 span { color:var(--blue); }
       </div>
     </div>
 
-    <div class="va-flagged-section" data-va="Baptiste">
-      <div class="va-flagged-header" style="border-left-color:#f97316">
-        <span class="va-flagged-name" style="color:#f97316">Baptiste</span>
-        <span class="va-flagged-total">1 flagged items</span>
-        <span class="va-cat-badges"><span class="va-cat-badge" style="color:#f59e0b">❌ 1</span></span>
-      </div>
-      <div class="flagged-category" style="margin:0 16px 12px 16px">
-        <div class="flagged-cat-header" style="padding:10px 16px">
-          <div class="flagged-cat-title" style="font-size:14px">❌ Missing Timeline</div>
-          <span class="flagged-cat-count" style="background:rgba(245,158,11,.15);color:#f59e0b;font-size:12px">1</span>
-        </div>
-        <div class="flagged-cat-body" style="padding:8px 16px">
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11818843609" target="_blank">Anna is inquiring about the kitchen amenities in her condo</a>
-            <span class="badge board">Reservation Issues</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
   <div id="tab-urgent" class="tab-content">
     <div style="margin-bottom:20px"><h2 style="font-size:22px;font-weight:700;margin-bottom:6px">🚨 Top Urgent Issues</h2><p style="color:var(--text2);font-size:13px">Open items scored by urgency. v2 formula: base (safety/revenue/deadline) + <b>recurrence</b> (inbox & board co-occurrence) + <b>stale penalty</b> (no updates on high-base items) − <b>active-work reward</b> (multiple updates in 14d). Scores above 100 = critical overload. Columns show <b>Unit #</b> (from board location tag) and <b>Last Update</b> with quality flags (missing what / owner / next step, too brief, stale).</p></div>
     <div class="flagged-summary">
-      <div class="flagged-summary-card" style="border-left-color:#3b82f6"><div class="flagged-summary-count" style="color:#3b82f6">6</div><div class="flagged-summary-label">Nicolás (2 critical)</div></div>
-      <div class="flagged-summary-card" style="border-left-color:#a855f7"><div class="flagged-summary-count" style="color:#a855f7">2</div><div class="flagged-summary-label">Aislynn (2 critical)</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#3b82f6"><div class="flagged-summary-count" style="color:#3b82f6">5</div><div class="flagged-summary-label">Nicolás (2 critical)</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#a855f7"><div class="flagged-summary-count" style="color:#a855f7">1</div><div class="flagged-summary-label">Aislynn (1 critical)</div></div>
       <div class="flagged-summary-card" style="border-left-color:#ec4899"><div class="flagged-summary-count" style="color:#ec4899">1</div><div class="flagged-summary-label">Luna (0 critical)</div></div>
       <div class="flagged-summary-card" style="border-left-color:#f97316"><div class="flagged-summary-count" style="color:#f97316">1</div><div class="flagged-summary-label">Baptiste (0 critical)</div></div>
     </div>
@@ -744,27 +701,10 @@ h1 span { color:var(--blue); }
     <div style="background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.35);border-radius:12px;padding:16px 20px;margin-bottom:18px">
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
         <span style="font-size:22px">🏷️</span>
-        <h3 style="font-size:16px;font-weight:700;color:#f59e0b;margin:0">Missing Unit / Property Tag (1)</h3>
+        <h3 style="font-size:16px;font-weight:700;color:#f59e0b;margin:0">Missing Unit / Property Tag (0)</h3>
       </div>
       <p style="color:var(--text2);font-size:12px;margin-bottom:10px">Open items across Bad Review, Maintenance & Cleaning boards with no unit/property dropdown set. These cannot be routed to the right VA or tracked against a listing — VAs must tag the unit on each item.</p>
-      <table style="width:100%;border-collapse:collapse;font-size:12.5px;background:rgba(0,0,0,.1);border-radius:8px;overflow:hidden">
-        <thead>
-          <tr style="text-align:left;color:var(--text2);font-size:10.5px;text-transform:uppercase;letter-spacing:.3px;background:rgba(245,158,11,.12)">
-            <th style="padding:8px 12px">Board</th>
-            <th style="padding:8px 12px">Item</th>
-            <th style="padding:8px 12px">Currently Assigned</th>
-            <th style="padding:8px 12px">Proposed VA</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="border-top:1px solid rgba(245,158,11,.2)">
-            <td style="padding:9px 12px;color:var(--text2);font-size:11.5px">Cleaning Issues</td>
-            <td style="padding:9px 12px"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11616336043" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500">The presence of a centipede indicates a potential pest issue</a></td>
-            <td style="padding:9px 12px;font-size:11.5px">Aislynn Elizarraras</td>
-            <td style="padding:9px 12px;font-size:11.5px;color:var(--text2);font-weight:600">Aislynn Elizarraras</td>
-          </tr>
-        </tbody>
-      </table>
+      <div style="color:#10b981;font-size:13px">✅ All open items have a unit tag.</div>
     </div>
 
     <div style="overflow-x:auto;border:1px solid var(--border);border-radius:10px">
@@ -782,46 +722,37 @@ h1 span { color:var(--blue); }
       </thead>
       <tbody>
         <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
-          <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">35</td>
+          <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">28</td>
           <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">Hawaii - P109</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401058709" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">Hawaii P109 — Full Property Mold & Disrepair Cluster (6 open items + guest left on arrival)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Cleaning Issues / Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Unit may be uninhabitable. Guest Reeta Schwegmann left on arrival Apr 11 and is seeking refund. 6 new items logged Apr 21: bathroo</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11802417604" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ P109 - The bathroom has full of mildew</a><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11802429430" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ P109 - The tiles and baseboards are mouldy</a><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11802422459" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ P109 - The AC unit is mouldy</a><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11802433052" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ P109 - The lanai is full of dirt and mildew</a><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11802414614" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ P109 - The drapes in the bedroom are filthy and stained</a><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11802424767" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ P109 - The drapes in the living room are dirty</a><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11728756352" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Reeta Schwegmann left unit on arrival Apr 11, asking for refund</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11533925188" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ URGENT Repair for Leak Damage - Unit P109 (open since Mar 18)</a></div></td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401058709" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">Hawaii P109 — Partial Progress: Lanai + Reeta Refund + Leak Repair Still Open (5 of 8 cleaned)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Cleaning Issues / Reservation Issues / Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 5 P109 cleaning items completed Apr 21 — good progress. 3 items still open: lanai mildew/dirt, Reeta Schwegmann refund (left on ar</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11802433052" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ P109 - The lanai is full of dirt and mildew</a><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11728756352" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Reeta Schwegmann leave the unit upon arrival April 11, asking for refu</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11533925188" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ URGENT Repair for Leak Damage — Unit P109 (open since Mar 18)</a></div></td>
           <td style="padding:12px"><span class="flagged-person person-aislynn">Aislynn</span></td>
           <td style="padding:12px"><div style="color:#ef4444;font-weight:600">⚠️ no updates ever</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
         <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
-          <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">32</td>
-          <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">Hawaii - G110A</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11789626698" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">Hawaii G110A — Recurring Electricity Loss (marked Complete but still ongoing per Erwan + NEW item to</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 No electricity = unit uninhabitable. Nicolas marked Completed Apr 19 (breakers reset) but Erwan questioned today if issue is still</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11789626698" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ No electricity in unit G110A (Completed Apr 19 — DISPUTED)</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11806553912" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Unit lost power while rest of hotel remains powered (G110A) — NEW Apr </a></div></td>
-          <td style="padding:12px"><span class="flagged-person person-aislynn">Aislynn</span></td>
-          <td style="padding:12px"><div style="color:#ef4444;font-weight:600">⚠️ no updates ever</div></td>
-          <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
-          <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
-        </tr>
-        <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
-          <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">30</td>
+          <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">27</td>
           <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - Whole Villa</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11560062730" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">USVI Villa — Deck Structural Failure + Foundation (4 items, liability risk for whole property)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Deck structural issues + wood rot on whole villa = guest injury liability, potential forced closure of all USVI units. Big Time In</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11560062730" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ DECK - INADEQUATE STRUCTURAL COMPONENT</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11559391391" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ DECK - WOOD ROT</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11669439246" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Inspection of the villa — Big Time Inspection</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11440249591" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Need to inspect and potentially repair foundation (open since Sep 2025</a></div></td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11560062730" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">USVI Villa — Deck Structural Failure + Foundation (4 items, no updates 7 days, liability risk)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Deck structural issues + wood rot on whole villa = guest injury liability, potential forced closure of all USVI units. Big Time In</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11560062730" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ DECK - INADEQUATE STRUCTURAL COMPONENT</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11559391391" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ DECK - WOOD ROT</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11669439246" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Inspection of the villa — Big Time Inspection</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11440249591" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Need to inspect and potentially repair foundation (open since Sep 2025</a></div></td>
           <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
           <td style="padding:12px"><div style="color:#ef4444;font-weight:600">⚠️ no updates ever</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
         <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
-          <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">26</td>
+          <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">24</td>
           <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - #1</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11666731004" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">USVI #1 — $4,700 Chargeback OVERDUE + Property Disrepair + Listing Mismatch</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Reservation Issues / Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 $4,700 Zofia chargeback deadline was YESTERDAY (Apr 20). Two new items logged today: unit described as 'falling apart' + lacks win</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11666731004" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Zofia #1 disputes $4,700 credit card charge — OVERDUE Apr 20</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11802458682" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Property in disrepair and unpleasant smell (USVI #1) — NEW Apr 21</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11802465754" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Description doesn't match: 'falling apart', lacking windows (USVI #1) </a></div></td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11666731004" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">USVI #1 — $4,700 Chargeback OVERDUE (2 days) — Updated Today</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Reservation Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 $4,700 Zofia chargeback deadline was Apr 20 (2 days overdue). Two related disrepair items (11802458682, 11802465754) completed tod</div></td>
           <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
           <td style="padding:12px"><div style="color:#ef4444;font-weight:600">⚠️ no updates ever</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
         <tr style="background:rgba(245,158,11,.04);border-top:1px solid var(--border);vertical-align:top">
-          <td style="padding:12px;font-size:20px;font-weight:800;color:#f59e0b;text-align:center">22</td>
-          <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">Napa 489</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11674288607" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">Napa 489 — Mold Remediation Unscheduled (deadline Apr 24 = 3 days)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; 2026-04-04 - 2026-04-24</div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Mold remediation company not yet scheduled for Napa 489 bathroom. Deadline Apr 24. Mold = health complaints, refunds, bad reviews,</div></td>
-          <td style="padding:12px"><span class="flagged-person person-luna">Luna</span></td>
+          <td style="padding:12px;font-size:20px;font-weight:800;color:#f59e0b;text-align:center">21</td>
+          <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - #3</td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11774235241" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">USVI #3 — Sliding Glass Door Lock Broken — Deadline TOMORROW Apr 23</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; 2026-04-16 - 2026-04-23</div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Broken sliding door lock = guest security breach. Deadline Apr 23 = TOMORROW. Updated today — confirm lock is repaired or repair c</div></td>
+          <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
           <td style="padding:12px"><div style="color:#ef4444;font-weight:600">⚠️ no updates ever</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(245,158,11,.15);color:#f59e0b;white-space:nowrap">HIGH</span></td>
@@ -829,43 +760,34 @@ h1 span { color:var(--blue); }
         <tr style="background:rgba(245,158,11,.04);border-top:1px solid var(--border);vertical-align:top">
           <td style="padding:12px;font-size:20px;font-weight:800;color:#f59e0b;text-align:center">20</td>
           <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11771718688" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">USVI Unit #7 — Smoke Detector Battery Missing (Safety + Compliance)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; 2026-04-16 - 2026-04-24</div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Non-functional smoke detector = fire safety violation. Regulatory inspection risk + potential license suspension. Deadline Apr 24 </div></td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11771718688" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">USVI Unit #7 — Smoke Detector Battery Missing (Safety + Compliance) — Deadline Apr 24</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; 2026-04-16 - 2026-04-24</div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Non-functional smoke detector = fire safety violation. Regulatory inspection risk + potential license suspension. Deadline Apr 24 </div></td>
           <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
           <td style="padding:12px"><div style="color:#ef4444;font-weight:600">⚠️ no updates ever</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(245,158,11,.15);color:#f59e0b;white-space:nowrap">HIGH</span></td>
         </tr>
         <tr style="background:rgba(245,158,11,.04);border-top:1px solid var(--border);vertical-align:top">
-          <td style="padding:12px;font-size:20px;font-weight:800;color:#f59e0b;text-align:center">19</td>
-          <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - #3</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11774235241" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">USVI #3 — Sliding Glass Door Lock Broken (Security + Liability)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; 2026-04-16 - 2026-04-23</div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Broken sliding door lock = guest security breach. If guest is robbed or injured, Bijou faces complaint, refund, and legal liabilit</div></td>
-          <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
-          <td style="padding:12px"><div style="color:#ef4444;font-weight:600">⚠️ no updates ever</div></td>
-          <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
-          <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(245,158,11,.15);color:#f59e0b;white-space:nowrap">HIGH</span></td>
-        </tr>
-        <tr style="background:rgba(245,158,11,.04);border-top:1px solid var(--border);vertical-align:top">
-          <td style="padding:12px;font-size:20px;font-weight:800;color:#f59e0b;text-align:center">18</td>
-          <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11674331278" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">USVI — Listing Claims 'Walk to Cruz Bay' Over Dangerous Road (Safety Liability + All VRBO Listings)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Bad Review Issues &middot; 2026-04-03 - 2026-04-22</div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Bijou listing implies walking to Cruz Bay but the route is a dangerous road with no sidewalk. Guest Dena reported this. Erwan inst</div></td>
-          <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
-          <td style="padding:12px"><div style="color:#ef4444;font-weight:600">⚠️ no updates ever</div></td>
-          <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
-          <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(245,158,11,.15);color:#f59e0b;white-space:nowrap">HIGH</span></td>
-        </tr>
-        <tr style="background:rgba(245,158,11,.04);border-top:1px solid var(--border);vertical-align:top">
-          <td style="padding:12px;font-size:20px;font-weight:800;color:#f59e0b;text-align:center">15</td>
-          <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - Whole Villa</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11682582022" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">USVI — Tesla Quote + Meter Readings (Overdue TODAY, Erwan-requested)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; 2026-04-06 - 2026-04-21</div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Erwan-requested electricity cost analysis expired today. Connects directly to the G110A electricity recurring issue — understandin</div></td>
-          <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
+          <td style="padding:12px;font-size:20px;font-weight:800;color:#f59e0b;text-align:center">20</td>
+          <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">Napa 489</td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11674288607" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">Napa 489 — Mold Remediation Unscheduled — Deadline Apr 24</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; 2026-04-04 - 2026-04-24</div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Mold remediation company not yet scheduled for Napa 489 bathroom. Deadline Apr 24 = 2 days. Mold = health complaints, refunds, bad</div></td>
+          <td style="padding:12px"><span class="flagged-person person-luna">Luna</span></td>
           <td style="padding:12px"><div style="color:#ef4444;font-weight:600">⚠️ no updates ever</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(245,158,11,.15);color:#f59e0b;white-space:nowrap">HIGH</span></td>
         </tr>
         <tr style="background:transparent;border-top:1px solid var(--border);vertical-align:top">
           <td style="padding:12px;font-size:20px;font-weight:800;color:#94a3b8;text-align:center">14</td>
+          <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - Whole Villa</td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11682582022" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">USVI — Tesla Quote + Meter Readings (Overdue Apr 21, 7 days no update)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; 2026-04-06 - 2026-04-21</div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Erwan-requested electricity cost analysis overdue (Apr 21 deadline). Last update Apr 15 — 7 days ago. Connects to USVI power monit</div></td>
+          <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
+          <td style="padding:12px"><div style="color:#ef4444;font-weight:600">⚠️ no updates ever</div></td>
+          <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
+          <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(148,163,184,.15);color:#94a3b8;white-space:nowrap">MODERATE</span></td>
+        </tr>
+        <tr style="background:transparent;border-top:1px solid var(--border);vertical-align:top">
+          <td style="padding:12px;font-size:20px;font-weight:800;color:#94a3b8;text-align:center">12</td>
           <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">France - VF</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11789761180" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">France VF — Only 1 Towel Despite Multiple Requests (Current Guest, Near-Certain Bad Review)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Reservation Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Guest asked multiple times for extra towels — 2 open items about this. Original request Apr 17 was never fully resolved. If unreso</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #94a3b8"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11785395395" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Guest reported having only one towel (France VF) — Apr 17</a><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11789761180" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ France VF — Only one bath towel despite multiple requests — Apr 19</a></div></td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11785395395" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">France VF — Guest Towel Shortage (1 item remaining after partial resolution)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Reservation Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Guest reported only 1 towel (Apr 17). Second item (Apr 19) marked Completed. Original Apr 17 request still open — confirm guest is</div></td>
           <td style="padding:12px"><span class="flagged-person person-baptiste">Baptiste</span></td>
           <td style="padding:12px"><div style="color:#ef4444;font-weight:600">⚠️ no updates ever</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
@@ -889,8 +811,8 @@ h1 span { color:var(--blue); }
   </div>
   <div id="tab-daily-progress" class="tab-content">
     <div style="background:var(--surface);border-radius:14px;padding:20px 24px;margin-bottom:20px;border:1px solid var(--surface2)">
-      <div style="font-size:18px;font-weight:800;margin-bottom:6px">📈 Daily Progress vs Morning Baseline — 2026-04-21</div>
-      <div style="font-size:13px;color:var(--text2);margin-bottom:16px">Last updated 2026-04-21T20:45:00-07:00 &middot; Baseline set at 5:00 AM PST</div>
+      <div style="font-size:18px;font-weight:800;margin-bottom:6px">📈 Daily Progress vs Morning Baseline — 2026-04-22</div>
+      <div style="font-size:13px;color:var(--text2);margin-bottom:16px">Last updated 2026-04-22T10:14:00-07:00 &middot; Baseline set at 5:00 AM PST</div>
       <div style="display:flex;gap:20px;flex-wrap:wrap">
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
           <div style="font-size:32px;font-weight:800;color:var(--text2)">0</div>
@@ -901,7 +823,7 @@ h1 span { color:var(--blue); }
           <div style="font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.4px">Resolved ✅</div>
         </div>
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
-          <div style="font-size:32px;font-weight:800;color:var(--red)">0</div>
+          <div style="font-size:32px;font-weight:800;color:var(--red)">19</div>
           <div style="font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.4px">Still Open 🔓</div>
         </div>
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
@@ -918,9 +840,54 @@ h1 span { color:var(--blue); }
         <div style="height:100%;width:0%;background:var(--green);border-radius:4px;transition:width .4s"></div>
       </div>
     </div>
-    <div style="background:var(--surface);border-radius:10px;padding:14px 20px;margin-bottom:24px;border:1px dashed var(--surface2);color:var(--text2);font-size:12px">
-      📉 Per-VA progress trend will appear here after the first 3-hour check populates <code>progress_snapshots_2026-04-22.json</code>.
+    <div style="background:var(--surface);border-radius:14px;padding:20px 24px;margin-bottom:24px;border:1px solid var(--surface2)">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:14px">
+        <div>
+          <div style="font-size:16px;font-weight:800">📉 Per-VA Progress Trend</div>
+          <div style="font-size:12px;color:var(--text2)">Flagged items and Top Urgent issues per VA at each 3-hour check (1 snapshot)</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+        <div style="background:var(--bg);border-radius:10px;padding:14px;min-height:260px">
+          <div style="font-size:13px;font-weight:700;margin-bottom:8px;color:var(--text)">🚩 Flagged Items per VA</div>
+          <div style="position:relative;height:240px"><canvas id="progressFlaggedChart"></canvas></div>
+        </div>
+        <div style="background:var(--bg);border-radius:10px;padding:14px;min-height:260px">
+          <div style="font-size:13px;font-weight:700;margin-bottom:8px;color:var(--text)">🚨 Top Urgent Issues per VA</div>
+          <div style="position:relative;height:240px"><canvas id="progressUrgentChart"></canvas></div>
+        </div>
+      </div>
     </div>
+    <script>
+    (function() {
+      if (typeof Chart === "undefined") return;
+      const labels = ["10:14 AM"];
+      const commonOpts = {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: "index", intersect: false },
+        plugins: {
+          legend: { position: "bottom", labels: { color: "#cbd5e1", font: { size: 11 } } },
+          tooltip: { backgroundColor: "#0b1120", titleColor: "#fff", bodyColor: "#e2e8f0", borderColor: "#334155", borderWidth: 1 }
+        },
+        scales: {
+          x: { ticks: { color: "#94a3b8" }, grid: { color: "rgba(148,163,184,.12)" } },
+          y: { beginAtZero: true, ticks: { color: "#94a3b8", precision: 0 }, grid: { color: "rgba(148,163,184,.12)" } }
+        }
+      };
+      new Chart(document.getElementById("progressFlaggedChart"), {
+        type: "line",
+        data: { labels: labels, datasets: [{"label": "Nicolas", "data": [0], "borderColor": "#3b82f6", "backgroundColor": "#3b82f6", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Aislynn", "data": [1], "borderColor": "#a855f7", "backgroundColor": "#a855f7", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Luna", "data": [1], "borderColor": "#ec4899", "backgroundColor": "#ec4899", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Baptiste", "data": [0], "borderColor": "#f97316", "backgroundColor": "#f97316", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}] },
+        options: commonOpts
+      });
+      new Chart(document.getElementById("progressUrgentChart"), {
+        type: "line",
+        data: { labels: labels, datasets: [{"label": "Nicolas", "data": [5], "borderColor": "#3b82f6", "backgroundColor": "#3b82f6", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Aislynn", "data": [1], "borderColor": "#a855f7", "backgroundColor": "#a855f7", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Luna", "data": [1], "borderColor": "#ec4899", "backgroundColor": "#ec4899", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Baptiste", "data": [1], "borderColor": "#f97316", "backgroundColor": "#f97316", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}] },
+        options: commonOpts
+      });
+    })();
+    </script>
+
     <div style="background:var(--surface);border-radius:14px;margin-bottom:20px;overflow:hidden;border:1px solid rgba(239,68,68,.3)">
       <div style="padding:16px 24px;border-bottom:1px solid rgba(239,68,68,.2);display:flex;align-items:center;gap:10px">
         <div style="font-size:16px;font-weight:800">🚨 Top Urgent Issues</div>
@@ -931,7 +898,7 @@ h1 span { color:var(--blue); }
           <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
             <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#1</div>
             <div style="flex:1;min-width:200px">
-              <a href="#" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 Hawaii P109 — Mold & Disrepair Cluster (3 items still open)</a>
+              <a href="https://bijougetaways.monday.com/boards/18401058709" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 Hawaii P109 — Lanai + Reeta Refund + Leak Repair (3 items open, 5 completed today)</a>
               <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
               <span class="badge board" style="margin-left:4px"></span>
               <span class="flagged-person person-aislynn" style="margin-left:4px">Aislynn</span>
@@ -943,7 +910,7 @@ h1 span { color:var(--blue); }
           <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
             <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#2</div>
             <div style="flex:1;min-width:200px">
-              <a href="#" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 USVI Villa — Deck Structural Failure + Foundation (4 items, deadline May 4)</a>
+              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11560062730" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 USVI Villa — Deck Structural + Foundation (no updates 7 days)</a>
               <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
               <span class="badge board" style="margin-left:4px"></span>
               <span class="flagged-person person-nicolas" style="margin-left:4px">Nicolas</span>
@@ -955,7 +922,7 @@ h1 span { color:var(--blue); }
           <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
             <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#3</div>
             <div style="flex:1;min-width:200px">
-              <a href="#" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 USVI #1 — $4,700 Chargeback OVERDUE + Property Disrepair</a>
+              <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11666731004" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 USVI #1 — $4,700 Chargeback OVERDUE 2 days (updated today)</a>
               <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
               <span class="badge board" style="margin-left:4px"></span>
               <span class="flagged-person person-nicolas" style="margin-left:4px">Nicolas</span>
@@ -967,7 +934,7 @@ h1 span { color:var(--blue); }
           <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
             <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#4</div>
             <div style="flex:1;min-width:200px">
-              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11774235241" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 USVI #3 — Sliding Glass Door Lock Broken (deadline TOMORROW Apr 23)</a>
+              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11774235241" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 USVI #3 — Door Lock Broken (deadline TOMORROW Apr 23)</a>
               <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
               <span class="badge board" style="margin-left:4px"></span>
               <span class="flagged-person person-nicolas" style="margin-left:4px">Nicolas</span>
@@ -979,46 +946,10 @@ h1 span { color:var(--blue); }
           <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
             <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#5</div>
             <div style="flex:1;min-width:200px">
-              <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11674331278" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 USVI — Listing 'Walk to Cruz Bay' Over Dangerous Road (deadline TODAY Apr 22)</a>
-              <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
-              <span class="badge board" style="margin-left:4px"></span>
-              <span class="flagged-person person-nicolas" style="margin-left:4px">Nicolas</span>
-            </div>
-          </div>
-          
-        </div>
-        <div style="padding:10px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px">
-          <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
-            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#6</div>
-            <div style="flex:1;min-width:200px">
-              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11674288607" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 Napa 489 — Mold Remediation Unscheduled (deadline Apr 24 = 3 days)</a>
+              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11674288607" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 Napa 489 — Mold Remediation (deadline Apr 24)</a>
               <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
               <span class="badge board" style="margin-left:4px"></span>
               <span class="flagged-person person-luna" style="margin-left:4px">Luna</span>
-            </div>
-          </div>
-          
-        </div>
-        <div style="padding:10px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px">
-          <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
-            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#7</div>
-            <div style="flex:1;min-width:200px">
-              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11771718688" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 USVI Unit #7 — Smoke Detector Battery Missing (deadline Apr 24)</a>
-              <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
-              <span class="badge board" style="margin-left:4px"></span>
-              <span class="flagged-person person-nicolas" style="margin-left:4px">Nicolas</span>
-            </div>
-          </div>
-          
-        </div>
-        <div style="padding:10px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px">
-          <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
-            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#8</div>
-            <div style="flex:1;min-width:200px">
-              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11682582022" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 USVI — Tesla Quote + Meter Readings (extended to Apr 27)</a>
-              <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
-              <span class="badge board" style="margin-left:4px"></span>
-              <span class="flagged-person person-nicolas" style="margin-left:4px">Nicolas</span>
             </div>
           </div>
           
