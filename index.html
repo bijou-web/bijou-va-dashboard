@@ -535,16 +535,26 @@ h1 span { color:var(--blue); }
     <div class="flagged-summary">
       <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">0</div><div class="flagged-summary-label">Past Deadline</div></div>
       <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">0</div><div class="flagged-summary-label">No Update (7+ Days)</div></div>
-      <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">2</div><div class="flagged-summary-label">Missing Timeline</div></div>
-      <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">17</div><div class="flagged-summary-label">Timeline Pushers (3+)</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">2</div><div class="flagged-summary-label">Missing Deadline</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">17</div><div class="flagged-summary-label">Deadline Extensions (3+)</div></div>
       <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">0</div><div class="flagged-summary-label">Zero-Update Completions</div></div>
       <div class="flagged-summary-card" style="border-left-color:#a855f7"><div class="flagged-summary-count" style="color:#a855f7">0</div><div class="flagged-summary-label">Needs Review / No Status</div></div>
     </div>
 
     <div class="va-filter-bar">
       <button class="va-filter-btn active" onclick="filterVA('all', this)">All VAs</button>
+      <button class="va-filter-btn" style="--va-color:#3b82f6" onclick="filterVA('Nicolás', this)">Nicolás (0)</button>
       <button class="va-filter-btn" style="--va-color:#a855f7" onclick="filterVA('Aislynn', this)">Aislynn (16)</button>
       <button class="va-filter-btn" style="--va-color:#ec4899" onclick="filterVA('Luna', this)">Luna (3)</button>
+      <button class="va-filter-btn" style="--va-color:#f97316" onclick="filterVA('Baptiste', this)">Baptiste (0)</button>
+    </div>
+
+    <div class="va-flagged-section" data-va="Nicolás">
+      <div class="va-flagged-header" style="border-left-color:#3b82f6">
+        <span class="va-flagged-name" style="color:#3b82f6">Nicolás</span>
+        <span class="va-flagged-total">0 flagged items</span>
+      </div>
+      <div style="padding:16px 24px;color:var(--text2);font-size:13px">✅ No flagged items</div>
     </div>
 
     <div class="va-flagged-section" data-va="Aislynn">
@@ -555,7 +565,7 @@ h1 span { color:var(--blue); }
       </div>
       <div class="flagged-category" style="margin:0 16px 12px 16px">
         <div class="flagged-cat-header" style="padding:10px 16px">
-          <div class="flagged-cat-title" style="font-size:14px">❌ Missing Timeline</div>
+          <div class="flagged-cat-title" style="font-size:14px">❌ Missing Deadline</div>
           <span class="flagged-cat-count" style="background:rgba(245,158,11,.15);color:#f59e0b;font-size:12px">1</span>
         </div>
         <div class="flagged-cat-body" style="padding:8px 16px">
@@ -567,7 +577,7 @@ h1 span { color:var(--blue); }
       </div>
       <div class="flagged-category" style="margin:0 16px 12px 16px">
         <div class="flagged-cat-header" style="padding:10px 16px">
-          <div class="flagged-cat-title" style="font-size:14px">🔄 Timeline Pushers (3+)</div>
+          <div class="flagged-cat-title" style="font-size:14px">🔄 Deadline Extensions (3+)</div>
           <span class="flagged-cat-count" style="background:rgba(239,68,68,.15);color:#ef4444;font-size:12px">15</span>
         </div>
         <div class="flagged-cat-body" style="padding:8px 16px">
@@ -658,7 +668,7 @@ h1 span { color:var(--blue); }
       </div>
       <div class="flagged-category" style="margin:0 16px 12px 16px">
         <div class="flagged-cat-header" style="padding:10px 16px">
-          <div class="flagged-cat-title" style="font-size:14px">❌ Missing Timeline</div>
+          <div class="flagged-cat-title" style="font-size:14px">❌ Missing Deadline</div>
           <span class="flagged-cat-count" style="background:rgba(245,158,11,.15);color:#f59e0b;font-size:12px">1</span>
         </div>
         <div class="flagged-cat-body" style="padding:8px 16px">
@@ -670,7 +680,7 @@ h1 span { color:var(--blue); }
       </div>
       <div class="flagged-category" style="margin:0 16px 12px 16px">
         <div class="flagged-cat-header" style="padding:10px 16px">
-          <div class="flagged-cat-title" style="font-size:14px">🔄 Timeline Pushers (3+)</div>
+          <div class="flagged-cat-title" style="font-size:14px">🔄 Deadline Extensions (3+)</div>
           <span class="flagged-cat-count" style="background:rgba(239,68,68,.15);color:#ef4444;font-size:12px">2</span>
         </div>
         <div class="flagged-cat-body" style="padding:8px 16px">
@@ -686,6 +696,14 @@ h1 span { color:var(--blue); }
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="va-flagged-section" data-va="Baptiste">
+      <div class="va-flagged-header" style="border-left-color:#f97316">
+        <span class="va-flagged-name" style="color:#f97316">Baptiste</span>
+        <span class="va-flagged-total">0 flagged items</span>
+      </div>
+      <div style="padding:16px 24px;color:var(--text2);font-size:13px">✅ No flagged items</div>
     </div>
 
   </div>
