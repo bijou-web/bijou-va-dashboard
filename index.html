@@ -148,8 +148,8 @@ h1 span { color:var(--blue); }
   <div class="tab-bar">
     <button class="tab-btn active" onclick="switchTab('dashboard')">📊 Dashboard</button>
     <button class="tab-btn" onclick="switchTab('flagged')">🚩 Flagged Issues (39)</button>
-    <button class="tab-btn" onclick="switchTab('urgent')">🚨 Top Urgent Issues (2)</button>
-    <button class="tab-btn" onclick="switchTab('daily-progress')">📈 Daily Progress (0✅ / 9 open)</button>
+    <button class="tab-btn" onclick="switchTab('urgent')">🚨 Top Urgent Issues (0)</button>
+    <button class="tab-btn" onclick="switchTab('daily-progress')">📈 Daily Progress (2✅ / 9 open)</button>
     <button class="tab-btn" onclick="switchTab('review-removal')">⭐ Review Removal</button>
     <button class="tab-btn" onclick="switchTab('closures')">✅ Yesterday's Closures (15)</button>
   </div>
@@ -396,9 +396,8 @@ h1 span { color:var(--blue); }
     </table>
   </div>
 <div class="reports-grid">
-  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge warn">2 flagged</span></div>
-    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/" target="_blank">The couch has a slightly worn appearance, which may require maintenance to addre</a><span class="badge board">Maintenance Issues</span></div>
-    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/" target="_blank">Order sugar for oksana</a><span class="badge board">Cleaning Issues</span></div>
+  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge warn">1 flagged</span></div>
+    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/" target="_blank">No hot water in shower — issue ongoing since yesterday</a><span class="badge board">Maintenance Issues</span></div>
   </div>
   <div class="report-block"><div class="report-header"><span>🔄 Deadline Extensions</span><span class="count-badge ok">0</span></div>
     <div class="empty-state">✅ No deadline extensions (3+)</div>
@@ -428,7 +427,7 @@ h1 span { color:var(--blue); }
 
   <div id="tab-flagged" class="tab-content">
     <div class="flagged-summary">
-      <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">2</div><div class="flagged-summary-label">Past Deadline</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">0</div><div class="flagged-summary-label">Past Deadline</div></div>
       <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">0</div><div class="flagged-summary-label">No Update (7+ Days)</div></div>
       <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">18</div><div class="flagged-summary-label">Missing Deadline</div></div>
       <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">0</div><div class="flagged-summary-label">Deadline Extensions (3+)</div></div>
@@ -440,7 +439,7 @@ h1 span { color:var(--blue); }
     <div class="va-filter-bar">
       <button class="va-filter-btn active" onclick="filterVA('all', this)">All VAs</button>
       <button class="va-filter-btn" style="--va-color:#3b82f6" onclick="filterVA('Nicolás', this)">Nicolás (0)</button>
-      <button class="va-filter-btn" style="--va-color:#ec4899" onclick="filterVA('Luna', this)">Luna (47)</button>
+      <button class="va-filter-btn" style="--va-color:#ec4899" onclick="filterVA('Luna', this)">Luna (45)</button>
       <button class="va-filter-btn" style="--va-color:#f97316" onclick="filterVA('Baptiste', this)">Baptiste (11)</button>
     </div>
 
@@ -455,25 +454,8 @@ h1 span { color:var(--blue); }
     <div class="va-flagged-section" data-va="Luna">
       <div class="va-flagged-header" style="border-left-color:#ec4899">
         <span class="va-flagged-name" style="color:#ec4899">Luna</span>
-        <span class="va-flagged-total">47 flagged items</span>
-        <span class="va-cat-badges"><span class="va-cat-badge" style="color:#ef4444">⚠️ 2</span><span class="va-cat-badge" style="color:#f59e0b">❌ 17</span><span class="va-cat-badge" style="color:#a855f7">🔍 7</span><span class="va-cat-badge" style="color:#8b5cf6">🗣️ 28</span></span>
-      </div>
-      <div class="flagged-category" style="margin:0 16px 12px 16px">
-        <div class="flagged-cat-header" style="padding:10px 16px">
-          <div class="flagged-cat-title" style="font-size:14px">⚠️ Past Deadline</div>
-          <span class="flagged-cat-count" style="background:rgba(239,68,68,.15);color:#ef4444;font-size:12px">2</span>
-        </div>
-        <div class="flagged-cat-body" style="padding:8px 16px">
-          <div style="font-size:11px;font-weight:700;color:#ec4899;text-transform:uppercase;letter-spacing:.5px;padding:6px 0 4px 0;margin-top:4px;border-bottom:1px solid rgba(236,72,153,.2)">📍 Other (2)</div>
-          <div class="flagged-item">
-            <a href="#" target="_blank">The couch has a slightly worn appearance, which may require maintenance to addre</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="#" target="_blank">Order sugar for oksana</a>
-            <span class="badge board">Cleaning Issues</span>
-          </div>
-        </div>
+        <span class="va-flagged-total">45 flagged items</span>
+        <span class="va-cat-badges"><span class="va-cat-badge" style="color:#f59e0b">❌ 17</span><span class="va-cat-badge" style="color:#a855f7">🔍 7</span><span class="va-cat-badge" style="color:#8b5cf6">🗣️ 28</span></span>
       </div>
       <div class="flagged-category" style="margin:0 16px 12px 16px">
         <div class="flagged-cat-header" style="padding:10px 16px">
@@ -794,7 +776,7 @@ h1 span { color:var(--blue); }
     <div style="margin-bottom:20px"><h2 style="font-size:22px;font-weight:700;margin-bottom:6px">🚨 Top Urgent Issues</h2><p style="color:var(--text2);font-size:13px">Open items scored by urgency. v2 formula: base (safety/revenue/deadline) + <b>recurrence</b> (inbox & board co-occurrence) + <b>stale penalty</b> (no updates on high-base items) − <b>active-work reward</b> (multiple updates in 14d). Scores above 100 = critical overload. Columns show <b>Unit #</b> (from board location tag) and <b>Last Update</b> with quality flags (missing what / owner / next step, too brief, stale).</p></div>
     <div class="flagged-summary">
       <div class="flagged-summary-card" style="border-left-color:#3b82f6"><div class="flagged-summary-count" style="color:#3b82f6">0</div><div class="flagged-summary-label">Nicolás (0 critical)</div></div>
-      <div class="flagged-summary-card" style="border-left-color:#ec4899"><div class="flagged-summary-count" style="color:#ec4899">2</div><div class="flagged-summary-label">Luna (2 critical)</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#ec4899"><div class="flagged-summary-count" style="color:#ec4899">0</div><div class="flagged-summary-label">Luna (0 critical)</div></div>
       <div class="flagged-summary-card" style="border-left-color:#f97316"><div class="flagged-summary-count" style="color:#f97316">0</div><div class="flagged-summary-label">Baptiste (0 critical)</div></div>
     </div>
 
@@ -824,41 +806,7 @@ h1 span { color:var(--blue); }
       </table>
     </div>
 
-    <div style="overflow-x:auto;border:1px solid var(--border);border-radius:10px">
-    <table style="width:100%;border-collapse:collapse;font-size:12.5px">
-      <thead style="background:rgba(148,163,184,.08);position:sticky;top:0">
-        <tr style="text-align:left;color:var(--text2);font-size:11px;text-transform:uppercase;letter-spacing:.3px">
-          <th style="padding:10px 12px;width:60px">Score</th>
-          <th style="padding:10px 12px;width:110px">Unit #</th>
-          <th style="padding:10px 12px;min-width:260px">Item</th>
-          <th style="padding:10px 12px;width:110px">VA</th>
-          <th style="padding:10px 12px;min-width:180px">Last Update</th>
-          <th style="padding:10px 12px;min-width:160px">48h Traction</th>
-          <th style="padding:10px 12px;width:90px">Severity</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
-          <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">100</td>
-          <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">—</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11620577505" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">The couch has a slightly worn appearance, which may require maintenance to address wear and tear.</a><div style="font-size:11px;color:var(--text2);margin-top:3px"> &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Overdue guest issue — risk of bad review + chargeback</div></td>
-          <td style="padding:12px"><span class="flagged-person person-luna">Luna</span></td>
-          <td style="padding:12px"><div style="color:#ef4444;font-weight:600">⚠️ no updates ever</div></td>
-          <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
-          <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
-        </tr>
-        <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
-          <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">90</td>
-          <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">—</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11622855227" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">Order sugar for oksana</a><div style="font-size:11px;color:var(--text2);margin-top:3px"> &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Overdue guest issue — risk of bad review + chargeback</div></td>
-          <td style="padding:12px"><span class="flagged-person person-luna">Luna</span></td>
-          <td style="padding:12px"><div style="color:#ef4444;font-weight:600">⚠️ no updates ever</div></td>
-          <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
-          <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
+    <div class="empty-state" style="padding:40px">✅ No urgent items detected</div>
   </div>
   <div id="tab-review-removal" class="tab-content">
     <div style="margin-bottom:20px"><h2 style="font-size:22px;font-weight:700;margin-bottom:6px">⭐ Review Removal Audit</h2><p style="color:var(--text2);font-size:13px">Board: Review Removal (18401067462) &middot; Handled by Nicolás &middot; 78 total reviews</p></div>
@@ -875,14 +823,14 @@ h1 span { color:var(--blue); }
   <div id="tab-daily-progress" class="tab-content">
     <div style="background:var(--surface);border-radius:14px;padding:20px 24px;margin-bottom:20px;border:1px solid var(--surface2)">
       <div style="font-size:18px;font-weight:800;margin-bottom:6px">📈 Daily Progress vs Morning Baseline — 2026-04-26</div>
-      <div style="font-size:13px;color:var(--text2);margin-bottom:16px">Last updated 2026-04-26T17:19:55.750832Z &middot; Baseline set at 5:00 AM PST</div>
+      <div style="font-size:13px;color:var(--text2);margin-bottom:16px">Last updated 2026-04-26T20:15:18.099404Z &middot; Baseline set at 5:00 AM PST</div>
       <div style="display:flex;gap:20px;flex-wrap:wrap">
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
-          <div style="font-size:32px;font-weight:800;color:var(--text2)">19</div>
+          <div style="font-size:32px;font-weight:800;color:var(--text2)">20</div>
           <div style="font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.4px">Morning Baseline</div>
         </div>
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
-          <div style="font-size:32px;font-weight:800;color:var(--green)">0</div>
+          <div style="font-size:32px;font-weight:800;color:var(--green)">2</div>
           <div style="font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.4px">Resolved ✅</div>
         </div>
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
@@ -890,24 +838,24 @@ h1 span { color:var(--blue); }
           <div style="font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.4px">Still Open 🔓</div>
         </div>
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
-          <div style="font-size:32px;font-weight:800;color:var(--red)">0%</div>
+          <div style="font-size:32px;font-weight:800;color:var(--red)">10%</div>
           <div style="font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.4px">Day Progress</div>
         </div>
       </div>
     </div>
     <div style="background:var(--surface);border-radius:10px;padding:14px 20px;margin-bottom:24px;border:1px solid var(--surface2)">
       <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin-bottom:6px">
-        <span>Resolution progress</span><span style="font-weight:700;color:var(--text)">0/19 items closed</span>
+        <span>Resolution progress</span><span style="font-weight:700;color:var(--text)">2/20 items closed</span>
       </div>
       <div style="height:8px;background:var(--bg);border-radius:4px;overflow:hidden">
-        <div style="height:100%;width:0%;background:var(--green);border-radius:4px;transition:width .4s"></div>
+        <div style="height:100%;width:10%;background:var(--green);border-radius:4px;transition:width .4s"></div>
       </div>
     </div>
     <div style="background:var(--surface);border-radius:14px;padding:20px 24px;margin-bottom:24px;border:1px solid var(--surface2)">
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:14px">
         <div>
           <div style="font-size:16px;font-weight:800">📉 Per-VA Progress Trend</div>
-          <div style="font-size:12px;color:var(--text2)">Flagged items and Top Urgent issues per VA at each 3-hour check (1 snapshot)</div>
+          <div style="font-size:12px;color:var(--text2)">Flagged items and Top Urgent issues per VA at each 3-hour check (2 snapshots)</div>
         </div>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
@@ -924,7 +872,7 @@ h1 span { color:var(--blue); }
     <script>
     (function() {
       if (typeof Chart === "undefined") return;
-      const labels = ["2026-04-26T17:20:07Z"];
+      const labels = ["2026-04-26T17:20:07Z", "2026-04-26T20:15:27.394711Z"];
       const commonOpts = {
         responsive: true,
         maintainAspectRatio: false,
@@ -940,12 +888,12 @@ h1 span { color:var(--blue); }
       };
       new Chart(document.getElementById("progressFlaggedChart"), {
         type: "line",
-        data: { labels: labels, datasets: [{"label": "Nicolas", "data": [0], "borderColor": "#3b82f6", "backgroundColor": "#3b82f6", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Luna", "data": [19], "borderColor": "#ec4899", "backgroundColor": "#ec4899", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Baptiste", "data": [1], "borderColor": "#f97316", "backgroundColor": "#f97316", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}] },
+        data: { labels: labels, datasets: [{"label": "Nicolas", "data": [0, 0], "borderColor": "#3b82f6", "backgroundColor": "#3b82f6", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Luna", "data": [19, 17], "borderColor": "#ec4899", "backgroundColor": "#ec4899", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Baptiste", "data": [1, 1], "borderColor": "#f97316", "backgroundColor": "#f97316", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}] },
         options: commonOpts
       });
       new Chart(document.getElementById("progressUrgentChart"), {
         type: "line",
-        data: { labels: labels, datasets: [{"label": "Nicolas", "data": [0], "borderColor": "#3b82f6", "backgroundColor": "#3b82f6", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Luna", "data": [3], "borderColor": "#ec4899", "backgroundColor": "#ec4899", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Baptiste", "data": [0], "borderColor": "#f97316", "backgroundColor": "#f97316", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}] },
+        data: { labels: labels, datasets: [{"label": "Nicolas", "data": [0, 0], "borderColor": "#3b82f6", "backgroundColor": "#3b82f6", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Luna", "data": [3, 2], "borderColor": "#ec4899", "backgroundColor": "#ec4899", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Baptiste", "data": [0, 0], "borderColor": "#f97316", "backgroundColor": "#f97316", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}] },
         options: commonOpts
       });
     })();
@@ -980,39 +928,38 @@ h1 span { color:var(--blue); }
         <div style="width:40px;height:40px;border-radius:50%;background:#ec4899;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;flex-shrink:0">L</div>
         <div>
           <div style="font-size:18px;font-weight:800;color:#ec4899">Luna</div>
-          <div style="font-size:12px;color:var(--text2)">18 flagged this morning &middot; Hawaii, Napa</div>
+          <div style="font-size:12px;color:var(--text2)">19 flagged this morning &middot; Hawaii, Napa</div>
         </div>
         <div style="margin-left:auto;display:flex;gap:16px;align-items:center">
           <div style="text-align:center">
-            <div style="font-size:22px;font-weight:800;color:var(--green)">0</div>
+            <div style="font-size:22px;font-weight:800;color:var(--green)">2</div>
             <div style="font-size:10px;color:var(--text2);text-transform:uppercase">Resolved</div>
           </div>
           <div style="text-align:center">
-            <div style="font-size:22px;font-weight:800;color:var(--red)">19</div>
+            <div style="font-size:22px;font-weight:800;color:var(--red)">17</div>
             <div style="font-size:10px;color:var(--text2);text-transform:uppercase">Still Open</div>
           </div>
           <div style="text-align:center">
-            <div style="font-size:22px;font-weight:800;color:var(--red)">0%</div>
+            <div style="font-size:22px;font-weight:800;color:var(--red)">11%</div>
             <div style="font-size:10px;color:var(--text2);text-transform:uppercase">Progress</div>
           </div>
         </div>
       </div>
+      <div style="padding:12px 24px 0">
+        <div style="font-size:13px;font-weight:700;color:var(--green);margin-bottom:8px">✅ Resolved Today</div>
+        <div style="padding:8px 0;border-bottom:1px solid rgba(16,185,129,.15);font-size:13px">
+          <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11620577505" target="_blank" style="color:var(--green);text-decoration:none;font-weight:600">✅ The couch has a slightly worn appearance, which may require maintenance to address wear an</a>
+          <span class="badge board" style="margin-left:6px">Maintenance Issues</span>
+          
+        </div>
+        <div style="padding:8px 0;border-bottom:1px solid rgba(16,185,129,.15);font-size:13px">
+          <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11622855227" target="_blank" style="color:var(--green);text-decoration:none;font-weight:600">✅ Order sugar for oksana</a>
+          <span class="badge board" style="margin-left:6px">Cleaning Issues</span>
+          
+        </div>
+      </div>
       <div style="padding:12px 24px 16px">
-        <div style="font-size:13px;font-weight:700;color:var(--red);margin-bottom:8px">🔓 Still Open (19)</div>
-        <div style="padding:8px 0;border-bottom:1px solid rgba(51,65,85,.5);font-size:13px">
-          <div style="display:flex;align-items:flex-start;gap:6px;flex-wrap:wrap">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11620577505" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500;flex:1;min-width:200px">🔓 The couch has a slightly worn appearance, which may require maintenance to address wear an</a>
-            <span class="badge board">Maintenance Issues</span><span style="font-size:10px;font-weight:700;padding:1px 6px;border-radius:4px;background:rgba(239,68,68,.12);color:#ef4444;margin-left:4px">⚠️ Past Deadline</span>
-          </div>
-          
-        </div>
-        <div style="padding:8px 0;border-bottom:1px solid rgba(51,65,85,.5);font-size:13px">
-          <div style="display:flex;align-items:flex-start;gap:6px;flex-wrap:wrap">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11622855227" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500;flex:1;min-width:200px">🔓 Order sugar for oksana</a>
-            <span class="badge board">Cleaning Issues</span><span style="font-size:10px;font-weight:700;padding:1px 6px;border-radius:4px;background:rgba(239,68,68,.12);color:#ef4444;margin-left:4px">⚠️ Past Deadline</span>
-          </div>
-          
-        </div>
+        <div style="font-size:13px;font-weight:700;color:var(--red);margin-bottom:8px">🔓 Still Open (17)</div>
         <div style="padding:8px 0;border-bottom:1px solid rgba(51,65,85,.5);font-size:13px">
           <div style="display:flex;align-items:flex-start;gap:6px;flex-wrap:wrap">
             <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11850617184" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500;flex:1;min-width:200px">🔓 No hot water in shower — issue ongoing since yesterday</a>
@@ -1036,7 +983,7 @@ h1 span { color:var(--blue); }
         </div>
         <div style="padding:8px 0;border-bottom:1px solid rgba(51,65,85,.5);font-size:13px">
           <div style="display:flex;align-items:flex-start;gap:6px;flex-wrap:wrap">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11848818927" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500;flex:1;min-width:200px">🔓 The property was still being cleaned at the time of check-in, indicating a delay in cleani</a>
+            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11848818927" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500;flex:1;min-width:200px">🔓 The property was still being cleaned at the time of check-in</a>
             <span class="badge board">Cleaning Issues</span><span style="font-size:10px;font-weight:700;padding:1px 6px;border-radius:4px;background:rgba(239,68,68,.12);color:#94a3b8;margin-left:4px">❌ Missing Deadline</span>
           </div>
           
@@ -1175,9 +1122,9 @@ h1 span { color:var(--blue); }
       <div style="padding:12px 24px 16px">
         <div style="padding:10px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px">
           <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
-            <div style="font-size:16px;font-weight:800;color:#ef4444;min-width:28px">#</div>
+            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#</div>
             <div style="flex:1;min-width:200px">
-              <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11850903222" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🔴 Bathroom flooding — safety hazard, guest slipped entering bathroom</a>
+              <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11850903222" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 Bathroom flooding — safety hazard, guest slipped entering bathroom</a>
               <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
               <span class="badge board" style="margin-left:4px">Reservation Issues</span>
               <span class="flagged-person person-luna" style="margin-left:4px">Luna</span>
@@ -1187,11 +1134,11 @@ h1 span { color:var(--blue); }
         </div>
         <div style="padding:10px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px">
           <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
-            <div style="font-size:16px;font-weight:800;color:#ef4444;min-width:28px">#</div>
+            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#</div>
             <div style="flex:1;min-width:200px">
-              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11620577505" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🔴 The couch has a slightly worn appearance — maintenance needed</a>
+              <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11850625361" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 Severe gnat infestation — hundreds/thousands of gnats, unit unlivable</a>
               <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
-              <span class="badge board" style="margin-left:4px">Maintenance Issues</span>
+              <span class="badge board" style="margin-left:4px">Cleaning Issues</span>
               <span class="flagged-person person-luna" style="margin-left:4px">Luna</span>
             </div>
           </div>
@@ -1199,11 +1146,11 @@ h1 span { color:var(--blue); }
         </div>
         <div style="padding:10px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px">
           <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
-            <div style="font-size:16px;font-weight:800;color:#ef4444;min-width:28px">#</div>
+            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#</div>
             <div style="flex:1;min-width:200px">
-              <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11622855227" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🔴 Order sugar for oksana</a>
+              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11850617184" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 No hot water in shower — issue ongoing since yesterday</a>
               <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
-              <span class="badge board" style="margin-left:4px">Cleaning Issues</span>
+              <span class="badge board" style="margin-left:4px">Maintenance Issues</span>
               <span class="flagged-person person-luna" style="margin-left:4px">Luna</span>
             </div>
           </div>
