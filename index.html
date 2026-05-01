@@ -152,6 +152,7 @@ h1 span { color:var(--blue); }
     <button class="tab-btn" onclick="switchTab('daily-progress')">📈 Daily Progress (0✅ / 0 open)</button>
     <button class="tab-btn" onclick="switchTab('review-removal')">⭐ Review Removal</button>
     <button class="tab-btn" onclick="switchTab('closures')">✅ Yesterday's Closures (0)</button>
+    <button class="tab-btn" onclick="switchTab('completions-7d')">📅 Completions (7d) (110)</button>
   </div>
 
   <div id="tab-dashboard" class="tab-content active">
@@ -880,6 +881,457 @@ h1 span { color:var(--blue); }
       <div class="empty-state" style="padding:14px 24px">No closures recorded for this date — either no items were resolved or the audit has not yet populated closures data.</div>
     </div>
 
+  </div>
+  <div id="tab-completions-7d" class="tab-content">
+    <div style="padding:20px 0 8px;display:flex;align-items:center;justify-content:space-between">
+      <div style="font-size:16px;font-weight:700">📅 Completions — Last 7 Days</div>
+      <div style="font-size:12.5px;color:var(--text2)">2026-04-24 → 2026-05-01 &middot; 110 total completions</div>
+    </div>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:24px">
+      <div style="flex:1;min-width:180px;background:var(--card);border:1px solid var(--border);border-left:4px solid #3b82f6;border-radius:10px;padding:16px 20px">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <div style="width:30px;height:30px;border-radius:50%;background:#3b82f6;color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center">N</div>
+          <div style="font-weight:700;font-size:15px;color:#3b82f6">Nicolas</div>
+        </div>
+        <div style="font-size:28px;font-weight:800;color:var(--text1)">23</div>
+        <div style="font-size:11.5px;color:var(--text2);margin-top:2px">tasks completed in 7 days</div>
+      </div>
+      <div style="flex:1;min-width:180px;background:var(--card);border:1px solid var(--border);border-left:4px solid #f97316;border-radius:10px;padding:16px 20px">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <div style="width:30px;height:30px;border-radius:50%;background:#f97316;color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center">B</div>
+          <div style="font-weight:700;font-size:15px;color:#f97316">Baptiste</div>
+        </div>
+        <div style="font-size:28px;font-weight:800;color:var(--text1)">8</div>
+        <div style="font-size:11.5px;color:var(--text2);margin-top:2px">tasks completed in 7 days</div>
+      </div>
+      <div style="flex:1;min-width:180px;background:var(--card);border:1px solid var(--border);border-left:4px solid #ec4899;border-radius:10px;padding:16px 20px">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <div style="width:30px;height:30px;border-radius:50%;background:#ec4899;color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center">L</div>
+          <div style="font-weight:700;font-size:15px;color:#ec4899">Luna</div>
+        </div>
+        <div style="font-size:28px;font-weight:800;color:var(--text1)">79</div>
+        <div style="font-size:11.5px;color:var(--text2);margin-top:2px">tasks completed in 7 days</div>
+      </div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:24px">
+      <div style="padding:14px 20px;font-weight:700;font-size:13px;border-bottom:1px solid var(--border)">📆 Day-by-Day Breakdown</div>
+      <table style="width:100%;border-collapse:collapse;font-size:13px">
+        <thead><tr style="background:rgba(99,102,241,.07);text-align:left;color:var(--text2);font-size:11px;text-transform:uppercase;letter-spacing:.4px">
+          <th style="padding:9px 16px">Date</th>
+          <th style="padding:9px 16px;color:#3b82f6">Nicolas</th>
+          <th style="padding:9px 16px;color:#f97316">Baptiste</th>
+          <th style="padding:9px 16px;color:#ec4899">Luna</th>
+          <th style="padding:9px 16px">Total</th>
+        </tr></thead>
+        <tbody>
+        <tr style="border-top:1px solid var(--border)">
+          <td style="padding:9px 16px;font-weight:600">2026-05-01</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;font-weight:700">2</td>
+        </tr>
+        <tr style="border-top:1px solid var(--border)">
+          <td style="padding:9px 16px;font-weight:600">2026-04-30</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;font-weight:700">15</td>
+        </tr>
+        <tr style="border-top:1px solid var(--border)">
+          <td style="padding:9px 16px;font-weight:600">2026-04-29</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;font-weight:700">5</td>
+        </tr>
+        <tr style="border-top:1px solid var(--border)">
+          <td style="padding:9px 16px;font-weight:600">2026-04-28</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;font-weight:700">6</td>
+        </tr>
+        <tr style="border-top:1px solid var(--border)">
+          <td style="padding:9px 16px;font-weight:600">2026-04-27</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;font-weight:700">7</td>
+        </tr>
+        <tr style="border-top:1px solid var(--border)">
+          <td style="padding:9px 16px;font-weight:600">2026-04-26</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;font-weight:700">22</td>
+        </tr>
+        <tr style="border-top:1px solid var(--border)">
+          <td style="padding:9px 16px;font-weight:600">2026-04-25</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;font-weight:700">37</td>
+        </tr>
+        <tr style="border-top:1px solid var(--border)">
+          <td style="padding:9px 16px;font-weight:600">2026-04-24</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;color:var(--text2)">—</td>
+          <td style="padding:9px 16px;font-weight:700">16</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="font-weight:700;font-size:14px;margin-bottom:12px">🗂️ Completed Items by VA</div>
+    <div style="background:var(--card);border:1px solid var(--border);border-left:4px solid #3b82f6;border-radius:10px;margin-bottom:12px">
+      <div style="padding:14px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border)">
+        <div style="width:28px;height:28px;border-radius:50%;background:#3b82f6;color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center">N</div>
+        <div style="font-weight:700;font-size:14px;color:#3b82f6">Nicolas</div>
+        <div style="margin-left:auto;font-size:13px;color:var(--text2)">23 completed</div>
+      </div>
+      <table style="width:100%;border-collapse:collapse;font-size:12.5px">
+        <thead><tr style="text-align:left;color:var(--text2);font-size:11px;text-transform:uppercase;letter-spacing:.3px;background:rgba(0,0,0,.03)">
+          <th style="padding:7px 14px">Item</th><th style="padding:7px 14px">Board</th><th style="padding:7px 14px">Completed</th>
+        </tr></thead>
+        <tbody>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11723127746" target="_blank" style="color:var(--blue);text-decoration:none">Lock not found for unit #3</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11619625608" target="_blank" style="color:var(--blue);text-decoration:none">Replace tube for PT Device for unit #5</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11857315948" target="_blank" style="color:var(--blue);text-decoration:none">Dresser drawer in master bedroom is broken</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11851756456" target="_blank" style="color:var(--blue);text-decoration:none">Broken dresser drawer in master bedroom — Conni Roush (USVI #3)</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11850617416" target="_blank" style="color:var(--blue);text-decoration:none">Bathroom door not latching — missing screw on plate</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11850710383" target="_blank" style="color:var(--blue);text-decoration:none">Broken Toilet</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11846684298" target="_blank" style="color:var(--blue);text-decoration:none">camera offline</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11847572375" target="_blank" style="color:var(--blue);text-decoration:none">Michael Flaherty — USVI #1 — Bathroom door not latching</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11847604406" target="_blank" style="color:var(--blue);text-decoration:none">Bathroom door not latching — missing screw on plate</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11841096260" target="_blank" style="color:var(--blue);text-decoration:none">Fridge off and AC not powering on (Hawaii G110)</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11771718688" target="_blank" style="color:var(--blue);text-decoration:none">Add batteries for smoke detector in unit #7</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11789541883" target="_blank" style="color:var(--blue);text-decoration:none">Revisit/tune the team for panel inspection</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11620496941" target="_blank" style="color:var(--blue);text-decoration:none">The wall air conditioner was very loud</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11850617138" target="_blank" style="color:var(--blue);text-decoration:none">Kitchen trash can full — needs to be emptied</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Cleaning Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11847648527" target="_blank" style="color:var(--blue);text-decoration:none">Vincent Mirabile — USVI #5 — Kitchen trash can full, needs emptying</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Cleaning Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11847681536" target="_blank" style="color:var(--blue);text-decoration:none">Kitchen trash can full and needs to be emptied</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Cleaning Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11850625363" target="_blank" style="color:var(--blue);text-decoration:none">Front door lock not working — guest cannot access unit</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11847580119" target="_blank" style="color:var(--blue);text-decoration:none">Conni Roush — USVI #3 — Cannot access unit, front door lock not working</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11847681583" target="_blank" style="color:var(--blue);text-decoration:none">Guest cannot access unit — front door lock not working</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11785557413" target="_blank" style="color:var(--blue);text-decoration:none">Update the guest information to include instructions about taking a key for pool</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11841109091" target="_blank" style="color:var(--blue);text-decoration:none">Guest broke a dinner plate (USVI #4)</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11841096116" target="_blank" style="color:var(--blue);text-decoration:none">Guest feels unsafe walking with stroller — requesting private taxi (USVI #5)</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11841094894" target="_blank" style="color:var(--blue);text-decoration:none">Guest cannot operate front door lock — access issue</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-left:4px solid #f97316;border-radius:10px;margin-bottom:12px">
+      <div style="padding:14px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border)">
+        <div style="width:28px;height:28px;border-radius:50%;background:#f97316;color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center">B</div>
+        <div style="font-weight:700;font-size:14px;color:#f97316">Baptiste</div>
+        <div style="margin-left:auto;font-size:13px;color:var(--text2)">8 completed</div>
+      </div>
+      <table style="width:100%;border-collapse:collapse;font-size:12.5px">
+        <thead><tr style="text-align:left;color:var(--text2);font-size:11px;text-transform:uppercase;letter-spacing:.3px;background:rgba(0,0,0,.03)">
+          <th style="padding:7px 14px">Item</th><th style="padding:7px 14px">Board</th><th style="padding:7px 14px">Completed</th>
+        </tr></thead>
+        <tbody>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11780954196" target="_blank" style="color:var(--blue);text-decoration:none">Chrissie Palmer — Maintenance: Shower door broken</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Bad Review Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11780951399" target="_blank" style="color:var(--blue);text-decoration:none">Chrissie Palmer — Maintenance: Second bedroom door won't shut</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Bad Review Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11723450827" target="_blank" style="color:var(--blue);text-decoration:none">change the camera battery</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11835118925" target="_blank" style="color:var(--blue);text-decoration:none">camera offline</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11850638572" target="_blank" style="color:var(--blue);text-decoration:none">Post-checkout cleaning needed — dishes left, guest recovering from surgery</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Cleaning Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11847649889" target="_blank" style="color:var(--blue);text-decoration:none">Guest requesting cleaning after unable to wash dishes due to surgery recovery</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Cleaning Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11847566025" target="_blank" style="color:var(--blue);text-decoration:none">Anna Diachok — Miami — Cleaning needed, guest unable to wash dishes post-checkou</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Cleaning Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11841124392" target="_blank" style="color:var(--blue);text-decoration:none">Guest inquiring about kitchen amenities — kitchenette, microwave, fridge, kettle</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-left:4px solid #ec4899;border-radius:10px;margin-bottom:12px">
+      <div style="padding:14px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border)">
+        <div style="width:28px;height:28px;border-radius:50%;background:#ec4899;color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center">L</div>
+        <div style="font-weight:700;font-size:14px;color:#ec4899">Luna</div>
+        <div style="margin-left:auto;font-size:13px;color:var(--text2)">79 completed</div>
+      </div>
+      <table style="width:100%;border-collapse:collapse;font-size:12.5px">
+        <thead><tr style="text-align:left;color:var(--text2);font-size:11px;text-transform:uppercase;letter-spacing:.3px;background:rgba(0,0,0,.03)">
+          <th style="padding:7px 14px">Item</th><th style="padding:7px 14px">Board</th><th style="padding:7px 14px">Completed</th>
+        </tr></thead>
+        <tbody>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11897683850" target="_blank" style="color:var(--blue);text-decoration:none">Kyle S. reported that the fireplace candles appeared to have mold on them.</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Bad Review Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11887104112" target="_blank" style="color:var(--blue);text-decoration:none">Lorraine reported being placed in a ground floor unit located by a busy office</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Bad Review Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11897657593" target="_blank" style="color:var(--blue);text-decoration:none">Kyle S. reported that the property was 'not as advertised'</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Bad Review Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11897627752" target="_blank" style="color:var(--blue);text-decoration:none">Kyle S. reported that the bathroom towel hanger was missing and the exhaust fan </a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Bad Review Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11897660120" target="_blank" style="color:var(--blue);text-decoration:none">Kyle S. reported peeling wallpaper in the bathroom and water stains in the close</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Bad Review Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11897683176" target="_blank" style="color:var(--blue);text-decoration:none">Kyle S. reported the unit appeared as though it had flooded and was put back int</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Bad Review Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11897660328" target="_blank" style="color:var(--blue);text-decoration:none">Kyle S. reported a dented refrigerator and a removed living room picture</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Bad Review Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11897644423" target="_blank" style="color:var(--blue);text-decoration:none">Kyle S. reported that the shampoo, conditioner, and body wash dispensers contain</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Bad Review Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11897645080" target="_blank" style="color:var(--blue);text-decoration:none">Kyle S. reported that the outdoor furniture was waterlogged and unusable.</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Bad Review Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11897661139" target="_blank" style="color:var(--blue);text-decoration:none">Kyle S. reported that the pillows were a 'disaster'.</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Bad Review Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11897664672" target="_blank" style="color:var(--blue);text-decoration:none">Kyle S. reported that the closet contained multiple broken coffee pots labeled '</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Bad Review Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11727508880" target="_blank" style="color:var(--blue);text-decoration:none">Tara Renee reported that the carpet in the unit was fraying.</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Bad Review Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11813417000" target="_blank" style="color:var(--blue);text-decoration:none">Gregory reported that his documented concerns were not resolved by the host</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Bad Review Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11635593894" target="_blank" style="color:var(--blue);text-decoration:none">Walter reported a dirty shower curtain.</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Bad Review Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11730312281" target="_blank" style="color:var(--blue);text-decoration:none">Erika reported that the pillows in the living room needed to be updated.</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Bad Review Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11635562321" target="_blank" style="color:var(--blue);text-decoration:none">Walter reported cracked corner guard on the wall</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Bad Review Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11842486783" target="_blank" style="color:var(--blue);text-decoration:none">3303 bathtub recoating with Edgar</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11376907626" target="_blank" style="color:var(--blue);text-decoration:none">Cold water shut-off valve installation</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11850646330" target="_blank" style="color:var(--blue);text-decoration:none">Ants in bathroom when it rains + front door chain hard to lock/unlock</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11850617184" target="_blank" style="color:var(--blue);text-decoration:none">No hot water in shower — issue ongoing since yesterday</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11850625175" target="_blank" style="color:var(--blue);text-decoration:none">Fly infestation (entering via AC units) + both TVs not connecting to internet</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11787369193" target="_blank" style="color:var(--blue);text-decoration:none">Rusty toilet brush</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11838086847" target="_blank" style="color:var(--blue);text-decoration:none">There is no spray available in the kitchen area, leading to a mosquito problem.</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/10768199914" target="_blank" style="color:var(--blue);text-decoration:none">Diamond Report cabin inside needs painting</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11838086483" target="_blank" style="color:var(--blue);text-decoration:none">There is a mosquito issue in the kitchen area</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11721936494" target="_blank" style="color:var(--blue);text-decoration:none">Verify pest control schedule and update it</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11722097463" target="_blank" style="color:var(--blue);text-decoration:none">Get Q401 remote missing</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11454391683" target="_blank" style="color:var(--blue);text-decoration:none">Oksana screen door lock appears damaged</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11847598330" target="_blank" style="color:var(--blue);text-decoration:none">Multiple maintenance issues — exhaust fan, water damage, waterlogged furniture</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11847591983" target="_blank" style="color:var(--blue);text-decoration:none">Ants in bathroom during rain and front door hard to lock/unlock</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr><td colspan="3" style="padding:10px 14px;color:var(--text2);font-size:11.5px;font-style:italic">… and 49 more items</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   <div class="footer">Bijou Getaways VA Performance Dashboard &middot; Auto-generated 2026-05-01 &middot; Ledger: 36 days &middot; Ranking: Health 40% + Rate 30% + Low Flagged 30%</div>
 </div>
