@@ -147,9 +147,9 @@ h1 span { color:var(--blue); }
 
   <div class="tab-bar">
     <button class="tab-btn active" onclick="switchTab('dashboard')">📊 Dashboard</button>
-    <button class="tab-btn" onclick="switchTab('flagged')">🚩 Flagged Issues (34)</button>
-    <button class="tab-btn" onclick="switchTab('urgent')">🚨 Top Urgent Issues (5)</button>
-    <button class="tab-btn" onclick="switchTab('daily-progress')">📈 Daily Progress (0✅ / 0 open)</button>
+    <button class="tab-btn" onclick="switchTab('flagged')">🚩 Flagged Issues (31)</button>
+    <button class="tab-btn" onclick="switchTab('urgent')">🚨 Top Urgent Issues (4)</button>
+    <button class="tab-btn" onclick="switchTab('daily-progress')">📈 Daily Progress (0✅ / 12 open)</button>
     <button class="tab-btn" onclick="switchTab('review-removal')">⭐ Review Removal</button>
     <button class="tab-btn" onclick="switchTab('closures')">✅ Yesterday's Closures (0)</button>
     <button class="tab-btn" onclick="switchTab('completions-7d')">📅 Completions (7d) (110)</button>
@@ -168,14 +168,14 @@ h1 span { color:var(--blue); }
   <div class="change-banner">
     <div class="change-banner-title">📊 Day-over-Day Changes &mdash; May 1 → May 3</div>
     <div class="change-cards">
-      <div class="change-card" style="border-left-color:#ef4444">
+      <div class="change-card" style="border-left-color:#f59e0b">
         <div class="change-card-name" style="color:#3b82f6">Nicolas</div>
-        <div class="change-card-alert" style="background:rgba(239,68,68,.12);color:#ef4444">CRITICAL DROP</div>
+        <div class="change-card-alert" style="background:rgba(245,158,11,.12);color:#f59e0b">DECLINING</div>
         <div class="change-card-metrics">
-          Composite: <span class="val">95.5</span> → <span class="val">74.5</span> <span class="delta delta-bad">↓21.0</span><br>
+          Composite: <span class="val">95.5</span> → <span class="val">79.0</span> <span class="delta delta-bad">↓16.5</span><br>
           Health: <span class="val">100</span> → <span class="val">55</span> <span class="delta delta-bad">↓45</span><br>
           Rate: <span class="val">95%</span> <span class="delta flat">—</span><br>
-          Flagged: <span class="val">2</span> → <span class="val">4</span> <span class="delta delta-bad">↑2</span>
+          Flagged: <span class="val">2</span> → <span class="val">1</span> <span class="delta delta-good">↓1</span>
         </div>
       </div>
       <div class="change-card" style="border-left-color:#f59e0b">
@@ -205,8 +205,8 @@ h1 span { color:var(--blue); }
     <div class="podium-card" style="border-color:#fbbf24">
       <div class="podium-medal" style="background:rgba(251,191,36,0.12);color:#fbbf24">🥇 Gold</div>
       <div class="podium-name" style="color:#3b82f6">🥇 Nicolas</div>
-      <div class="podium-score">74.5<span class="podium-score-label">pts</span></div>
-      <div class="podium-breakdown">Health 55 &middot; Rate 95% &middot; Flagged 4</div>
+      <div class="podium-score">79.0<span class="podium-score-label">pts</span></div>
+      <div class="podium-breakdown">Health 55 &middot; Rate 95% &middot; Flagged 1</div>
     </div>
     <div class="podium-card" style="border-color:#94a3b8">
       <div class="podium-medal" style="background:rgba(148,163,184,0.12);color:#94a3b8">🥈 Silver</div>
@@ -225,8 +225,8 @@ h1 span { color:var(--blue); }
   <div class="summary-bar">
     <div class="summary-item"><div class="summary-val" style="color:var(--yellow)">74</div><div class="summary-lbl">Open Issues</div></div>
     <div class="summary-item"><div class="summary-val" style="color:var(--green)">570</div><div class="summary-lbl">Closed Issues</div></div>
-    <div class="summary-item"><div class="summary-val" style="color:var(--red)">34</div><div class="summary-lbl">Total Flagged</div></div>
-    <div class="summary-item"><div class="summary-val" style="color:var(--green)">4</div><div class="summary-lbl">Completed (May 2)</div></div>
+    <div class="summary-item"><div class="summary-val" style="color:var(--red)">31</div><div class="summary-lbl">Total Flagged</div></div>
+    <div class="summary-item"><div class="summary-val" style="color:var(--green)">6</div><div class="summary-lbl">Completed (May 2)</div></div>
   </div>
 
     <div class="va-section" style="border-color:rgba(59,130,246,0.25)">
@@ -235,7 +235,7 @@ h1 span { color:var(--blue); }
           <div class="va-avatar" style="background:#3b82f6">N</div>
           <div>
             <h2 class="va-name" style="color:#3b82f6">🥇 Nicolas</h2>
-            <div class="va-subtitle">366 total items &middot; Composite: 74.5 pts</div>
+            <div class="va-subtitle">366 total items &middot; Composite: 79.0 pts</div>
           </div>
         </div>
         <div class="va-kpis">
@@ -247,7 +247,7 @@ h1 span { color:var(--blue); }
           <div class="kpi-col" title="Items currently open"><span class="kpi-val" style="color:#f59e0b">17</span><span class="kpi-lbl">Open</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Items marked Complete/Completed"><span class="kpi-val" style="color:#10b981">349</span><span class="kpi-lbl">Closed</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Completion Rate = Closed &divide; Total"><span class="kpi-val" style="color:#3b82f6">95%</span><span class="kpi-lbl">Rate</span><span class="delta flat">—</span></div>
-          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">4</span><span class="kpi-lbl">Flagged</span><span class="delta delta-bad">↑2</span></div>
+          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">1</span><span class="kpi-lbl">Flagged</span><span class="delta delta-good">↓1</span></div>
           <div class="kpi-col" title="Items with Needs Review or No Status"><span class="kpi-val" style="color:#a855f7">0</span><span class="kpi-lbl">Review / No Status</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Open bad review issues assigned"><span class="kpi-val" style="color:#ec4899">0</span><span class="kpi-lbl">Bad Reviews</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Average days to complete closed items"><span class="kpi-val" style="color:#06b6d4">0d</span><span class="kpi-lbl">Avg Complete</span><span class="delta flat">—</span></div>
@@ -262,8 +262,8 @@ h1 span { color:var(--blue); }
       <tr><td class="metric-label">Open</td><td class="cell-metric">17</td><td class="cell-metric">17</td><td><span class="delta flat">—</span></td></tr>
       <tr><td class="metric-label">Closed</td><td class="cell-metric">349</td><td class="cell-metric">349</td><td><span class="delta flat">—</span></td></tr>
       <tr><td class="metric-label">Rate</td><td class="cell-metric">95%</td><td class="cell-metric">95%</td><td><span class="delta flat">—</span></td></tr>
-      <tr><td class="metric-label">Flagged</td><td class="cell-metric">2</td><td class="cell-metric">4</td><td><span class="delta delta-bad">↑2</span></td></tr>
-      <tr><td class="metric-label">Completed (Day)</td><td class="cell-metric">0</td><td class="cell-metric">1</td><td><span class="delta delta-good">↑1</span></td></tr>
+      <tr><td class="metric-label">Flagged</td><td class="cell-metric">2</td><td class="cell-metric">1</td><td><span class="delta delta-good">↓1</span></td></tr>
+      <tr><td class="metric-label">Completed (Day)</td><td class="cell-metric">0</td><td class="cell-metric">3</td><td><span class="delta delta-good">↑3</span></td></tr>
       <tr><td class="metric-label">Review / No Status</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
       <tr><td class="metric-label">Bad Reviews Open</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
       <tr><td class="metric-label">Avg Days to Complete</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
@@ -271,13 +271,11 @@ h1 span { color:var(--blue); }
     </table>
   </div>
 <div class="reports-grid">
-  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge warn">2 flagged</span></div>
-    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11887212519" target="_blank">Cistern #6 Not Connected</a><span class="badge board">Maintenance Issues</span></div>
-    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11847974591" target="_blank">Reinforcement of foundation</a><span class="badge board">Maintenance Issues</span></div>
+  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge ok">0 flagged</span></div>
+    <div class="empty-state">✅ No flagged items — all clear!</div>
   </div>
-  <div class="report-block"><div class="report-header"><span>🔄 Deadline Extensions</span><span class="count-badge warn">2</span></div>
+  <div class="report-block"><div class="report-header"><span>🔄 Deadline Extensions</span><span class="count-badge warn">1</span></div>
     <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11666731004" target="_blank">Zofia #1 dispute her $4700 credit card payment — was taken automatically from us</a><span class="badge sev-yellow"></span><span class="badge board">Reservation Issues</span></div>
-    <div class="item-row">🟡 <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11452369015" target="_blank">Cristian reported a brown spot on the kitchen wall</a><span class="badge sev-yellow"></span><span class="badge board">Bad Review Issues</span></div>
   </div>
   <div class="report-block"><div class="report-header"><span>✅ Completed (May 2)</span><span class="count-badge ok">0</span></div>
     <div class="empty-state">✅ No completions yesterday</div>
@@ -436,10 +434,10 @@ h1 span { color:var(--blue); }
 
   <div id="tab-flagged" class="tab-content">
     <div class="flagged-summary">
-      <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">2</div><div class="flagged-summary-label">Past Deadline</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">0</div><div class="flagged-summary-label">Past Deadline</div></div>
       <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">3</div><div class="flagged-summary-label">No Update (7+ Days)</div></div>
       <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">9</div><div class="flagged-summary-label">Missing Deadline</div></div>
-      <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">19</div><div class="flagged-summary-label">Deadline Extensions (3+)</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">18</div><div class="flagged-summary-label">Deadline Extensions (3+)</div></div>
       <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">0</div><div class="flagged-summary-label">Zero-Update Completions</div></div>
       <div class="flagged-summary-card" style="border-left-color:#a855f7"><div class="flagged-summary-count" style="color:#a855f7">2</div><div class="flagged-summary-label">Needs Review / No Status</div></div>
       <div class="flagged-summary-card" style="border-left-color:#8b5cf6"><div class="flagged-summary-count" style="color:#8b5cf6">9</div><div class="flagged-summary-label">Missing Who / What / When</div></div>
@@ -447,7 +445,7 @@ h1 span { color:var(--blue); }
 
     <div class="va-filter-bar">
       <button class="va-filter-btn active" onclick="filterVA('all', this)">All VAs</button>
-      <button class="va-filter-btn" style="--va-color:#3b82f6" onclick="filterVA('Nicolás', this)">Nicolás (4)</button>
+      <button class="va-filter-btn" style="--va-color:#3b82f6" onclick="filterVA('Nicolás', this)">Nicolás (1)</button>
       <button class="va-filter-btn" style="--va-color:#ec4899" onclick="filterVA('Luna', this)">Luna (25)</button>
       <button class="va-filter-btn" style="--va-color:#f97316" onclick="filterVA('Baptiste', this)">Baptiste (5)</button>
     </div>
@@ -455,39 +453,18 @@ h1 span { color:var(--blue); }
     <div class="va-flagged-section" data-va="Nicolás">
       <div class="va-flagged-header" style="border-left-color:#3b82f6">
         <span class="va-flagged-name" style="color:#3b82f6">Nicolás</span>
-        <span class="va-flagged-total">4 flagged items</span>
-        <span class="va-cat-badges"><span class="va-cat-badge" style="color:#ef4444">⚠️ 2</span><span class="va-cat-badge" style="color:#ef4444">🔄 2</span></span>
-      </div>
-      <div class="flagged-category" style="margin:0 16px 12px 16px">
-        <div class="flagged-cat-header" style="padding:10px 16px">
-          <div class="flagged-cat-title" style="font-size:14px">⚠️ Past Deadline</div>
-          <span class="flagged-cat-count" style="background:rgba(239,68,68,.15);color:#ef4444;font-size:12px">2</span>
-        </div>
-        <div class="flagged-cat-body" style="padding:8px 16px">
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11887212519" target="_blank">Cistern #6 Not Connected</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11847974591" target="_blank">Reinforcement of foundation</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-        </div>
+        <span class="va-flagged-total">1 flagged item</span>
+        <span class="va-cat-badges"><span class="va-cat-badge" style="color:#ef4444">🔄 1</span></span>
       </div>
       <div class="flagged-category" style="margin:0 16px 12px 16px">
         <div class="flagged-cat-header" style="padding:10px 16px">
           <div class="flagged-cat-title" style="font-size:14px">🔄 Deadline Extensions (3+)</div>
-          <span class="flagged-cat-count" style="background:rgba(239,68,68,.15);color:#ef4444;font-size:12px">2</span>
+          <span class="flagged-cat-count" style="background:rgba(239,68,68,.15);color:#ef4444;font-size:12px">1</span>
         </div>
         <div class="flagged-cat-body" style="padding:8px 16px">
           <div class="flagged-item">
             <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11666731004" target="_blank">Zofia #1 dispute her $4700 credit card payment — was taken automatically from us</a>
             <span class="badge board">Reservation Issues</span>
-            <span class="flagged-meta">3x pushed</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11452369015" target="_blank">Cristian reported a brown spot on the kitchen wall</a>
-            <span class="badge board">Bad Review Issues</span>
             <span class="flagged-meta">3x pushed</span>
           </div>
         </div>
@@ -756,7 +733,7 @@ h1 span { color:var(--blue); }
   <div id="tab-urgent" class="tab-content">
     <div style="margin-bottom:20px"><h2 style="font-size:22px;font-weight:700;margin-bottom:6px">🚨 Top Urgent Issues</h2><p style="color:var(--text2);font-size:13px">Open items scored by urgency. v2 formula: base (safety/revenue/deadline) + <b>recurrence</b> (inbox & board co-occurrence) + <b>stale penalty</b> (no updates on high-base items) − <b>active-work reward</b> (multiple updates in 14d). Scores above 100 = critical overload. Columns show <b>Unit #</b> (from board location tag) and <b>Last Update</b> with quality flags (missing what / owner / next step, too brief, stale).</p></div>
     <div class="flagged-summary">
-      <div class="flagged-summary-card" style="border-left-color:#3b82f6"><div class="flagged-summary-count" style="color:#3b82f6">3</div><div class="flagged-summary-label">Nicolás (3 critical)</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#3b82f6"><div class="flagged-summary-count" style="color:#3b82f6">2</div><div class="flagged-summary-label">Nicolás (2 critical)</div></div>
       <div class="flagged-summary-card" style="border-left-color:#ec4899"><div class="flagged-summary-count" style="color:#ec4899">1</div><div class="flagged-summary-label">Luna (1 critical)</div></div>
       <div class="flagged-summary-card" style="border-left-color:#f97316"><div class="flagged-summary-count" style="color:#f97316">1</div><div class="flagged-summary-label">Baptiste (1 critical)</div></div>
     </div>
@@ -811,15 +788,6 @@ h1 span { color:var(--blue); }
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
         <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
-          <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">88</td>
-          <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI #5</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11808193415" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">Mildew/mold issue USVI #5</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Cleaning Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Tier 1 auto-escalation. Mold in USVI = highest health/legal risk.</div></td>
-          <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
-          <td style="padding:12px"><div style="color:#ef4444;font-weight:600">⚠️ no updates ever</div></td>
-          <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
-          <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
-        </tr>
-        <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
           <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">62</td>
           <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">Miami/France</td>
           <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11875927810" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">camera offline</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Security camera down = liability risk. Past deadline, no closure update.</div></td>
@@ -864,11 +832,11 @@ h1 span { color:var(--blue); }
   </div>
   <div id="tab-daily-progress" class="tab-content">
     <div style="background:var(--surface);border-radius:14px;padding:20px 24px;margin-bottom:20px;border:1px solid var(--surface2)">
-      <div style="font-size:18px;font-weight:800;margin-bottom:6px">📈 Daily Progress vs Morning Baseline — 2026-05-01</div>
+      <div style="font-size:18px;font-weight:800;margin-bottom:6px">📈 Daily Progress vs Morning Baseline — 2026-05-03</div>
       <div style="font-size:13px;color:var(--text2);margin-bottom:16px">Last updated  &middot; Baseline set at 5:00 AM PST</div>
       <div style="display:flex;gap:20px;flex-wrap:wrap">
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
-          <div style="font-size:32px;font-weight:800;color:var(--text2)">2</div>
+          <div style="font-size:32px;font-weight:800;color:var(--text2)">0</div>
           <div style="font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.4px">Morning Baseline</div>
         </div>
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
@@ -876,7 +844,7 @@ h1 span { color:var(--blue); }
           <div style="font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.4px">Resolved ✅</div>
         </div>
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
-          <div style="font-size:32px;font-weight:800;color:var(--red)">0</div>
+          <div style="font-size:32px;font-weight:800;color:var(--red)">12</div>
           <div style="font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.4px">Still Open 🔓</div>
         </div>
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
@@ -887,7 +855,7 @@ h1 span { color:var(--blue); }
     </div>
     <div style="background:var(--surface);border-radius:10px;padding:14px 20px;margin-bottom:24px;border:1px solid var(--surface2)">
       <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin-bottom:6px">
-        <span>Resolution progress</span><span style="font-weight:700;color:var(--text)">0/2 items closed</span>
+        <span>Resolution progress</span><span style="font-weight:700;color:var(--text)">0/0 items closed</span>
       </div>
       <div style="height:8px;background:var(--bg);border-radius:4px;overflow:hidden">
         <div style="height:100%;width:0%;background:var(--green);border-radius:4px;transition:width .4s"></div>
@@ -896,101 +864,11 @@ h1 span { color:var(--blue); }
     <div style="background:var(--surface);border-radius:10px;padding:14px 20px;margin-bottom:24px;border:1px dashed var(--surface2);color:var(--text2);font-size:12px">
       📉 Per-VA progress trend will appear here after the first 3-hour check populates <code>progress_snapshots_2026-05-03.json</code>.
     </div>
-    <div style="background:var(--surface);border-radius:14px;margin-bottom:20px;overflow:hidden;border:1px solid var(--surface2)">
-      <div style="padding:16px 24px;border-bottom:1px solid var(--surface2);display:flex;align-items:center;gap:14px;flex-wrap:wrap">
-        <div style="width:40px;height:40px;border-radius:50%;background:#3b82f6;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;flex-shrink:0">N</div>
-        <div>
-          <div style="font-size:18px;font-weight:800;color:#3b82f6">Nicolas</div>
-          <div style="font-size:12px;color:var(--text2)">0 flagged this morning &middot; USVI</div>
-        </div>
-        <div style="margin-left:auto;display:flex;gap:16px;align-items:center">
-          <div style="text-align:center">
-            <div style="font-size:22px;font-weight:800;color:var(--green)">0</div>
-            <div style="font-size:10px;color:var(--text2);text-transform:uppercase">Resolved</div>
-          </div>
-          <div style="text-align:center">
-            <div style="font-size:22px;font-weight:800;color:var(--red)">0</div>
-            <div style="font-size:10px;color:var(--text2);text-transform:uppercase">Still Open</div>
-          </div>
-          <div style="text-align:center">
-            <div style="font-size:22px;font-weight:800;color:var(--red)">0%</div>
-            <div style="font-size:10px;color:var(--text2);text-transform:uppercase">Progress</div>
-          </div>
-        </div>
-      </div>
-      <div class="empty-state" style="padding:16px">No flagged items recorded for this VA.</div>
-    </div>
-    <div style="background:var(--surface);border-radius:14px;margin-bottom:20px;overflow:hidden;border:1px solid var(--surface2)">
-      <div style="padding:16px 24px;border-bottom:1px solid var(--surface2);display:flex;align-items:center;gap:14px;flex-wrap:wrap">
-        <div style="width:40px;height:40px;border-radius:50%;background:#ec4899;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;flex-shrink:0">L</div>
-        <div>
-          <div style="font-size:18px;font-weight:800;color:#ec4899">Luna</div>
-          <div style="font-size:12px;color:var(--text2)">1 flagged this morning &middot; Hawaii, Napa</div>
-        </div>
-        <div style="margin-left:auto;display:flex;gap:16px;align-items:center">
-          <div style="text-align:center">
-            <div style="font-size:22px;font-weight:800;color:var(--green)">0</div>
-            <div style="font-size:10px;color:var(--text2);text-transform:uppercase">Resolved</div>
-          </div>
-          <div style="text-align:center">
-            <div style="font-size:22px;font-weight:800;color:var(--red)">1</div>
-            <div style="font-size:10px;color:var(--text2);text-transform:uppercase">Still Open</div>
-          </div>
-          <div style="text-align:center">
-            <div style="font-size:22px;font-weight:800;color:var(--red)">0%</div>
-            <div style="font-size:10px;color:var(--text2);text-transform:uppercase">Progress</div>
-          </div>
-        </div>
-      </div>
-      <div style="padding:12px 24px 16px">
-        <div style="font-size:13px;font-weight:700;color:var(--red);margin-bottom:8px">🔓 Still Open (1)</div>
-        <div style="padding:8px 0;border-bottom:1px solid rgba(51,65,85,.5);font-size:13px">
-          <div style="display:flex;align-items:flex-start;gap:6px;flex-wrap:wrap">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11897823867" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500;flex:1;min-width:200px">🔓 Gross stain on couch</a>
-            <span class="badge board"></span><span style="font-size:10px;font-weight:700;padding:1px 6px;border-radius:4px;background:rgba(239,68,68,.12);color:#94a3b8;margin-left:4px">❌ Missing Deadline</span>
-          </div>
-          
-        </div>
-      </div>
-    </div>
-    <div style="background:var(--surface);border-radius:14px;margin-bottom:20px;overflow:hidden;border:1px solid var(--surface2)">
-      <div style="padding:16px 24px;border-bottom:1px solid var(--surface2);display:flex;align-items:center;gap:14px;flex-wrap:wrap">
-        <div style="width:40px;height:40px;border-radius:50%;background:#f97316;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;flex-shrink:0">B</div>
-        <div>
-          <div style="font-size:18px;font-weight:800;color:#f97316">Baptiste</div>
-          <div style="font-size:12px;color:var(--text2)">1 flagged this morning &middot; Miami, France</div>
-        </div>
-        <div style="margin-left:auto;display:flex;gap:16px;align-items:center">
-          <div style="text-align:center">
-            <div style="font-size:22px;font-weight:800;color:var(--green)">0</div>
-            <div style="font-size:10px;color:var(--text2);text-transform:uppercase">Resolved</div>
-          </div>
-          <div style="text-align:center">
-            <div style="font-size:22px;font-weight:800;color:var(--red)">1</div>
-            <div style="font-size:10px;color:var(--text2);text-transform:uppercase">Still Open</div>
-          </div>
-          <div style="text-align:center">
-            <div style="font-size:22px;font-weight:800;color:var(--red)">0%</div>
-            <div style="font-size:10px;color:var(--text2);text-transform:uppercase">Progress</div>
-          </div>
-        </div>
-      </div>
-      <div style="padding:12px 24px 16px">
-        <div style="font-size:13px;font-weight:700;color:var(--red);margin-bottom:8px">🔓 Still Open (1)</div>
-        <div style="padding:8px 0;border-bottom:1px solid rgba(51,65,85,.5);font-size:13px">
-          <div style="display:flex;align-items:flex-start;gap:6px;flex-wrap:wrap">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11875927810" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500;flex:1;min-width:200px">🔓 camera offline</a>
-            <span class="badge board"></span><span style="font-size:10px;font-weight:700;padding:1px 6px;border-radius:4px;background:rgba(239,68,68,.12);color:#ef4444;margin-left:4px">⚠️ Past Deadline</span>
-          </div>
-          <div style='font-size:11px;color:var(--text2);margin-top:3px;font-style:italic'>↳ Baptiste, Checking camera, April 29</div>
-        </div>
-      </div>
-    </div>
   </div>
   <div id="tab-closures" class="tab-content">
     <div style="margin-bottom:20px">
       <h2 style="font-size:22px;font-weight:700;margin-bottom:6px">✅ Yesterday's Closures</h2>
-      <p style="color:var(--text2);font-size:13px">Items closed on <b>Yesterday</b> that were previously flagged (health check, pushers, zero-update) or listed in the Top Urgent Issues tab. Tracks whether VAs are working through their backlog.</p>
+      <p style="color:var(--text2);font-size:13px">Items closed on <b>May 2</b> that were previously flagged (health check, pushers, zero-update) or listed in the Top Urgent Issues tab. Tracks whether VAs are working through their backlog.</p>
     </div>
     <div class="flagged-summary" style="margin-bottom:24px">
       <div class="flagged-summary-card" style="border-left-color:#3b82f6"><div class="flagged-summary-count" style="color:#3b82f6">0</div><div class="flagged-summary-label">Nicolás (🚩0 flagged · 🚨0 urgent)</div></div>
