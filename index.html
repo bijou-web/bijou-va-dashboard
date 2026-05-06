@@ -147,8 +147,8 @@ h1 span { color:var(--blue); }
 
   <div class="tab-bar">
     <button class="tab-btn active" onclick="switchTab('dashboard')">📊 Dashboard</button>
-    <button class="tab-btn" onclick="switchTab('flagged')">🚩 Flagged Issues (1)</button>
-    <button class="tab-btn" onclick="switchTab('urgent')">🚨 Top Urgent Issues (3)</button>
+    <button class="tab-btn" onclick="switchTab('flagged')">🚩 Flagged Issues (4)</button>
+    <button class="tab-btn" onclick="switchTab('urgent')">🚨 Top Urgent Issues (8)</button>
     <button class="tab-btn" onclick="switchTab('daily-progress')">📈 Daily Progress (0✅ / 82 open)</button>
     <button class="tab-btn" onclick="switchTab('review-removal')">⭐ Review Removal</button>
     <button class="tab-btn" onclick="switchTab('closures')">✅ Yesterday's Closures (0)</button>
@@ -387,7 +387,7 @@ h1 span { color:var(--blue); }
           <div class="kpi-col" title="Open bad review issues assigned"><span class="kpi-val" style="color:#ec4899">0</span><span class="kpi-lbl">Bad Reviews</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Average days to complete closed items"><span class="kpi-val" style="color:#06b6d4">0d</span><span class="kpi-lbl">Avg Complete</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Average aging days of open items"><span class="kpi-val" style="color:#f97316">0d</span><span class="kpi-lbl">Avg Aging</span><span class="delta flat">—</span></div>
-          <div class="kpi-col" title="QC Completion Rate — % of all-time QC records finalized (passed or failed, not pending)" style="border-left:1px solid rgba(148,163,184,.2);padding-left:12px"><span class="kpi-val" style="color:#10b981">100%</span><span class="kpi-lbl">🔬 QC Complete</span></div>
+          <div class="kpi-col" title="QC Completion Rate — 120 finalized / 125 eligible (5 checkouts with no QC record = Not Done)" style="border-left:1px solid rgba(148,163,184,.2);padding-left:12px"><span class="kpi-val" style="color:#f59e0b">96%</span><span class="kpi-lbl">🔬 QC Complete</span></div>
           <div class="kpi-col" title="QC Pass Rate — % of finalized QC checks that passed (39 passed / 81 failed of 120 total records)"><span class="kpi-val" style="color:#ef4444">32%</span><span class="kpi-lbl">✅ QC Pass Rate</span></div>
         </div>
       </div>
@@ -405,7 +405,7 @@ h1 span { color:var(--blue); }
       <tr><td class="metric-label">Bad Reviews Open</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
       <tr><td class="metric-label">Avg Days to Complete</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
       <tr><td class="metric-label">Avg Aging (Open)</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
-      <tr style="background:rgba(59,130,246,.04)"><td class="metric-label">🔬 QC Completion %</td><td class="cell-metric" style="color:var(--text2)">—</td><td class="cell-metric" style="color:#10b981">100%</td><td><span class="delta flat">all-time</span></td></tr>
+      <tr style="background:rgba(59,130,246,.04)"><td class="metric-label">🔬 QC Completion %</td><td class="cell-metric" style="color:var(--text2)">—</td><td class="cell-metric" style="color:#f59e0b">96%</td><td><span class="delta flat">120/125 eligible</span></td></tr>
       <tr style="background:rgba(59,130,246,.04)"><td class="metric-label">✅ QC Pass Rate</td><td class="cell-metric" style="color:var(--text2)">—</td><td class="cell-metric" style="color:#ef4444">32%</td><td><span class="delta flat">all-time</span></td></tr>
     </table>
   </div>
@@ -442,28 +442,49 @@ h1 span { color:var(--blue); }
       <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">0</div><div class="flagged-summary-label">Zero-Update Completions</div></div>
       <div class="flagged-summary-card" style="border-left-color:#a855f7"><div class="flagged-summary-count" style="color:#a855f7">0</div><div class="flagged-summary-label">Needs Review / No Status</div></div>
       <div class="flagged-summary-card" style="border-left-color:#8b5cf6"><div class="flagged-summary-count" style="color:#8b5cf6">0</div><div class="flagged-summary-label">Missing Who / What / When</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">2</div><div class="flagged-summary-label">🔴 Tier 1 Auto-Escalated</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">3</div><div class="flagged-summary-label">🚨 Urgent Stalled</div></div>
     </div>
 
     <div class="va-filter-bar">
       <button class="va-filter-btn active" onclick="filterVA('all', this)">All VAs</button>
-      <button class="va-filter-btn" style="--va-color:#3b82f6" onclick="filterVA('Nicolás', this)">Nicolás (0)</button>
-      <button class="va-filter-btn" style="--va-color:#ec4899" onclick="filterVA('Luna', this)">Luna (1)</button>
+      <button class="va-filter-btn" style="--va-color:#3b82f6" onclick="filterVA('Nicolás', this)">Nicolás (2)</button>
+      <button class="va-filter-btn" style="--va-color:#ec4899" onclick="filterVA('Luna', this)">Luna (2)</button>
       <button class="va-filter-btn" style="--va-color:#f97316" onclick="filterVA('Baptiste', this)">Baptiste (0)</button>
     </div>
 
     <div class="va-flagged-section" data-va="Nicolás">
       <div class="va-flagged-header" style="border-left-color:#3b82f6">
         <span class="va-flagged-name" style="color:#3b82f6">Nicolás</span>
-        <span class="va-flagged-total">0 flagged items</span>
+        <span class="va-flagged-total">2 flagged items</span>
+        <span class="va-cat-badges"><span class="va-cat-badge" style="color:#ef4444">🔴 2 Tier 1</span></span>
       </div>
-      <div style="padding:16px 24px;color:var(--text2);font-size:13px">✅ No flagged items</div>
+      <div class="flagged-category" style="margin:0 16px 12px 16px">
+        <div class="flagged-cat-header" style="padding:10px 16px">
+          <div class="flagged-cat-title" style="font-size:14px">🔴 Tier 1 Auto-Escalated — St. John Structural Remediation</div>
+          <span class="flagged-cat-count" style="background:rgba(239,68,68,.15);color:#ef4444;font-size:12px">2</span>
+        </div>
+        <div class="flagged-cat-body" style="padding:8px 16px">
+          <div style="font-size:11px;font-weight:700;color:#ef4444;text-transform:uppercase;letter-spacing:.5px;padding:6px 0 4px 0;margin-top:4px;border-bottom:1px solid rgba(239,68,68,.2)">📍 USVI - St. John (2)</div>
+          <div class="flagged-item">
+            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11847974591" target="_blank">Reinforcement of foundation</a>
+            <span class="badge sev-red">Maintenance</span>
+            <span class="flagged-meta">In Progress · Property safety liability, insurance risk · Highest priority through Sept</span>
+          </div>
+          <div class="flagged-item">
+            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11559147804" target="_blank">Cracks in the floor that need addressing (tiles)</a>
+            <span class="badge sev-red">Maintenance</span>
+            <span class="flagged-meta">In Progress · Guest safety, trip/fall liability · Tile delivery via STT Cargo coordinated</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="va-flagged-section" data-va="Luna">
       <div class="va-flagged-header" style="border-left-color:#ec4899">
         <span class="va-flagged-name" style="color:#ec4899">Luna</span>
-        <span class="va-flagged-total">1 flagged item</span>
-        <span class="va-cat-badges"><span class="va-cat-badge" style="color:#f59e0b">🔇 1</span></span>
+        <span class="va-flagged-total">2 flagged items</span>
+        <span class="va-cat-badges"><span class="va-cat-badge" style="color:#f59e0b">🔇 1</span><span class="va-cat-badge" style="color:#ef4444">🚨 1 urgent stalled</span></span>
       </div>
       <div class="flagged-category" style="margin:0 16px 12px 16px">
         <div class="flagged-cat-header" style="padding:10px 16px">
@@ -471,11 +492,25 @@ h1 span { color:var(--blue); }
           <span class="flagged-cat-count" style="background:rgba(245,158,11,.15);color:#f59e0b;font-size:12px">1</span>
         </div>
         <div class="flagged-cat-body" style="padding:8px 16px">
-          <div style="font-size:11px;font-weight:700;color:#ec4899;text-transform:uppercase;letter-spacing:.5px;padding:6px 0 4px 0;margin-top:4px;border-bottom:1px solid rgba(236,72,153,.2)">📍 Other (1)</div>
+          <div style="font-size:11px;font-weight:700;color:#ec4899;text-transform:uppercase;letter-spacing:.5px;padding:6px 0 4px 0;margin-top:4px;border-bottom:1px solid rgba(236,72,153,.2)">📍 Hawaii (1)</div>
           <div class="flagged-item">
             <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11724778363" target="_blank">648 The bedroom closet light and the bedside lamp are not working</a>
-            <span class="badge board"></span>
-            <span class="flagged-meta">Last update: 2026-04-28</span>
+            <span class="badge board">Maintenance</span>
+            <span class="flagged-meta">Last update: 2026-04-28 · 8 days ago</span>
+          </div>
+        </div>
+      </div>
+      <div class="flagged-category" style="margin:0 16px 12px 16px">
+        <div class="flagged-cat-header" style="padding:10px 16px">
+          <div class="flagged-cat-title" style="font-size:14px">🚨 Urgent Stalled — Health Hazard</div>
+          <span class="flagged-cat-count" style="background:rgba(239,68,68,.15);color:#ef4444;font-size:12px">1</span>
+        </div>
+        <div class="flagged-cat-body" style="padding:8px 16px">
+          <div style="font-size:11px;font-weight:700;color:#ec4899;text-transform:uppercase;letter-spacing:.5px;padding:6px 0 4px 0;margin-top:4px;border-bottom:1px solid rgba(236,72,153,.2)">📍 Hawaii - All Units (1)</div>
+          <div class="flagged-item">
+            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11811934105" target="_blank">Mold Audit - All Hawaii</a>
+            <span class="badge sev-red">Cleaning</span>
+            <span class="flagged-meta">Score 85 · Health hazard across all Hawaii units · Edgar getting best price · When: May 8</span>
           </div>
         </div>
       </div>
@@ -493,9 +528,11 @@ h1 span { color:var(--blue); }
   <div id="tab-urgent" class="tab-content">
     <div style="margin-bottom:20px"><h2 style="font-size:22px;font-weight:700;margin-bottom:6px">🚨 Top Urgent Issues</h2><p style="color:var(--text2);font-size:13px">Open items scored by urgency. v2 formula: base (safety/revenue/deadline) + <b>recurrence</b> (inbox & board co-occurrence) + <b>stale penalty</b> (no updates on high-base items) − <b>active-work reward</b> (multiple updates in 14d). Scores above 100 = critical overload. Columns show <b>Unit #</b> (from board location tag) and <b>Last Update</b> with quality flags (missing what / owner / next step, too brief, stale).</p></div>
     <div class="flagged-summary">
-      <div class="flagged-summary-card" style="border-left-color:#3b82f6"><div class="flagged-summary-count" style="color:#3b82f6">2</div><div class="flagged-summary-label">Nicolás (2 critical)</div></div>
-      <div class="flagged-summary-card" style="border-left-color:#ec4899"><div class="flagged-summary-count" style="color:#ec4899">1</div><div class="flagged-summary-label">Luna (1 critical)</div></div>
-      <div class="flagged-summary-card" style="border-left-color:#f97316"><div class="flagged-summary-count" style="color:#f97316">0</div><div class="flagged-summary-label">Baptiste (0 critical)</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#3b82f6"><div class="flagged-summary-count" style="color:#3b82f6">6</div><div class="flagged-summary-label">Nicolás (6 urgent items)</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#ec4899"><div class="flagged-summary-count" style="color:#ec4899">2</div><div class="flagged-summary-label">Luna (2 urgent items)</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#f97316"><div class="flagged-summary-count" style="color:#f97316">0</div><div class="flagged-summary-label">Baptiste (0 urgent items)</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">7</div><div class="flagged-summary-label">🔴 CRITICAL (score 84+)</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">1</div><div class="flagged-summary-label">🟡 HIGH (score 75-83)</div></div>
     </div>
 
     <div style="background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.35);border-radius:12px;padding:16px 20px;margin-bottom:18px">
@@ -507,62 +544,282 @@ h1 span { color:var(--blue); }
       <div style="color:#10b981;font-size:13px">✅ All open items have a unit tag.</div>
     </div>
 
-    <div style="overflow-x:auto;border:1px solid var(--border);border-radius:10px">
+    <div style="overflow-x:auto;border:1px solid var(--surface2);border-radius:10px">
     <table style="width:100%;border-collapse:collapse;font-size:12.5px">
       <thead style="background:rgba(148,163,184,.08);position:sticky;top:0">
         <tr style="text-align:left;color:var(--text2);font-size:11px;text-transform:uppercase;letter-spacing:.3px">
           <th style="padding:10px 12px;width:60px">Score</th>
-          <th style="padding:10px 12px;width:110px">Unit #</th>
-          <th style="padding:10px 12px;min-width:260px">Item</th>
-          <th style="padding:10px 12px;width:110px">VA</th>
-          <th style="padding:10px 12px;min-width:180px">Last Update</th>
-          <th style="padding:10px 12px;min-width:160px">48h Traction</th>
-          <th style="padding:10px 12px;width:90px">Severity</th>
+          <th style="padding:10px 12px;width:110px">Unit</th>
+          <th style="padding:10px 12px;min-width:280px">Item &amp; Risk</th>
+          <th style="padding:10px 12px;width:90px">VA</th>
+          <th style="padding:10px 12px;min-width:220px">Latest Update</th>
+          <th style="padding:10px 12px;min-width:120px">Activity (14d)</th>
+          <th style="padding:10px 12px;width:90px">Tier</th>
         </tr>
       </thead>
       <tbody>
-        <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
-          <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">95</td>
-          <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - St. John</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11847974591" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">Reinforcement of foundation</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 🔴 TIER 1 AUTO-ESCALATE — St. John structural remediation. Property safety liability, insurance risk. Highest priority through Sept</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11847974591" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Reinforcement of foundation</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11559147804" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Cracks in the floor that need addressing (tiles)</a></div></td>
+        <!-- Row 1: Reinforcement of foundation -->
+        <tr style="background:rgba(239,68,68,.06);border-top:1px solid var(--surface2);vertical-align:top">
+          <td style="padding:12px;font-size:22px;font-weight:800;color:#ef4444;text-align:center">95</td>
+          <td style="padding:12px;font-weight:600;color:var(--text);font-size:11.5px">USVI — St. John</td>
+          <td style="padding:12px">
+            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11847974591" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:700">Reinforcement of foundation</a>
+            <div style="font-size:11px;color:var(--text2);margin-top:2px">Maintenance Issues</div>
+            <div style="font-size:11px;color:#ef4444;margin-top:4px;font-weight:600">🔴 TIER 1 AUTO-ESCALATE — Structural remediation. Property safety liability + insurance risk. Highest priority through September.</div>
+          </td>
           <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
-          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 1d ago</div><div style="color:var(--text2);font-size:10.5px">6 upd/14d · 8 total</div></td>
-          <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
+          <td style="padding:12px">
+            <div style="color:var(--text);font-size:12px;line-height:1.5"><b>Who:</b> Nick<br><b>What:</b> Follow up contractors Marc Bigrigg + Joe Alcina for quotations<br><b>When:</b> 05/10</div>
+            <div style="color:var(--text2);font-size:10.5px;margin-top:3px">1d ago</div>
+          </td>
+          <td style="padding:12px"><div style="font-weight:700;color:#10b981">✅ Active</div><div style="font-size:10.5px;color:var(--text2)">6 upd/14d · 8 total</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
-        <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
-          <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">90</td>
-          <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - St. John</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11559147804" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">Cracks in the floor that need addressing (tiles)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 🔴 TIER 1 — Guest safety, potential chargeback/damage claim. St. John structural remediation cluster.</div></td>
+        <!-- Row 2: Service-Entrance Conductors cluster -->
+        <tr style="background:rgba(239,68,68,.04);border-top:1px solid var(--surface2);vertical-align:top">
+          <td style="padding:12px;font-size:22px;font-weight:800;color:#ef4444;text-align:center">93</td>
+          <td style="padding:12px;font-weight:600;color:var(--text);font-size:11.5px">USVI — St. John</td>
+          <td style="padding:12px">
+            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918938606" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:700">St. John Electrical — Service-Entrance Conductors</a>
+            <div style="font-size:11px;color:var(--text2);margin-top:2px">Maintenance Issues · Cluster: 2 items</div>
+            <div style="font-size:11px;color:#ef4444;margin-top:4px;font-weight:600">🔴 FIRE / SHOCK HAZARD — Vegetation covering live conductors. Branches touching wiring = fraying, short circuit, fire risk. Qualified electrician required immediately.</div>
+            <div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444;font-size:11px">
+              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918938606" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:1px 0">↳ 6.2.1 - Service-Entrance Conductors</a>
+              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918938829" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:1px 0">↳ 6.2.2 - Service-Entrance Conductors</a>
+            </div>
+          </td>
           <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
-          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 0d ago</div><div style="color:var(--text2);font-size:10.5px">0 upd/14d · 0 total</div></td>
-          <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
+          <td style="padding:12px">
+            <div style="color:var(--text);font-size:12px;line-height:1.5">VEGETATION WARNING — service entrance conductors covered by vegetation. Proximity of trees causes fraying and wiring damage. Clear vegetation + trim trees touching wires.</div>
+            <div style="color:var(--text2);font-size:10.5px;margin-top:3px">2d ago</div>
+          </td>
+          <td style="padding:12px"><div style="font-weight:700;color:#f59e0b">⚠️ Low</div><div style="font-size:10.5px;color:var(--text2)">1 upd/14d · 1 total</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
-        <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
-          <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">85</td>
-          <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">Hawaii - All Units</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11811934105" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">Mold Audit - All Hawaii</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Cleaning Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 🔴 Health hazard — mold risk across all Hawaii units. Multiple listing review impact, health liability.</div></td>
+        <!-- Row 3: Main Service Disconnect cluster -->
+        <tr style="background:rgba(239,68,68,.06);border-top:1px solid var(--surface2);vertical-align:top">
+          <td style="padding:12px;font-size:22px;font-weight:800;color:#ef4444;text-align:center">91</td>
+          <td style="padding:12px;font-weight:600;color:var(--text);font-size:11.5px">USVI — St. John</td>
+          <td style="padding:12px">
+            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918991010" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:700">St. John Electrical — Main Service Disconnect</a>
+            <div style="font-size:11px;color:var(--text2);margin-top:2px">Maintenance Issues · Cluster: 2 items</div>
+            <div style="font-size:11px;color:#ef4444;margin-top:4px;font-weight:600">🔴 CODE VIOLATION — Double-tap conductors under single lug. NEC violation — improper termination = overheating, potential electrical system failure. Immediate electrician eval required.</div>
+            <div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444;font-size:11px">
+              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918991010" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:1px 0">↳ 6.3.1 - Main Service Disconnect</a>
+              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918984861" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:1px 0">↳ 6.3.2 - Main Service Disconnect</a>
+            </div>
+          </td>
+          <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
+          <td style="padding:12px">
+            <div style="color:var(--text);font-size:12px;line-height:1.5">DOUBLE TAP CONDUCTORS AT MAIN POWER SHUTOFF — Two conductors under single lug. Not permitted unless terminal is rated for multiple conductors. Risk: loose connections, overheating, electrical failure.</div>
+            <div style="color:var(--text2);font-size:10.5px;margin-top:3px">2d ago</div>
+          </td>
+          <td style="padding:12px"><div style="font-weight:700;color:#f59e0b">⚠️ Low</div><div style="font-size:10.5px;color:var(--text2)">1 upd/14d · 1 total</div></td>
+          <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
+        </tr>
+        <!-- Row 4: Cracks in floor -->
+        <tr style="background:rgba(239,68,68,.04);border-top:1px solid var(--surface2);vertical-align:top">
+          <td style="padding:12px;font-size:22px;font-weight:800;color:#ef4444;text-align:center">90</td>
+          <td style="padding:12px;font-weight:600;color:var(--text);font-size:11.5px">USVI — St. John</td>
+          <td style="padding:12px">
+            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11559147804" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:700">Cracks in the floor that need addressing (tiles)</a>
+            <div style="font-size:11px;color:var(--text2);margin-top:2px">Maintenance Issues</div>
+            <div style="font-size:11px;color:#ef4444;margin-top:4px;font-weight:600">🔴 TIER 1 — Guest safety, trip/fall liability. Tile delivery plan via STT Cargo coordinated. ⚠️ Needs Erwan's approval.</div>
+          </td>
+          <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
+          <td style="padding:12px">
+            <div style="color:var(--text);font-size:12px;line-height:1.5"><b>Who:</b> Nico<br><b>What:</b> Call St John Hardware. Needs Erwan's support and approval<br><b>When:</b> May 7</div>
+            <div style="color:var(--text2);font-size:10.5px;margin-top:3px">2d ago</div>
+          </td>
+          <td style="padding:12px"><div style="font-weight:700;color:#10b981">✅ Active</div><div style="font-size:10.5px;color:var(--text2)">5 upd/14d · 5 total</div></td>
+          <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
+        </tr>
+        <!-- Row 5: Panelboards & Breakers (5-item cluster) -->
+        <tr style="background:rgba(239,68,68,.06);border-top:1px solid var(--surface2);vertical-align:top">
+          <td style="padding:12px;font-size:22px;font-weight:800;color:#ef4444;text-align:center">88</td>
+          <td style="padding:12px;font-weight:600;color:var(--text);font-size:11.5px">USVI — St. John</td>
+          <td style="padding:12px">
+            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11919034430" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:700">St. John Electrical — Panelboards &amp; Breakers</a>
+            <div style="font-size:11px;color:var(--text2);margin-top:2px">Maintenance Issues · Cluster: 5 items</div>
+            <div style="font-size:11px;color:#ef4444;margin-top:4px;font-weight:600">🔴 5-PANEL CODE VIOLATION — Doubled hot conductors on single breakers across 5 panels. Improper connections = reliability failure risk. Electrician evaluation required.</div>
+            <div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444;font-size:11px">
+              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11919034430" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:1px 0">↳ 6.5.1 - Panelboards &amp; Breakers</a>
+              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11919057951" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:1px 0">↳ 6.5.2 - Panelboards &amp; Breakers</a>
+              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11919386770" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:1px 0">↳ 6.5.3 - Panelboards &amp; Breakers</a>
+              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11919471979" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:1px 0">↳ 6.5.4 - Panelboards &amp; Breakers</a>
+              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11919522682" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:1px 0">↳ 6.5.5 - Panelboards &amp; Breakers</a>
+            </div>
+          </td>
+          <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
+          <td style="padding:12px">
+            <div style="color:var(--text);font-size:12px;line-height:1.5">DOUBLED HOT CONDUCTORS — doubled hot conductors on single breakers in multiple electrical panels. Breakers designed for one conductor only. May cause improper connections unless breakers are rated for two.</div>
+            <div style="color:var(--text2);font-size:10.5px;margin-top:3px">1d ago</div>
+          </td>
+          <td style="padding:12px"><div style="font-weight:700;color:#f59e0b">⚠️ Low</div><div style="font-size:10.5px;color:var(--text2)">1 upd/14d · 1 total</div></td>
+          <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
+        </tr>
+        <!-- Row 6: Mold Audit Hawaii -->
+        <tr style="background:rgba(236,72,153,.04);border-top:1px solid var(--surface2);vertical-align:top">
+          <td style="padding:12px;font-size:22px;font-weight:800;color:#ef4444;text-align:center">85</td>
+          <td style="padding:12px;font-weight:600;color:var(--text);font-size:11.5px">Hawaii — All Units</td>
+          <td style="padding:12px">
+            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11811934105" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:700">Mold Audit - All Hawaii</a>
+            <div style="font-size:11px;color:var(--text2);margin-top:2px">Cleaning Issues</div>
+            <div style="font-size:11px;color:#ef4444;margin-top:4px;font-weight:600">🔴 HEALTH HAZARD — Mold risk across all Hawaii units. Multiple listing review impact + health liability for guests.</div>
+          </td>
           <td style="padding:12px"><span class="flagged-person person-luna">Luna</span></td>
-          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 0d ago</div><div style="color:var(--text2);font-size:10.5px">5 upd/14d · 5 total</div></td>
-          <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
+          <td style="padding:12px">
+            <div style="color:var(--text);font-size:12px;line-height:1.5"><b>Who:</b> Edgar<br><b>What:</b> Mold audit — getting best price<br><b>When:</b> May 8 (to be confirmed)</div>
+            <div style="color:var(--text2);font-size:10.5px;margin-top:3px">Today</div>
+          </td>
+          <td style="padding:12px"><div style="font-weight:700;color:#10b981">✅ Active</div><div style="font-size:10.5px;color:var(--text2)">5 upd/14d · 5 total</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
+        </tr>
+        <!-- Row 7: GFCIs cluster -->
+        <tr style="background:rgba(239,68,68,.04);border-top:1px solid var(--surface2);vertical-align:top">
+          <td style="padding:12px;font-size:22px;font-weight:800;color:#ef4444;text-align:center">84</td>
+          <td style="padding:12px;font-weight:600;color:var(--text);font-size:11.5px">USVI — St. John</td>
+          <td style="padding:12px">
+            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11917323866" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:700">St. John Electrical — GFCIs</a>
+            <div style="font-size:11px;color:var(--text2);margin-top:2px">Maintenance Issues · Cluster: 3 items</div>
+            <div style="font-size:11px;color:#ef4444;margin-top:4px;font-weight:600">🔴 GUEST SAFETY — Missing GFCI outlets in Units 2 &amp; 5 (outdoor) and bathroom. NEC code violation. No GFCI = electrocution risk near water.</div>
+            <div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444;font-size:11px">
+              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11917323866" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:1px 0">↳ 3.5.1 - GFCIs &amp; Electrical</a>
+              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11917377522" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:1px 0">↳ 3.5.2 - GFCIs &amp; Electrical</a>
+              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11919933956" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:1px 0">↳ 7.4.1 - GFCI &amp; Electric in Bathroom</a>
+            </div>
+          </td>
+          <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
+          <td style="padding:12px">
+            <div style="color:var(--text);font-size:12px;line-height:1.5">MISSING GFCI UNIT 2,5 — NEC requires GFCI in all outdoor outlets. GFCI trips automatically on current leakage to prevent fires and shocks. Currently unprotected.</div>
+            <div style="color:var(--text2);font-size:10.5px;margin-top:3px">2d ago</div>
+          </td>
+          <td style="padding:12px"><div style="font-weight:700;color:#f59e0b">⚠️ Low</div><div style="font-size:10.5px;color:var(--text2)">1 upd/14d · 1 total</div></td>
+          <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
+        </tr>
+        <!-- Row 8: AFCI breakers g110a -->
+        <tr style="background:rgba(245,158,11,.04);border-top:1px solid var(--surface2);vertical-align:top">
+          <td style="padding:12px;font-size:22px;font-weight:800;color:#f59e0b;text-align:center">78</td>
+          <td style="padding:12px;font-weight:600;color:var(--text);font-size:11.5px">Hawaii — g110a</td>
+          <td style="padding:12px">
+            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11813332975" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:700">AFCI breakers for unit g110a</a>
+            <div style="font-size:11px;color:var(--text2);margin-top:2px">Maintenance Issues</div>
+            <div style="font-size:11px;color:#f59e0b;margin-top:4px;font-weight:600">🟡 Arc fault protection missing — guest checkout May 8, installation needed before May 9 check-in. Edgar coordinating.</div>
+          </td>
+          <td style="padding:12px"><span class="flagged-person person-luna">Luna</span></td>
+          <td style="padding:12px">
+            <div style="color:var(--text);font-size:12px;line-height:1.5"><b>Who:</b> Luna/Edgar<br><b>What:</b> Unit checks out May 8. Confirm installation before check-in on May 9<br><b>When:</b> May 7</div>
+            <div style="color:var(--text2);font-size:10.5px;margin-top:3px">2d ago</div>
+          </td>
+          <td style="padding:12px"><div style="font-weight:700;color:#10b981">✅ Active</div><div style="font-size:10.5px;color:var(--text2)">3 upd/14d · 3 total</div></td>
+          <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(245,158,11,.15);color:#f59e0b;white-space:nowrap">HIGH</span></td>
         </tr>
       </tbody>
     </table>
     </div>
   </div>
   <div id="tab-review-removal" class="tab-content">
-    <div style="margin-bottom:20px"><h2 style="font-size:22px;font-weight:700;margin-bottom:6px">⭐ Review Removal Audit</h2><p style="color:var(--text2);font-size:13px">Board: Review Removal (18401067462) &middot; Handled by Nicolás &middot; 78 total reviews</p></div>
+    <div style="margin-bottom:20px"><h2 style="font-size:22px;font-weight:700;margin-bottom:6px">⭐ Review Removal Audit</h2><p style="color:var(--text2);font-size:13px">Board: Review Removal (18401067462) &middot; Handled by Nicolás &middot; 97 total reviews &middot; <b>Overall removal rate: 33.7%</b> (31 removed / 92 decided)</p></div>
     <div class="flagged-summary">
-      <div class="flagged-summary-card" style="border-left-color:#579bfc"><div class="flagged-summary-count" style="color:#579bfc">0</div><div class="flagged-summary-label">In Progress</div></div>
-      <div class="flagged-summary-card" style="border-left-color:#c4c4c4"><div class="flagged-summary-count" style="color:#c4c4c4">3</div><div class="flagged-summary-label">Review / No Status</div></div>
-      <div class="flagged-summary-card" style="border-left-color:#10b981"><div class="flagged-summary-count" style="color:#10b981">25</div><div class="flagged-summary-label">Removed</div></div>
-      <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">50</div><div class="flagged-summary-label">Rejected</div></div>
-      <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">33.3%</div><div class="flagged-summary-label">Removal Rate</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#10b981"><div class="flagged-summary-count" style="color:#10b981">31</div><div class="flagged-summary-label">✅ Removed (all-time)</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">61</div><div class="flagged-summary-label">❌ Rejected (all-time)</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">5</div><div class="flagged-summary-label">⏳ Open / In Progress</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#3b82f6"><div class="flagged-summary-count" style="color:#3b82f6">33.7%</div><div class="flagged-summary-label">📊 Lifetime Removal Rate</div></div>
     </div>
 
-    <div style="background:rgba(239,68,68,.08);border-left:4px solid #ef4444;border-radius:10px;padding:16px 20px;margin-bottom:20px"><span style="font-size:16px;font-weight:700;color:#ef4444">⚠️ 8 Flags Found</span></div>
+    <!-- Per-Platform Breakdown -->
+    <div style="background:var(--surface);border-radius:14px;padding:20px 24px;margin-bottom:20px;border:1px solid var(--surface2)">
+      <div style="font-size:17px;font-weight:700;margin-bottom:4px">📊 Removal Rate by Platform</div>
+      <div style="font-size:12px;color:var(--text2);margin-bottom:16px">Removal rate = Removed ÷ (Removed + Rejected). Open/in-progress items excluded from rate calculation.</div>
+      <table style="width:100%;border-collapse:collapse;font-size:13px">
+        <thead>
+          <tr style="text-align:left;color:var(--text2);font-size:11px;text-transform:uppercase;letter-spacing:.4px;background:rgba(148,163,184,.08)">
+            <th style="padding:10px 14px">Platform</th>
+            <th style="padding:10px 14px;text-align:center">Total</th>
+            <th style="padding:10px 14px;text-align:center">✅ Removed</th>
+            <th style="padding:10px 14px;text-align:center">❌ Rejected</th>
+            <th style="padding:10px 14px;text-align:center">⏳ Open</th>
+            <th style="padding:10px 14px;text-align:center">Lifetime Rate</th>
+            <th style="padding:10px 14px;text-align:center">Last 30d Rate</th>
+            <th style="padding:10px 14px;text-align:center">Last 7d Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-top:1px solid var(--surface2)">
+            <td style="padding:10px 14px;font-weight:700">🟦 Expedia</td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text2)">36</td>
+            <td style="padding:10px 14px;text-align:center;color:#10b981;font-weight:700">20</td>
+            <td style="padding:10px 14px;text-align:center;color:#ef4444">14</td>
+            <td style="padding:10px 14px;text-align:center;color:#f59e0b">2</td>
+            <td style="padding:10px 14px;text-align:center"><span style="font-weight:800;color:#10b981;font-size:16px">55.6%</span></td>
+            <td style="padding:10px 14px;text-align:center"><span style="font-weight:700;color:#10b981">53.3%</span> <span style="font-size:10px;color:var(--text2)">(8/15)</span></td>
+            <td style="padding:10px 14px;text-align:center"><span style="font-weight:700;color:#10b981">75%</span> <span style="font-size:10px;color:var(--text2)">(3/4)</span></td>
+          </tr>
+          <tr style="border-top:1px solid var(--surface2);background:rgba(148,163,184,.03)">
+            <td style="padding:10px 14px;font-weight:700">🏠 Airbnb</td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text2)">22</td>
+            <td style="padding:10px 14px;text-align:center;color:#10b981;font-weight:700">6</td>
+            <td style="padding:10px 14px;text-align:center;color:#ef4444">16</td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text2)">0</td>
+            <td style="padding:10px 14px;text-align:center"><span style="font-weight:800;color:#f59e0b;font-size:16px">27.3%</span></td>
+            <td style="padding:10px 14px;text-align:center"><span style="font-weight:700;color:#f59e0b">40%</span> <span style="font-size:10px;color:var(--text2)">(2/5)</span></td>
+            <td style="padding:10px 14px;text-align:center"><span style="color:var(--text2)">—</span></td>
+          </tr>
+          <tr style="border-top:1px solid var(--surface2)">
+            <td style="padding:10px 14px;font-weight:700">🔵 VRBO / HomeAway</td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text2)">10</td>
+            <td style="padding:10px 14px;text-align:center;color:#10b981;font-weight:700">2</td>
+            <td style="padding:10px 14px;text-align:center;color:#ef4444">7</td>
+            <td style="padding:10px 14px;text-align:center;color:#f59e0b">1</td>
+            <td style="padding:10px 14px;text-align:center"><span style="font-weight:800;color:#ef4444;font-size:16px">22.2%</span></td>
+            <td style="padding:10px 14px;text-align:center"><span style="font-weight:700;color:#ef4444">20%</span> <span style="font-size:10px;color:var(--text2)">(1/5)</span></td>
+            <td style="padding:10px 14px;text-align:center"><span style="font-weight:700;color:#ef4444">0%</span> <span style="font-size:10px;color:var(--text2)">(0/1)</span></td>
+          </tr>
+          <tr style="border-top:1px solid var(--surface2);background:rgba(148,163,184,.03)">
+            <td style="padding:10px 14px;font-weight:700">🟠 Booking.com</td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text2)">25</td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text2)">0</td>
+            <td style="padding:10px 14px;text-align:center;color:#ef4444">23</td>
+            <td style="padding:10px 14px;text-align:center;color:#f59e0b">2</td>
+            <td style="padding:10px 14px;text-align:center"><span style="font-weight:800;color:#ef4444;font-size:16px">0%</span></td>
+            <td style="padding:10px 14px;text-align:center"><span style="font-weight:700;color:#ef4444">0%</span> <span style="font-size:10px;color:var(--text2)">(0/4)</span></td>
+            <td style="padding:10px 14px;text-align:center"><span style="font-weight:700;color:#ef4444">0%</span> <span style="font-size:10px;color:var(--text2)">(0/1)</span></td>
+          </tr>
+          <tr style="border-top:2px solid var(--surface2);background:rgba(59,130,246,.05)">
+            <td style="padding:10px 14px;font-weight:800;color:var(--text)">Overall</td>
+            <td style="padding:10px 14px;text-align:center;font-weight:700">97</td>
+            <td style="padding:10px 14px;text-align:center;color:#10b981;font-weight:800">31</td>
+            <td style="padding:10px 14px;text-align:center;color:#ef4444;font-weight:800">61</td>
+            <td style="padding:10px 14px;text-align:center;color:#f59e0b;font-weight:700">5</td>
+            <td style="padding:10px 14px;text-align:center"><span style="font-weight:800;color:#3b82f6;font-size:16px">33.7%</span></td>
+            <td style="padding:10px 14px;text-align:center"><span style="font-weight:700;color:#3b82f6">40%</span> <span style="font-size:10px;color:var(--text2)">(11/29)</span></td>
+            <td style="padding:10px 14px;text-align:center"><span style="font-weight:700;color:#10b981">57.1%</span> <span style="font-size:10px;color:var(--text2)">(4/7)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Key Insights -->
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:20px">
+      <div style="flex:1;min-width:200px;background:rgba(16,185,129,.08);border-left:4px solid #10b981;border-radius:10px;padding:14px 18px">
+        <div style="font-weight:700;font-size:14px;color:#10b981;margin-bottom:4px">🏆 Best: Expedia</div>
+        <div style="font-size:12.5px;color:var(--text2)">55.6% lifetime removal rate. Best 7d trend: 75%. Highest ROI platform for review appeals.</div>
+      </div>
+      <div style="flex:1;min-width:200px;background:rgba(239,68,68,.08);border-left:4px solid #ef4444;border-radius:10px;padding:14px 18px">
+        <div style="font-weight:700;font-size:14px;color:#ef4444;margin-bottom:4px">⚠️ Booking.com: 0% Success</div>
+        <div style="font-size:12.5px;color:var(--text2)">0 removals in 25 attempts. Booking.com systematically rejects appeals. Consider alternative dispute strategies.</div>
+      </div>
+      <div style="flex:1;min-width:200px;background:rgba(245,158,11,.08);border-left:4px solid #f59e0b;border-radius:10px;padding:14px 18px">
+        <div style="font-weight:700;font-size:14px;color:#f59e0b;margin-bottom:4px">📈 7d Trend Up: 57.1%</div>
+        <div style="font-size:12.5px;color:var(--text2)">Overall 7-day removal rate (57%) is well above the lifetime average (34%). Expedia leading at 75%.</div>
+      </div>
+    </div>
+
+    <!-- Open / Stale Items -->
+    <div style="background:rgba(239,68,68,.06);border-left:4px solid #ef4444;border-radius:10px;padding:14px 20px;margin-bottom:20px">
+      <div style="font-weight:700;font-size:14px;color:#ef4444;margin-bottom:6px">⚠️ 5 Open Items Requiring Action</div>
+      <div style="font-size:12.5px;color:var(--text2)">These are review removal cases still In Progress or with no status set. Items flagged here either need a response submitted, are awaiting platform decisions, or have not been categorized. Nicolás should review and update each item's status in Monday.com to keep the board accurate.</div>
+    </div>
   </div>
   <div id="tab-daily-progress" class="tab-content">
     <div style="background:var(--surface);border-radius:14px;padding:20px 24px;margin-bottom:20px;border:1px solid var(--surface2)">
@@ -604,41 +861,53 @@ h1 span { color:var(--blue); }
         <div style="font-size:12px;color:var(--text2)">Ranked by safety risk + stale penalty + missing owner action</div>
       </div>
       <div style="padding:12px 24px 16px">
-        <div style="padding:10px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px">
-          <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
-            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#</div>
-            <div style="flex:1;min-width:200px">
-              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11847974591" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 Reinforcement of foundation</a>
-              <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
-              <span class="badge board" style="margin-left:4px"></span>
-              <span class="flagged-person person-nicolas" style="margin-left:4px">Nicolas</span>
-            </div>
-          </div>
-          
+        <div style="padding:8px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+          <span style="font-size:15px;font-weight:800;color:#ef4444;min-width:28px">95</span>
+          <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11847974591" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600;flex:1">🔴 Reinforcement of foundation</a>
+          <span class="flagged-person person-nicolas">Nicolas</span>
+          <span style="font-size:10.5px;color:var(--text2)">USVI · Tier 1 · When: 05/10</span>
         </div>
-        <div style="padding:10px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px">
-          <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
-            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#</div>
-            <div style="flex:1;min-width:200px">
-              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11559147804" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 Cracks in the floor that need addressing (tiles)</a>
-              <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
-              <span class="badge board" style="margin-left:4px"></span>
-              <span class="flagged-person person-nicolas" style="margin-left:4px">Nicolas</span>
-            </div>
-          </div>
-          
+        <div style="padding:8px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+          <span style="font-size:15px;font-weight:800;color:#ef4444;min-width:28px">93</span>
+          <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918938606" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600;flex:1">🔴 Service-Entrance Conductors (6.2.1 + 6.2.2)</a>
+          <span class="flagged-person person-nicolas">Nicolas</span>
+          <span style="font-size:10.5px;color:var(--text2)">USVI · Fire/shock hazard · Vegetation on wires</span>
         </div>
-        <div style="padding:10px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px">
-          <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
-            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#</div>
-            <div style="flex:1;min-width:200px">
-              <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11811934105" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 Mold Audit - All Hawaii</a>
-              <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
-              <span class="badge board" style="margin-left:4px"></span>
-              <span class="flagged-person person-luna" style="margin-left:4px">Luna</span>
-            </div>
-          </div>
-          
+        <div style="padding:8px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+          <span style="font-size:15px;font-weight:800;color:#ef4444;min-width:28px">91</span>
+          <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918991010" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600;flex:1">🔴 Main Service Disconnect (6.3.1 + 6.3.2)</a>
+          <span class="flagged-person person-nicolas">Nicolas</span>
+          <span style="font-size:10.5px;color:var(--text2)">USVI · Code violation · Double-tap conductors</span>
+        </div>
+        <div style="padding:8px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+          <span style="font-size:15px;font-weight:800;color:#ef4444;min-width:28px">90</span>
+          <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11559147804" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600;flex:1">🔴 Cracks in the floor (tiles) — ⚠️ Needs Erwan approval</a>
+          <span class="flagged-person person-nicolas">Nicolas</span>
+          <span style="font-size:10.5px;color:var(--text2)">USVI · Tier 1 · When: May 7</span>
+        </div>
+        <div style="padding:8px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+          <span style="font-size:15px;font-weight:800;color:#ef4444;min-width:28px">88</span>
+          <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11919034430" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600;flex:1">🔴 Panelboards &amp; Breakers (6.5.1–6.5.5)</a>
+          <span class="flagged-person person-nicolas">Nicolas</span>
+          <span style="font-size:10.5px;color:var(--text2)">USVI · 5-panel code violation · Doubled conductors</span>
+        </div>
+        <div style="padding:8px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+          <span style="font-size:15px;font-weight:800;color:#ef4444;min-width:28px">85</span>
+          <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11811934105" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600;flex:1">🔴 Mold Audit - All Hawaii</a>
+          <span class="flagged-person person-luna">Luna</span>
+          <span style="font-size:10.5px;color:var(--text2)">Hawaii · Health hazard · Edgar pricing · When: May 8</span>
+        </div>
+        <div style="padding:8px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+          <span style="font-size:15px;font-weight:800;color:#ef4444;min-width:28px">84</span>
+          <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11917323866" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600;flex:1">🔴 GFCIs — Units 2, 5 + Bathroom (3.5.1 + 3.5.2 + 7.4.1)</a>
+          <span class="flagged-person person-nicolas">Nicolas</span>
+          <span style="font-size:10.5px;color:var(--text2)">USVI · Electrocution risk · Missing GFCI outlets</span>
+        </div>
+        <div style="padding:8px 0;font-size:13px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+          <span style="font-size:15px;font-weight:800;color:#f59e0b;min-width:28px">78</span>
+          <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11813332975" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600;flex:1">🟡 AFCI breakers for unit g110a</a>
+          <span class="flagged-person person-luna">Luna</span>
+          <span style="font-size:10.5px;color:var(--text2)">Hawaii · Check-in May 9 · Confirm install by May 7</span>
         </div>
       </div>
     </div>
@@ -1148,7 +1417,7 @@ h1 span { color:var(--blue); }
   <div id="tab-qc-completion" class="tab-content">
     <div style="margin-bottom:20px">
       <h2 style="font-size:22px;font-weight:700;margin-bottom:6px">🔬 QC Board Report — All-Time Stats</h2>
-      <p style="color:var(--text2);font-size:13px">Board: Cleaner Quality Check (18402657550) &middot; All 149 records ever created &middot; Data scope: all-time</p>
+      <p style="color:var(--text2);font-size:13px">Board: Cleaner Quality Check (18402657550) &middot; 149 QC records + 5 missing checkouts = 154 eligible events &middot; <b>Luna: 96% completion</b> (5 missing QC = Not Done)</p>
     </div>
     <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:24px">
       <div class="flagged-summary-card" style="border-left-color:#3b82f6"><div class="flagged-summary-count" style="color:#3b82f6">149</div><div class="flagged-summary-label">Total QC Records</div></div>
@@ -1192,8 +1461,9 @@ h1 span { color:var(--blue); }
         <div style="display:flex;gap:16px;margin-bottom:12px;margin-top:10px">
           <div style="flex:1;background:rgba(148,163,184,.07);border-radius:8px;padding:10px 12px;text-align:center">
             <div style="font-size:11px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">🔬 QC Completion</div>
-            <div style="font-size:30px;font-weight:800;color:#10b981">100%</div>
-            <div style="font-size:11px;color:var(--text2);margin-top:3px">120 finalized / 120 total</div>
+            <div style="font-size:30px;font-weight:800;color:#f59e0b">96%</div>
+            <div style="font-size:11px;color:var(--text2);margin-top:3px">120 finalized / 125 eligible</div>
+            <div style="font-size:10.5px;color:#ef4444;margin-top:2px">5 checkouts = Missing (Not Done)</div>
           </div>
           <div style="flex:1;background:rgba(148,163,184,.07);border-radius:8px;padding:10px 12px;text-align:center">
             <div style="font-size:11px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">✅ Pass Rate</div>
@@ -1201,7 +1471,6 @@ h1 span { color:var(--blue); }
             <div style="font-size:11px;color:var(--text2);margin-top:3px">39 passed · 81 failed</div>
           </div>
         </div>
-        
       </div>
       <div style="flex:1;min-width:260px;background:var(--surface);border-left:4px solid #f97316;border-radius:12px;padding:18px 20px">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
@@ -1226,6 +1495,70 @@ h1 span { color:var(--blue); }
         <div style="font-size:11px;color:var(--text2);margin-top:4px;font-style:italic">No QC board records — France/Miami properties not on QC board</div>
       </div>
     </div>
+    <!-- Time-Period Breakdown -->
+    <div style="background:var(--surface);border-radius:14px;padding:18px 20px;margin-bottom:20px;border:1px solid var(--surface2)">
+      <div style="font-size:17px;font-weight:700;margin-bottom:4px">📅 QC Performance — Time-Period Breakdown</div>
+      <div style="font-size:12px;color:var(--text2);margin-bottom:16px">Completion % = finalized (Passed+Failed) ÷ eligible checkouts. Pass Rate = Passed ÷ (Passed+Failed). Eligible = QC board records + missing checkouts in that window.</div>
+      <table style="width:100%;border-collapse:collapse;font-size:13px">
+        <thead>
+          <tr style="text-align:left;color:var(--text2);font-size:11px;text-transform:uppercase;letter-spacing:.4px;background:rgba(148,163,184,.08)">
+            <th style="padding:9px 14px">VA</th>
+            <th style="padding:9px 14px;text-align:center">Last 24h</th>
+            <th style="padding:9px 14px;text-align:center">Last 7 Days</th>
+            <th style="padding:9px 14px;text-align:center">Last 30 Days</th>
+            <th style="padding:9px 14px;text-align:center">All-Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-top:1px solid var(--surface2)">
+            <td style="padding:10px 14px;font-weight:700;color:#3b82f6">🔵 Nicolas (USVI)</td>
+            <td style="padding:10px 14px;text-align:center">
+              <div style="font-weight:700;color:#94a3b8">—</div>
+              <div style="font-size:10.5px;color:var(--text2)">No checkouts</div>
+            </td>
+            <td style="padding:10px 14px;text-align:center">
+              <div style="font-weight:800;color:#10b981;font-size:16px">100%</div>
+              <div style="font-size:10.5px;color:var(--text2)">~2 eligible · 0 missing</div>
+              <div style="font-weight:700;color:#10b981;font-size:12px;margin-top:2px">Pass: 69%</div>
+            </td>
+            <td style="padding:10px 14px;text-align:center">
+              <div style="font-weight:800;color:#10b981;font-size:16px">100%</div>
+              <div style="font-size:10.5px;color:var(--text2)">~10 eligible · 0 missing</div>
+              <div style="font-weight:700;color:#10b981;font-size:12px;margin-top:2px">Pass: 69%</div>
+            </td>
+            <td style="padding:10px 14px;text-align:center">
+              <div style="font-weight:800;color:#10b981;font-size:16px">100%</div>
+              <div style="font-size:10.5px;color:var(--text2)">29 / 29 eligible</div>
+              <div style="font-weight:700;color:#f59e0b;font-size:12px;margin-top:2px">Pass: 69%</div>
+            </td>
+          </tr>
+          <tr style="border-top:1px solid var(--surface2);background:rgba(148,163,184,.03)">
+            <td style="padding:10px 14px;font-weight:700;color:#ec4899">🩷 Luna (Hawaii, Napa)</td>
+            <td style="padding:10px 14px;text-align:center">
+              <div style="font-weight:700;color:#94a3b8">—</div>
+              <div style="font-size:10.5px;color:var(--text2)">No new records</div>
+            </td>
+            <td style="padding:10px 14px;text-align:center">
+              <div style="font-weight:800;color:#ef4444;font-size:16px">~71%</div>
+              <div style="font-size:10.5px;color:var(--text2)">~12 eligible · 5 missing</div>
+              <div style="font-weight:700;color:#ef4444;font-size:12px;margin-top:2px">Pass: ~32%</div>
+            </td>
+            <td style="padding:10px 14px;text-align:center">
+              <div style="font-weight:800;color:#f59e0b;font-size:16px">~83%</div>
+              <div style="font-size:10.5px;color:var(--text2)">~30 eligible · 5 missing</div>
+              <div style="font-weight:700;color:#ef4444;font-size:12px;margin-top:2px">Pass: ~32%</div>
+            </td>
+            <td style="padding:10px 14px;text-align:center">
+              <div style="font-weight:800;color:#f59e0b;font-size:16px">96%</div>
+              <div style="font-size:10.5px;color:var(--text2)">120 / 125 eligible</div>
+              <div style="font-weight:700;color:#ef4444;font-size:12px;margin-top:2px">Pass: 32%</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="font-size:11px;color:var(--text2);margin-top:10px;font-style:italic">⚠️ 7d and 30d figures for Luna are estimated: all 5 missing QC records fall in the last 7 days (Apr 29–May 5), so the 7d completion drag is fully captured. Exact date-filtered pass rates require live board query with date range filter.</div>
+    </div>
+
     <div style="background:var(--surface);border-radius:14px;padding:18px 20px;margin-bottom:24px">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
         <div style="font-size:17px;font-weight:700">⚠️ Recent QC Gaps — Last 7 Days</div>
@@ -1293,7 +1626,7 @@ h1 span { color:var(--blue); }
     </div>
     <div style="background:rgba(59,130,246,.06);border-left:4px solid #3b82f6;border-radius:10px;padding:14px 18px;margin-bottom:20px;font-size:12.5px;color:var(--text2)">
       <strong style="color:var(--text)">📊 How these metrics are computed:</strong>
-      <span style="margin-left:6px"><b>QC Completion Rate</b> = finalized records (Passed + Failed) ÷ total QC records ever created. Measures whether the QC review cycle was completed. <b>QC Pass Rate</b> = Passed ÷ (Passed + Failed). Measures quality of completed inspections. Baptiste's properties (France, Miami) are not tracked on this board.</span>
+      <span style="margin-left:6px"><b>QC Completion Rate</b> = finalized records (Passed + Failed) ÷ <b>eligible checkouts</b> (QC board records + guest checkouts with no QC record). A missing QC = Not Done, reducing completion %. <b>QC Pass Rate</b> = Passed ÷ (Passed + Failed). Measures quality of completed inspections. Luna's 96% (not 100%) accounts for the 5 recent checkouts with no QC record on file. Baptiste's properties (France, Miami) are not tracked on this board.</span>
     </div>
   </div>
   <div class="footer">Bijou Getaways VA Performance Dashboard &middot; Auto-generated 2026-05-06 &middot; Ledger: 40 days &middot; Ranking: Health 40% + Rate 30% + Low Flagged 30%</div>
