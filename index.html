@@ -387,7 +387,7 @@ h1 span { color:var(--blue); }
           <div class="kpi-col" title="Open bad review issues assigned"><span class="kpi-val" style="color:#ec4899">0</span><span class="kpi-lbl">Bad Reviews</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Average days to complete closed items"><span class="kpi-val" style="color:#06b6d4">0d</span><span class="kpi-lbl">Avg Complete</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Average aging days of open items"><span class="kpi-val" style="color:#f97316">0d</span><span class="kpi-lbl">Avg Aging</span><span class="delta flat">—</span></div>
-          <div class="kpi-col" title="QC Completion Rate — 120 finalized / 125 eligible (5 checkouts with no QC record = Not Done)" style="border-left:1px solid rgba(148,163,184,.2);padding-left:12px"><span class="kpi-val" style="color:#f59e0b">96%</span><span class="kpi-lbl">🔬 QC Complete</span></div>
+          <div class="kpi-col" title="QC Completion Rate — 120 finalized / 124 eligible (4 checkouts with no QC record = Not Done; back-to-back same-guest stays count as 1 QC event)" style="border-left:1px solid rgba(148,163,184,.2);padding-left:12px"><span class="kpi-val" style="color:#10b981">97%</span><span class="kpi-lbl">🔬 QC Complete</span></div>
           <div class="kpi-col" title="QC Pass Rate — % of finalized QC checks that passed (39 passed / 81 failed of 120 total records)"><span class="kpi-val" style="color:#ef4444">32%</span><span class="kpi-lbl">✅ QC Pass Rate</span></div>
         </div>
       </div>
@@ -405,7 +405,7 @@ h1 span { color:var(--blue); }
       <tr><td class="metric-label">Bad Reviews Open</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
       <tr><td class="metric-label">Avg Days to Complete</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
       <tr><td class="metric-label">Avg Aging (Open)</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
-      <tr style="background:rgba(59,130,246,.04)"><td class="metric-label">🔬 QC Completion %</td><td class="cell-metric" style="color:var(--text2)">—</td><td class="cell-metric" style="color:#f59e0b">96%</td><td><span class="delta flat">120/125 eligible</span></td></tr>
+      <tr style="background:rgba(59,130,246,.04)"><td class="metric-label">🔬 QC Completion %</td><td class="cell-metric" style="color:var(--text2)">—</td><td class="cell-metric" style="color:#10b981">97%</td><td><span class="delta flat">120/124 eligible</span></td></tr>
       <tr style="background:rgba(59,130,246,.04)"><td class="metric-label">✅ QC Pass Rate</td><td class="cell-metric" style="color:var(--text2)">—</td><td class="cell-metric" style="color:#ef4444">32%</td><td><span class="delta flat">all-time</span></td></tr>
     </table>
   </div>
@@ -1417,7 +1417,7 @@ h1 span { color:var(--blue); }
   <div id="tab-qc-completion" class="tab-content">
     <div style="margin-bottom:20px">
       <h2 style="font-size:22px;font-weight:700;margin-bottom:6px">🔬 QC Board Report — All-Time Stats</h2>
-      <p style="color:var(--text2);font-size:13px">Board: Cleaner Quality Check (18402657550) &middot; 149 QC records + 5 missing checkouts = 154 eligible events &middot; <b>Luna: 96% completion</b> (5 missing QC = Not Done)</p>
+      <p style="color:var(--text2);font-size:13px">Board: Cleaner Quality Check (18402657550) &middot; 149 QC records + 4 missing checkouts = 153 eligible events &middot; <b>Luna: 97% completion</b> (4 missing QC = Not Done). Back-to-back same-guest stays at the same property count as 1 QC event, not 2.</p>
     </div>
     <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:24px">
       <div class="flagged-summary-card" style="border-left-color:#3b82f6"><div class="flagged-summary-count" style="color:#3b82f6">149</div><div class="flagged-summary-label">Total QC Records</div></div>
@@ -1461,9 +1461,9 @@ h1 span { color:var(--blue); }
         <div style="display:flex;gap:16px;margin-bottom:12px;margin-top:10px">
           <div style="flex:1;background:rgba(148,163,184,.07);border-radius:8px;padding:10px 12px;text-align:center">
             <div style="font-size:11px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">🔬 QC Completion</div>
-            <div style="font-size:30px;font-weight:800;color:#f59e0b">96%</div>
-            <div style="font-size:11px;color:var(--text2);margin-top:3px">120 finalized / 125 eligible</div>
-            <div style="font-size:10.5px;color:#ef4444;margin-top:2px">5 checkouts = Missing (Not Done)</div>
+            <div style="font-size:30px;font-weight:800;color:#10b981">97%</div>
+            <div style="font-size:11px;color:var(--text2);margin-top:3px">120 finalized / 124 eligible</div>
+            <div style="font-size:10.5px;color:#ef4444;margin-top:2px">4 checkouts = Missing (Not Done)</div>
           </div>
           <div style="flex:1;background:rgba(148,163,184,.07);border-radius:8px;padding:10px 12px;text-align:center">
             <div style="font-size:11px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">✅ Pass Rate</div>
@@ -1539,13 +1539,13 @@ h1 span { color:var(--blue); }
               <div style="font-size:10.5px;color:var(--text2)">No new records</div>
             </td>
             <td style="padding:10px 14px;text-align:center">
-              <div style="font-weight:800;color:#ef4444;font-size:16px">~71%</div>
-              <div style="font-size:10.5px;color:var(--text2)">~12 eligible · 5 missing</div>
+              <div style="font-weight:800;color:#f59e0b;font-size:16px">~75%</div>
+              <div style="font-size:10.5px;color:var(--text2)">~12 eligible · 4 missing</div>
               <div style="font-weight:700;color:#ef4444;font-size:12px;margin-top:2px">Pass: ~32%</div>
             </td>
             <td style="padding:10px 14px;text-align:center">
-              <div style="font-weight:800;color:#f59e0b;font-size:16px">~83%</div>
-              <div style="font-size:10.5px;color:var(--text2)">~30 eligible · 5 missing</div>
+              <div style="font-weight:800;color:#f59e0b;font-size:16px">~87%</div>
+              <div style="font-size:10.5px;color:var(--text2)">~30 eligible · 4 missing</div>
               <div style="font-weight:700;color:#ef4444;font-size:12px;margin-top:2px">Pass: ~32%</div>
             </td>
             <td style="padding:10px 14px;text-align:center">
@@ -1556,7 +1556,7 @@ h1 span { color:var(--blue); }
           </tr>
         </tbody>
       </table>
-      <div style="font-size:11px;color:var(--text2);margin-top:10px;font-style:italic">⚠️ 7d and 30d figures for Luna are estimated: all 5 missing QC records fall in the last 7 days (Apr 29–May 5), so the 7d completion drag is fully captured. Exact date-filtered pass rates require live board query with date range filter.</div>
+      <div style="font-size:11px;color:var(--text2);margin-top:10px;font-style:italic">⚠️ 7d and 30d figures for Luna are estimated: all 4 missing QC records fall in the last 7 days (Apr 29–May 5), so the 7d completion drag is fully captured. Note: Hawaii-P304 had back-to-back reservations from the same guest (David Aguirre, May 2→May 4) — treated as 1 QC event, not 2. Exact date-filtered pass rates require live board query with date range filter.</div>
     </div>
 
     <div style="background:var(--surface);border-radius:14px;padding:18px 20px;margin-bottom:24px">
@@ -1566,7 +1566,7 @@ h1 span { color:var(--blue); }
       </div>
       <div style="font-size:12.5px;color:var(--text2);margin-bottom:14px">Checkouts with no finalized QC record on the board. Each row = a missed or incomplete inspection.</div>
       <div style="display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap">
-        <div style="background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.25);border-radius:8px;padding:8px 16px;font-size:13px;font-weight:700;color:#ef4444">5 Missing QC</div>
+        <div style="background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.25);border-radius:8px;padding:8px 16px;font-size:13px;font-weight:700;color:#ef4444">4 Missing QC</div>
         <div style="background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25);border-radius:8px;padding:8px 16px;font-size:13px;font-weight:700;color:#f59e0b">0 In Progress</div>
       </div>
       <table style="width:100%;border-collapse:collapse;font-size:12.5px">
@@ -1581,14 +1581,6 @@ h1 span { color:var(--blue); }
           </tr>
         </thead>
         <tbody>
-          <tr style="border-top:1px solid var(--surface2)">
-            <td style="padding:9px 14px;font-weight:700">Hawaii-P304</td>
-            <td style="padding:9px 14px;color:var(--text2)">2026-05-02</td>
-            <td style="padding:9px 14px;font-weight:700;color:#ef4444">3d ago</td>
-            <td style="padding:9px 14px;color:#ef4444;font-weight:700">❌ Missing</td>
-            <td style="padding:9px 14px"><span class="flagged-person person-luna">Luna</span></td>
-            <td style="padding:9px 14px"><span style="background:#ef444422;color:#ef4444;font-weight:700;padding:2px 8px;border-radius:4px;font-size:11px">HIGH</span></td>
-          </tr>
           <tr style="border-top:1px solid var(--surface2)">
             <td style="padding:9px 14px;font-weight:700">Napa-465</td>
             <td style="padding:9px 14px;color:var(--text2)">2026-05-03</td>
@@ -1626,7 +1618,7 @@ h1 span { color:var(--blue); }
     </div>
     <div style="background:rgba(59,130,246,.06);border-left:4px solid #3b82f6;border-radius:10px;padding:14px 18px;margin-bottom:20px;font-size:12.5px;color:var(--text2)">
       <strong style="color:var(--text)">📊 How these metrics are computed:</strong>
-      <span style="margin-left:6px"><b>QC Completion Rate</b> = finalized records (Passed + Failed) ÷ <b>eligible checkouts</b> (QC board records + guest checkouts with no QC record). A missing QC = Not Done, reducing completion %. <b>QC Pass Rate</b> = Passed ÷ (Passed + Failed). Measures quality of completed inspections. Luna's 96% (not 100%) accounts for the 5 recent checkouts with no QC record on file. Baptiste's properties (France, Miami) are not tracked on this board.</span>
+      <span style="margin-left:6px"><b>QC Completion Rate</b> = finalized records (Passed + Failed) ÷ <b>eligible checkouts</b> (QC board records + guest checkouts with no QC record). A missing QC = Not Done, reducing completion %. <b>QC Pass Rate</b> = Passed ÷ (Passed + Failed). Measures quality of completed inspections. Luna's 97% (not 100%) accounts for 4 recent checkouts with no QC record on file. Back-to-back reservations from the same guest at the same property (e.g. David Aguirre at Hawaii-P304 May 2→4) count as 1 QC event — only the final departure date is flagged. Baptiste's properties (France, Miami) are not tracked on this board.</span>
     </div>
   </div>
   <div class="footer">Bijou Getaways VA Performance Dashboard &middot; Auto-generated 2026-05-06 &middot; Ledger: 40 days &middot; Ranking: Health 40% + Rate 30% + Low Flagged 30%</div>
