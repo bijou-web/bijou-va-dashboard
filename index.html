@@ -147,9 +147,9 @@ h1 span { color:var(--blue); }
 
   <div class="tab-bar">
     <button class="tab-btn active" onclick="switchTab('dashboard')">📊 Dashboard</button>
-    <button class="tab-btn" onclick="switchTab('flagged')">🚩 Flagged Issues (113)</button>
-    <button class="tab-btn" onclick="switchTab('urgent')">🚨 Top Urgent Issues (20)</button>
-    <button class="tab-btn" onclick="switchTab('daily-progress')">📈 Daily Progress (0✅ / 113 open)</button>
+    <button class="tab-btn" onclick="switchTab('flagged')">🚩 Flagged Issues (0)</button>
+    <button class="tab-btn" onclick="switchTab('urgent')">🚨 Top Urgent Issues (18)</button>
+    <button class="tab-btn" onclick="switchTab('daily-progress')">📈 Daily Progress (0✅ / 13 open)</button>
     <button class="tab-btn" onclick="switchTab('review-removal')">⭐ Review Removal</button>
     <button class="tab-btn" onclick="switchTab('closures')">✅ Yesterday's Closures (0)</button>
     <button class="tab-btn" onclick="switchTab('completions-7d')">📅 Completions (7d) (110)</button>
@@ -173,30 +173,30 @@ h1 span { color:var(--blue); }
         <div class="change-card-name" style="color:#f97316">Baptiste</div>
         <div class="change-card-alert" style="background:rgba(245,158,11,.12);color:#f59e0b">DECLINING</div>
         <div class="change-card-metrics">
-          Composite: <span class="val">98.8</span> → <span class="val">93.9</span> <span class="delta delta-bad">↓4.9</span><br>
+          Composite: <span class="val">98.8</span> → <span class="val">95.4</span> <span class="delta delta-bad">↓3.4</span><br>
           Health: <span class="val">100</span> → <span class="val">90</span> <span class="delta delta-bad">↓10</span><br>
           Rate: <span class="val">96%</span> → <span class="val">98%</span> <span class="delta delta-good">↑2%</span><br>
-          Flagged: <span class="val">0</span> → <span class="val">1</span> <span class="delta delta-bad">↑1</span>
+          Flagged: <span class="val">0</span> <span class="delta flat">—</span>
         </div>
       </div>
-      <div class="change-card" style="border-left-color:#ef4444">
-        <div class="change-card-name" style="color:#3b82f6">Nicolas</div>
-        <div class="change-card-alert" style="background:rgba(239,68,68,.12);color:#ef4444">CRITICAL DROP</div>
-        <div class="change-card-metrics">
-          Composite: <span class="val">78.6</span> → <span class="val">48.1</span> <span class="delta delta-bad">↓30.5</span><br>
-          Health: <span class="val">60</span> → <span class="val">55</span> <span class="delta delta-bad">↓5</span><br>
-          Rate: <span class="val">97%</span> → <span class="val">87%</span> <span class="delta delta-bad">↓10%</span><br>
-          Flagged: <span class="val">3</span> → <span class="val">52</span> <span class="delta delta-bad">↑49</span>
-        </div>
-      </div>
-      <div class="change-card" style="border-left-color:#ef4444">
+      <div class="change-card" style="border-left-color:#10b981">
         <div class="change-card-name" style="color:#ec4899">Luna</div>
-        <div class="change-card-alert" style="background:rgba(239,68,68,.12);color:#ef4444">CRITICAL DROP</div>
+        <div class="change-card-alert" style="background:rgba(16,185,129,.12);color:#10b981">STEADY</div>
         <div class="change-card-metrics">
-          Composite: <span class="val">78.0</span> → <span class="val">47.6</span> <span class="delta delta-bad">↓30.4</span><br>
+          Composite: <span class="val">78.0</span> → <span class="val">77.6</span> <span class="delta delta-bad">↓0.4</span><br>
           Health: <span class="val">72</span> → <span class="val">62</span> <span class="delta delta-bad">↓10</span><br>
           Rate: <span class="val">74%</span> → <span class="val">76%</span> <span class="delta delta-good">↑2%</span><br>
-          Flagged: <span class="val">2</span> → <span class="val">60</span> <span class="delta delta-bad">↑58</span>
+          Flagged: <span class="val">2</span> → <span class="val">0</span> <span class="delta delta-good">↓2</span>
+        </div>
+      </div>
+      <div class="change-card" style="border-left-color:#f59e0b">
+        <div class="change-card-name" style="color:#3b82f6">Nicolas</div>
+        <div class="change-card-alert" style="background:rgba(245,158,11,.12);color:#f59e0b">DECLINING</div>
+        <div class="change-card-metrics">
+          Composite: <span class="val">78.6</span> → <span class="val">73.6</span> <span class="delta delta-bad">↓5.0</span><br>
+          Health: <span class="val">60</span> → <span class="val">55</span> <span class="delta delta-bad">↓5</span><br>
+          Rate: <span class="val">97%</span> → <span class="val">87%</span> <span class="delta delta-bad">↓10%</span><br>
+          Flagged: <span class="val">3</span> <span class="delta flat">—</span>
         </div>
       </div>
     </div>
@@ -206,27 +206,27 @@ h1 span { color:var(--blue); }
     <div class="podium-card" style="border-color:#fbbf24">
       <div class="podium-medal" style="background:rgba(251,191,36,0.12);color:#fbbf24">🥇 Gold</div>
       <div class="podium-name" style="color:#f97316">🥇 Baptiste</div>
-      <div class="podium-score">93.9<span class="podium-score-label">pts</span></div>
-      <div class="podium-breakdown">Health 90 &middot; Rate 98% &middot; Flagged 1</div>
+      <div class="podium-score">95.4<span class="podium-score-label">pts</span></div>
+      <div class="podium-breakdown">Health 90 &middot; Rate 98% &middot; Flagged 0</div>
     </div>
     <div class="podium-card" style="border-color:#94a3b8">
       <div class="podium-medal" style="background:rgba(148,163,184,0.12);color:#94a3b8">🥈 Silver</div>
-      <div class="podium-name" style="color:#3b82f6">🥈 Nicolas</div>
-      <div class="podium-score">48.1<span class="podium-score-label">pts</span></div>
-      <div class="podium-breakdown">Health 55 &middot; Rate 87% &middot; Flagged 52</div>
+      <div class="podium-name" style="color:#ec4899">🥈 Luna</div>
+      <div class="podium-score">77.6<span class="podium-score-label">pts</span></div>
+      <div class="podium-breakdown">Health 62 &middot; Rate 76% &middot; Flagged 0</div>
     </div>
     <div class="podium-card" style="border-color:#cd7f32">
       <div class="podium-medal" style="background:rgba(205,127,50,0.12);color:#cd7f32">🥉 Bronze</div>
-      <div class="podium-name" style="color:#ec4899">🥉 Luna</div>
-      <div class="podium-score">47.6<span class="podium-score-label">pts</span></div>
-      <div class="podium-breakdown">Health 62 &middot; Rate 76% &middot; Flagged 60</div>
+      <div class="podium-name" style="color:#3b82f6">🥉 Nicolas</div>
+      <div class="podium-score">73.6<span class="podium-score-label">pts</span></div>
+      <div class="podium-breakdown">Health 55 &middot; Rate 87% &middot; Flagged 3</div>
     </div>
   </div>
 
   <div class="summary-bar">
     <div class="summary-item"><div class="summary-val" style="color:var(--yellow)">113</div><div class="summary-lbl">Open Issues</div></div>
     <div class="summary-item"><div class="summary-val" style="color:var(--green)">593</div><div class="summary-lbl">Closed Issues</div></div>
-    <div class="summary-item"><div class="summary-val" style="color:var(--red)">113</div><div class="summary-lbl">Total Flagged</div></div>
+    <div class="summary-item"><div class="summary-val" style="color:var(--red)">3</div><div class="summary-lbl">Total Flagged</div></div>
     <div class="summary-item"><div class="summary-val" style="color:var(--green)">10</div><div class="summary-lbl">Completed (May 6)</div></div>
   </div>
 
@@ -236,7 +236,7 @@ h1 span { color:var(--blue); }
           <div class="va-avatar" style="background:#f97316">B</div>
           <div>
             <h2 class="va-name" style="color:#f97316">🥇 Baptiste</h2>
-            <div class="va-subtitle">48 total items &middot; Composite: 93.9 pts</div>
+            <div class="va-subtitle">48 total items &middot; Composite: 95.4 pts</div>
           </div>
         </div>
         <div class="va-kpis">
@@ -248,7 +248,7 @@ h1 span { color:var(--blue); }
           <div class="kpi-col" title="Items currently open"><span class="kpi-val" style="color:#f59e0b">1</span><span class="kpi-lbl">Open</span><span class="delta delta-good">↓1</span></div>
           <div class="kpi-col" title="Items marked Complete/Completed"><span class="kpi-val" style="color:#10b981">47</span><span class="kpi-lbl">Closed</span><span class="delta delta-good">↑4</span></div>
           <div class="kpi-col" title="Completion Rate = Closed &divide; Total"><span class="kpi-val" style="color:#f97316">98%</span><span class="kpi-lbl">Rate</span><span class="delta delta-good">↑2</span></div>
-          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">1</span><span class="kpi-lbl">Flagged</span><span class="delta delta-bad">↑1</span></div>
+          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">0</span><span class="kpi-lbl">Flagged</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Items with Needs Review or No Status"><span class="kpi-val" style="color:#a855f7">0</span><span class="kpi-lbl">Review / No Status</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Open bad review issues assigned"><span class="kpi-val" style="color:#ec4899">0</span><span class="kpi-lbl">Bad Reviews</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Average days to complete closed items"><span class="kpi-val" style="color:#06b6d4">0d</span><span class="kpi-lbl">Avg Complete</span><span class="delta flat">—</span></div>
@@ -265,7 +265,7 @@ h1 span { color:var(--blue); }
       <tr><td class="metric-label">Open</td><td class="cell-metric">2</td><td class="cell-metric">1</td><td><span class="delta delta-good">↓1</span></td></tr>
       <tr><td class="metric-label">Closed</td><td class="cell-metric">43</td><td class="cell-metric">47</td><td><span class="delta delta-good">↑4</span></td></tr>
       <tr><td class="metric-label">Rate</td><td class="cell-metric">96%</td><td class="cell-metric">98%</td><td><span class="delta delta-good">↑2%</span></td></tr>
-      <tr><td class="metric-label">Flagged</td><td class="cell-metric">0</td><td class="cell-metric">1</td><td><span class="delta delta-bad">↑1</span></td></tr>
+      <tr><td class="metric-label">Flagged</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
       <tr><td class="metric-label">Completed (Day)</td><td class="cell-metric">2</td><td class="cell-metric">4</td><td><span class="delta delta-good">↑2</span></td></tr>
       <tr><td class="metric-label">Review / No Status</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
       <tr><td class="metric-label">Bad Reviews Open</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
@@ -276,8 +276,8 @@ h1 span { color:var(--blue); }
     </table>
   </div>
 <div class="reports-grid">
-  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge warn">1 flagged</span></div>
-    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11842478309" target="_blank">Identify Auditor for Paris properties</a><span class="badge board"></span></div>
+  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge ok">0 flagged</span></div>
+    <div class="empty-state">✅ No flagged items — all clear!</div>
   </div>
   <div class="report-block"><div class="report-header"><span>🔄 Deadline Extensions</span><span class="count-badge ok">0</span></div>
     <div class="empty-state">✅ No deadline extensions (3+)</div>
@@ -300,80 +300,13 @@ h1 span { color:var(--blue); }
 </div>
     </div>
 
-    <div class="va-section" style="border-color:rgba(59,130,246,0.25)">
-      <div class="va-header" style="background:rgba(59,130,246,0.08)">
-        <div class="va-identity">
-          <div class="va-avatar" style="background:#3b82f6">N</div>
-          <div>
-            <h2 class="va-name" style="color:#3b82f6">🥈 Nicolas</h2>
-            <div class="va-subtitle">403 total items &middot; Composite: 48.1 pts</div>
-          </div>
-        </div>
-        <div class="va-kpis">
-          <div class="mini-ring" title="Health Score">
-            <svg viewBox="0 0 80 80" width="64" height="64"><circle cx="40" cy="40" r="34" fill="none" stroke="#334155" stroke-width="7"/><circle cx="40" cy="40" r="34" fill="none" stroke="#f59e0b" stroke-width="7" stroke-dasharray="117.5" stroke-dashoffset="0" stroke-linecap="round" style="transform:rotate(-90deg);transform-origin:center"/></svg>
-            <span class="mini-score" style="color:#f59e0b">55</span>
-            <span class="mini-delta"><span class="delta delta-bad">↓5</span></span>
-          </div>
-          <div class="kpi-col" title="Items currently open"><span class="kpi-val" style="color:#f59e0b">52</span><span class="kpi-lbl">Open</span><span class="delta delta-bad">↑40</span></div>
-          <div class="kpi-col" title="Items marked Complete/Completed"><span class="kpi-val" style="color:#10b981">351</span><span class="kpi-lbl">Closed</span><span class="delta flat">—</span></div>
-          <div class="kpi-col" title="Completion Rate = Closed &divide; Total"><span class="kpi-val" style="color:#3b82f6">87%</span><span class="kpi-lbl">Rate</span><span class="delta delta-bad">↓10</span></div>
-          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">52</span><span class="kpi-lbl">Flagged</span><span class="delta delta-bad">↑49</span></div>
-          <div class="kpi-col" title="Items with Needs Review or No Status"><span class="kpi-val" style="color:#a855f7">0</span><span class="kpi-lbl">Review / No Status</span><span class="delta flat">—</span></div>
-          <div class="kpi-col" title="Open bad review issues assigned"><span class="kpi-val" style="color:#ec4899">0</span><span class="kpi-lbl">Bad Reviews</span><span class="delta flat">—</span></div>
-          <div class="kpi-col" title="Average days to complete closed items"><span class="kpi-val" style="color:#06b6d4">0d</span><span class="kpi-lbl">Avg Complete</span><span class="delta flat">—</span></div>
-          <div class="kpi-col" title="Average aging days of open items"><span class="kpi-val" style="color:#f97316">0d</span><span class="kpi-lbl">Avg Aging</span><span class="delta flat">—</span></div>
-          <div class="kpi-col" title="QC Completion Rate — % of all-time QC records finalized (passed or failed, not pending)" style="border-left:1px solid rgba(148,163,184,.2);padding-left:12px"><span class="kpi-val" style="color:#10b981">100%</span><span class="kpi-lbl">🔬 QC Complete</span></div>
-          <div class="kpi-col" title="QC Pass Rate — % of finalized QC checks that passed (20 passed / 9 failed of 29 total records)"><span class="kpi-val" style="color:#f59e0b">69%</span><span class="kpi-lbl">✅ QC Pass Rate</span></div>
-        </div>
-      </div>
-<div class="trend-section">
-    <div class="trend-title">📈 Daily Performance Ledger</div>
-    <table class="trend-table">
-      <tr><th>Metric</th><th>May 6</th><th>May 7</th><th>Change</th></tr>
-      <tr><td class="metric-label">Health Score</td><td class="cell-metric">60</td><td class="cell-metric">55</td><td><span class="delta delta-bad">↓5</span></td></tr>
-      <tr><td class="metric-label">Open</td><td class="cell-metric">12</td><td class="cell-metric">52</td><td><span class="delta delta-bad">↑40</span></td></tr>
-      <tr><td class="metric-label">Closed</td><td class="cell-metric">351</td><td class="cell-metric">351</td><td><span class="delta flat">—</span></td></tr>
-      <tr><td class="metric-label">Rate</td><td class="cell-metric">97%</td><td class="cell-metric">87%</td><td><span class="delta delta-bad">↓10%</span></td></tr>
-      <tr><td class="metric-label">Flagged</td><td class="cell-metric">3</td><td class="cell-metric">52</td><td><span class="delta delta-bad">↑49</span></td></tr>
-      <tr><td class="metric-label">Completed (Day)</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
-      <tr><td class="metric-label">Review / No Status</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
-      <tr><td class="metric-label">Bad Reviews Open</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
-      <tr><td class="metric-label">Avg Days to Complete</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
-      <tr><td class="metric-label">Avg Aging (Open)</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
-      <tr style="background:rgba(59,130,246,.04)"><td class="metric-label">🔬 QC Completion %</td><td class="cell-metric" style="color:var(--text2)">—</td><td class="cell-metric" style="color:#10b981">100%</td><td><span class="delta flat">all-time</span></td></tr>
-      <tr style="background:rgba(59,130,246,.04)"><td class="metric-label">✅ QC Pass Rate</td><td class="cell-metric" style="color:var(--text2)">—</td><td class="cell-metric" style="color:#f59e0b">69%</td><td><span class="delta flat">all-time</span></td></tr>
-    </table>
-  </div>
-<div class="reports-grid">
-  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge danger">52 flagged</span></div>
-    <div class="item-row" style="color:var(--text2);font-size:12px;">52 flagged items — see Flagged Issues tab for full clickable list</div>
-  </div>
-  <div class="report-block"><div class="report-header"><span>🔄 Deadline Extensions</span><span class="count-badge ok">0</span></div>
-    <div class="empty-state">✅ No deadline extensions (3+)</div>
-  </div>
-  <div class="report-block"><div class="report-header"><span>✅ Completed (May 6)</span><span class="count-badge ok">0</span></div>
-    <div class="empty-state">✅ No completions yesterday</div>
-  </div>
-  <div class="report-block"><div class="report-header"><span>🗑️ All Deleted/Archived Items</span><span class="count-badge ok">0 total</span></div>
-    <div class="empty-state">✅ No deletions on record</div>
-  </div>
-  <div class="report-block"><div class="report-header"><span>🔇 Zero-Update Completions</span><span class="count-badge ok">0</span></div>
-    <div class="empty-state">✅ No zero-update completions</div>
-  </div>
-  <div class="report-block"><div class="report-header"><span>🔍 Needs Review / No Status</span><span class="count-badge ok">0</span></div>
-    <div class="empty-state">✅ No items awaiting review</div>
-  </div>
-</div>
-    </div>
-
     <div class="va-section" style="border-color:rgba(236,72,153,0.25)">
       <div class="va-header" style="background:rgba(236,72,153,0.08)">
         <div class="va-identity">
           <div class="va-avatar" style="background:#ec4899">L</div>
           <div>
-            <h2 class="va-name" style="color:#ec4899">🥉 Luna</h2>
-            <div class="va-subtitle">255 total items &middot; Composite: 47.6 pts</div>
+            <h2 class="va-name" style="color:#ec4899">🥈 Luna</h2>
+            <div class="va-subtitle">255 total items &middot; Composite: 77.6 pts</div>
           </div>
         </div>
         <div class="va-kpis">
@@ -385,7 +318,7 @@ h1 span { color:var(--blue); }
           <div class="kpi-col" title="Items currently open"><span class="kpi-val" style="color:#f59e0b">60</span><span class="kpi-lbl">Open</span><span class="delta delta-good">↓7</span></div>
           <div class="kpi-col" title="Items marked Complete/Completed"><span class="kpi-val" style="color:#10b981">195</span><span class="kpi-lbl">Closed</span><span class="delta delta-good">↑6</span></div>
           <div class="kpi-col" title="Completion Rate = Closed &divide; Total"><span class="kpi-val" style="color:#ec4899">76%</span><span class="kpi-lbl">Rate</span><span class="delta delta-good">↑2</span></div>
-          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">60</span><span class="kpi-lbl">Flagged</span><span class="delta delta-bad">↑58</span></div>
+          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">0</span><span class="kpi-lbl">Flagged</span><span class="delta delta-good">↓2</span></div>
           <div class="kpi-col" title="Items with Needs Review or No Status"><span class="kpi-val" style="color:#a855f7">0</span><span class="kpi-lbl">Review / No Status</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Open bad review issues assigned"><span class="kpi-val" style="color:#ec4899">0</span><span class="kpi-lbl">Bad Reviews</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Average days to complete closed items"><span class="kpi-val" style="color:#06b6d4">0d</span><span class="kpi-lbl">Avg Complete</span><span class="delta flat">—</span></div>
@@ -402,7 +335,7 @@ h1 span { color:var(--blue); }
       <tr><td class="metric-label">Open</td><td class="cell-metric">67</td><td class="cell-metric">60</td><td><span class="delta delta-good">↓7</span></td></tr>
       <tr><td class="metric-label">Closed</td><td class="cell-metric">189</td><td class="cell-metric">195</td><td><span class="delta delta-good">↑6</span></td></tr>
       <tr><td class="metric-label">Rate</td><td class="cell-metric">74%</td><td class="cell-metric">76%</td><td><span class="delta delta-good">↑2%</span></td></tr>
-      <tr><td class="metric-label">Flagged</td><td class="cell-metric">2</td><td class="cell-metric">60</td><td><span class="delta delta-bad">↑58</span></td></tr>
+      <tr><td class="metric-label">Flagged</td><td class="cell-metric">2</td><td class="cell-metric">0</td><td><span class="delta delta-good">↓2</span></td></tr>
       <tr><td class="metric-label">Completed (Day)</td><td class="cell-metric">6</td><td class="cell-metric">6</td><td><span class="delta flat">—</span></td></tr>
       <tr><td class="metric-label">Review / No Status</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
       <tr><td class="metric-label">Bad Reviews Open</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
@@ -413,8 +346,8 @@ h1 span { color:var(--blue); }
     </table>
   </div>
 <div class="reports-grid">
-  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge danger">60 flagged</span></div>
-    <div class="item-row" style="color:var(--text2);font-size:12px;">60 flagged items — see Flagged Issues tab for full clickable list</div>
+  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge ok">0 flagged</span></div>
+    <div class="empty-state">✅ No flagged items — all clear!</div>
   </div>
   <div class="report-block"><div class="report-header"><span>🔄 Deadline Extensions</span><span class="count-badge ok">0</span></div>
     <div class="empty-state">✅ No deadline extensions (3+)</div>
@@ -439,964 +372,122 @@ h1 span { color:var(--blue); }
 </div>
     </div>
 
+    <div class="va-section" style="border-color:rgba(59,130,246,0.25)">
+      <div class="va-header" style="background:rgba(59,130,246,0.08)">
+        <div class="va-identity">
+          <div class="va-avatar" style="background:#3b82f6">N</div>
+          <div>
+            <h2 class="va-name" style="color:#3b82f6">🥉 Nicolas</h2>
+            <div class="va-subtitle">403 total items &middot; Composite: 73.6 pts</div>
+          </div>
+        </div>
+        <div class="va-kpis">
+          <div class="mini-ring" title="Health Score">
+            <svg viewBox="0 0 80 80" width="64" height="64"><circle cx="40" cy="40" r="34" fill="none" stroke="#334155" stroke-width="7"/><circle cx="40" cy="40" r="34" fill="none" stroke="#f59e0b" stroke-width="7" stroke-dasharray="117.5" stroke-dashoffset="0" stroke-linecap="round" style="transform:rotate(-90deg);transform-origin:center"/></svg>
+            <span class="mini-score" style="color:#f59e0b">55</span>
+            <span class="mini-delta"><span class="delta delta-bad">↓5</span></span>
+          </div>
+          <div class="kpi-col" title="Items currently open"><span class="kpi-val" style="color:#f59e0b">52</span><span class="kpi-lbl">Open</span><span class="delta delta-bad">↑40</span></div>
+          <div class="kpi-col" title="Items marked Complete/Completed"><span class="kpi-val" style="color:#10b981">351</span><span class="kpi-lbl">Closed</span><span class="delta flat">—</span></div>
+          <div class="kpi-col" title="Completion Rate = Closed &divide; Total"><span class="kpi-val" style="color:#3b82f6">87%</span><span class="kpi-lbl">Rate</span><span class="delta delta-bad">↓10</span></div>
+          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">3</span><span class="kpi-lbl">Flagged</span><span class="delta flat">—</span></div>
+          <div class="kpi-col" title="Items with Needs Review or No Status"><span class="kpi-val" style="color:#a855f7">0</span><span class="kpi-lbl">Review / No Status</span><span class="delta flat">—</span></div>
+          <div class="kpi-col" title="Open bad review issues assigned"><span class="kpi-val" style="color:#ec4899">0</span><span class="kpi-lbl">Bad Reviews</span><span class="delta flat">—</span></div>
+          <div class="kpi-col" title="Average days to complete closed items"><span class="kpi-val" style="color:#06b6d4">0d</span><span class="kpi-lbl">Avg Complete</span><span class="delta flat">—</span></div>
+          <div class="kpi-col" title="Average aging days of open items"><span class="kpi-val" style="color:#f97316">0d</span><span class="kpi-lbl">Avg Aging</span><span class="delta flat">—</span></div>
+          <div class="kpi-col" title="QC Completion Rate — % of all-time QC records finalized (passed or failed, not pending)" style="border-left:1px solid rgba(148,163,184,.2);padding-left:12px"><span class="kpi-val" style="color:#10b981">100%</span><span class="kpi-lbl">🔬 QC Complete</span></div>
+          <div class="kpi-col" title="QC Pass Rate — % of finalized QC checks that passed (20 passed / 9 failed of 29 total records)"><span class="kpi-val" style="color:#f59e0b">69%</span><span class="kpi-lbl">✅ QC Pass Rate</span></div>
+        </div>
+      </div>
+<div class="trend-section">
+    <div class="trend-title">📈 Daily Performance Ledger</div>
+    <table class="trend-table">
+      <tr><th>Metric</th><th>May 6</th><th>May 7</th><th>Change</th></tr>
+      <tr><td class="metric-label">Health Score</td><td class="cell-metric">60</td><td class="cell-metric">55</td><td><span class="delta delta-bad">↓5</span></td></tr>
+      <tr><td class="metric-label">Open</td><td class="cell-metric">12</td><td class="cell-metric">52</td><td><span class="delta delta-bad">↑40</span></td></tr>
+      <tr><td class="metric-label">Closed</td><td class="cell-metric">351</td><td class="cell-metric">351</td><td><span class="delta flat">—</span></td></tr>
+      <tr><td class="metric-label">Rate</td><td class="cell-metric">97%</td><td class="cell-metric">87%</td><td><span class="delta delta-bad">↓10%</span></td></tr>
+      <tr><td class="metric-label">Flagged</td><td class="cell-metric">3</td><td class="cell-metric">3</td><td><span class="delta flat">—</span></td></tr>
+      <tr><td class="metric-label">Completed (Day)</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
+      <tr><td class="metric-label">Review / No Status</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
+      <tr><td class="metric-label">Bad Reviews Open</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
+      <tr><td class="metric-label">Avg Days to Complete</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
+      <tr><td class="metric-label">Avg Aging (Open)</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
+      <tr style="background:rgba(59,130,246,.04)"><td class="metric-label">🔬 QC Completion %</td><td class="cell-metric" style="color:var(--text2)">—</td><td class="cell-metric" style="color:#10b981">100%</td><td><span class="delta flat">all-time</span></td></tr>
+      <tr style="background:rgba(59,130,246,.04)"><td class="metric-label">✅ QC Pass Rate</td><td class="cell-metric" style="color:var(--text2)">—</td><td class="cell-metric" style="color:#f59e0b">69%</td><td><span class="delta flat">all-time</span></td></tr>
+    </table>
+  </div>
+<div class="reports-grid">
+  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge ok">0 flagged</span></div>
+    <div class="empty-state">✅ No flagged items — all clear!</div>
+  </div>
+  <div class="report-block"><div class="report-header"><span>🔄 Deadline Extensions</span><span class="count-badge ok">0</span></div>
+    <div class="empty-state">✅ No deadline extensions (3+)</div>
+  </div>
+  <div class="report-block"><div class="report-header"><span>✅ Completed (May 6)</span><span class="count-badge ok">0</span></div>
+    <div class="empty-state">✅ No completions yesterday</div>
+  </div>
+  <div class="report-block"><div class="report-header"><span>🗑️ All Deleted/Archived Items</span><span class="count-badge ok">0 total</span></div>
+    <div class="empty-state">✅ No deletions on record</div>
+  </div>
+  <div class="report-block"><div class="report-header"><span>🔇 Zero-Update Completions</span><span class="count-badge ok">0</span></div>
+    <div class="empty-state">✅ No zero-update completions</div>
+  </div>
+  <div class="report-block"><div class="report-header"><span>🔍 Needs Review / No Status</span><span class="count-badge ok">0</span></div>
+    <div class="empty-state">✅ No items awaiting review</div>
+  </div>
+</div>
+    </div>
+
   </div>
 
   <div id="tab-flagged" class="tab-content">
     <div class="flagged-summary">
       <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">0</div><div class="flagged-summary-label">Past Deadline</div></div>
-      <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">47</div><div class="flagged-summary-label">No Update (7+ Days)</div></div>
-      <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">113</div><div class="flagged-summary-label">Missing Deadline</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">0</div><div class="flagged-summary-label">No Update (7+ Days)</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">0</div><div class="flagged-summary-label">Missing Deadline</div></div>
       <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">0</div><div class="flagged-summary-label">Deadline Extensions (3+)</div></div>
       <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">0</div><div class="flagged-summary-label">Zero-Update Completions</div></div>
       <div class="flagged-summary-card" style="border-left-color:#a855f7"><div class="flagged-summary-count" style="color:#a855f7">0</div><div class="flagged-summary-label">Needs Review / No Status</div></div>
-      <div class="flagged-summary-card" style="border-left-color:#8b5cf6"><div class="flagged-summary-count" style="color:#8b5cf6">47</div><div class="flagged-summary-label">Missing Who / What / When</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#8b5cf6"><div class="flagged-summary-count" style="color:#8b5cf6">0</div><div class="flagged-summary-label">Missing Who / What / When</div></div>
     </div>
 
     <div class="va-filter-bar">
       <button class="va-filter-btn active" onclick="filterVA('all', this)">All VAs</button>
-      <button class="va-filter-btn" style="--va-color:#3b82f6" onclick="filterVA('Nicolás', this)">Nicolás (52)</button>
-      <button class="va-filter-btn" style="--va-color:#ec4899" onclick="filterVA('Luna', this)">Luna (60)</button>
-      <button class="va-filter-btn" style="--va-color:#f97316" onclick="filterVA('Baptiste', this)">Baptiste (1)</button>
+      <button class="va-filter-btn" style="--va-color:#3b82f6" onclick="filterVA('Nicolás', this)">Nicolás (0)</button>
+      <button class="va-filter-btn" style="--va-color:#ec4899" onclick="filterVA('Luna', this)">Luna (0)</button>
+      <button class="va-filter-btn" style="--va-color:#f97316" onclick="filterVA('Baptiste', this)">Baptiste (0)</button>
     </div>
 
     <div class="va-flagged-section" data-va="Nicolás">
       <div class="va-flagged-header" style="border-left-color:#3b82f6">
         <span class="va-flagged-name" style="color:#3b82f6">Nicolás</span>
-        <span class="va-flagged-total">52 flagged items</span>
-        <span class="va-cat-badges"><span class="va-cat-badge" style="color:#f59e0b">🔇 5</span><span class="va-cat-badge" style="color:#f59e0b">❌ 52</span><span class="va-cat-badge" style="color:#8b5cf6">🗣️ 5</span></span>
+        <span class="va-flagged-total">0 flagged items</span>
       </div>
-      <div class="flagged-category" style="margin:0 16px 12px 16px">
-        <div class="flagged-cat-header" style="padding:10px 16px">
-          <div class="flagged-cat-title" style="font-size:14px">🔇 No Update (7+ Days)</div>
-          <span class="flagged-cat-count" style="background:rgba(245,158,11,.15);color:#f59e0b;font-size:12px">5</span>
-        </div>
-        <div class="flagged-cat-body" style="padding:8px 16px">
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11666731004" target="_blank">Zofia CC dispute $4,700 — chargeback pending</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11789556496" target="_blank">USVI maintenance item — structural</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11559147804" target="_blank">Cracks in the floor (tiles) — USVI unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11846443442" target="_blank">USVI maintenance — Cristina+Nicolas item</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11847974591" target="_blank">Reinforcement of foundation — USVI structural</a>
-            <span class="badge board"></span>
-          </div>
-        </div>
-      </div>
-      <div class="flagged-category" style="margin:0 16px 12px 16px">
-        <div class="flagged-cat-header" style="padding:10px 16px">
-          <div class="flagged-cat-title" style="font-size:14px">❌ Missing Deadline</div>
-          <span class="flagged-cat-count" style="background:rgba(245,158,11,.15);color:#f59e0b;font-size:12px">52</span>
-        </div>
-        <div class="flagged-cat-body" style="padding:8px 16px">
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11941732554" target="_blank">Thomas Bay — USVI #3 — multiple guest complaints during stay</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11923079642" target="_blank">Guest alternate unit request — USVI</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11666731004" target="_blank">Zofia CC dispute $4,700 — chargeback pending</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11952755431" target="_blank">Thomas Bay — USVI #3 — Island-wide power outage (8-10 hours)</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11952732928" target="_blank">Teresa Lynn Hensel — USVI #2 — Island-wide power outage</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11952745508" target="_blank">Maxime La — USVI #1 — Power outage at arrival</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11947036682" target="_blank">USVI maintenance item — recent</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11946272421" target="_blank">USVI maintenance item — inspection follow-up</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11829579971" target="_blank">USVI structural maintenance — ongoing</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11901872890" target="_blank">USVI unit maintenance item</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11887212519" target="_blank">USVI maintenance — ongoing repair</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11789556496" target="_blank">USVI maintenance item — structural</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11559147804" target="_blank">Cracks in the floor (tiles) — USVI unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11920069702" target="_blank">St. John Inspection — 7.6.1 Door hardware</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11920037220" target="_blank">St. John Inspection — 7.5.1 Smoke detector</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11919933956" target="_blank">St. John Inspection — 7.4.1 GFCI outlets</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11941733122" target="_blank">Foul smell on porch — USVI</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11941692448" target="_blank">Broken window — USVI unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11846443442" target="_blank">USVI maintenance — Cristina+Nicolas item</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11847974591" target="_blank">Reinforcement of foundation — USVI structural</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945780601" target="_blank">St. John Inspection — 3.7.1 Stairs step condition</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945780675" target="_blank">St. John Inspection — 3.7.2 Stair handrail</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945795382" target="_blank">St. John Inspection — 3.7.4 Stair treads</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945780677" target="_blank">St. John Inspection — 3.8.1 Deck structural</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945796020" target="_blank">St. John Inspection — 3.8.2-5 Balconies & carports</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945787552" target="_blank">St. John Inspection — 3.9.1-3 Railings & guards</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945572486" target="_blank">St. John Inspection — 8.4.3 Exposed wires</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945561468" target="_blank">St. John Inspection — 8.4.5 Scorched outlet</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945573150" target="_blank">St. John Inspection — 8.1.3 Microbial growth</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945565961" target="_blank">St. John Inspection — 8.1.4 Roof sheathing rot</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945566185" target="_blank">St. John Inspection — 7.2.1 Hot/Cold reversed</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945579037" target="_blank">St. John Inspection — 10.2.2 Kitchen ventilation</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945562246" target="_blank">St. John Inspection — 10.3.1 Kitchen GFCI</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945562391" target="_blank">St. John Inspection — 10.3.2 Kitchen safety</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945578903" target="_blank">St. John Inspection — 10.4.1 Anti-tip bracket</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945573318" target="_blank">St. John Inspection — 8.1.5 WDI damage</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945753727" target="_blank">St. John Inspection — 11.1.1 Cistern condition</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945779088" target="_blank">St. John Inspection — 6.2.1 Service entrance conductors</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945758798" target="_blank">St. John Inspection — 6.2.2 Conductor insulation</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945754567" target="_blank">St. John Inspection — 6.3.1 Main service disconnect</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945795257" target="_blank">St. John Inspection — 6.3.2 Disconnect labeling</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945795939" target="_blank">St. John Inspection — 6.5.1 Panelboard condition</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945780589" target="_blank">St. John Inspection — 6.5.2 Breaker labeling</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945795260" target="_blank">St. John Inspection — 6.5.3 Double-tap breakers</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945787754" target="_blank">St. John Inspection — 6.5.4 Breaker amperage</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945795552" target="_blank">St. John Inspection — 6.5.5 AFCI requirements</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945787960" target="_blank">St. John Inspection — 3.3.3 Wall covering & flashing</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945780061" target="_blank">St. John Inspection — 2.1.3 Roof covering</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945795554" target="_blank">St. John Inspection — 5.4.1 Drain/Waste/Vent</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945780200" target="_blank">St. John Inspection — 5.3.3 Hot water source critical</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945795784" target="_blank">St. John Inspection — 3.5.1-2 GFCI exterior/bathrooms</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11923106351" target="_blank">AC smell — USVI unit maintenance</a>
-            <span class="badge board"></span>
-          </div>
-        </div>
-      </div>
-      <div class="flagged-category" style="margin:0 16px 12px 16px">
-        <div class="flagged-cat-header" style="padding:10px 16px">
-          <div class="flagged-cat-title" style="font-size:14px">🗣️ Missing Who / What / When</div>
-          <span class="flagged-cat-count" style="background:rgba(245,158,11,.15);color:#8b5cf6;font-size:12px">5</span>
-        </div>
-        <div class="flagged-cat-body" style="padding:8px 16px">
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11666731004" target="_blank">Zofia CC dispute $4,700 — chargeback pending</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11789556496" target="_blank">USVI maintenance item — structural</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11559147804" target="_blank">Cracks in the floor (tiles) — USVI unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11846443442" target="_blank">USVI maintenance — Cristina+Nicolas item</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11847974591" target="_blank">Reinforcement of foundation — USVI structural</a>
-            <span class="badge board"></span>
-          </div>
-        </div>
-      </div>
+      <div style="padding:16px 24px;color:var(--text2);font-size:13px">✅ No flagged items</div>
     </div>
 
     <div class="va-flagged-section" data-va="Luna">
       <div class="va-flagged-header" style="border-left-color:#ec4899">
         <span class="va-flagged-name" style="color:#ec4899">Luna</span>
-        <span class="va-flagged-total">60 flagged items</span>
-        <span class="va-cat-badges"><span class="va-cat-badge" style="color:#f59e0b">🔇 41</span><span class="va-cat-badge" style="color:#f59e0b">❌ 60</span><span class="va-cat-badge" style="color:#8b5cf6">🗣️ 41</span></span>
+        <span class="va-flagged-total">0 flagged items</span>
       </div>
-      <div class="flagged-category" style="margin:0 16px 12px 16px">
-        <div class="flagged-cat-header" style="padding:10px 16px">
-          <div class="flagged-cat-title" style="font-size:14px">🔇 No Update (7+ Days)</div>
-          <span class="flagged-cat-count" style="background:rgba(245,158,11,.15);color:#f59e0b;font-size:12px">41</span>
-        </div>
-        <div class="flagged-cat-body" style="padding:8px 16px">
-          <div style="font-size:11px;font-weight:700;color:#ec4899;text-transform:uppercase;letter-spacing:.5px;padding:6px 0 4px 0;margin-top:4px;border-bottom:1px solid rgba(236,72,153,.2)">🌺 Hawaii (15)</div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11787384263" target="_blank">Dirty wall P109A — needs cleaning</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11811909981" target="_blank">Curtains Audit Hawaii — full inspection needed</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11811934105" target="_blank">Mold Audit Hawaii — all units</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11847607964" target="_blank">No insect spray in P304 — Hawaii</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11736758926" target="_blank">Lock on sliding glass door — Hawaii</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11533925188" target="_blank">Leak P109 — Hawaii URGENT water leak</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11813332975" target="_blank">AFCI breakers — Hawaii G110A unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11833469731" target="_blank">Maintenance item — Hawaii unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11723886653" target="_blank">Hawaii maintenance — Napa unit issue</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11844132930" target="_blank">Hawaii unit maintenance item</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11724778363" target="_blank">Maintenance task — Hawaii P304</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11674297164" target="_blank">Maintenance follow-up — Hawaii unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11787502936" target="_blank">Maintenance task — Hawaii G110</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11825361221" target="_blank">Hawaii maintenance — ongoing</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11852402119" target="_blank">Missed items HI — Hawaii follow-up</a>
-            <span class="badge board"></span>
-          </div>
-          <div style="font-size:11px;font-weight:700;color:#ec4899;text-transform:uppercase;letter-spacing:.5px;padding:6px 0 4px 0;margin-top:4px;border-bottom:1px solid rgba(236,72,153,.2)">🍷 Napa (19)</div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11405818229" target="_blank">Moldy curtain — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11697825726" target="_blank">Insufficient pillows reported — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11635515658" target="_blank">Dirty rug — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11686618884" target="_blank">Buy new pillows — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11787685038" target="_blank">Beach towels — Napa unit replenishment needed</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11853016974" target="_blank">Dining chair stains — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11440261143" target="_blank">Fan remote — Martha Moore, Napa 669</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11722160764" target="_blank">Mattress protector needed — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11787393539" target="_blank">Belt dryer replacement — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11674288853" target="_blank">AC filters maintenance — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11821475723" target="_blank">Napa unit maintenance — ongoing</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11783342666" target="_blank">Maintenance repair — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11844139332" target="_blank">Napa maintenance — follow-up needed</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11707219705" target="_blank">Napa maintenance item — repair needed</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11787474637" target="_blank">Maintenance task — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11787338976" target="_blank">Repair needed — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/10940538734" target="_blank">Older Napa maintenance item</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/10633073711" target="_blank">Long-standing maintenance item — Napa</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/10655383287" target="_blank">Long-standing repair — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div style="font-size:11px;font-weight:700;color:#ec4899;text-transform:uppercase;letter-spacing:.5px;padding:6px 0 4px 0;margin-top:4px;border-bottom:1px solid rgba(236,72,153,.2)">📍 Other (7)</div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11730286223" target="_blank">Michael — cars and people checking into nearby hotel all day long</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11441455894" target="_blank">Guest reported interior felt cheap and supplies worn</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11730317120" target="_blank">Erika — pillows in the living room needed updating</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11534101759" target="_blank">Guest reported unit condition concerns — needs resolution</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11686706348" target="_blank">Guest reported amenity and condition issues</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11635561870" target="_blank">Walter — dirty shower curtain reported</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11455870257" target="_blank">Guest reported maintenance and amenity issues</a>
-            <span class="badge board"></span>
-          </div>
-        </div>
-      </div>
-      <div class="flagged-category" style="margin:0 16px 12px 16px">
-        <div class="flagged-cat-header" style="padding:10px 16px">
-          <div class="flagged-cat-title" style="font-size:14px">❌ Missing Deadline</div>
-          <span class="flagged-cat-count" style="background:rgba(245,158,11,.15);color:#f59e0b;font-size:12px">60</span>
-        </div>
-        <div class="flagged-cat-body" style="padding:8px 16px">
-          <div style="font-size:11px;font-weight:700;color:#ec4899;text-transform:uppercase;letter-spacing:.5px;padding:6px 0 4px 0;margin-top:4px;border-bottom:1px solid rgba(236,72,153,.2)">🌺 Hawaii (19)</div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11787384263" target="_blank">Dirty wall P109A — needs cleaning</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11885043623" target="_blank">Mold Inspection — Hawaii 491</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11811909981" target="_blank">Curtains Audit Hawaii — full inspection needed</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11811934105" target="_blank">Mold Audit Hawaii — all units</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11847607964" target="_blank">No insect spray in P304 — Hawaii</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11736758926" target="_blank">Lock on sliding glass door — Hawaii</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11952755640" target="_blank">Angelica J — Hawaii P304 — Smart lock code requested at check-in</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11935371652" target="_blank">Bathroom flushing issue — Hawaii unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11533925188" target="_blank">Leak P109 — Hawaii URGENT water leak</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11813332975" target="_blank">AFCI breakers — Hawaii G110A unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11833469731" target="_blank">Maintenance item — Hawaii unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11723886653" target="_blank">Hawaii maintenance — Napa unit issue</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11844132930" target="_blank">Hawaii unit maintenance item</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11724778363" target="_blank">Maintenance task — Hawaii P304</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11674297164" target="_blank">Maintenance follow-up — Hawaii unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11787502936" target="_blank">Maintenance task — Hawaii G110</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11923071605" target="_blank">Maintenance item — Hawaii unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11825361221" target="_blank">Hawaii maintenance — ongoing</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11852402119" target="_blank">Missed items HI — Hawaii follow-up</a>
-            <span class="badge board"></span>
-          </div>
-          <div style="font-size:11px;font-weight:700;color:#ec4899;text-transform:uppercase;letter-spacing:.5px;padding:6px 0 4px 0;margin-top:4px;border-bottom:1px solid rgba(236,72,153,.2)">🍷 Napa (22)</div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11405818229" target="_blank">Moldy curtain — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11697825726" target="_blank">Insufficient pillows reported — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11635515658" target="_blank">Dirty rug — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11686618884" target="_blank">Buy new pillows — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11787685038" target="_blank">Beach towels — Napa unit replenishment needed</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11897823867" target="_blank">Gross stain on couch — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11853016974" target="_blank">Dining chair stains — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11911607064" target="_blank">Laundry soap missing — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11440261143" target="_blank">Fan remote — Martha Moore, Napa 669</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11722160764" target="_blank">Mattress protector needed — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11941735754" target="_blank">Christine Mailloux — Napa 663 maintenance</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11787393539" target="_blank">Belt dryer replacement — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11674288853" target="_blank">AC filters maintenance — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11821475723" target="_blank">Napa unit maintenance — ongoing</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11783342666" target="_blank">Maintenance repair — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11844139332" target="_blank">Napa maintenance — follow-up needed</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11707219705" target="_blank">Napa maintenance item — repair needed</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11787474637" target="_blank">Maintenance task — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11787338976" target="_blank">Repair needed — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/10940538734" target="_blank">Older Napa maintenance item</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/10633073711" target="_blank">Long-standing maintenance item — Napa</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/10655383287" target="_blank">Long-standing repair — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div style="font-size:11px;font-weight:700;color:#ec4899;text-transform:uppercase;letter-spacing:.5px;padding:6px 0 4px 0;margin-top:4px;border-bottom:1px solid rgba(236,72,153,.2)">📍 Other (19)</div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11897680643" target="_blank">Kyle S. — fireplace candles appeared to have mold</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11897634079" target="_blank">Kyle S. — property 'not as advertised', different experience than other units</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11730286223" target="_blank">Michael — cars and people checking into nearby hotel all day long</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11935839026" target="_blank">Christine — unit felt shabby and a little ick</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11441455894" target="_blank">Guest reported interior felt cheap and supplies worn</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11897611833" target="_blank">Kyle S. — shampoo dispensers contained grey substances</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11897601692" target="_blank">Kyle S. — outdoor furniture was waterlogged and unusable</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11897607382" target="_blank">Kyle S. — pillows were a disaster</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11935921259" target="_blank">Christine — room was very cramped</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11730317120" target="_blank">Erika — pillows in the living room needed updating</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11935808677" target="_blank">Christine — satellite TV service was annoying</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11534101759" target="_blank">Guest reported unit condition concerns — needs resolution</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11686706348" target="_blank">Guest reported amenity and condition issues</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11635561870" target="_blank">Walter — dirty shower curtain reported</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11455870257" target="_blank">Guest reported maintenance and amenity issues</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11935958668" target="_blank">Christine — room felt shabby (additional follow-up)</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11935959163" target="_blank">Christine — cramped room follow-up action needed</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11935867353" target="_blank">Christine — satellite issue follow-up</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11904668152" target="_blank">Cleaner Weekly Calls — coordination with cleaning team</a>
-            <span class="badge board"></span>
-          </div>
-        </div>
-      </div>
-      <div class="flagged-category" style="margin:0 16px 12px 16px">
-        <div class="flagged-cat-header" style="padding:10px 16px">
-          <div class="flagged-cat-title" style="font-size:14px">🗣️ Missing Who / What / When</div>
-          <span class="flagged-cat-count" style="background:rgba(245,158,11,.15);color:#8b5cf6;font-size:12px">41</span>
-        </div>
-        <div class="flagged-cat-body" style="padding:8px 16px">
-          <div style="font-size:11px;font-weight:700;color:#ec4899;text-transform:uppercase;letter-spacing:.5px;padding:6px 0 4px 0;margin-top:4px;border-bottom:1px solid rgba(236,72,153,.2)">🌺 Hawaii (15)</div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11787384263" target="_blank">Dirty wall P109A — needs cleaning</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11811909981" target="_blank">Curtains Audit Hawaii — full inspection needed</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11811934105" target="_blank">Mold Audit Hawaii — all units</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11847607964" target="_blank">No insect spray in P304 — Hawaii</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11736758926" target="_blank">Lock on sliding glass door — Hawaii</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11533925188" target="_blank">Leak P109 — Hawaii URGENT water leak</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11813332975" target="_blank">AFCI breakers — Hawaii G110A unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11833469731" target="_blank">Maintenance item — Hawaii unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11723886653" target="_blank">Hawaii maintenance — Napa unit issue</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11844132930" target="_blank">Hawaii unit maintenance item</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11724778363" target="_blank">Maintenance task — Hawaii P304</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11674297164" target="_blank">Maintenance follow-up — Hawaii unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11787502936" target="_blank">Maintenance task — Hawaii G110</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11825361221" target="_blank">Hawaii maintenance — ongoing</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11852402119" target="_blank">Missed items HI — Hawaii follow-up</a>
-            <span class="badge board"></span>
-          </div>
-          <div style="font-size:11px;font-weight:700;color:#ec4899;text-transform:uppercase;letter-spacing:.5px;padding:6px 0 4px 0;margin-top:4px;border-bottom:1px solid rgba(236,72,153,.2)">🍷 Napa (19)</div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11405818229" target="_blank">Moldy curtain — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11697825726" target="_blank">Insufficient pillows reported — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11635515658" target="_blank">Dirty rug — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11686618884" target="_blank">Buy new pillows — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11787685038" target="_blank">Beach towels — Napa unit replenishment needed</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11853016974" target="_blank">Dining chair stains — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11440261143" target="_blank">Fan remote — Martha Moore, Napa 669</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11722160764" target="_blank">Mattress protector needed — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11787393539" target="_blank">Belt dryer replacement — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11674288853" target="_blank">AC filters maintenance — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11821475723" target="_blank">Napa unit maintenance — ongoing</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11783342666" target="_blank">Maintenance repair — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11844139332" target="_blank">Napa maintenance — follow-up needed</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11707219705" target="_blank">Napa maintenance item — repair needed</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11787474637" target="_blank">Maintenance task — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11787338976" target="_blank">Repair needed — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/10940538734" target="_blank">Older Napa maintenance item</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/10633073711" target="_blank">Long-standing maintenance item — Napa</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/10655383287" target="_blank">Long-standing repair — Napa unit</a>
-            <span class="badge board"></span>
-          </div>
-          <div style="font-size:11px;font-weight:700;color:#ec4899;text-transform:uppercase;letter-spacing:.5px;padding:6px 0 4px 0;margin-top:4px;border-bottom:1px solid rgba(236,72,153,.2)">📍 Other (7)</div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11730286223" target="_blank">Michael — cars and people checking into nearby hotel all day long</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11441455894" target="_blank">Guest reported interior felt cheap and supplies worn</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11730317120" target="_blank">Erika — pillows in the living room needed updating</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11534101759" target="_blank">Guest reported unit condition concerns — needs resolution</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11686706348" target="_blank">Guest reported amenity and condition issues</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11635561870" target="_blank">Walter — dirty shower curtain reported</a>
-            <span class="badge board"></span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11455870257" target="_blank">Guest reported maintenance and amenity issues</a>
-            <span class="badge board"></span>
-          </div>
-        </div>
-      </div>
+      <div style="padding:16px 24px;color:var(--text2);font-size:13px">✅ No flagged items</div>
     </div>
 
     <div class="va-flagged-section" data-va="Baptiste">
       <div class="va-flagged-header" style="border-left-color:#f97316">
         <span class="va-flagged-name" style="color:#f97316">Baptiste</span>
-        <span class="va-flagged-total">1 flagged item</span>
-        <span class="va-cat-badges"><span class="va-cat-badge" style="color:#f59e0b">🔇 1</span><span class="va-cat-badge" style="color:#f59e0b">❌ 1</span><span class="va-cat-badge" style="color:#8b5cf6">🗣️ 1</span></span>
+        <span class="va-flagged-total">0 flagged items</span>
       </div>
-      <div class="flagged-category" style="margin:0 16px 12px 16px">
-        <div class="flagged-cat-header" style="padding:10px 16px">
-          <div class="flagged-cat-title" style="font-size:14px">🔇 No Update (7+ Days)</div>
-          <span class="flagged-cat-count" style="background:rgba(245,158,11,.15);color:#f59e0b;font-size:12px">1</span>
-        </div>
-        <div class="flagged-cat-body" style="padding:8px 16px">
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11842478309" target="_blank">Identify Auditor for Paris properties</a>
-            <span class="badge board"></span>
-          </div>
-        </div>
-      </div>
-      <div class="flagged-category" style="margin:0 16px 12px 16px">
-        <div class="flagged-cat-header" style="padding:10px 16px">
-          <div class="flagged-cat-title" style="font-size:14px">❌ Missing Deadline</div>
-          <span class="flagged-cat-count" style="background:rgba(245,158,11,.15);color:#f59e0b;font-size:12px">1</span>
-        </div>
-        <div class="flagged-cat-body" style="padding:8px 16px">
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11842478309" target="_blank">Identify Auditor for Paris properties</a>
-            <span class="badge board"></span>
-          </div>
-        </div>
-      </div>
-      <div class="flagged-category" style="margin:0 16px 12px 16px">
-        <div class="flagged-cat-header" style="padding:10px 16px">
-          <div class="flagged-cat-title" style="font-size:14px">🗣️ Missing Who / What / When</div>
-          <span class="flagged-cat-count" style="background:rgba(245,158,11,.15);color:#8b5cf6;font-size:12px">1</span>
-        </div>
-        <div class="flagged-cat-body" style="padding:8px 16px">
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11842478309" target="_blank">Identify Auditor for Paris properties</a>
-            <span class="badge board"></span>
-          </div>
-        </div>
-      </div>
+      <div style="padding:16px 24px;color:var(--text2);font-size:13px">✅ No flagged items</div>
     </div>
 
   </div>
   <div id="tab-urgent" class="tab-content">
     <div style="margin-bottom:20px"><h2 style="font-size:22px;font-weight:700;margin-bottom:6px">🚨 Top Urgent Issues</h2><p style="color:var(--text2);font-size:13px">Open items scored by urgency. v2 formula: base (safety/revenue/deadline) + <b>recurrence</b> (inbox & board co-occurrence) + <b>stale penalty</b> (no updates on high-base items) − <b>active-work reward</b> (multiple updates in 14d). Scores above 100 = critical overload. Columns show <b>Unit #</b> (from board location tag) and <b>Last Update</b> with quality flags (missing what / owner / next step, too brief, stale).</p></div>
     <div class="flagged-summary">
-      <div class="flagged-summary-card" style="border-left-color:#3b82f6"><div class="flagged-summary-count" style="color:#3b82f6">17</div><div class="flagged-summary-label">Nicolás (17 critical)</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#3b82f6"><div class="flagged-summary-count" style="color:#3b82f6">15</div><div class="flagged-summary-label">Nicolás (15 critical)</div></div>
       <div class="flagged-summary-card" style="border-left-color:#ec4899"><div class="flagged-summary-count" style="color:#ec4899">3</div><div class="flagged-summary-label">Luna (3 critical)</div></div>
       <div class="flagged-summary-card" style="border-left-color:#f97316"><div class="flagged-summary-count" style="color:#f97316">0</div><div class="flagged-summary-label">Baptiste (0 critical)</div></div>
     </div>
@@ -1427,180 +518,162 @@ h1 span { color:var(--blue); }
         <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
           <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">95</td>
           <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - St. John</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11847974591" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">Reinforcement of foundation — USVI St. John</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Structural failure risk — immediate safety hazard, potential for full property closure, estimated $50k+ revenue loss</div></td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11847974591" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">Reinforcement of foundation</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Structural failure risk — foundation compromise could trigger emergency closure of the villa, loss of all future bookings, and pot</div></td>
           <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
-          <td style="padding:12px"><div style="color:#ef4444;font-weight:600">? · 12d ago</div><div style="color:var(--text2);font-size:10.5px">1 upd/14d · 3 total</div></td>
+          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 0d ago</div><div style="color:var(--text2);font-size:10.5px">3 upd/14d · 3 total</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
         <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
           <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">93</td>
           <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - St. John</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945779088" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">St. John Electrical — Service-Entrance Conductors (6.2.1, 6.2.2)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Electrocution/fire risk if left unaddressed. Insurance void, immediate guest safety hazard, property shutdown risk.</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945758798" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Sub-item 11945758798</a></div></td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918938606" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">6.2.1 / 6.2.2 — Service-Entrance Conductors (vegetation contact)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Electrical fire/shock hazard. If guest is injured or property burns, $500K+ liability. WAPA coordination required — cannot be defe</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918938606" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 6.2.1 - Service-Entrance Conductors</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918938829" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 6.2.2 - Service-Entrance Conductors</a></div></td>
           <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
-          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 2d ago</div><div style="color:var(--text2);font-size:10.5px">1 upd/14d · 1 total</div></td>
+          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 0d ago</div><div style="color:var(--text2);font-size:10.5px">2 upd/14d · 2 total</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
         <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
           <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">92</td>
           <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - St. John</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945780601" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">St. John Inspection — Stairs, Steps & Stairways (3.7.1, 3.7.2, 3.7.4)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Slip/fall liability, guest injury risk. Potential $100k+ lawsuit exposure. Immediate safety remediation required.</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945780675" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Sub-item 11945780675</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945795382" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Sub-item 11945795382</a></div></td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11917382466" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">3.7.1–3.7.4 — Stairs, Steps, Stoops & Ramps (missing handrail)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Fall liability — guest injury on unguarded stairs could result in lawsuit and Airbnb removal. Code violation; must be resolved bef</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11917382466" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 3.7.1 - Stairs, Steps, Stoops, Stairways & Ramps</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11917389095" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 3.7.2 - Stairs, Steps, Stoops, Stairways & Ramps</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11917389602" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 3.7.3 - Stairs, Steps, Stoops, Stairways & Ramps</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11917470204" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 3.7.4 - Stairs, Steps, Stoops, Stairways & Ramps</a></div></td>
           <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
-          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 2d ago</div><div style="color:var(--text2);font-size:10.5px">1 upd/14d · 1 total</div></td>
+          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 0d ago</div><div style="color:var(--text2);font-size:10.5px">2 upd/14d · 2 total</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
         <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
           <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">91</td>
           <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - St. John</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945754567" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">St. John Electrical — Main Service Disconnect (6.3.1, 6.3.2)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Code violation — power cutoff risk by utility. Guest displacement, 100% revenue loss during outage.</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945795257" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Sub-item 11945795257</a></div></td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918991010" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">6.3.1 / 6.3.2 — Main Service Disconnect (missing dead-front cover)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Exposed energized electrical components — shock and electrocution hazard. Contractor Mike (Power Up Electric) visited today; quota</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918991010" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 6.3.1 - Main Service Disconnect</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918984861" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 6.3.2 - Main Service Disconnect</a></div></td>
           <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
-          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 2d ago</div><div style="color:var(--text2);font-size:10.5px">1 upd/14d · 1 total</div></td>
+          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 0d ago</div><div style="color:var(--text2);font-size:10.5px">3 upd/14d · 3 total</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
         <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
           <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">90</td>
           <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - St. John</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945780677" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">St. John Inspection — Decks, Balconies & Carports (3.8.1–3.8.5)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Structural collapse risk, immediate liability for any deck usage by guests. Multiple units affected.</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945796020" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Sub-item 11945796020</a></div></td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918044244" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">3.8.1–3.8.5 — Decks, Balconies & Carports (wood rot, structural)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Deck collapse risk — structural wood rot at multiple deck areas. Guest injury liability. Contractor quotation required before any </div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918044244" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 3.8.1 - Porches, Patios, Decks, Balconies & Carports</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918137180" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 3.8.2 - Porches, Patios, Decks, Balconies & Carports</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918227965" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 3.8.3 - Porches, Patios, Decks, Balconies & Carports</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918215439" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 3.8.4 - Porches, Patios, Decks, Balconies & Carports</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918249254" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 3.8.5 - Porches, Patios, Decks, Balconies & Carports</a></div></td>
           <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
-          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 2d ago</div><div style="color:var(--text2);font-size:10.5px">1 upd/14d · 1 total</div></td>
+          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 0d ago</div><div style="color:var(--text2);font-size:10.5px">2 upd/14d · 2 total</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
         <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
           <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">90</td>
           <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - St. John</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11559147804" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">Cracks in the floor (tiles) — USVI unit</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Structural deterioration, trip hazard, guest injury risk. Worsening without repair.</div></td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11559147804" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">Cracks in the floor that need addressing (tiles)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Guest safety and bad review risk — cracked tiles can cause injury. Needs contractor quote; pending Erwan approval.</div></td>
           <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
-          <td style="padding:12px"><div style="color:#ef4444;font-weight:600">? · 36d ago</div><div style="color:var(--text2);font-size:10.5px">0 upd/14d · 2 total</div></td>
+          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 3d ago</div><div style="color:var(--text2);font-size:10.5px">3 upd/14d · 3 total</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
         <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
           <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">88</td>
           <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - St. John</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945795939" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">St. John Electrical — Panelboards & Breakers (6.5.1–6.5.5)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Arc flash/fire risk. NEC code violations, 5 distinct panel issues require licensed electrician.</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945780589" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Sub-item 11945780589</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945795260" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Sub-item 11945795260</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945787754" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Sub-item 11945787754</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945795552" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Sub-item 11945795552</a></div></td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11919034430" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">6.5.1–6.5.5 — Panelboards & Breakers (doubled hot conductors)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Fire and electrical failure risk from improperly doubled conductors on breakers. Mike (Power Up Electric) on site today; quotation</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11919034430" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 6.5.1 - Panelboards & Breakers</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11919057951" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 6.5.2 - Panelboards & Breakers</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11919386770" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 6.5.3 - Panelboards & Breakers</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11919471979" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 6.5.4 - Panelboards & Breakers</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11919522682" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 6.5.5 - Panelboards & Breakers</a></div></td>
           <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
-          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 2d ago</div><div style="color:var(--text2);font-size:10.5px">1 upd/14d · 1 total</div></td>
+          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 0d ago</div><div style="color:var(--text2);font-size:10.5px">3 upd/14d · 3 total</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
         <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
           <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">87</td>
           <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - St. John</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945787552" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">St. John Inspection — Railings, Guards & Handrails (3.9.1–3.9.3)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Fall hazard from elevated areas — OSHA/building code violation. Immediate guest safety risk.</div></td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918252022" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">3.9.1–3.9.3 — Railings, Guards & Handrails (loose, multiple locations)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Fall hazard — loose railings at deck areas present immediate guest injury risk. Carpenter quotation in progress.</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918252022" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 3.9.1 - Railings, Guards & Handrails</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918265932" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 3.9.2 - Railings, Guards & Handrails</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918318403" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 3.9.3 - Railings, Guards & Handrails</a></div></td>
           <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
-          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 2d ago</div><div style="color:var(--text2);font-size:10.5px">1 upd/14d · 1 total</div></td>
+          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 0d ago</div><div style="color:var(--text2);font-size:10.5px">2 upd/14d · 2 total</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
         <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
           <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">87</td>
           <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - St. John</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945572486" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">St. John Inspection — Exposed Wires & Scorched Outlet (8.4.3, 8.4.5)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Electrocution/fire risk — immediate guest safety hazard. Insurance void if not remediated.</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945561468" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Sub-item 11945561468</a></div></td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945572486" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">8.4.3 / 8.4.5 — Exposed Electrical Wires & Scorched Outlet</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Fire and shock hazard from exposed wiring and scorched outlet. Requires immediate electrician evaluation.</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945572486" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 8.4.3 - Switches, Fixtures & Receptacles — Exposed Electrical Wires</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945561468" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 8.4.5 - Switches, Fixtures & Receptacles — Non-Functional Outlet with </a></div></td>
           <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
-          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 3d ago</div><div style="color:var(--text2);font-size:10.5px">1 upd/14d · 1 total</div></td>
+          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 3d ago</div><div style="color:var(--text2);font-size:10.5px">0 upd/14d · 0 total</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
         <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
           <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">85</td>
-          <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">Hawaii - Maui Banyan</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11811934105" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">Mold Audit — All Hawaii units (Luna)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Cleaning Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Health hazard, ADA/habitability violation. Guest illness liability, platform removal risk for property.</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11885043623" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Sub-item 11885043623</a></div></td>
+          <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">Hawaii</td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11811934105" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">Mold Audit - All Hawaii</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Cleaning Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Mold across all Hawaii units — guest health liability, potential listing suspension. Edgar quote in progress; audit scheduled for </div></td>
           <td style="padding:12px"><span class="flagged-person person-luna">Luna</span></td>
-          <td style="padding:12px"><div style="color:#ef4444;font-weight:600">? · 15d ago</div><div style="color:var(--text2);font-size:10.5px">0 upd/14d · 1 total</div></td>
+          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 2d ago</div><div style="color:var(--text2);font-size:10.5px">3 upd/14d · 3 total</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
         <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
           <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">84</td>
           <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - St. John</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945795784" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">St. John Inspection — GFCIs (3.5.1, 3.5.2, 7.4.1)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 NEC code violation, electrical safety hazard near water sources. Building inspector risk.</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11919933956" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Sub-item 11919933956</a></div></td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11917323866" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">3.5.1 / 3.5.2 / 7.4.1 — GFCIs Missing (outdoor + bathroom)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 NEC code violation — missing GFCI protection in outdoor and bathroom areas. Shock risk for guests. Electrician (Mike) on site; quo</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11917323866" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 3.5.1 - GFCIs & Electrical</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11917377522" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 3.5.2 - GFCIs & Electrical</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11919933956" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 7.4.1 - GFCI & Electric in Bathroom</a></div></td>
           <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
-          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 2d ago</div><div style="color:var(--text2);font-size:10.5px">1 upd/14d · 1 total</div></td>
-          <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
-          <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
-        </tr>
-        <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
-          <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">84</td>
-          <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - St. John</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945795554" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">St. John Inspection — Drain, Waste & Vent Systems (5.4.1)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Sewer backup risk, health hazard. Guest displacement during plumbing emergency.</div></td>
-          <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
-          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 2d ago</div><div style="color:var(--text2);font-size:10.5px">1 upd/14d · 1 total</div></td>
+          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 0d ago</div><div style="color:var(--text2);font-size:10.5px">2 upd/14d · 2 total</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
         <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
           <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">83</td>
           <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - St. John</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945573150" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">St. John Inspection — Microbial Growth, Roof Rot & WDI (8.1.3–8.1.5)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Mold/WDI damage risk — structural deterioration, insurance claim risk, potential full-unit remediation.</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945565961" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Sub-item 11945565961</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945573318" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Sub-item 11945573318</a></div></td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945573150" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">8.1.3–8.1.5 — Microbial Growth, Roof Rot & WDI Damage (interior)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Microbial growth and wood rot indicate moisture intrusion — health hazard and structural deterioration risk if untreated.</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945573150" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 8.1.3 - Floors, Walls, Ceilings — Microbial Growth</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945565961" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 8.1.4 - Floors, Walls, Ceilings — Roof Sheathing Rot with Daylight Pen</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945573318" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 8.1.5 - Floors, Walls, Ceilings — WDI Damage (Interior)</a></div></td>
           <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
-          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 3d ago</div><div style="color:var(--text2);font-size:10.5px">1 upd/14d · 1 total</div></td>
+          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 3d ago</div><div style="color:var(--text2);font-size:10.5px">0 upd/14d · 0 total</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
         <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
           <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">82</td>
           <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - St. John</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945780200" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">St. John Inspection — Hot Water Source Critical (5.3.3)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Guest habitability issue — no hot water = immediate booking complaints, refund demands.</div></td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918591451" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">5.3.3 - Hot Water Source (exposed wiring splices in crawlspace)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Exposed electrical splices near water heater in crawlspace — moisture + electricity = fire/shock risk. Electrician visiting; quote</div></td>
           <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
-          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 2d ago</div><div style="color:var(--text2);font-size:10.5px">1 upd/14d · 1 total</div></td>
+          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 0d ago</div><div style="color:var(--text2);font-size:10.5px">3 upd/14d · 3 total</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
         <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
           <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">81</td>
           <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - St. John</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945562246" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">St. John Inspection — Kitchen Safety Issues (10.3.1, 10.3.2, 10.2.2, 10.4.1)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Kitchen GFCI absent, anti-tip bracket missing — guest burn/electrocution risk. Code violation.</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945562391" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Sub-item 11945562391</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945579037" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Sub-item 11945579037</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945578903" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ Sub-item 11945578903</a></div></td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945562246" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">10.3.1 / 10.3.2 / 10.2.2 / 10.4.1 — Kitchen Safety Issues</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Multiple kitchen safety deficiencies — GFCI failures, reversed plumbing, missing stove anti-tip bracket. Guest safety risk; code v</div><div style="margin-top:6px;padding:6px 8px;background:rgba(148,163,184,.07);border-radius:6px;border-left:2px solid #ef4444"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945562246" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 10.3.1 - Kitchen GFCI — GFCI Wouldn't Reset</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945562391" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 10.3.2 - Kitchen GFCI — Non-GFCI Outlet</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945579037" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 10.2.2 - Kitchen Sink — Hot/Cold Reversed</a><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945578903" target="_blank" style="color:#94a3b8;text-decoration:none;display:block;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">↳ 10.4.1 - Range/Oven/Cooktop — Missing Anti-Tip Bracket</a></div></td>
           <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
-          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 3d ago</div><div style="color:var(--text2);font-size:10.5px">1 upd/14d · 1 total</div></td>
+          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 3d ago</div><div style="color:var(--text2);font-size:10.5px">0 upd/14d · 0 total</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
         <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
           <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">79</td>
           <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - St. John</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945780061" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">St. John Inspection — Roof Covering (2.1.3)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Hurricane season approaching — compromised roof covering, potential water infiltration, structural damage.</div></td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11916018020" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">2.1.3 - Roof Covering (deteriorated trim paint, moisture exposure)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Deteriorated roof trim allows moisture infiltration — can accelerate rot and lead to interior water damage if not repainted.</div></td>
           <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
-          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 2d ago</div><div style="color:var(--text2);font-size:10.5px">1 upd/14d · 1 total</div></td>
+          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 3d ago</div><div style="color:var(--text2);font-size:10.5px">1 upd/14d · 1 total</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
         <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
           <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">78</td>
-          <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">Hawaii - Maui Banyan</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11813332975" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">AFCI breakers — Hawaii G110A</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Arc fault protection missing — fire risk. NEC 2023 requirement. Potential insurance void.</div></td>
+          <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">Hawaii - Maui Banyan G110A</td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11813332975" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">AFCI breakers for unit g110a</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 AFCI breaker code requirement — arc fault protection missing. Fire risk. Must be resolved before next guest check-in.</div></td>
           <td style="padding:12px"><span class="flagged-person person-luna">Luna</span></td>
-          <td style="padding:12px"><div style="color:#ef4444;font-weight:600">? · 15d ago</div><div style="color:var(--text2);font-size:10.5px">0 upd/14d · 2 total</div></td>
+          <td style="padding:12px"><div style="color:#f59e0b;font-weight:600">? · 7d ago</div><div style="color:var(--text2);font-size:10.5px">1 upd/14d · 1 total</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
         <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
           <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">76</td>
           <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - St. John</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945787960" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">St. John Inspection — Wall-Covering, Flashing & Trim (3.3.3)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Water infiltration risk, mold potential. Exterior wall compromise accelerates structural deterioration.</div></td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11917166540" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">3.3.3 - Wall-Covering, Flashing & Trim (WDI damage, siding)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Wood-destroying insect damage to exterior siding and interior components. Concealed activity cannot be ruled out — pest control ev</div></td>
           <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
-          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 2d ago</div><div style="color:var(--text2);font-size:10.5px">1 upd/14d · 1 total</div></td>
+          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 3d ago</div><div style="color:var(--text2);font-size:10.5px">1 upd/14d · 1 total</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
         <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
           <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">75</td>
-          <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">Hawaii - Maui Banyan</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11533925188" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">Leak P109 — Hawaii water leak (URGENT)</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Active water leak — property damage escalation, potential mold, guest displacement risk.</div></td>
+          <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">Hawaii - Maui Banyan P109</td>
+          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11533925188" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">URGENT Repair for Leak Damage – Unit P109 reported by Justin church</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Active leak damage to unit P109 — guest impact and property damage risk. Emergency repair needed.</div></td>
           <td style="padding:12px"><span class="flagged-person person-luna">Luna</span></td>
-          <td style="padding:12px"><div style="color:#ef4444;font-weight:600">? · 27d ago</div><div style="color:var(--text2);font-size:10.5px">0 upd/14d · 3 total</div></td>
-          <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
-          <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
-        </tr>
-        <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
-          <td style="padding:12px;font-size:20px;font-weight:800;color:#ef4444;text-align:center">72</td>
-          <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">USVI - St. John</td>
-          <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11666731004" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">Zofia CC dispute $4,700 — chargeback pending</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Reservation Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 $4,700 chargeback exposure. If dispute not resolved, permanent loss + processing penalty.</div></td>
-          <td style="padding:12px"><span class="flagged-person person-nicolas">Nicolas</span></td>
-          <td style="padding:12px"><div style="color:#ef4444;font-weight:600">? · 17d ago</div><div style="color:var(--text2);font-size:10.5px">1 upd/14d · 4 total</div></td>
+          <td style="padding:12px"><div style="color:var(--text);font-weight:600">? · 1d ago</div><div style="color:var(--text2);font-size:10.5px">2 upd/14d · 2 total</div></td>
           <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
@@ -1634,7 +707,7 @@ h1 span { color:var(--blue); }
           <div style="font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.4px">Resolved ✅</div>
         </div>
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
-          <div style="font-size:32px;font-weight:800;color:var(--red)">113</div>
+          <div style="font-size:32px;font-weight:800;color:var(--red)">13</div>
           <div style="font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.4px">Still Open 🔓</div>
         </div>
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
@@ -1764,20 +837,20 @@ h1 span { color:var(--blue); }
         <div style="font-size:28px;font-weight:800;color:var(--text1)">8</div>
         <div style="font-size:11.5px;color:var(--text2);margin-top:2px">tasks completed in 7 days</div>
       </div>
-      <div style="flex:1;min-width:180px;background:var(--card);border:1px solid var(--border);border-left:4px solid #3b82f6;border-radius:10px;padding:16px 20px">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-          <div style="width:30px;height:30px;border-radius:50%;background:#3b82f6;color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center">N</div>
-          <div style="font-weight:700;font-size:15px;color:#3b82f6">Nicolas</div>
-        </div>
-        <div style="font-size:28px;font-weight:800;color:var(--text1)">23</div>
-        <div style="font-size:11.5px;color:var(--text2);margin-top:2px">tasks completed in 7 days</div>
-      </div>
       <div style="flex:1;min-width:180px;background:var(--card);border:1px solid var(--border);border-left:4px solid #ec4899;border-radius:10px;padding:16px 20px">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
           <div style="width:30px;height:30px;border-radius:50%;background:#ec4899;color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center">L</div>
           <div style="font-weight:700;font-size:15px;color:#ec4899">Luna</div>
         </div>
         <div style="font-size:28px;font-weight:800;color:var(--text1)">79</div>
+        <div style="font-size:11.5px;color:var(--text2);margin-top:2px">tasks completed in 7 days</div>
+      </div>
+      <div style="flex:1;min-width:180px;background:var(--card);border:1px solid var(--border);border-left:4px solid #3b82f6;border-radius:10px;padding:16px 20px">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <div style="width:30px;height:30px;border-radius:50%;background:#3b82f6;color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center">N</div>
+          <div style="font-weight:700;font-size:15px;color:#3b82f6">Nicolas</div>
+        </div>
+        <div style="font-size:28px;font-weight:800;color:var(--text1)">23</div>
         <div style="font-size:11.5px;color:var(--text2);margin-top:2px">tasks completed in 7 days</div>
       </div>
     </div>
@@ -1787,8 +860,8 @@ h1 span { color:var(--blue); }
         <thead><tr style="background:rgba(99,102,241,.07);text-align:left;color:var(--text2);font-size:11px;text-transform:uppercase;letter-spacing:.4px">
           <th style="padding:9px 16px">Date</th>
           <th style="padding:9px 16px;color:#f97316">Baptiste</th>
-          <th style="padding:9px 16px;color:#3b82f6">Nicolas</th>
           <th style="padding:9px 16px;color:#ec4899">Luna</th>
+          <th style="padding:9px 16px;color:#3b82f6">Nicolas</th>
           <th style="padding:9px 16px">Total</th>
         </tr></thead>
         <tbody>
@@ -1900,135 +973,6 @@ h1 span { color:var(--blue); }
           </tr>
           <tr style="border-top:1px solid var(--border)">
             <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11841124392" target="_blank" style="color:var(--blue);text-decoration:none">Guest inquiring about kitchen amenities — kitchenette, microwave, fridge, kettle</a></td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div style="background:var(--card);border:1px solid var(--border);border-left:4px solid #3b82f6;border-radius:10px;margin-bottom:12px">
-      <div style="padding:14px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border)">
-        <div style="width:28px;height:28px;border-radius:50%;background:#3b82f6;color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center">N</div>
-        <div style="font-weight:700;font-size:14px;color:#3b82f6">Nicolas</div>
-        <div style="margin-left:auto;font-size:13px;color:var(--text2)">23 completed</div>
-      </div>
-      <table style="width:100%;border-collapse:collapse;font-size:12.5px">
-        <thead><tr style="text-align:left;color:var(--text2);font-size:11px;text-transform:uppercase;letter-spacing:.3px;background:rgba(0,0,0,.03)">
-          <th style="padding:7px 14px">Item</th><th style="padding:7px 14px">Board</th><th style="padding:7px 14px">Completed</th>
-        </tr></thead>
-        <tbody>
-          <tr style="border-top:1px solid var(--border)">
-            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11723127746" target="_blank" style="color:var(--blue);text-decoration:none">Lock not found for unit #3</a></td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
-          </tr>
-          <tr style="border-top:1px solid var(--border)">
-            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11619625608" target="_blank" style="color:var(--blue);text-decoration:none">Replace tube for PT Device for unit #5</a></td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
-          </tr>
-          <tr style="border-top:1px solid var(--border)">
-            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11857315948" target="_blank" style="color:var(--blue);text-decoration:none">Dresser drawer in master bedroom is broken</a></td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
-          </tr>
-          <tr style="border-top:1px solid var(--border)">
-            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11851756456" target="_blank" style="color:var(--blue);text-decoration:none">Broken dresser drawer in master bedroom — Conni Roush (USVI #3)</a></td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
-          </tr>
-          <tr style="border-top:1px solid var(--border)">
-            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11850617416" target="_blank" style="color:var(--blue);text-decoration:none">Bathroom door not latching — missing screw on plate</a></td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
-          </tr>
-          <tr style="border-top:1px solid var(--border)">
-            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11850710383" target="_blank" style="color:var(--blue);text-decoration:none">Broken Toilet</a></td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
-          </tr>
-          <tr style="border-top:1px solid var(--border)">
-            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11846684298" target="_blank" style="color:var(--blue);text-decoration:none">camera offline</a></td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
-          </tr>
-          <tr style="border-top:1px solid var(--border)">
-            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11847572375" target="_blank" style="color:var(--blue);text-decoration:none">Michael Flaherty — USVI #1 — Bathroom door not latching</a></td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
-          </tr>
-          <tr style="border-top:1px solid var(--border)">
-            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11847604406" target="_blank" style="color:var(--blue);text-decoration:none">Bathroom door not latching — missing screw on plate</a></td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
-          </tr>
-          <tr style="border-top:1px solid var(--border)">
-            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11841096260" target="_blank" style="color:var(--blue);text-decoration:none">Fridge off and AC not powering on (Hawaii G110)</a></td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
-          </tr>
-          <tr style="border-top:1px solid var(--border)">
-            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11771718688" target="_blank" style="color:var(--blue);text-decoration:none">Add batteries for smoke detector in unit #7</a></td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
-          </tr>
-          <tr style="border-top:1px solid var(--border)">
-            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11789541883" target="_blank" style="color:var(--blue);text-decoration:none">Revisit/tune the team for panel inspection</a></td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
-          </tr>
-          <tr style="border-top:1px solid var(--border)">
-            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11620496941" target="_blank" style="color:var(--blue);text-decoration:none">The wall air conditioner was very loud</a></td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
-          </tr>
-          <tr style="border-top:1px solid var(--border)">
-            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11850617138" target="_blank" style="color:var(--blue);text-decoration:none">Kitchen trash can full — needs to be emptied</a></td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Cleaning Issues</td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
-          </tr>
-          <tr style="border-top:1px solid var(--border)">
-            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11847648527" target="_blank" style="color:var(--blue);text-decoration:none">Vincent Mirabile — USVI #5 — Kitchen trash can full, needs emptying</a></td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Cleaning Issues</td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
-          </tr>
-          <tr style="border-top:1px solid var(--border)">
-            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11847681536" target="_blank" style="color:var(--blue);text-decoration:none">Kitchen trash can full and needs to be emptied</a></td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Cleaning Issues</td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
-          </tr>
-          <tr style="border-top:1px solid var(--border)">
-            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11850625363" target="_blank" style="color:var(--blue);text-decoration:none">Front door lock not working — guest cannot access unit</a></td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
-          </tr>
-          <tr style="border-top:1px solid var(--border)">
-            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11847580119" target="_blank" style="color:var(--blue);text-decoration:none">Conni Roush — USVI #3 — Cannot access unit, front door lock not working</a></td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
-          </tr>
-          <tr style="border-top:1px solid var(--border)">
-            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11847681583" target="_blank" style="color:var(--blue);text-decoration:none">Guest cannot access unit — front door lock not working</a></td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
-          </tr>
-          <tr style="border-top:1px solid var(--border)">
-            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11785557413" target="_blank" style="color:var(--blue);text-decoration:none">Update the guest information to include instructions about taking a key for pool</a></td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
-          </tr>
-          <tr style="border-top:1px solid var(--border)">
-            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11841109091" target="_blank" style="color:var(--blue);text-decoration:none">Guest broke a dinner plate (USVI #4)</a></td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
-          </tr>
-          <tr style="border-top:1px solid var(--border)">
-            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11841096116" target="_blank" style="color:var(--blue);text-decoration:none">Guest feels unsafe walking with stroller — requesting private taxi (USVI #5)</a></td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
-            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
-          </tr>
-          <tr style="border-top:1px solid var(--border)">
-            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11841094894" target="_blank" style="color:var(--blue);text-decoration:none">Guest cannot operate front door lock — access issue</a></td>
             <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
             <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
           </tr>
@@ -2197,6 +1141,135 @@ h1 span { color:var(--blue); }
             <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
           </tr>
           <tr><td colspan="3" style="padding:10px 14px;color:var(--text2);font-size:11.5px;font-style:italic">… and 49 more items</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-left:4px solid #3b82f6;border-radius:10px;margin-bottom:12px">
+      <div style="padding:14px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border)">
+        <div style="width:28px;height:28px;border-radius:50%;background:#3b82f6;color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center">N</div>
+        <div style="font-weight:700;font-size:14px;color:#3b82f6">Nicolas</div>
+        <div style="margin-left:auto;font-size:13px;color:var(--text2)">23 completed</div>
+      </div>
+      <table style="width:100%;border-collapse:collapse;font-size:12.5px">
+        <thead><tr style="text-align:left;color:var(--text2);font-size:11px;text-transform:uppercase;letter-spacing:.3px;background:rgba(0,0,0,.03)">
+          <th style="padding:7px 14px">Item</th><th style="padding:7px 14px">Board</th><th style="padding:7px 14px">Completed</th>
+        </tr></thead>
+        <tbody>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11723127746" target="_blank" style="color:var(--blue);text-decoration:none">Lock not found for unit #3</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11619625608" target="_blank" style="color:var(--blue);text-decoration:none">Replace tube for PT Device for unit #5</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11857315948" target="_blank" style="color:var(--blue);text-decoration:none">Dresser drawer in master bedroom is broken</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11851756456" target="_blank" style="color:var(--blue);text-decoration:none">Broken dresser drawer in master bedroom — Conni Roush (USVI #3)</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11850617416" target="_blank" style="color:var(--blue);text-decoration:none">Bathroom door not latching — missing screw on plate</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11850710383" target="_blank" style="color:var(--blue);text-decoration:none">Broken Toilet</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11846684298" target="_blank" style="color:var(--blue);text-decoration:none">camera offline</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11847572375" target="_blank" style="color:var(--blue);text-decoration:none">Michael Flaherty — USVI #1 — Bathroom door not latching</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11847604406" target="_blank" style="color:var(--blue);text-decoration:none">Bathroom door not latching — missing screw on plate</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11841096260" target="_blank" style="color:var(--blue);text-decoration:none">Fridge off and AC not powering on (Hawaii G110)</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11771718688" target="_blank" style="color:var(--blue);text-decoration:none">Add batteries for smoke detector in unit #7</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11789541883" target="_blank" style="color:var(--blue);text-decoration:none">Revisit/tune the team for panel inspection</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11620496941" target="_blank" style="color:var(--blue);text-decoration:none">The wall air conditioner was very loud</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Maintenance Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11850617138" target="_blank" style="color:var(--blue);text-decoration:none">Kitchen trash can full — needs to be emptied</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Cleaning Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11847648527" target="_blank" style="color:var(--blue);text-decoration:none">Vincent Mirabile — USVI #5 — Kitchen trash can full, needs emptying</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Cleaning Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11847681536" target="_blank" style="color:var(--blue);text-decoration:none">Kitchen trash can full and needs to be emptied</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Cleaning Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11850625363" target="_blank" style="color:var(--blue);text-decoration:none">Front door lock not working — guest cannot access unit</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11847580119" target="_blank" style="color:var(--blue);text-decoration:none">Conni Roush — USVI #3 — Cannot access unit, front door lock not working</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11847681583" target="_blank" style="color:var(--blue);text-decoration:none">Guest cannot access unit — front door lock not working</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11785557413" target="_blank" style="color:var(--blue);text-decoration:none">Update the guest information to include instructions about taking a key for pool</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11841109091" target="_blank" style="color:var(--blue);text-decoration:none">Guest broke a dinner plate (USVI #4)</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11841096116" target="_blank" style="color:var(--blue);text-decoration:none">Guest feels unsafe walking with stroller — requesting private taxi (USVI #5)</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
+          <tr style="border-top:1px solid var(--border)">
+            <td style="padding:8px 14px"><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11841094894" target="_blank" style="color:var(--blue);text-decoration:none">Guest cannot operate front door lock — access issue</a></td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px">Reservation Issues</td>
+            <td style="padding:8px 14px;color:var(--text2);font-size:11.5px"></td>
+          </tr>
         </tbody>
       </table>
     </div>
