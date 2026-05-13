@@ -147,7 +147,7 @@ h1 span { color:var(--blue); }
 
   <div class="tab-bar">
     <button class="tab-btn active" onclick="switchTab('dashboard')">📊 Dashboard</button>
-    <button class="tab-btn" onclick="switchTab('flagged')">🚩 Flagged Issues (41)</button>
+    <button class="tab-btn" onclick="switchTab('flagged')">🚩 Flagged Issues (37)</button>
     <button class="tab-btn" onclick="switchTab('urgent')">🚨 Top Urgent Issues (0)</button>
     <button class="tab-btn" onclick="switchTab('daily-progress')">📈 Daily Progress (0✅ / 82 open)</button>
     <button class="tab-btn" onclick="switchTab('review-removal')">⭐ Review Removal</button>
@@ -196,7 +196,7 @@ h1 span { color:var(--blue); }
           Composite: <span class="val">39.5</span> → <span class="val">24.8</span> <span class="delta delta-bad">↓14.7</span><br>
           Health: <span class="val">44</span> → <span class="val">5</span> <span class="delta delta-bad">↓39</span><br>
           Rate: <span class="val">73%</span> → <span class="val">76%</span> <span class="delta delta-good">↑3%</span><br>
-          Flagged: <span class="val">25</span> → <span class="val">31</span> <span class="delta delta-bad">↑6</span>
+          Flagged: <span class="val">25</span> → <span class="val">27</span> <span class="delta delta-bad">↑2</span>
         </div>
       </div>
     </div>
@@ -219,14 +219,14 @@ h1 span { color:var(--blue); }
       <div class="podium-medal" style="background:rgba(205,127,50,0.12);color:#cd7f32">🥉 Bronze</div>
       <div class="podium-name" style="color:#ec4899">🥉 Luna</div>
       <div class="podium-score">24.8<span class="podium-score-label">pts</span></div>
-      <div class="podium-breakdown">Health 5 &middot; Rate 76% &middot; Flagged 31</div>
+      <div class="podium-breakdown">Health 5 &middot; Rate 76% &middot; Flagged 27</div>
     </div>
   </div>
 
   <div class="summary-bar">
     <div class="summary-item"><div class="summary-val" style="color:var(--yellow)">204</div><div class="summary-lbl">Open Issues</div></div>
     <div class="summary-item"><div class="summary-val" style="color:var(--green)">641</div><div class="summary-lbl">Closed Issues</div></div>
-    <div class="summary-item"><div class="summary-val" style="color:var(--red)">42</div><div class="summary-lbl">Total Flagged</div></div>
+    <div class="summary-item"><div class="summary-val" style="color:var(--red)">38</div><div class="summary-lbl">Total Flagged</div></div>
     <div class="summary-item"><div class="summary-val" style="color:var(--green)">26</div><div class="summary-lbl">Completed (May 11)</div></div>
   </div>
 
@@ -399,10 +399,10 @@ h1 span { color:var(--blue); }
           <div class="kpi-col" title="Items currently open"><span class="kpi-val" style="color:#f59e0b">72</span><span class="kpi-lbl">Open</span><span class="delta delta-bad">↑32</span></div>
           <div class="kpi-col" title="Items marked Complete/Completed"><span class="kpi-val" style="color:#10b981">232</span><span class="kpi-lbl">Closed</span><span class="delta delta-good">↑232</span></div>
           <div class="kpi-col" title="Completion Rate = Closed &divide; Total"><span class="kpi-val" style="color:#ec4899">76%</span><span class="kpi-lbl">Rate</span><span class="delta delta-good">↑3</span></div>
-          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">31</span><span class="kpi-lbl">Flagged</span><span class="delta delta-bad">↑6</span></div>
+          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">27</span><span class="kpi-lbl">Flagged</span><span class="delta delta-bad">↑2</span></div>
           <div class="kpi-col" title="Items with Needs Review or No Status"><span class="kpi-val" style="color:#a855f7">0</span><span class="kpi-lbl">Review / No Status</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Open items missing a WHO / WHAT / WHEN update — VA must post one"><span class="kpi-val" style="color:#8b5cf6">15</span><span class="kpi-lbl">🗣️ Missing W/W/W</span><span class="delta delta-bad">↑15</span></div>
-          <div class="kpi-col" title="Items whose WHO/WHAT/WHEN 'When:' date is now in the past with no follow-up"><span class="kpi-val" style="color:#dc2626">6</span><span class="kpi-lbl">📅 Overdue Next Step</span><span class="delta delta-bad">↑6</span></div>
+          <div class="kpi-col" title="Items whose WHO/WHAT/WHEN 'When:' date is now in the past with no follow-up"><span class="kpi-val" style="color:#dc2626">2</span><span class="kpi-lbl">📅 Overdue Next Step</span><span class="delta delta-bad">↑2</span></div>
           <div class="kpi-col" title="Open bad review issues assigned"><span class="kpi-val" style="color:#ec4899">0</span><span class="kpi-lbl">Bad Reviews</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Average days to complete closed items"><span class="kpi-val" style="color:#06b6d4">0d</span><span class="kpi-lbl">Avg Complete</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Average aging days of open items"><span class="kpi-val" style="color:#f97316">0d</span><span class="kpi-lbl">Avg Aging</span><span class="delta flat">—</span></div>
@@ -418,7 +418,7 @@ h1 span { color:var(--blue); }
       <tr><td class="metric-label">Open</td><td class="cell-metric">40</td><td class="cell-metric">72</td><td><span class="delta delta-bad">↑32</span></td></tr>
       <tr><td class="metric-label">Closed</td><td class="cell-metric">0</td><td class="cell-metric">232</td><td><span class="delta delta-good">↑232</span></td></tr>
       <tr><td class="metric-label">Rate</td><td class="cell-metric">73%</td><td class="cell-metric">76%</td><td><span class="delta delta-good">↑3%</span></td></tr>
-      <tr><td class="metric-label">Flagged</td><td class="cell-metric">25</td><td class="cell-metric">31</td><td><span class="delta delta-bad">↑6</span></td></tr>
+      <tr><td class="metric-label">Flagged</td><td class="cell-metric">25</td><td class="cell-metric">27</td><td><span class="delta delta-bad">↑2</span></td></tr>
       <tr><td class="metric-label">Completed (Day)</td><td class="cell-metric">2</td><td class="cell-metric">17</td><td><span class="delta delta-good">↑15</span></td></tr>
       <tr><td class="metric-label">Review / No Status</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
       <tr><td class="metric-label">Bad Reviews Open</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
@@ -477,13 +477,13 @@ h1 span { color:var(--blue); }
       <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">0</div><div class="flagged-summary-label">Zero-Update Completions</div></div>
       <div class="flagged-summary-card" style="border-left-color:#a855f7"><div class="flagged-summary-count" style="color:#a855f7">0</div><div class="flagged-summary-label">Needs Review / No Status</div></div>
       <div class="flagged-summary-card" style="border-left-color:#8b5cf6"><div class="flagged-summary-count" style="color:#8b5cf6">18</div><div class="flagged-summary-label">Missing Who / What / When</div></div>
-      <div class="flagged-summary-card" style="border-left-color:#dc2626"><div class="flagged-summary-count" style="color:#dc2626">9</div><div class="flagged-summary-label">Overdue Next Step (When: date passed)</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#dc2626"><div class="flagged-summary-count" style="color:#dc2626">5</div><div class="flagged-summary-label">Overdue Next Step (When: date passed)</div></div>
     </div>
 
     <div class="va-filter-bar">
       <button class="va-filter-btn active" onclick="filterVA('all', this)">All VAs</button>
       <button class="va-filter-btn" style="--va-color:#3b82f6" onclick="filterVA('Nicolás', this)">Nicolás (8)</button>
-      <button class="va-filter-btn" style="--va-color:#ec4899" onclick="filterVA('Luna', this)">Luna (31)</button>
+      <button class="va-filter-btn" style="--va-color:#ec4899" onclick="filterVA('Luna', this)">Luna (27)</button>
       <button class="va-filter-btn" style="--va-color:#f97316" onclick="filterVA('Baptiste', this)">Baptiste (3)</button>
     </div>
 
@@ -559,8 +559,8 @@ When: May 11. Followup</span>
     <div class="va-flagged-section" data-va="Luna">
       <div class="va-flagged-header" style="border-left-color:#ec4899">
         <span class="va-flagged-name" style="color:#ec4899">Luna</span>
-        <span class="va-flagged-total">31 flagged items</span>
-        <span class="va-cat-badges"><span class="va-cat-badge" style="color:#f59e0b">❌ 25</span><span class="va-cat-badge" style="color:#8b5cf6">🗣️ 15</span><span class="va-cat-badge" style="color:#dc2626">📅 6</span></span>
+        <span class="va-flagged-total">27 flagged items</span>
+        <span class="va-cat-badges"><span class="va-cat-badge" style="color:#f59e0b">❌ 25</span><span class="va-cat-badge" style="color:#8b5cf6">🗣️ 15</span><span class="va-cat-badge" style="color:#dc2626">📅 2</span></span>
       </div>
       <div class="flagged-category" style="margin:0 16px 12px 16px">
         <div class="flagged-cat-header" style="padding:10px 16px">
@@ -760,7 +760,7 @@ When: May 11. Followup</span>
       <div class="flagged-category" style="margin:0 16px 12px 16px">
         <div class="flagged-cat-header" style="padding:10px 16px">
           <div class="flagged-cat-title" style="font-size:14px">📅 Overdue Next Step (When: date passed)</div>
-          <span class="flagged-cat-count" style="background:rgba(245,158,11,.15);color:#dc2626;font-size:12px">6</span>
+          <span class="flagged-cat-count" style="background:rgba(245,158,11,.15);color:#dc2626;font-size:12px">2</span>
         </div>
         <div class="flagged-cat-body" style="padding:8px 16px">
           <div style="font-size:11px;font-weight:700;color:#ec4899;text-transform:uppercase;letter-spacing:.5px;padding:6px 0 4px 0;margin-top:4px;border-bottom:1px solid rgba(236,72,153,.2)">🌺 Hawaii (1)</div>
@@ -772,33 +772,7 @@ What: check guarantee for this job
 
 When: May 9th</span>
           </div>
-          <div style="font-size:11px;font-weight:700;color:#ec4899;text-transform:uppercase;letter-spacing:.5px;padding:6px 0 4px 0;margin-top:4px;border-bottom:1px solid rgba(236,72,153,.2)">🍷 Napa (1)</div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11963905417" target="_blank">Erika L SCHWARZ-COHEN — Napa 667 — Mold/cleaning issue in unit</a>
-            <span class="badge board">Cleaning Issues</span>
-            <span class="flagged-meta">When: 2026-05-11 (OVERDUE — no follow-up) &middot; Last update: Who: Luna
-
-What: inspect unit upon guest check out
-
-When: May 11th</span>
-          </div>
-          <div style="font-size:11px;font-weight:700;color:#ec4899;text-transform:uppercase;letter-spacing:.5px;padding:6px 0 4px 0;margin-top:4px;border-bottom:1px solid rgba(236,72,153,.2)">📍 Other (4)</div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11967279382" target="_blank">Stained areas in the property that affect cleanliness and guest satisfaction.</a>
-            <span class="badge board">Cleaning Issues</span>
-            <span class="flagged-meta">When: 2026-05-11 (OVERDUE — no follow-up) &middot; Last update: Who: Luna
-What: coordinate inspection
-When: May11th</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11885043623" target="_blank">Mold Inspection - 491</a>
-            <span class="badge board">Cleaning Issues</span>
-            <span class="flagged-meta">When: 2026-05-11 (OVERDUE — no follow-up) &middot; Last update: Who: Luna
-
-What: InspectionDozer constructors
-
-When: May 11th</span>
-          </div>
+          <div style="font-size:11px;font-weight:700;color:#ec4899;text-transform:uppercase;letter-spacing:.5px;padding:6px 0 4px 0;margin-top:4px;border-bottom:1px solid rgba(236,72,153,.2)">📍 Other (1)</div>
           <div class="flagged-item">
             <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11947036682" target="_blank">Loud noise from the AC indicates a potential maintenance issue.</a>
             <span class="badge board">Maintenance Issues</span>
@@ -806,15 +780,6 @@ When: May 11th</span>
 What: scheduled to check AC, repair bed and install dispenser
 
 When: May 11th</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11833469731" target="_blank">Bathroom: wc, faucet and tub with mineral marks</a>
-            <span class="badge board">Maintenance Issues</span>
-            <span class="flagged-meta">When: 2026-05-11 (OVERDUE — no follow-up) &middot; Last update: Who: Luna/handyman
-
-What: Quoting sink replacement Edgar's advice. Toilet can be clened
-
-When: May 11</span>
           </div>
         </div>
       </div>
@@ -935,7 +900,7 @@ When: May 11</span>
       </div>
     </div>
     <div style="background:var(--surface);border-radius:10px;padding:14px 20px;margin-bottom:24px;border:1px dashed var(--surface2);color:var(--text2);font-size:12px">
-      📉 Per-VA progress trend will appear here after the first 3-hour check populates <code>progress_snapshots_2026-05-12.json</code>.
+      📉 Per-VA progress trend will appear here after the first 3-hour check populates <code>progress_snapshots_2026-05-13.json</code>.
     </div>
     <div style="background:var(--surface);border-radius:14px;margin-bottom:20px;overflow:hidden;border:1px solid rgba(239,68,68,.3)">
       <div style="padding:16px 24px;border-bottom:1px solid rgba(239,68,68,.2);display:flex;align-items:center;gap:10px">
