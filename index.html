@@ -147,7 +147,7 @@ h1 span { color:var(--blue); }
 
   <div class="tab-bar">
     <button class="tab-btn active" onclick="switchTab('dashboard')">📊 Dashboard</button>
-    <button class="tab-btn" onclick="switchTab('flagged')">🚩 Flagged Issues (8)</button>
+    <button class="tab-btn" onclick="switchTab('flagged')">🚩 Flagged Issues (4)</button>
     <button class="tab-btn" onclick="switchTab('urgent')">🚨 Top Urgent Issues (7)</button>
     <button class="tab-btn" onclick="switchTab('daily-progress')">📈 Daily Progress (0✅ / 4 open)</button>
     <button class="tab-btn" onclick="switchTab('review-removal')">⭐ Review Removal</button>
@@ -191,12 +191,12 @@ h1 span { color:var(--blue); }
       </div>
       <div class="change-card" style="border-left-color:#10b981">
         <div class="change-card-name" style="color:#ec4899">Luna</div>
-        <div class="change-card-alert" style="background:rgba(16,185,129,.12);color:#10b981">STEADY</div>
+        <div class="change-card-alert" style="background:rgba(16,185,129,.12);color:#10b981">IMPROVING</div>
         <div class="change-card-metrics">
-          Composite: <span class="val">39.5</span> → <span class="val">39.8</span> <span class="delta delta-good">↑0.3</span><br>
+          Composite: <span class="val">39.5</span> → <span class="val">45.8</span> <span class="delta delta-good">↑6.3</span><br>
           Health: <span class="val">44</span> → <span class="val">5</span> <span class="delta delta-bad">↓39</span><br>
           Rate: <span class="val">73%</span> → <span class="val">76%</span> <span class="delta delta-good">↑3%</span><br>
-          Flagged: <span class="val">25</span> → <span class="val">10</span> <span class="delta delta-good">↓15</span>
+          Flagged: <span class="val">25</span> → <span class="val">6</span> <span class="delta delta-good">↓19</span>
         </div>
       </div>
     </div>
@@ -218,15 +218,15 @@ h1 span { color:var(--blue); }
     <div class="podium-card" style="border-color:#cd7f32">
       <div class="podium-medal" style="background:rgba(205,127,50,0.12);color:#cd7f32">🥉 Bronze</div>
       <div class="podium-name" style="color:#ec4899">🥉 Luna</div>
-      <div class="podium-score">39.8<span class="podium-score-label">pts</span></div>
-      <div class="podium-breakdown">Health 5 &middot; Rate 76% &middot; Flagged 10</div>
+      <div class="podium-score">45.8<span class="podium-score-label">pts</span></div>
+      <div class="podium-breakdown">Health 5 &middot; Rate 76% &middot; Flagged 6</div>
     </div>
   </div>
 
   <div class="summary-bar">
     <div class="summary-item"><div class="summary-val" style="color:var(--yellow)">204</div><div class="summary-lbl">Open Issues</div></div>
     <div class="summary-item"><div class="summary-val" style="color:var(--green)">641</div><div class="summary-lbl">Closed Issues</div></div>
-    <div class="summary-item"><div class="summary-val" style="color:var(--red)">13</div><div class="summary-lbl">Total Flagged</div></div>
+    <div class="summary-item"><div class="summary-val" style="color:var(--red)">9</div><div class="summary-lbl">Total Flagged</div></div>
     <div class="summary-item"><div class="summary-val" style="color:var(--green)">26</div><div class="summary-lbl">Completed (May 11)</div></div>
   </div>
 
@@ -374,7 +374,7 @@ h1 span { color:var(--blue); }
           <div class="va-avatar" style="background:#ec4899">L</div>
           <div>
             <h2 class="va-name" style="color:#ec4899">🥉 Luna</h2>
-            <div class="va-subtitle">304 total items &middot; Composite: 39.8 pts</div>
+            <div class="va-subtitle">304 total items &middot; Composite: 45.8 pts</div>
           </div>
         </div>
         <div class="va-kpis">
@@ -386,7 +386,7 @@ h1 span { color:var(--blue); }
           <div class="kpi-col" title="Items currently open"><span class="kpi-val" style="color:#f59e0b">72</span><span class="kpi-lbl">Open</span><span class="delta delta-bad">↑32</span></div>
           <div class="kpi-col" title="Items marked Complete/Completed"><span class="kpi-val" style="color:#10b981">232</span><span class="kpi-lbl">Closed</span><span class="delta delta-good">↑232</span></div>
           <div class="kpi-col" title="Completion Rate = Closed &divide; Total"><span class="kpi-val" style="color:#ec4899">76%</span><span class="kpi-lbl">Rate</span><span class="delta delta-good">↑3</span></div>
-          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">10</span><span class="kpi-lbl">Flagged</span><span class="delta delta-good">↓15</span></div>
+          <div class="kpi-col" title="All flagged issues across categories"><span class="kpi-val" style="color:#ef4444">6</span><span class="kpi-lbl">Flagged</span><span class="delta delta-good">↓19</span></div>
           <div class="kpi-col" title="Items with Needs Review or No Status"><span class="kpi-val" style="color:#a855f7">0</span><span class="kpi-lbl">Review / No Status</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Open items missing a WHO / WHAT / WHEN update — VA must post one"><span class="kpi-val" style="color:#8b5cf6">0</span><span class="kpi-lbl">🗣️ Missing W/W/W</span><span class="delta flat">—</span></div>
           <div class="kpi-col" title="Items whose WHO/WHAT/WHEN 'When:' date is now in the past with no follow-up"><span class="kpi-val" style="color:#dc2626">0</span><span class="kpi-lbl">📅 Overdue Next Step</span><span class="delta flat">—</span></div>
@@ -405,7 +405,7 @@ h1 span { color:var(--blue); }
       <tr><td class="metric-label">Open</td><td class="cell-metric">40</td><td class="cell-metric">72</td><td><span class="delta delta-bad">↑32</span></td></tr>
       <tr><td class="metric-label">Closed</td><td class="cell-metric">0</td><td class="cell-metric">232</td><td><span class="delta delta-good">↑232</span></td></tr>
       <tr><td class="metric-label">Rate</td><td class="cell-metric">73%</td><td class="cell-metric">76%</td><td><span class="delta delta-good">↑3%</span></td></tr>
-      <tr><td class="metric-label">Flagged</td><td class="cell-metric">25</td><td class="cell-metric">10</td><td><span class="delta delta-good">↓15</span></td></tr>
+      <tr><td class="metric-label">Flagged</td><td class="cell-metric">25</td><td class="cell-metric">6</td><td><span class="delta delta-good">↓19</span></td></tr>
       <tr><td class="metric-label">Completed (Day)</td><td class="cell-metric">2</td><td class="cell-metric">17</td><td><span class="delta delta-good">↑15</span></td></tr>
       <tr><td class="metric-label">Review / No Status</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
       <tr><td class="metric-label">Bad Reviews Open</td><td class="cell-metric">0</td><td class="cell-metric">0</td><td><span class="delta flat">—</span></td></tr>
@@ -416,11 +416,7 @@ h1 span { color:var(--blue); }
     </table>
   </div>
 <div class="reports-grid">
-  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge warn">8 flagged</span></div>
-    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards//pulses/11973044257" target="_blank">The guest is reporting a power issue in the kitchen...</a><span class="badge board"></span></div>
-    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards//pulses/10655383287" target="_blank">Robert Seliga (Not urgent) Walls need patch</a><span class="badge board"></span></div>
-    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards//pulses/11974213150" target="_blank">Can you confirm if there is a tub stopper...</a><span class="badge board"></span></div>
-    <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards//pulses/11967416167" target="_blank">Heather reported that the microwave readout was broken...</a><span class="badge board"></span></div>
+  <div class="report-block"><div class="report-header"><span>🏥 Health Check</span><span class="count-badge warn">4 flagged</span></div>
     <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards//pulses/12009388382" target="_blank">Henry reported that the AC unit barely blew cool air</a><span class="badge board"></span></div>
     <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards//pulses/12009332264" target="_blank">Henry reported that the AC unit was extremely loud...</a><span class="badge board"></span></div>
     <div class="item-row">⚠️ <a href="https://bijougetaways.monday.com/boards//pulses/12009316508" target="_blank">Henry reported that he contacted property management...</a><span class="badge board"></span></div>
@@ -451,7 +447,7 @@ h1 span { color:var(--blue); }
 
   <div id="tab-flagged" class="tab-content">
     <div class="flagged-summary">
-      <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">4</div><div class="flagged-summary-label">Past Deadline</div></div>
+      <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">0</div><div class="flagged-summary-label">Past Deadline</div></div>
       <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">0</div><div class="flagged-summary-label">No Update (7+ Days)</div></div>
       <div class="flagged-summary-card" style="border-left-color:#f59e0b"><div class="flagged-summary-count" style="color:#f59e0b">4</div><div class="flagged-summary-label">Missing Deadline</div></div>
       <div class="flagged-summary-card" style="border-left-color:#ef4444"><div class="flagged-summary-count" style="color:#ef4444">0</div><div class="flagged-summary-label">Deadline Extensions (3+)</div></div>
@@ -464,7 +460,7 @@ h1 span { color:var(--blue); }
     <div class="va-filter-bar">
       <button class="va-filter-btn active" onclick="filterVA('all', this)">All VAs</button>
       <button class="va-filter-btn" style="--va-color:#3b82f6" onclick="filterVA('Nicolás', this)">Nicolás (0)</button>
-      <button class="va-filter-btn" style="--va-color:#ec4899" onclick="filterVA('Luna', this)">Luna (8)</button>
+      <button class="va-filter-btn" style="--va-color:#ec4899" onclick="filterVA('Luna', this)">Luna (4)</button>
       <button class="va-filter-btn" style="--va-color:#f97316" onclick="filterVA('Baptiste', this)">Baptiste (0)</button>
     </div>
 
@@ -479,33 +475,8 @@ h1 span { color:var(--blue); }
     <div class="va-flagged-section" data-va="Luna">
       <div class="va-flagged-header" style="border-left-color:#ec4899">
         <span class="va-flagged-name" style="color:#ec4899">Luna</span>
-        <span class="va-flagged-total">8 flagged items</span>
-        <span class="va-cat-badges"><span class="va-cat-badge" style="color:#ef4444">⚠️ 4</span><span class="va-cat-badge" style="color:#f59e0b">❌ 4</span></span>
-      </div>
-      <div class="flagged-category" style="margin:0 16px 12px 16px">
-        <div class="flagged-cat-header" style="padding:10px 16px">
-          <div class="flagged-cat-title" style="font-size:14px">⚠️ Past Deadline</div>
-          <span class="flagged-cat-count" style="background:rgba(239,68,68,.15);color:#ef4444;font-size:12px">4</span>
-        </div>
-        <div class="flagged-cat-body" style="padding:8px 16px">
-          <div style="font-size:11px;font-weight:700;color:#ec4899;text-transform:uppercase;letter-spacing:.5px;padding:6px 0 4px 0;margin-top:4px;border-bottom:1px solid rgba(236,72,153,.2)">📍 Other (4)</div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11973044257" target="_blank">The guest is reporting a power issue in the kitchen...</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/10655383287" target="_blank">Robert Seliga (Not urgent) Walls need patch</a>
-            <span class="badge board">Maintenance Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11974213150" target="_blank">Can you confirm if there is a tub stopper...</a>
-            <span class="badge board">Reservation Issues</span>
-          </div>
-          <div class="flagged-item">
-            <a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11967416167" target="_blank">Heather reported that the microwave readout was broken...</a>
-            <span class="badge board">Bad Review Issues</span>
-          </div>
-        </div>
+        <span class="va-flagged-total">4 flagged items</span>
+        <span class="va-cat-badges"><span class="va-cat-badge" style="color:#f59e0b">❌ 4</span></span>
       </div>
       <div class="flagged-category" style="margin:0 16px 12px 16px">
         <div class="flagged-cat-header" style="padding:10px 16px">
@@ -606,8 +577,12 @@ h1 span { color:var(--blue); }
           <td style="padding:12px;font-weight:600;color:var(--text);white-space:nowrap">Hawaii - G110A</td>
           <td style="padding:12px"><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11813332975" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">AFCI breakers for unit g110a</a><div style="font-size:11px;color:var(--text2);margin-top:3px">Maintenance Issues &middot; </div><div style="font-size:10.5px;color:#f59e0b;margin-top:4px">💰 Missing AFCI breakers = code violation and fire hazard. Scheduled for May 15. If delayed further, triggers additional citation ris</div></td>
           <td style="padding:12px"><span class="flagged-person person-luna">Luna</span></td>
-          <td style="padding:12px"><div style="color:var(--text);font-weight:600">6d ago · 6d ago</div><div style="color:var(--text2);font-size:10.5px">3 upd/14d · 6 total</div><div style="font-size:10px;color:var(--text2);margin-top:4px;font-style:italic">"AFCI breakers required for unit g110a. Who: Luna. What: coordinate with electrician. When: may15th."</div></td>
-          <td style="padding:12px"><div style="font-weight:700;color:#ef4444">🔴 No activity</div><div style="font-size:10px;color:var(--text2);margin-top:3px;font-style:italic">"AFCI breakers required for unit g110a. Who: Luna. What: coordinate with electrician. When:"</div></td>
+          <td style="padding:12px"><div style="color:var(--text);font-weight:600">0d ago · 0d ago</div><div style="color:var(--text2);font-size:10.5px">4 upd/14d · 5 total</div><div style="font-size:10px;color:var(--text2);margin-top:4px;font-style:italic">"Who: Luna
+What: Jack from Shak is attending
+When: may14th"</div></td>
+          <td style="padding:12px"><div style="font-weight:700;color:#f59e0b">🟡 Updated 0d ago</div><div style="font-size:10px;color:var(--text2);margin-top:3px;font-style:italic">"Who: Luna
+What: Jack from Shak is attending
+When: may14th"</div></td>
           <td style="padding:12px"><span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(239,68,68,.15);color:#ef4444;white-space:nowrap">CRITICAL</span></td>
         </tr>
         <tr style="background:rgba(239,68,68,.05);border-top:1px solid var(--border);vertical-align:top">
