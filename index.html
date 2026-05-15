@@ -149,7 +149,7 @@ h1 span { color:var(--blue); }
     <button class="tab-btn active" onclick="switchTab('dashboard')">📊 Dashboard</button>
     <button class="tab-btn" onclick="switchTab('flagged')">🚩 Flagged Issues (0)</button>
     <button class="tab-btn" onclick="switchTab('urgent')">🚨 Top Urgent Issues (5)</button>
-    <button class="tab-btn" onclick="switchTab('daily-progress')">📈 Daily Progress (0✅ / 4 open)</button>
+    <button class="tab-btn" onclick="switchTab('daily-progress')">📈 Daily Progress (0✅ / 3 open)</button>
     <button class="tab-btn" onclick="switchTab('review-removal')">⭐ Review Removal</button>
     <button class="tab-btn" onclick="switchTab('closures')">✅ Yesterday's Closures (2)</button>
     <button class="tab-btn" onclick="switchTab('completions-7d')">📅 Completions (7d) (60)</button>
@@ -609,8 +609,8 @@ What: Jack from Shak is attending main connection was tightened to specification
   </div>
   <div id="tab-daily-progress" class="tab-content">
     <div style="background:var(--surface);border-radius:14px;padding:20px 24px;margin-bottom:20px;border:1px solid var(--surface2)">
-      <div style="font-size:18px;font-weight:800;margin-bottom:6px">📈 Daily Progress vs Morning Baseline — 2026-05-13</div>
-      <div style="font-size:13px;color:var(--text2);margin-bottom:16px">Last updated 2026-05-13T23:10:00Z &middot; Baseline set at 5:00 AM PST</div>
+      <div style="font-size:18px;font-weight:800;margin-bottom:6px">📈 Daily Progress vs Morning Baseline — 2026-05-15</div>
+      <div style="font-size:13px;color:var(--text2);margin-bottom:16px">Last updated 2026-05-15T20:14:00Z &middot; Baseline set at 5:00 AM PST</div>
       <div style="display:flex;gap:20px;flex-wrap:wrap">
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
           <div style="font-size:32px;font-weight:800;color:var(--text2)">0</div>
@@ -621,7 +621,7 @@ What: Jack from Shak is attending main connection was tightened to specification
           <div style="font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.4px">Resolved ✅</div>
         </div>
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
-          <div style="font-size:32px;font-weight:800;color:var(--red)">4</div>
+          <div style="font-size:32px;font-weight:800;color:var(--red)">3</div>
           <div style="font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.4px">Still Open 🔓</div>
         </div>
         <div style="text-align:center;background:var(--bg);border-radius:10px;padding:14px 24px;min-width:120px">
@@ -638,9 +638,54 @@ What: Jack from Shak is attending main connection was tightened to specification
         <div style="height:100%;width:0%;background:var(--green);border-radius:4px;transition:width .4s"></div>
       </div>
     </div>
-    <div style="background:var(--surface);border-radius:10px;padding:14px 20px;margin-bottom:24px;border:1px dashed var(--surface2);color:var(--text2);font-size:12px">
-      📉 Per-VA progress trend will appear here after the first 3-hour check populates <code>progress_snapshots_2026-05-15.json</code>.
+    <div style="background:var(--surface);border-radius:14px;padding:20px 24px;margin-bottom:24px;border:1px solid var(--surface2)">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:14px">
+        <div>
+          <div style="font-size:16px;font-weight:800">📉 Per-VA Progress Trend</div>
+          <div style="font-size:12px;color:var(--text2)">Flagged items and Top Urgent issues per VA at each 3-hour check (1 snapshot)</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+        <div style="background:var(--bg);border-radius:10px;padding:14px;min-height:260px">
+          <div style="font-size:13px;font-weight:700;margin-bottom:8px;color:var(--text)">🚩 Flagged Items per VA</div>
+          <div style="position:relative;height:240px"><canvas id="progressFlaggedChart"></canvas></div>
+        </div>
+        <div style="background:var(--bg);border-radius:10px;padding:14px;min-height:260px">
+          <div style="font-size:13px;font-weight:700;margin-bottom:8px;color:var(--text)">🚨 Top Urgent Issues per VA</div>
+          <div style="position:relative;height:240px"><canvas id="progressUrgentChart"></canvas></div>
+        </div>
+      </div>
     </div>
+    <script>
+    (function() {
+      if (typeof Chart === "undefined") return;
+      const labels = ["13:14 PDT"];
+      const commonOpts = {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: "index", intersect: false },
+        plugins: {
+          legend: { position: "bottom", labels: { color: "#cbd5e1", font: { size: 11 } } },
+          tooltip: { backgroundColor: "#0b1120", titleColor: "#fff", bodyColor: "#e2e8f0", borderColor: "#334155", borderWidth: 1 }
+        },
+        scales: {
+          x: { ticks: { color: "#94a3b8" }, grid: { color: "rgba(148,163,184,.12)" } },
+          y: { beginAtZero: true, ticks: { color: "#94a3b8", precision: 0 }, grid: { color: "rgba(148,163,184,.12)" } }
+        }
+      };
+      new Chart(document.getElementById("progressFlaggedChart"), {
+        type: "line",
+        data: { labels: labels, datasets: [{"label": "Nicolas", "data": [2], "borderColor": "#3b82f6", "backgroundColor": "#3b82f6", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Luna", "data": [1], "borderColor": "#ec4899", "backgroundColor": "#ec4899", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Baptiste", "data": [0], "borderColor": "#f97316", "backgroundColor": "#f97316", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}] },
+        options: commonOpts
+      });
+      new Chart(document.getElementById("progressUrgentChart"), {
+        type: "line",
+        data: { labels: labels, datasets: [{"label": "Nicolas", "data": [3], "borderColor": "#3b82f6", "backgroundColor": "#3b82f6", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Luna", "data": [2], "borderColor": "#ec4899", "backgroundColor": "#ec4899", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}, {"label": "Baptiste", "data": [0], "borderColor": "#f97316", "backgroundColor": "#f97316", "tension": 0.25, "fill": false, "pointRadius": 4, "pointHoverRadius": 6, "borderWidth": 2}] },
+        options: commonOpts
+      });
+    })();
+    </script>
+
     <div style="background:var(--surface);border-radius:14px;margin-bottom:20px;overflow:hidden;border:1px solid rgba(239,68,68,.3)">
       <div style="padding:16px 24px;border-bottom:1px solid rgba(239,68,68,.2);display:flex;align-items:center;gap:10px">
         <div style="font-size:16px;font-weight:800">🚨 Top Urgent Issues</div>
@@ -675,6 +720,18 @@ What: Jack from Shak is attending main connection was tightened to specification
           <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
             <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#</div>
             <div style="flex:1;min-width:200px">
+              <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11811934105" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 Mold Audit - All Hawaii</a>
+              <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
+              <span class="badge board" style="margin-left:4px"></span>
+              <span class="flagged-person person-luna" style="margin-left:4px">Luna</span>
+            </div>
+          </div>
+          
+        </div>
+        <div style="padding:10px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px">
+          <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
+            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#</div>
+            <div style="flex:1;min-width:200px">
               <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945779088" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 8.1.8 - Floors, Walls, Ceilings — Drywall Crack with Moisture</a>
               <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
               <span class="badge board" style="margin-left:4px"></span>
@@ -688,42 +745,6 @@ What: Jack from Shak is attending main connection was tightened to specification
             <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#</div>
             <div style="flex:1;min-width:200px">
               <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11813332975" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 AFCI breakers for unit g110a</a>
-              <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
-              <span class="badge board" style="margin-left:4px"></span>
-              <span class="flagged-person person-luna" style="margin-left:4px">Luna</span>
-            </div>
-          </div>
-          
-        </div>
-        <div style="padding:10px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px">
-          <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
-            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#</div>
-            <div style="flex:1;min-width:200px">
-              <a href="https://bijougetaways.monday.com/boards/18400813768/pulses/11666731004" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 Zofia #1 dispute her $4700 credit card payment</a>
-              <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
-              <span class="badge board" style="margin-left:4px"></span>
-              <span class="flagged-person person-nicolas" style="margin-left:4px">Nicolas</span>
-            </div>
-          </div>
-          
-        </div>
-        <div style="padding:10px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px">
-          <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
-            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#</div>
-            <div style="flex:1;min-width:200px">
-              <a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11811934105" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 Mold Audit - All Hawaii</a>
-              <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
-              <span class="badge board" style="margin-left:4px"></span>
-              <span class="flagged-person person-luna" style="margin-left:4px">Luna</span>
-            </div>
-          </div>
-          
-        </div>
-        <div style="padding:10px 0;border-bottom:1px solid rgba(239,68,68,.12);font-size:13px">
-          <div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap">
-            <div style="font-size:16px;font-weight:800;color:#f59e0b;min-width:28px">#</div>
-            <div style="flex:1;min-width:200px">
-              <a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11844132930" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600">🟡 Mold remediation Napa</a>
               <span style="font-size:10px;font-weight:700;padding:1px 8px;border-radius:6px;background:rgba(239,68,68,.12);color:var(--red);margin-left:6px">OPEN</span>
               <span class="badge board" style="margin-left:4px"></span>
               <span class="flagged-person person-luna" style="margin-left:4px">Luna</span>
