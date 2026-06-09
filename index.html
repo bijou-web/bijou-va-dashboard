@@ -1,4 +1,658 @@
-d mattress</td><td>Jun 7</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214401984" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214401984</a></td></tr>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bijou Getaways — VA Leaderboard v5 · June 8, 2026</title>
+<style>
+:root{
+  --gold:#F6C026;--silver:#A8B2C0;--bronze:#C97B3A;
+  --red:#E53E3E;--orange:#ED8936;--yellow:#ECC94B;--green:#48BB78;
+  --blue:#4299E1;--purple:#9F7AEA;
+  --dark:#1A202C;--panel:#1E2535;--panel2:#252D3D;--border:#2D3748;
+  --text:#E2E8F0;--muted:#718096;--accent:#63B3ED;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:var(--dark);color:var(--text);min-height:100vh;padding:18px 14px}
+
+/* TABS */
+.tab-bar{display:flex;gap:4px;max-width:980px;margin:0 auto 20px;background:var(--panel);padding:5px;border-radius:12px;border:1px solid var(--border)}
+.tab-btn{flex:1;padding:8px 8px;border:none;border-radius:8px;font-size:11.5px;font-weight:700;cursor:pointer;background:transparent;color:var(--muted);transition:all .18s;text-align:center}
+.tab-btn.active{background:var(--panel2);color:#fff;box-shadow:0 1px 4px rgba(0,0,0,.4)}
+.tab-btn:hover:not(.active){color:var(--text)}
+.tab-panel{display:none;max-width:980px;margin:0 auto}
+.tab-panel.active{display:block}
+
+/* HEADER */
+.hdr{text-align:center;margin-bottom:22px}
+.badge{display:inline-block;background:linear-gradient(135deg,#2563EB,#7C3AED);color:#fff;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:3px 11px;border-radius:99px;margin-bottom:8px}
+.hdr h1{font-size:21px;font-weight:800;color:#fff;margin-bottom:3px}
+.hdr p{color:var(--muted);font-size:11px}
+
+.sec{font-size:9.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.note{display:flex;align-items:flex-start;gap:7px;background:rgba(66,153,225,.09);border:1px solid rgba(66,153,225,.22);color:#90CDF4;font-size:11px;padding:7px 12px;border-radius:9px;margin-bottom:14px;line-height:1.5}
+.note-o{background:rgba(237,137,54,.09);border-color:rgba(237,137,54,.22);color:#F6AD55}
+.note-g{background:rgba(72,187,120,.09);border-color:rgba(72,187,120,.22);color:#68D391}
+.note-r{background:rgba(229,62,62,.09);border-color:rgba(229,62,62,.22);color:#FC8181}
+
+/* PODIUM */
+.podium{display:grid;grid-template-columns:1fr 1.1fr 1fr 1fr;gap:8px;margin-bottom:22px;align-items:end}
+.pod{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:13px 10px 11px;text-align:center;position:relative}
+.pod.r1{border-color:var(--gold);box-shadow:0 0 18px rgba(246,192,38,.13)}
+.pod.r2{border-color:var(--silver)}.pod.r3{border-color:var(--bronze)}
+.rb{position:absolute;top:-11px;left:50%;transform:translateX(-50%);width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;border:2px solid var(--dark)}
+.r1 .rb{background:var(--gold);color:#1a1200}.r2 .rb{background:var(--silver);color:#1a2030}
+.r3 .rb{background:var(--bronze);color:#1a0f00}.r4 .rb{background:#4A5568;color:#fff}
+.pod-nm{font-size:12px;font-weight:700;color:#fff;margin-bottom:1px}
+.pod-rg{font-size:9.5px;color:var(--muted);margin-bottom:7px}
+.pod-sc{font-size:22px;font-weight:900;line-height:1}
+.r1 .pod-sc{color:var(--gold)}.r2 .pod-sc{color:var(--silver)}.r3 .pod-sc{color:var(--bronze)}.r4 .pod-sc{color:#4A5568}
+.pod-lb{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:7px}
+.pod-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:7px}
+.pod-stat{background:rgba(255,255,255,.05);border-radius:6px;padding:4px 5px}
+.sv{font-size:13px;font-weight:800;color:#fff}.sl{font-size:8.5px;color:var(--muted)}
+.pod-flag{margin-top:6px;display:flex;align-items:center;justify-content:center;gap:5px;font-size:10px}
+.fn{font-size:13px;font-weight:800}
+
+/* VA CARD */
+.va-card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:15px;margin-bottom:11px;position:relative;overflow:hidden}
+.va-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;border-radius:12px 0 0 12px}
+.r1c::before{background:var(--gold)}.r2c::before{background:var(--silver)}.r3c::before{background:var(--bronze)}.r4c::before{background:#4A5568}
+.va-hdr{display:flex;align-items:center;gap:10px;margin-bottom:11px}
+.av{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.va-nm{font-size:13px;font-weight:700;color:#fff}.va-sb{font-size:10px;color:var(--muted)}
+.pill{margin-left:auto;font-size:9.5px;font-weight:700;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.r1c .pill{background:rgba(246,192,38,.2);color:var(--gold)}.r2c .pill{background:rgba(168,178,192,.15);color:var(--silver)}
+.r3c .pill{background:rgba(201,123,58,.2);color:var(--bronze)}.r4c .pill{background:rgba(74,85,104,.4);color:#A0AEC0}
+
+.mg{display:grid;grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:6px;margin-bottom:9px}
+.mb{background:rgba(255,255,255,.04);border-radius:8px;padding:8px 9px}
+.mv{font-size:17px;font-weight:800;line-height:1.1;color:#fff}
+.mv.g{color:var(--green)}.mv.w{color:var(--orange)}.mv.b{color:var(--red)}.mv.d{color:#718096}
+.ml{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:1px}
+
+.flag-summary{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:8px;padding:9px;margin-bottom:9px}
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:5px}
+.fi{display:flex;align-items:center;gap:6px;font-size:10.5px}
+.fn2{font-size:15px;font-weight:800;min-width:20px;text-align:right}
+.fl{color:var(--muted);font-size:9.5px;line-height:1.2}
+
+.sbar{display:flex;align-items:center;gap:7px;margin-bottom:8px}
+.sbar-t{flex:1;background:rgba(255,255,255,.06);border-radius:99px;height:5px}
+.sbar-f{height:5px;border-radius:99px}
+.sbar-l{font-size:10.5px;font-weight:700}
+
+.chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.chip{display:inline-flex;align-items:center;gap:3px;padding:3px 7px;border-radius:99px;font-size:9.5px;font-weight:600;border:1px solid}
+.cr{background:rgba(229,62,62,.12);border-color:rgba(229,62,62,.3);color:#FC8181}
+.co{background:rgba(237,137,54,.12);border-color:rgba(237,137,54,.3);color:#F6AD55}
+.cy{background:rgba(236,201,75,.12);border-color:rgba(236,201,75,.3);color:#FAF089}
+.cg{background:rgba(72,187,120,.12);border-color:rgba(72,187,120,.3);color:#68D391}
+.cb{background:rgba(66,153,225,.12);border-color:rgba(66,153,225,.3);color:#90CDF4}
+.cp{background:rgba(159,122,234,.12);border-color:rgba(159,122,234,.3);color:#B794F4}
+.cgr{background:rgba(74,85,104,.2);border-color:rgba(74,85,104,.5);color:#A0AEC0}
+
+/* BAR */
+.bar-wrap{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:15px;margin-bottom:16px}
+.br{display:flex;align-items:center;gap:7px;margin-bottom:7px}
+.bn{width:64px;font-size:10px;font-weight:600;color:var(--text);flex-shrink:0}
+.bt{flex:1;background:rgba(255,255,255,.05);border-radius:99px;height:14px;overflow:hidden}
+.bf{height:100%;border-radius:99px;display:flex;align-items:center;padding-left:5px;font-size:8px;font-weight:700;color:rgba(255,255,255,.9);min-width:16px}
+.bv{width:26px;font-size:10px;font-weight:700;color:#fff;text-align:right;flex-shrink:0}
+.bs{width:48px;font-size:8.5px;color:var(--muted);text-align:right;flex-shrink:0}
+
+/* TABLE */
+.tbl{background:var(--panel);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:14px}
+.tbl table{width:100%;border-collapse:collapse;font-size:11px}
+.tbl th{background:var(--panel2);color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:1px;padding:8px 11px;text-align:left;border-bottom:1px solid var(--border)}
+.tbl td{padding:8px 11px;border-bottom:1px solid rgba(255,255,255,.03);vertical-align:middle;color:var(--text)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:hover td{background:rgba(255,255,255,.015)}
+td a{color:var(--accent);text-decoration:none}
+td a:hover{text-decoration:underline}
+.td-va{font-weight:700;white-space:nowrap}
+.sb{display:inline-block;font-size:9.5px;font-weight:800;padding:2px 7px;border-radius:5px}
+.sb-r{background:rgba(229,62,62,.2);color:#FC8181}
+.sb-o{background:rgba(237,137,54,.2);color:#F6AD55}
+.sb-y{background:rgba(236,201,75,.2);color:#FAF089}
+.sb-b{background:rgba(66,153,225,.2);color:#90CDF4}
+.sb-g{background:rgba(72,187,120,.2);color:#68D391}
+.sb-gr{background:rgba(74,85,104,.3);color:#A0AEC0}
+.sb-p{background:rgba(159,122,234,.2);color:#B794F4}
+
+/* CAT HEADER */
+.cat{display:flex;align-items:center;gap:8px;padding:7px 12px;border-radius:9px;margin-bottom:6px;font-size:11px;font-weight:700}
+.cat-badge{margin-left:auto;font-size:9px;font-weight:700;padding:2px 7px;border-radius:99px}
+.cat.c1{background:rgba(229,62,62,.1);color:#FC8181;border:1px solid rgba(229,62,62,.2)}
+.cat.c2{background:rgba(237,137,54,.1);color:#F6AD55;border:1px solid rgba(237,137,54,.2)}
+.cat.c3{background:rgba(236,201,75,.1);color:#FAF089;border:1px solid rgba(236,201,75,.2)}
+.cat.c4{background:rgba(66,153,225,.1);color:#90CDF4;border:1px solid rgba(66,153,225,.2)}
+.cat.c5{background:rgba(159,122,234,.1);color:#B794F4;border:1px solid rgba(159,122,234,.2)}
+.cat.c6{background:rgba(72,187,120,.1);color:#68D391;border:1px solid rgba(72,187,120,.2)}
+
+/* UNASSIGNED */
+.ubox{background:var(--panel);border:1px dashed rgba(229,62,62,.3);border-radius:12px;padding:13px;margin-bottom:14px}
+.ug{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px;font-size:10.5px;color:var(--muted)}
+.ug-item{background:rgba(255,255,255,.03);border-radius:8px;padding:9px;border:1px solid var(--border)}
+
+/* COMPLETED TAB */
+.comp-va-section{margin-bottom:20px}
+.comp-va-hdr{display:flex;align-items:center;gap:10px;margin-bottom:10px;padding:10px 14px;border-radius:10px;border:1px solid var(--border)}
+.comp-count{font-size:22px;font-weight:800}
+.comp-nm{font-size:14px;font-weight:700;color:#fff}
+.comp-rg{font-size:10.5px;color:var(--muted)}
+.comp-note{font-size:10px;color:var(--muted);margin-top:5px;font-style:italic}
+
+@media(max-width:620px){.podium{grid-template-columns:1fr 1fr}.mg{grid-template-columns:repeat(2,1fr)}.tab-btn{font-size:9.5px;padding:6px 4px}}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div class="badge">Bijou Getaways · Monday.com AI Agent</div>
+  <h1>🏆 VA Performance Command Center</h1>
+  <p>June 8, 2026 · All 4 boards · Normalized by properties · v4</p>
+</div>
+
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="st('lb',this)">🏆 Leaderboard</button>
+  <button class="tab-btn" onclick="st('flags',this)">🚩 Flagged Issues</button>
+  <button class="tab-btn" onclick="st('completed',this)">✅ Completed (7d)</button>
+  <button class="tab-btn" onclick="st('unassigned',this)">📥 Unassigned (74)</button>
+</div>
+
+<!-- ══════════════════════════════════ TAB 1: LEADERBOARD ══════════════════════════════════ -->
+<div id="tab-lb" class="tab-panel active">
+
+  <div class="note">📐 Scores normalized per property. Flag counts include all 4 boards. Links go to the correct Monday.com items — click to open directly.</div>
+
+  <!-- PODIUM -->
+  <div class="podium">
+    <div class="pod r2"><div class="rb">2</div><div style="font-size:18px;margin-bottom:4px">🥈</div>
+      <div class="pod-nm">Nicolas</div><div class="pod-rg">🏝️ USVI · 7 props</div>
+      <div class="pod-sc" style="color:var(--silver)">57</div><div class="pod-lb">/100</div>
+      <div class="pod-grid">
+        <div class="pod-stat"><div class="sv">4.4</div><div class="sl">upd/prop/7d</div></div>
+        <div class="pod-stat"><div class="sv">10.7</div><div class="sl">upd/prop/30d</div></div>
+      </div>
+      <div class="pod-flag"><span class="fn" style="color:#FC8181">15</span><span style="color:var(--muted)">flags</span></div>
+      <div class="pod-flag"><span class="fn" style="color:#68D391">20</span><span style="color:var(--muted)">completed 7d</span></div>
+    </div>
+    <div class="pod r1" style="margin-top:-12px"><div class="rb">1</div><div style="font-size:22px;margin-bottom:4px">🥇</div>
+      <div class="pod-nm">Luna</div><div class="pod-rg">🍷 Napa · 11 props</div>
+      <div class="pod-sc" style="color:var(--gold)">83</div><div class="pod-lb">/100</div>
+      <div class="pod-grid">
+        <div class="pod-stat"><div class="sv">5.5</div><div class="sl">upd/prop/7d</div></div>
+        <div class="pod-stat"><div class="sv">8.6</div><div class="sl">upd/prop/30d</div></div>
+      </div>
+      <div class="pod-flag"><span class="fn" style="color:#F6AD55">11</span><span style="color:var(--muted)">flags</span></div>
+      <div class="pod-flag"><span class="fn" style="color:#68D391">6</span><span style="color:var(--muted)">completed 7d</span></div>
+    </div>
+    <div class="pod r3"><div class="rb">3</div><div style="font-size:18px;margin-bottom:4px">🥉</div>
+      <div class="pod-nm">Luis</div><div class="pod-rg">🏄 Hawaii · 12 props</div>
+      <div class="pod-sc" style="color:var(--bronze)">38</div><div class="pod-lb">/100</div>
+      <div class="pod-grid">
+        <div class="pod-stat"><div class="sv">1.6</div><div class="sl">upd/prop/7d</div></div>
+        <div class="pod-stat"><div class="sv">2.9</div><div class="sl">upd/prop/30d</div></div>
+      </div>
+      <div class="pod-flag"><span class="fn" style="color:#E53E3E">18</span><span style="color:var(--muted)">flags ⚠️</span></div>
+      <div class="pod-flag"><span class="fn" style="color:#68D391">4</span><span style="color:var(--muted)">completed 7d</span></div>
+    </div>
+    <div class="pod r4"><div class="rb">4</div><div style="font-size:18px;margin-bottom:4px">🗼</div>
+      <div class="pod-nm">Baptiste</div><div class="pod-rg">🇫🇷 Paris+Miami · 7 props</div>
+      <div class="pod-sc">22</div><div class="pod-lb">/100</div>
+      <div class="pod-grid">
+        <div class="pod-stat"><div class="sv">0.0</div><div class="sl">upd/prop/7d</div></div>
+        <div class="pod-stat"><div class="sv">0.6</div><div class="sl">upd/prop/30d</div></div>
+      </div>
+      <div class="pod-flag"><span class="fn" style="color:#ECC94B">3</span><span style="color:var(--muted)">flags</span></div>
+      <div class="pod-flag"><span class="fn" style="color:#718096">0</span><span style="color:var(--muted)">completed 7d</span></div>
+    </div>
+  </div>
+
+  <!-- BAR CHART -->
+  <div class="bar-wrap">
+    <div class="sec">📊 Updates / Property — 7 Days vs 30 Days</div>
+    <div style="font-size:9px;font-weight:700;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:1px">Last 7 Days (per property)</div>
+    <div class="br"><div class="bn">Luna</div><div class="bt"><div class="bf" style="width:100%;background:linear-gradient(90deg,#48BB78,#38B2AC)">5.5</div></div><div class="bv">5.5</div><div class="bs">(60÷11)</div></div>
+    <div class="br"><div class="bn">Nicolas</div><div class="bt"><div class="bf" style="width:80%;background:linear-gradient(90deg,#4299E1,#667EEA)">4.4</div></div><div class="bv">4.4</div><div class="bs">(31÷7)</div></div>
+    <div class="br"><div class="bn">Luis</div><div class="bt"><div class="bf" style="width:29%;background:linear-gradient(90deg,#ED8936,#F6AD55)">1.6</div></div><div class="bv">1.6</div><div class="bs">(19÷12)</div></div>
+    <div class="br"><div class="bn">Baptiste</div><div class="bt"><div class="bf" style="width:3%;background:#4A5568;min-width:12px">0</div></div><div class="bv" style="color:var(--muted)">0.0</div><div class="bs">(0÷7)</div></div>
+    <div style="font-size:9px;font-weight:700;color:var(--muted);margin:12px 0 6px;text-transform:uppercase;letter-spacing:1px">Last 30 Days (per property)</div>
+    <div class="br"><div class="bn">Nicolas</div><div class="bt"><div class="bf" style="width:100%;background:linear-gradient(90deg,#4299E1,#667EEA)">10.7</div></div><div class="bv">10.7</div><div class="bs">(75÷7)</div></div>
+    <div class="br"><div class="bn">Luna</div><div class="bt"><div class="bf" style="width:81%;background:linear-gradient(90deg,#48BB78,#38B2AC)">8.6</div></div><div class="bv">8.6</div><div class="bs">(95÷11)</div></div>
+    <div class="br"><div class="bn">Luis</div><div class="bt"><div class="bf" style="width:27%;background:linear-gradient(90deg,#ED8936,#F6AD55)">2.9</div></div><div class="bv">2.9</div><div class="bs">(35÷12)</div></div>
+    <div class="br"><div class="bn">Baptiste</div><div class="bt"><div class="bf" style="width:5%;background:#4A5568;min-width:12px">0.6</div></div><div class="bv" style="color:var(--muted)">0.6</div><div class="bs">(4÷7)</div></div>
+    <div style="margin-top:10px;padding-top:9px;border-top:1px solid var(--border);font-size:10.5px;color:var(--muted)">
+      ✉️ <strong style="color:var(--text)">Outlook (hello@/admin@):</strong> Baptiste sent 2 guest emails Jun 7. Daily Guesty cleaning reports received for France &amp; Miami. No checklist emails found from any VA in last 30 days.
+    </div>
+  </div>
+
+  <!-- LUNA -->
+  <div class="va-card r1c">
+    <div class="va-hdr"><div class="av" style="background:rgba(72,187,120,.15)">🍷</div>
+      <div><div class="va-nm">Luna Proietti</div><div class="va-sb">Napa Valley · 11 properties</div></div>
+      <span class="pill">#1 GOLD · 83/100</span>
+    </div>
+    <div class="mg">
+      <div class="mb"><div class="mv g">60</div><div class="ml">Updates 7d</div></div>
+      <div class="mb"><div class="mv g">95</div><div class="ml">Updates 30d</div></div>
+      <div class="mb"><div class="mv g">5.5</div><div class="ml">Per prop/7d</div></div>
+      <div class="mb"><div class="mv g">6</div><div class="ml">✅ Done 7d</div></div>
+      <div class="mb"><div class="mv w">18</div><div class="ml">Open issues</div></div>
+      <div class="mb"><div class="mv w">11</div><div class="ml">🚩 Flags</div></div>
+    </div>
+    <div class="flag-summary"><div class="sec" style="margin-bottom:7px">Flag breakdown</div>
+      <div class="fg">
+        <div class="fi"><span class="fn2" style="color:#FC8181">2</span><span class="fl">🔴 Critical (mold/health)</span></div>
+        <div class="fi"><span class="fn2" style="color:#F6AD55">1</span><span class="fl">⏰ Past deadline</span></div>
+        <div class="fi"><span class="fn2" style="color:#FAF089">2</span><span class="fl">📅 No deadline set</span></div>
+        <div class="fi"><span class="fn2" style="color:#90CDF4">4</span><span class="fl">📋 Bad Review active</span></div>
+        <div class="fi"><span class="fn2" style="color:#B794F4">2</span><span class="fl">🧹 Cleaning active</span></div>
+      </div>
+    </div>
+    <div class="sbar"><span style="font-size:9.5px;color:var(--muted);min-width:65px">Score 83/100</span><div class="sbar-t"><div class="sbar-f" style="width:83%;background:linear-gradient(90deg,#48BB78,#38B2AC)"></div></div><span class="sbar-l" style="color:var(--green)">Excellent</span></div>
+    <div class="chips">
+      <span class="chip cr">🔴 Mold remediation Napa (Erwan auth)</span>
+      <span class="chip cr">🔴 Mold inspection unit 491</span>
+      <span class="chip co">⏰ Countertop Jun 7 (past)</span>
+      <span class="chip cy">Nancy Wallace + misleading listing complaint</span>
+      <span class="chip cg">✅ Jun 7: 23 batch updates, 2 new handymen hired</span>
+    </div>
+  </div>
+
+  <!-- NICOLAS -->
+  <div class="va-card r2c">
+    <div class="va-hdr"><div class="av" style="background:rgba(66,153,225,.15)">🏝️</div>
+      <div><div class="va-nm">Nicolas Carrasco</div><div class="va-sb">St. John, USVI · 7 properties</div></div>
+      <span class="pill">#2 SILVER · 57/100</span>
+    </div>
+    <div class="mg">
+      <div class="mb"><div class="mv g">31</div><div class="ml">Updates 7d</div></div>
+      <div class="mb"><div class="mv g">75</div><div class="ml">Updates 30d</div></div>
+      <div class="mb"><div class="mv g">4.4</div><div class="ml">Per prop/7d</div></div>
+      <div class="mb"><div class="mv g">20</div><div class="ml">✅ Done 7d</div></div>
+      <div class="mb"><div class="mv b">50+</div><div class="ml">Open issues</div></div>
+      <div class="mb"><div class="mv b">15</div><div class="ml">🚩 Flags</div></div>
+    </div>
+    <div class="flag-summary"><div class="sec" style="margin-bottom:7px">Flag breakdown</div>
+      <div class="fg">
+        <div class="fi"><span class="fn2" style="color:#FC8181">10</span><span class="fl">🔴 Critical (structural)</span></div>
+        <div class="fi"><span class="fn2" style="color:#F6AD55">2</span><span class="fl">🟠 High (roof, sinks)</span></div>
+        <div class="fi"><span class="fn2" style="color:#90CDF4">2</span><span class="fl">🔇 No activity 7d</span></div>
+        <div class="fi"><span class="fn2" style="color:#F6AD55">1</span><span class="fl">⏰ Past checkout</span></div>
+      </div>
+    </div>
+    <div class="sbar"><span style="font-size:9.5px;color:var(--muted);min-width:65px">Score 57/100</span><div class="sbar-t"><div class="sbar-f" style="width:57%;background:linear-gradient(90deg,#4299E1,#667EEA)"></div></div><span class="sbar-l" style="color:var(--blue)">Strong (50+ open items)</span></div>
+    <div class="chips">
+      <span class="chip cr">🔴×10 Structural: railings/stairs/decks (USVI inspection)</span>
+      <span class="chip cg">✅ Jun 3: 20 electrical repairs (GFCI/panels/outlets)</span>
+      <span class="chip cg">✅ Jun 8: 6 updates, Brad Walters visit</span>
+      <span class="chip co">⚠️ 7.1 open issues/property — plan needed to close audit items</span>
+    </div>
+  </div>
+
+  <!-- LUIS -->
+  <div class="va-card r3c">
+    <div class="va-hdr"><div class="av" style="background:rgba(201,123,58,.15)">🏄</div>
+      <div><div class="va-nm">Luis Robleda</div><div class="va-sb">Maui, Hawaii · 12 properties</div></div>
+      <span class="pill">#3 BRONZE · 38/100</span>
+    </div>
+    <div class="mg">
+      <div class="mb"><div class="mv w">19</div><div class="ml">Updates 7d</div></div>
+      <div class="mb"><div class="mv w">35</div><div class="ml">Updates 30d</div></div>
+      <div class="mb"><div class="mv w">1.6</div><div class="ml">Per prop/7d</div></div>
+      <div class="mb"><div class="mv w">4</div><div class="ml">✅ Done 7d</div></div>
+      <div class="mb"><div class="mv w">22</div><div class="ml">Open issues</div></div>
+      <div class="mb"><div class="mv b">18</div><div class="ml">🚩 Flags ⚠️</div></div>
+    </div>
+    <div class="flag-summary"><div class="sec" style="margin-bottom:7px">Flag breakdown — most on team</div>
+      <div class="fg">
+        <div class="fi"><span class="fn2" style="color:#FC8181">3</span><span class="fl">🔴 Critical (electrical/pest/mold)</span></div>
+        <div class="fi"><span class="fn2" style="color:#E53E3E">7</span><span class="fl">⏰ Past deadline</span></div>
+        <div class="fi"><span class="fn2" style="color:#FAF089">4</span><span class="fl">📅 No deadline set</span></div>
+        <div class="fi"><span class="fn2" style="color:#B794F4">2</span><span class="fl">📝 WHO/WHAT/WHEN</span></div>
+        <div class="fi"><span class="fn2" style="color:#F6AD55">2</span><span class="fl">📋 Reservation flags</span></div>
+      </div>
+    </div>
+    <div class="sbar"><span style="font-size:9.5px;color:var(--muted);min-width:65px">Score 38/100</span><div class="sbar-t"><div class="sbar-f" style="width:38%;background:linear-gradient(90deg,#ED8936,#F6AD55)"></div></div><span class="sbar-l" style="color:var(--orange)">Needs Improvement</span></div>
+    <div class="chips">
+      <span class="chip cr">🔴 Mold Audit Hawaii — deadline Jun 6 PAST, pictures missing</span>
+      <span class="chip cr">🔴 Ant infestation 49A — deadline Jun 7 PAST</span>
+      <span class="chip cr">🔴 Bus Bar Electrical G110 — fire risk</span>
+      <span class="chip co">⏰×5 Bad Review past deadlines (49A hygiene, P109)</span>
+      <span class="chip co">🚨 18 flags = most on team. Clear backlog urgently.</span>
+    </div>
+  </div>
+
+  <!-- BAPTISTE -->
+  <div class="va-card r4c">
+    <div class="va-hdr"><div class="av" style="background:rgba(74,85,104,.2)">🗼</div>
+      <div><div class="va-nm">Baptiste Sarrat</div><div class="va-sb">Paris + Miami · 7 properties</div></div>
+      <span class="pill">#4 · 22/100</span>
+    </div>
+    <div class="mg">
+      <div class="mb"><div class="mv b">0</div><div class="ml">Updates 7d</div></div>
+      <div class="mb"><div class="mv b">4</div><div class="ml">Updates 30d</div></div>
+      <div class="mb"><div class="mv d">0.0</div><div class="ml">Per prop/7d</div></div>
+      <div class="mb"><div class="mv d">0</div><div class="ml">✅ Done 7d</div></div>
+      <div class="mb"><div class="mv g">1</div><div class="ml">Open issues</div></div>
+      <div class="mb"><div class="mv w">3</div><div class="ml">🚩 Flags</div></div>
+    </div>
+    <div class="flag-summary"><div class="sec" style="margin-bottom:7px">Flag breakdown</div>
+      <div class="fg">
+        <div class="fi"><span class="fn2" style="color:#90CDF4">1</span><span class="fl">🔇 No activity 7d (audit item)</span></div>
+        <div class="fi"><span class="fn2" style="color:#B794F4">1</span><span class="fl">🧹 France VF cleaning complaint</span></div>
+        <div class="fi"><span class="fn2" style="color:#ECC94B">1</span><span class="fl">📋 QC reminder (Jun 12)</span></div>
+      </div>
+    </div>
+    <div class="sbar"><span style="font-size:9.5px;color:var(--muted);min-width:65px">Score 22/100</span><div class="sbar-t"><div class="sbar-f" style="width:22%;background:#4A5568"></div></div><span class="sbar-l" style="color:#718096">Needs Attention</span></div>
+    <div class="chips">
+      <span class="chip cr">❗ 0 Monday.com updates in 7 days — no accountability trail</span>
+      <span class="chip cg">✅ Lowest flags/property (0.4) · 0 critical items</span>
+      <span class="chip cb">✉️ 2 guest emails sent Jun 7 via Outlook</span>
+    </div>
+  </div>
+
+  <div style="background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:13px;margin-top:4px">
+    <div class="sec">📐 Method · Sources · Properties</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:9px;font-size:10.5px;color:var(--muted)">
+      <div><b style="color:var(--text);display:block;margin-bottom:2px">Activity 40%</b>Updates/property/7d — normalized</div>
+      <div><b style="color:var(--text);display:block;margin-bottom:2px">Consistency 30%</b>Updates/property/30d — normalized</div>
+      <div><b style="color:var(--text);display:block;margin-bottom:2px">Load Mgmt 20%</b>Inverse open issues/property</div>
+      <div><b style="color:var(--text);display:block;margin-bottom:2px">Critical Penalty -10%</b>-5 pts per unresolved 🔴 Critical</div>
+    </div>
+    <div style="margin-top:8px;font-size:9.5px;color:var(--muted);padding-top:7px;border-top:1px solid var(--border)">
+      <b style="color:var(--text)">Properties:</b> Nicolas 7 (USVI #1–7) · Luis 12 (Q401/A, P109/A, G110/A, P304, 3303, 49, 49A, 9306, 4112) · Luna 11 (491,466,465,489,663,667,648,649,662,666,669) · Baptiste 7 (VDT,VF,Rosiers + ~4 Miami) · Sources: Maintenance, Reservation, Cleaning, Bad Review Issues boards + Outlook
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════ TAB 2: FLAGGED ISSUES ══════════════════════════════════ -->
+<div id="tab-flags" class="tab-panel">
+
+  <div class="note note-o">🚩 All 4 boards scanned. Every link below opens the exact Monday.com item. Flag reasons: Critical / Past Deadline / No Deadline / No Activity / Missing WHO-WHAT-WHEN.</div>
+
+  <!-- SUMMARY -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:7px;margin-bottom:16px">
+    <div style="background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:11px"><div style="font-size:18px;font-weight:800;color:#FC8181">15</div><div style="font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px">Nicolas</div></div>
+    <div style="background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:11px"><div style="font-size:18px;font-weight:800;color:#F6AD55">11</div><div style="font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px">Luna</div></div>
+    <div style="background:var(--panel);border:1px solid rgba(229,62,62,.35);border-radius:10px;padding:11px"><div style="font-size:18px;font-weight:800;color:#FC8181">18</div><div style="font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px">Luis ⚠️ Most</div></div>
+    <div style="background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:11px"><div style="font-size:18px;font-weight:800;color:#ECC94B">3</div><div style="font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px">Baptiste</div></div>
+    <div style="background:var(--panel);border:1px solid rgba(237,137,54,.3);border-radius:10px;padding:11px"><div style="font-size:18px;font-weight:800;color:#F6AD55">74</div><div style="font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px">Unassigned inbox</div></div>
+  </div>
+
+  <!-- CAT 1 CRITICAL -->
+  <div class="cat c1" style="margin-bottom:6px">🔴 Category 1 — Critical (Safety &amp; Revenue) <span class="cat-badge" style="background:rgba(229,62,62,.25);color:#FC8181">-10 pts ea.</span></div>
+  <div class="tbl" style="margin-bottom:16px">
+    <table><thead><tr><th>VA</th><th>Issue</th><th>Board</th><th>Why Critical</th><th>Next Action</th></tr></thead>
+    <tbody>
+      <tr><td class="td-va" style="color:#90CDF4">Nicolas</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918318403" target="_blank">3.9.1–3.9.3 Railings / Guards (×3 items)</a></td><td>Maintenance</td><td>Guest fall risk — structural</td><td><span class="sb sb-r">Brad Walters Jun 8</span></td></tr>
+      <tr><td class="td-va" style="color:#90CDF4">Nicolas</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918044244" target="_blank">3.8.1–3.8.5 Porches / Decks (×5 items)</a></td><td>Maintenance</td><td>Deck collapse risk</td><td><span class="sb sb-r">Brad/Marc → Aug</span></td></tr>
+      <tr><td class="td-va" style="color:#90CDF4">Nicolas</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11917382466" target="_blank">3.7.1–3.7.4 Stairs / Stairways (×3 items)</a></td><td>Maintenance</td><td>Trip/fall hazard</td><td><span class="sb sb-r">In Progress</span></td></tr>
+      <tr><td class="td-va" style="color:#68D391">Luna</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11844132930" target="_blank">Mold remediation — Napa units</a></td><td>Maintenance</td><td>Health hazard — mold exposure</td><td><span class="sb sb-o">Erwan auth needed</span></td></tr>
+      <tr><td class="td-va" style="color:#68D391">Luna</td><td><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11885043623" target="_blank">Mold Inspection — Napa 491</a></td><td>Cleaning</td><td>Health hazard — active mold</td><td><span class="sb sb-o">Service Needed</span></td></tr>
+      <tr><td class="td-va" style="color:#F6AD55">Luis</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12177833433" target="_blank">Bus Bar Electrical — G110 (burned)</a></td><td>Maintenance</td><td>Electrical fire risk</td><td><span class="sb sb-y">Waiting Quote</span></td></tr>
+      <tr><td class="td-va" style="color:#F6AD55">Luis</td><td><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/12152193241" target="_blank">Ant infestation — Hawaii 49A</a></td><td>Bad Review</td><td>Pest = health + review risk</td><td><span class="sb sb-r">Deadline Jun 7 PAST</span></td></tr>
+      <tr><td class="td-va" style="color:#F6AD55">Luis</td><td><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11811934105" target="_blank">Mold Audit — All Hawaii Properties</a></td><td>Cleaning</td><td>Mold across Hawaii portfolio</td><td><span class="sb sb-r">Jun 6 PAST · Pictures missing</span></td></tr>
+    </tbody></table>
+  </div>
+
+  <!-- CAT 2 PAST DEADLINE -->
+  <div class="cat c2" style="margin-bottom:6px">⏰ Category 2 — Past Deadline (today = Jun 8) <span class="cat-badge" style="background:rgba(237,137,54,.25);color:#F6AD55">-5 pts ea.</span></div>
+  <div class="tbl" style="margin-bottom:16px">
+    <table><thead><tr><th>VA</th><th>Issue</th><th>Board</th><th>Deadline</th><th>Overdue</th></tr></thead>
+    <tbody>
+      <tr><td class="td-va" style="color:#F6AD55">Luis</td><td><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/11811934105" target="_blank">Mold Audit — All Hawaii (pictures missing)</a></td><td>Cleaning</td><td>Jun 6</td><td><span class="sb sb-r">2 days</span></td></tr>
+      <tr><td class="td-va" style="color:#F6AD55">Luis</td><td><a href="https://bijougetaways.monday.com/boards/18401058709/pulses/12143417271" target="_blank">Kitchen items dirty + dirty floor (Hawaii)</a></td><td>Cleaning</td><td>Jun 6</td><td><span class="sb sb-r">2 days</span></td></tr>
+      <tr><td class="td-va" style="color:#F6AD55">Luis</td><td><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/12152207401" target="_blank">No cleaning utensils — Hawaii 49A</a></td><td>Bad Review</td><td>Jun 7</td><td><span class="sb sb-r">1 day</span></td></tr>
+      <tr><td class="td-va" style="color:#F6AD55">Luis</td><td><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/12152193069" target="_blank">Dead flies — Hawaii 49A (hygiene)</a></td><td>Bad Review</td><td>Jun 7</td><td><span class="sb sb-r">1 day</span></td></tr>
+      <tr><td class="td-va" style="color:#F6AD55">Luis</td><td><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/11967416167" target="_blank">Broken microwave readout — Hawaii P109</a></td><td>Bad Review</td><td>Jun 7</td><td><span class="sb sb-r">1 day</span></td></tr>
+      <tr><td class="td-va" style="color:#F6AD55">Luis</td><td><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/12032375144" target="_blank">Unit worn / needs attention — Hawaii P109</a></td><td>Bad Review</td><td>Jun 7</td><td><span class="sb sb-r">1 day</span></td></tr>
+      <tr><td class="td-va" style="color:#68D391">Luna</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12092386227" target="_blank">Kitchen countertop circular mark</a></td><td>Maintenance</td><td>Jun 7</td><td><span class="sb sb-o">1 day</span></td></tr>
+      <tr><td class="td-va" style="color:#90CDF4">Nicolas</td><td><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/12157245272" target="_blank">Unhappy Guest — Ethleene Johnson (USVI #5)</a></td><td>Reservation</td><td>No deadline — checkout May 31</td><td><span class="sb sb-o">8 days post-checkout</span></td></tr>
+    </tbody></table>
+  </div>
+
+  <!-- CAT 3 NO DEADLINE -->
+  <div class="cat c3" style="margin-bottom:6px">📅 Category 3 — No Deadline Set (active assigned items) <span class="cat-badge" style="background:rgba(236,201,75,.25);color:#FAF089">-2 pts ea.</span></div>
+  <div class="tbl" style="margin-bottom:16px">
+    <table><thead><tr><th>VA</th><th>Issue</th><th>Board</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td class="td-va" style="color:#90CDF4">Nicolas</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12215126738" target="_blank">Trim trees near units #2 / #3 / #4</a></td><td>Maintenance</td><td><span class="sb sb-b">In Progress</span></td></tr>
+      <tr><td class="td-va" style="color:#68D391">Luna</td><td><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/12172226554" target="_blank">Unhappy Guest — Nancy Wallace (Napa 466)</a></td><td>Reservation</td><td><span class="sb sb-o">Needs Update</span></td></tr>
+      <tr><td class="td-va" style="color:#68D391">Luna</td><td><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/12211854202" target="_blank">Misleading listing complaint</a></td><td>Reservation</td><td><span class="sb sb-o">Needs Review</span></td></tr>
+      <tr><td class="td-va" style="color:#F6AD55">Luis</td><td><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/12127500762" target="_blank">Booking.com Claim (Hawaii)</a></td><td>Reservation</td><td><span class="sb sb-o">Needs Update</span></td></tr>
+      <tr><td class="td-va" style="color:#F6AD55">Luis</td><td><a href="https://bijougetaways.monday.com/boards/18400813768/pulses/12210535690" target="_blank">Guest requesting call — Q401A</a></td><td>Reservation</td><td><span class="sb sb-o">Needs Review</span></td></tr>
+      <tr><td class="td-va" style="color:#F6AD55">Luis</td><td><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/12213296356" target="_blank">Dirty tile flooring — Hawaii 9306 (Erin)</a></td><td>Bad Review</td><td><span class="sb sb-b">Active</span></td></tr>
+      <tr><td class="td-va" style="color:#F6AD55">Luis</td><td><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/12213296904" target="_blank">Road noise — Hawaii 9306 (lanai)</a></td><td>Bad Review</td><td><span class="sb sb-b">Active</span></td></tr>
+    </tbody></table>
+  </div>
+
+  <!-- CAT 4 NO ACTIVITY 7D -->
+  <div class="cat c4" style="margin-bottom:6px">🔇 Category 4 — No Activity Last 7 Days (last updated before Jun 1) <span class="cat-badge" style="background:rgba(66,153,225,.25);color:#90CDF4">-3 pts ea.</span></div>
+  <div class="tbl" style="margin-bottom:16px">
+    <table><thead><tr><th>VA</th><th>Issue</th><th>Board</th><th>Last Updated</th><th>Silent</th></tr></thead>
+    <tbody>
+      <tr><td class="td-va" style="color:#90CDF4">Nicolas</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945780061" target="_blank">8.3.2 — Windows: Cracked Glass (USVI)</a></td><td>Maintenance</td><td>May 25</td><td><span class="sb sb-o">14 days</span></td></tr>
+      <tr><td class="td-va" style="color:#90CDF4">Nicolas</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945795554" target="_blank">8.3.3 — Windows: Soft Wood Damage (USVI)</a></td><td>Maintenance</td><td>May 25</td><td><span class="sb sb-o">14 days</span></td></tr>
+      <tr><td class="td-va" style="color:#A0AEC0">Baptiste</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12141798011" target="_blank">Audit Issues in MDC</a></td><td>Maintenance</td><td>Jun 4 (Cristina update)</td><td><span class="sb sb-y">4 days</span></td></tr>
+    </tbody></table>
+  </div>
+
+  <!-- CAT 5 WHO/WHAT/WHEN -->
+  <div class="cat c5" style="margin-bottom:6px">📝 Category 5 — Missing WHO / WHAT / WHEN Format <span class="cat-badge" style="background:rgba(159,122,234,.25);color:#B794F4">-2 pts ea.</span></div>
+  <div class="tbl" style="margin-bottom:16px">
+    <table><thead><tr><th>VA</th><th>Item</th><th>Evidence</th></tr></thead>
+    <tbody>
+      <tr><td class="td-va" style="color:#F6AD55">Luis</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12200545548" target="_blank">P304 AC remote + batteries</a></td><td>Cristina posted Jun 5: "Please remember to follow the correct Who/What/When format @Luis Robleda"</td></tr>
+      <tr><td class="td-va" style="color:#F6AD55">Luis</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12178137315" target="_blank">AOAO Water Leak follow-up</a></td><td>Cristina re-sent: "RESENDING COMMENT @Luis Robleda" with correct format</td></tr>
+      <tr><td class="td-va" style="color:#A0AEC0">Baptiste</td><td>Zero updates this week</td><td>No updates to assess format on — zero Monday.com trace</td></tr>
+    </tbody></table>
+  </div>
+
+  <!-- UNASSIGNED -->
+  <div class="ubox">
+    <div style="font-size:12px;font-weight:700;color:#FC8181;margin-bottom:6px;display:flex;align-items:center;gap:8px">🔴 74 Unassigned Items in Team Inbox — No Owner, No Deadline
+      <span class="sb sb-r" style="font-size:10px">Triage needed</span>
+    </div>
+    <div style="font-size:10.5px;color:var(--muted);margin-bottom:9px">These were auto-created by the Monday.com AI Agent from guest messages and Conduit alerts. No VA has been assigned to any of them. They sit in "Needs Review" with no deadline.</div>
+    <div class="ug">
+      <div class="ug-item"><div style="font-size:11.5px;font-weight:700;color:#FC8181;margin-bottom:5px">~56 — Maintenance Board</div>Auto-logged Jun 6–8. Examples: camera covered (security risk), incorrect lockbox code, AC/coffee broken, amenity misrepresentation, payment link failures, TV/kitchen issues. All unassigned.</div>
+      <div class="ug-item"><div style="font-size:11.5px;font-weight:700;color:#F6AD55;margin-bottom:5px">6 — Cleaning Board</div>Logged Jun 8 today: empty dispensers ×2, cleanliness issues, dirty/insufficient sheets + towels ×4. All unassigned, no deadline.</div>
+      <div class="ug-item"><div style="font-size:11.5px;font-weight:700;color:#FC8181;margin-bottom:5px">USVI #3 — Critical (Bad Review)</div><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/12208952509" target="_blank">Electricity outages USVI #3</a> — unassigned, no deadline → revenue + review risk<br><a href="https://bijougetaways.monday.com/boards/18402079325/pulses/12208952575" target="_blank">Noise complaint USVI #3</a> — unassigned</div>
+      <div class="ug-item"><div style="font-size:11.5px;font-weight:700;color:#F6AD55;margin-bottom:5px">~12 — Napa + Reservation</div>3× Barbara complaints (Napa 648): listing accuracy, moldy cushion, maintenance. Check-in hiccup Napa 466. Pool/early check-in inquiries. All unassigned.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════ TAB 3: COMPLETED LAST 7 DAYS ══════════════════════════════════ -->
+<div id="tab-completed" class="tab-panel">
+
+  <div class="note note-g">✅ Items resolved Jun 1–8, 2026. Source: update text posted by VAs ("Done by Brad Walters", "Fixed", "GFCI installed", etc.). <strong>Click any link to verify in Monday.com.</strong></div>
+
+  <div class="note">ℹ️ Monday.com's "Completion Date" field is not always filled when an item is resolved — some VAs post a resolution update without formally marking the status. These are items where the update text clearly indicates the work is done.</div>
+
+  <!-- NICOLAS - 20 items -->
+  <div class="comp-va-section">
+    <div class="comp-va-hdr" style="background:rgba(66,153,225,.08);border-color:rgba(66,153,225,.2)">
+      <div style="font-size:20px">🏝️</div>
+      <div>
+        <div class="comp-nm">Nicolas Carrasco — USVI</div>
+        <div class="comp-rg">~20 items resolved Jun 1–8</div>
+        <div class="comp-note">Primarily Jun 3: electrical inspection corrections (GFCI, panels, outlets). Jun 4+8: Brad Walters contractor completions.</div>
+      </div>
+      <div style="margin-left:auto;text-align:center">
+        <div class="comp-count" style="color:#4299E1">20</div>
+        <div style="font-size:9px;color:var(--muted)">resolved</div>
+      </div>
+    </div>
+    <div class="tbl">
+      <table><thead><tr><th>Date</th><th>Item / Action Taken</th><th>Board</th><th>Evidence</th></tr></thead>
+      <tbody>
+        <tr><td>Jun 8</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918505340" target="_blank">11918505340 — Maintenance item</a></td><td>Maintenance</td><td>"Done by Brad Walters"</td></tr>
+        <tr><td>Jun 6</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945565961" target="_blank">11945565961 — Maintenance item</a></td><td>Maintenance</td><td>"done by brad Walters"</td></tr>
+        <tr><td>Jun 4</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945795257" target="_blank">11945795257 — Maintenance item</a></td><td>Maintenance</td><td>"Done by Brad Walters"</td></tr>
+        <tr><td>Jun 4</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945780589" target="_blank">11945780589 — Maintenance item</a></td><td>Maintenance</td><td>"Done by Brad Walters"</td></tr>
+        <tr><td>Jun 4</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12176643837" target="_blank">12176643837 — Camera offline</a></td><td>Maintenance</td><td>"All cameras back online"</td></tr>
+        <tr><td>Jun 3</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11917323866" target="_blank">11917323866 — GFCI</a></td><td>Maintenance</td><td>"GFCI installed"</td></tr>
+        <tr><td>Jun 3</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945561468" target="_blank">11945561468 — Outlet</a></td><td>Maintenance</td><td>"outlet replaced"</td></tr>
+        <tr><td>Jun 3</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945562246" target="_blank">11945562246 — GFCI circuit</a></td><td>Maintenance</td><td>"GFCI now resets"</td></tr>
+        <tr><td>Jun 3</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945572486" target="_blank">11945572486 — Cables</a></td><td>Maintenance</td><td>"Cables are secured"</td></tr>
+        <tr><td>Jun 3</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11919034430" target="_blank">11919034430 — Panel (doubled hot conductors)</a></td><td>Maintenance</td><td>"CORRECTION: DOUBLED HOT CONDUCTORS — corrected"</td></tr>
+        <tr><td>Jun 3</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918984861" target="_blank">11918984861 — Panel (double tap)</a></td><td>Maintenance</td><td>"CORRECTION: DOUBLE TAP CONDUCTORS — corrected"</td></tr>
+        <tr><td>Jun 3</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11919522682" target="_blank">11919522682 — Screw</a></td><td>Maintenance</td><td>"Screw installed"</td></tr>
+        <tr><td>Jun 3</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11789556496" target="_blank">11789556496 — Sensor switch</a></td><td>Maintenance</td><td>"Sensor switch installed"</td></tr>
+        <tr><td>Jun 3</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11919057951" target="_blank">11919057951 — Screw</a></td><td>Maintenance</td><td>"Screw installed"</td></tr>
+        <tr><td>Jun 3</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11918991010" target="_blank">11918991010 — Cover</a></td><td>Maintenance</td><td>"Cover was installed"</td></tr>
+        <tr><td>Jun 3</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11919933956" target="_blank">11919933956 — Fix</a></td><td>Maintenance</td><td>"Fixed"</td></tr>
+        <tr><td>Jun 3</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945780675" target="_blank">11945780675 — Fix</a></td><td>Maintenance</td><td>"Fixed"</td></tr>
+        <tr><td>Jun 3</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945780601" target="_blank">11945780601 — Open ground outlets</a></td><td>Maintenance</td><td>"Outlets with open ground were fixed"</td></tr>
+        <tr><td>Jun 3</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11941742532" target="_blank">11941742532 — Inspection</a></td><td>Maintenance</td><td>"This is done. Inspection was sent to Erwan"</td></tr>
+        <tr><td>Jun 3</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11945562391" target="_blank">11945562391 — GFCI confirmed</a></td><td>Maintenance</td><td>"Electrician confirm these outlets are GFCI"</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+
+  <!-- LUNA - 6 items -->
+  <div class="comp-va-section">
+    <div class="comp-va-hdr" style="background:rgba(72,187,120,.08);border-color:rgba(72,187,120,.2)">
+      <div style="font-size:20px">🍷</div>
+      <div>
+        <div class="comp-nm">Luna Proietti — Napa</div>
+        <div class="comp-rg">~6 items resolved Jun 1–8</div>
+        <div class="comp-note">Brian Taylor repairs Jun 3 (wall patches, mold removal, painting). Russell dispenser install + toilet repair Jun 4.</div>
+      </div>
+      <div style="margin-left:auto;text-align:center">
+        <div class="comp-count" style="color:#48BB78">6</div>
+        <div style="font-size:9px;color:var(--muted)">resolved</div>
+      </div>
+    </div>
+    <div class="tbl">
+      <table><thead><tr><th>Date</th><th>Item / Action Taken</th><th>Board</th><th>Evidence</th></tr></thead>
+      <tbody>
+        <tr><td>Jun 4</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12188351372" target="_blank">12188351372 — Toilet repair</a></td><td>Maintenance</td><td>"Russell: Repair toilet flushing — flapper fixed + AC drain sealant"</td></tr>
+        <tr><td>Jun 4</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12187819718" target="_blank">12187819718 — Brian Taylor repair</a></td><td>Maintenance</td><td>"Brian Taylor: Inspect and repair — Jun 2nd"</td></tr>
+        <tr><td>Jun 4</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11723886653" target="_blank">11723886653 — Dispensers Hawaii</a></td><td>Maintenance</td><td>"Russell Installed at G110 &amp; G110A, Q401A, P304, 49 — Jun 1-2"</td></tr>
+        <tr><td>Jun 3</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/11941735754" target="_blank">11941735754 — Wall patches + mold removal</a></td><td>Maintenance</td><td>"Brian Taylor: attended walls patches, removed mold from wall above door, repaired access door, painted, cleaned fan — jun 01"</td></tr>
+        <tr><td>Jun 3</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12144359728" target="_blank">12144359728 — Water Leak 9306 AOAO</a></td><td>Maintenance</td><td>"Luna/AOAO: accepted address on june 5 upon guest checkout"</td></tr>
+        <tr><td>Jun 3</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12141799806" target="_blank">12141799806 — New handyman vendors</a></td><td>Maintenance</td><td>"Fernando Aguilar + Tony's Handyman added to vendor list — jun 6"</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+
+  <!-- LUIS - 4 items -->
+  <div class="comp-va-section">
+    <div class="comp-va-hdr" style="background:rgba(201,123,58,.08);border-color:rgba(201,123,58,.2)">
+      <div style="font-size:20px">🏄</div>
+      <div>
+        <div class="comp-nm">Luis Robleda — Hawaii</div>
+        <div class="comp-rg">~4 items resolved Jun 1–8</div>
+        <div class="comp-note">Oksana deliveries, sofa work, AC batteries, snorkeling gear. Fewer completions vs. large open flag count.</div>
+      </div>
+      <div style="margin-left:auto;text-align:center">
+        <div class="comp-count" style="color:#ED8936">4</div>
+        <div style="font-size:9px;color:var(--muted)">resolved</div>
+      </div>
+    </div>
+    <div class="tbl">
+      <table><thead><tr><th>Date</th><th>Item / Action Taken</th><th>Board</th><th>Evidence</th></tr></thead>
+      <tbody>
+        <tr><td>Jun 8</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12215859967" target="_blank">12215859967 — Snorkeling gear + beach chairs</a></td><td>Maintenance</td><td>"Oksana and Luis: Deliver Snorkeling gear and review Beach Chairs — Kamaole Sands 9306 &amp; 4112 — Jun 8"</td></tr>
+        <tr><td>Jun 5</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12200545548" target="_blank">12200545548 — AC remote batteries P304</a></td><td>Maintenance</td><td>"Edgar and Luis: Purchase and install batteries for AC remote + receptor — Jun 5"</td></tr>
+        <tr><td>Jun 2</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12152437776" target="_blank">12152437776 — Item delivery</a></td><td>Maintenance</td><td>"Oksana: delivered — June 1st"</td></tr>
+        <tr><td>Jun 2</td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12112084415" target="_blank">12112084415 — Sofa P304 assessment</a></td><td>Maintenance</td><td>"Edgar: Try final time to fix and get data to replace — Jun 2"</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+
+  <!-- BAPTISTE - 0 -->
+  <div class="comp-va-section">
+    <div class="comp-va-hdr" style="background:rgba(74,85,104,.12);border-color:rgba(74,85,104,.3)">
+      <div style="font-size:20px">🗼</div>
+      <div>
+        <div class="comp-nm">Baptiste Sarrat — Paris + Miami</div>
+        <div class="comp-rg">0 items resolved Jun 1–8</div>
+        <div class="comp-note">No Monday.com updates this week — no resolutions logged. 2 guest emails sent Jun 7 via Outlook.</div>
+      </div>
+      <div style="margin-left:auto;text-align:center">
+        <div class="comp-count" style="color:#718096">0</div>
+        <div style="font-size:9px;color:var(--muted)">resolved</div>
+      </div>
+    </div>
+    <div style="background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:12px;font-size:11px;color:var(--muted)">
+      No completion updates found in Monday.com for Jun 1–8. Baptiste's last update was May 29 ("Resolved" on a reservation item). His 2 Outlook emails from Jun 7 suggest guest-facing work is happening, but it's not documented in Monday.com.
+    </div>
+  </div>
+
+</div><!-- /completed -->
+
+<!-- ══════════════════════════════════ TAB 4: UNASSIGNED INBOX ══════════════════════════════════ -->
+<div id="tab-unassigned" class="tab-panel">
+
+  <div class="note note-r">🔴 These items have <strong>no VA assigned and no deadline</strong>. Every one is an active guest issue, complaint, or maintenance request that nobody owns yet. Someone needs to open each one, assign it, and set a follow-up date.</div>
+
+  <!-- SUMMARY COUNTS -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:7px;margin-bottom:16px">
+    <div style="background:var(--panel);border:1px solid rgba(229,62,62,.3);border-radius:10px;padding:11px"><div style="font-size:20px;font-weight:800;color:#FC8181">~56</div><div style="font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px">Maintenance Issues</div></div>
+    <div style="background:var(--panel);border:1px solid rgba(237,137,54,.3);border-radius:10px;padding:11px"><div style="font-size:20px;font-weight:800;color:#F6AD55">7</div><div style="font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px">Cleaning Issues</div></div>
+    <div style="background:var(--panel);border:1px solid rgba(66,153,225,.3);border-radius:10px;padding:11px"><div style="font-size:20px;font-weight:800;color:#90CDF4">6</div><div style="font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px">Reservation Issues</div></div>
+    <div style="background:var(--panel);border:1px solid rgba(159,122,234,.3);border-radius:10px;padding:11px"><div style="font-size:20px;font-weight:800;color:#B794F4">6</div><div style="font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px">Bad Review Issues</div></div>
+    <div style="background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:11px"><div style="font-size:20px;font-weight:800;color:#fff">75</div><div style="font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px">Total</div></div>
+  </div>
+
+  <!-- ── MAINTENANCE ISSUES UNASSIGNED ── -->
+  <div class="cat c1" style="margin-bottom:6px">🔧 Maintenance Issues — Unassigned (~56 items) · <a href="https://bijougetaways.monday.com/boards/18401061908" target="_blank" style="color:#FC8181;font-size:10px">Open Board ↗</a></div>
+  <div class="tbl" style="margin-bottom:16px">
+    <table><thead><tr><th style="width:22%">Item Name</th><th style="width:9%">Date</th><th style="width:8%">Severity</th><th style="width:61%">Link</th></tr></thead>
+    <tbody>
+      <tr><td>Camera covered — security concern</td><td>Jun 6</td><td><span class="sb sb-r">🔴 Security</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12208894318" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12208894318</a></td></tr>
+      <tr><td>TV signal issues</td><td>Jun 6</td><td><span class="sb sb-gr">Low</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12209085382" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12209085382</a></td></tr>
+      <tr><td>Guest expected full apartment — refund request</td><td>Jun 6</td><td><span class="sb sb-o">⚠️ Revenue</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12210850797" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12210850797</a></td></tr>
+      <tr><td>AC + coffee pot issues</td><td>Jun 6</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12211040344" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12211040344</a></td></tr>
+      <tr><td>Incorrect lockbox code (access issue)</td><td>Jun 6</td><td><span class="sb sb-r">🔴 Access</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12211574157" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12211574157</a></td></tr>
+      <tr><td>Guest inquired about fitness center access</td><td>Jun 6</td><td><span class="sb sb-gr">Low</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12211773542" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12211773542</a></td></tr>
+      <tr><td>Misrepresentation of property amenities</td><td>Jun 6</td><td><span class="sb sb-o">⚠️ Revenue</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12211661281" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12211661281</a></td></tr>
+      <tr><td>AC + coffee maker not functioning</td><td>Jun 6</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12211836059" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12211836059</a></td></tr>
+      <tr><td>Wrong coffee pods installed on cleanings</td><td>Jun 7</td><td><span class="sb sb-gr">Low</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214760843" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214760843</a></td></tr>
+      <tr><td>Late checkout request (prior maintenance issues)</td><td>Jun 7</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12212061810" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12212061810</a></td></tr>
+      <tr><td>Request for kitchen supplies + TV repair</td><td>Jun 7</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12212014578" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12212014578</a></td></tr>
+      <tr><td>Kitchen supplies + TV functionality issues</td><td>Jun 7</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12212068102" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12212068102</a></td></tr>
+      <tr><td>Request for unit with a kitchen</td><td>Jun 7</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12212610512" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12212610512</a></td></tr>
+      <tr><td>Incompatible coffee capsules</td><td>Jun 7</td><td><span class="sb sb-gr">Low</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12213797765" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12213797765</a></td></tr>
+      <tr><td>Slow draining sink + difficult drain hole</td><td>Jun 7</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12213869453" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12213869453</a></td></tr>
+      <tr><td>Guest unable to update credit card info</td><td>Jun 7</td><td><span class="sb sb-o">⚠️ Payment</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214151204" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214151204</a></td></tr>
+      <tr><td>Guest requests new payment link</td><td>Jun 7</td><td><span class="sb sb-o">⚠️ Payment</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214259064" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214259064</a></td></tr>
+      <tr><td>Fix Blinds + Screen on P304</td><td>Jun 7</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214380052" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214380052</a></td></tr>
+      <tr><td>Sheer curtain blocks thick curtain — window</td><td>Jun 7</td><td><span class="sb sb-gr">Low</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214401888" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214401888</a></td></tr>
+      <tr><td>G110A — towels and linens purchase</td><td>Jun 7</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214401794" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214401794</a></td></tr>
+      <tr><td>Dishwasher not turning on</td><td>Jun 7</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214380466" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214380466</a></td></tr>
+      <tr><td>Purchase of dehumidifiers Hawaii</td><td>Jun 7</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214401889" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214401889</a></td></tr>
+      <tr><td>P304 — Vegetables drawer broken (fridge)</td><td>Jun 7</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214402230" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214402230</a></td></tr>
+      <tr><td>Ugly exterior — P109</td><td>Jun 7</td><td><span class="sb sb-gr">Low</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214380467" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214380467</a></td></tr>
+      <tr><td>Closet door locked — 4112 Hawaii</td><td>Jun 7</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214354998" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214354998</a></td></tr>
+      <tr><td>Dispensers installation for Hawaii</td><td>Jun 7</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214380183" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214380183</a></td></tr>
+      <tr><td>P304 — Water heater repair</td><td>Jun 7</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214401795" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214401795</a></td></tr>
+      <tr><td>49-49A Vent Cleaning (AOAO)</td><td>Jun 7</td><td><span class="sb sb-gr">Low</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214354999" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214354999</a></td></tr>
+      <tr><td>Missed items — Hawaii inspection batch</td><td>Jun 7</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214380468" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214380468</a></td></tr>
+      <tr><td>P109 — bathtub painting</td><td>Jun 7</td><td><span class="sb sb-gr">Low</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214402249" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214402249</a></td></tr>
+      <tr><td>Entrance door cannot be secured — Simon</td><td>Jun 7</td><td><span class="sb sb-r">🔴 Security</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214355000" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214355000</a></td></tr>
+      <tr><td>Water Leak — 9306 balcony (AOAO)</td><td>Jun 7</td><td><span class="sb sb-o">⚠️ Damage</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214380053" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214380053</a></td></tr>
+      <tr><td>Bus Bar Electrical — G110 (burned)</td><td>Jun 7</td><td><span class="sb sb-r">🔴 Fire risk</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214380186" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214380186</a></td></tr>
+      <tr><td>Bus Bar Electrical Issue on G110 (duplicate)</td><td>Jun 7</td><td><span class="sb sb-r">🔴 Fire risk</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214401796" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214401796</a></td></tr>
+      <tr><td>G110A — painting and seal repair</td><td>Jun 7</td><td><span class="sb sb-gr">Low</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214380145" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214380145</a></td></tr>
+      <tr><td>No insect spray + mosquito issue in kitchen</td><td>Jun 7</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214355001" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214355001</a></td></tr>
+      <tr><td>Bathroom: faucet + tub with mineral marks</td><td>Jun 7</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214379993" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214379993</a></td></tr>
+      <tr><td>P304 AC remote cover + batteries</td><td>Jun 7</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214381272" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214381272</a></td></tr>
+      <tr><td>Curtains replacement for G110</td><td>Jun 7</td><td><span class="sb sb-gr">Low</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214401982" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214401982</a></td></tr>
+      <tr><td>Fixing / Replace Sofabed</td><td>Jun 7</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214401890" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214401890</a></td></tr>
+      <tr><td>P304 — kitchen drawers scratched / worn</td><td>Jun 7</td><td><span class="sb sb-gr">Low</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214401891" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214401891</a></td></tr>
+      <tr><td>P109A — rust in shower corners</td><td>Jun 7</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214402362" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214402362</a></td></tr>
+      <tr><td>Several lights not working — Simon</td><td>Jun 7</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214380146" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214380146</a></td></tr>
+      <tr><td>P109 — rusty wardrobe profiles</td><td>Jun 7</td><td><span class="sb sb-gr">Low</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214380469" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214380469</a></td></tr>
+      <tr><td>49A — broken chair outside</td><td>Jun 7</td><td><span class="sb sb-gr">Low</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214402231" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214402231</a></td></tr>
+      <tr><td>Mattress protector + sofabed mattress</td><td>Jun 7</td><td><span class="sb sb-y">Medium</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214401984" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214401984</a></td></tr>
       <tr><td>Missing electric kettle delivery</td><td>Jun 7</td><td><span class="sb sb-gr">Low</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214401895" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214401895</a></td></tr>
       <tr><td>Water LEAK — 9306 balcony AOAO</td><td>Jun 7</td><td><span class="sb sb-o">⚠️ Damage</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214380471" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214380471</a></td></tr>
       <tr><td>49A — drain stop missed</td><td>Jun 7</td><td><span class="sb sb-gr">Low</span></td><td><a href="https://bijougetaways.monday.com/boards/18401061908/pulses/12214402232" target="_blank">bijougetaways.monday.com/boards/18401061908/pulses/12214402232</a></td></tr>
