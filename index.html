@@ -1,182 +1,423 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>VA Compliance Dashboard — June 10, 2026</title>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VA Login Compliance Dashboard — June 11, 2026</title>
 <style>
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#0f172a;color:#e2e8f0}
-  table{border-collapse:collapse;width:100%}
-</style>
-</head><body>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f0f2f5; color: #1a1a2e; min-height: 100vh; }
+  .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 24px 32px; display: flex; align-items: center; justify-content: space-between; }
+  .header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.3px; }
+  .header .subtitle { font-size: 0.85rem; color: #a0b4cc; margin-top: 4px; }
+  .date-badge { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); border-radius: 8px; padding: 8px 16px; text-align: right; }
+  .date-badge .date-main { font-size: 1.1rem; font-weight: 700; }
+  .date-badge .date-sub { font-size: 0.75rem; color: #a0b4cc; margin-top: 2px; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 24px 20px; }
 
-<!-- HEADER -->
-<div style="background:linear-gradient(135deg,#1e293b,#0f172a);padding:28px 36px;border-bottom:1px solid #1e293b">
-  <h1 style="font-size:1.4rem;font-weight:700;color:#f8fafc">VA Login/Logout Compliance
-    <span style="display:inline-block;padding:2px 10px;border-radius:9999px;font-size:.72rem;font-weight:600;background:#1e3a5f;color:#60a5fa;margin-left:8px;vertical-align:middle">June 10, 2026</span>
-  </h1>
-  <div style="color:#94a3b8;font-size:.82rem;margin-top:6px">Nicolas Carrasco · Luna Proietti · Luis Robleda · Source: #va-login-logout</div>
-  <div style="color:#64748b;font-size:.78rem;margin-top:4px">Days off: Nicolas=Tue · Luna=Sun &amp; Mon · Luis=Wed &amp; Thu · Break: ✅ 60–70 min · ❌ &lt;60 min · ⚠️ &gt;70 min</div>
+  .leaderboard { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+  .card { background: white; border-radius: 14px; padding: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+  .card.gold { border-top: 4px solid #f5a623; }
+  .card.silver { border-top: 4px solid #9b9b9b; }
+  .card.bronze { border-top: 4px solid #c07a3f; }
+  .medal { font-size: 1.8rem; margin-bottom: 6px; }
+  .va-name { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; }
+  .va-region { font-size: 0.75rem; color: #6b7280; margin-bottom: 10px; }
+  .score-big { font-size: 2.4rem; font-weight: 800; line-height: 1; margin-bottom: 4px; }
+  .gold .score-big { color: #d97706; }
+  .silver .score-big { color: #6b7280; }
+  .bronze .score-big { color: #b45309; }
+  .score-label { font-size: 0.72rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+  .score-bars { display: flex; flex-direction: column; gap: 6px; }
+  .bar-row { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; }
+  .bar-label { width: 46px; color: #6b7280; flex-shrink: 0; }
+  .bar-track { flex: 1; height: 7px; background: #e5e7eb; border-radius: 4px; }
+  .bar-fill { height: 100%; border-radius: 4px; }
+  .bar-fill.green { background: #10b981; }
+  .bar-fill.yellow { background: #f59e0b; }
+  .bar-fill.red { background: #ef4444; }
+  .bar-pct { width: 34px; text-align: right; font-weight: 600; color: #374151; }
+  .trend-chip { display: inline-flex; align-items: center; gap: 4px; font-size: 0.7rem; font-weight: 600; padding: 2px 8px; border-radius: 12px; margin-top: 6px; }
+  .trend-up { background: #d1fae5; color: #059669; }
+  .trend-steady { background: #f3f4f6; color: #6b7280; }
+
+  .section-title { font-size: 1rem; font-weight: 700; color: #1a1a2e; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .section-title .badge { font-size: 0.65rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+  .in-progress-badge { background: #fef3c7; color: #d97706; }
+  .table-card { background: white; border-radius: 14px; padding: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 24px; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  th { background: #f8fafc; color: #6b7280; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.6px; padding: 10px 12px; text-align: left; border-bottom: 1px solid #e5e7eb; }
+  td { padding: 12px 12px; border-bottom: 1px solid #f3f4f6; vertical-align: middle; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #fafafa; }
+  .va-cell { font-weight: 600; color: #1a1a2e; }
+  .status-ok { color: #10b981; font-weight: 600; }
+  .status-warn { color: #f59e0b; font-weight: 600; }
+  .status-bad { color: #ef4444; font-weight: 600; }
+  .status-off { color: #9ca3af; font-style: italic; }
+  .chip { display: inline-block; font-size: 0.7rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+  .chip-green { background: #d1fae5; color: #065f46; }
+  .chip-yellow { background: #fef3c7; color: #92400e; }
+  .chip-red { background: #fee2e2; color: #991b1b; }
+  .chip-gray { background: #f3f4f6; color: #6b7280; }
+
+  .grid-7d { display: grid; grid-template-columns: 130px repeat(7, 1fr); gap: 0; }
+  .grid-head { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.5px; color: #9ca3af; padding: 8px 6px; text-align: center; background: #f8fafc; border-bottom: 1px solid #e5e7eb; }
+  .grid-head.left { text-align: left; padding-left: 12px; }
+  .grid-cell { padding: 10px 6px; text-align: center; border-bottom: 1px solid #f3f4f6; font-size: 0.8rem; vertical-align: middle; }
+  .grid-cell.left { text-align: left; padding-left: 12px; font-weight: 600; color: #374151; font-size: 0.82rem; }
+  .grid-cell.off { background: #f9fafb; color: #d1d5db; font-size: 0.7rem; }
+  .dot-ok { display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: #10b981; color: white; font-size: 0.65rem; font-weight: 800; line-height: 20px; text-align: center; }
+  .dot-bad { display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: #ef4444; color: white; font-size: 0.65rem; font-weight: 800; line-height: 20px; text-align: center; }
+  .dot-warn { display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: #f59e0b; color: white; font-size: 0.65rem; font-weight: 800; line-height: 20px; text-align: center; }
+  .dot-off { color: #d1d5db; font-size: 0.75rem; }
+  .sub-label { font-size: 0.65rem; color: #9ca3af; display: block; margin-top: 2px; }
+
+  .flags-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+  .flag-card { background: white; border-radius: 14px; padding: 18px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+  .flag-card.red-flag { border-left: 4px solid #ef4444; }
+  .flag-card.yellow-flag { border-left: 4px solid #f59e0b; }
+  .flag-card.green-flag { border-left: 4px solid #10b981; }
+  .flag-title { font-size: 0.8rem; font-weight: 700; color: #374151; margin-bottom: 8px; }
+  .flag-item { font-size: 0.8rem; color: #4b5563; margin-bottom: 4px; line-height: 1.4; }
+  .flag-date { font-size: 0.7rem; color: #9ca3af; margin-top: 6px; }
+
+  .otter-section { background: white; border-radius: 14px; padding: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 24px; }
+  .otter-item { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f3f4f6; }
+  .otter-item:last-child { border-bottom: none; }
+  .otter-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+  .otter-body { flex: 1; }
+  .otter-who { font-size: 0.8rem; font-weight: 700; color: #1a1a2e; }
+  .otter-what { font-size: 0.8rem; color: #4b5563; margin-top: 2px; line-height: 1.4; }
+  .otter-meeting { font-size: 0.7rem; color: #9ca3af; margin-top: 3px; }
+
+  .thirty-day { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+  .thirty-card { background: white; border-radius: 14px; padding: 18px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+  .thirty-name { font-weight: 700; font-size: 0.9rem; color: #1a1a2e; margin-bottom: 10px; }
+  .stat-row { display: flex; justify-content: space-between; font-size: 0.78rem; padding: 4px 0; border-bottom: 1px solid #f3f4f6; color: #4b5563; }
+  .stat-row:last-child { border-bottom: none; }
+  .stat-val { font-weight: 700; color: #1a1a2e; }
+  .stat-val.green { color: #10b981; }
+  .stat-val.yellow { color: #f59e0b; }
+
+  .footer { text-align: center; padding: 20px; font-size: 0.72rem; color: #9ca3af; }
+  .auto-deploy { background: #d1fae5; color: #065f46; font-size: 0.7rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; display: inline-block; margin-top: 6px; }
+  .live-link { color: #3b82f6; text-decoration: none; font-weight: 600; }
+
+  @media (max-width: 700px) {
+    .leaderboard, .flags-grid, .thirty-day { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>🏆 VA Login Compliance Dashboard</h1>
+    <div class="subtitle">Bijou Getaways · Auto-generated by Cowork · <a href="https://bijou-web.github.io/bijou-va-dashboard/" class="live-link" style="color:#60a5fa">Live Dashboard ↗</a></div>
+  </div>
+  <div class="date-badge">
+    <div class="date-main">June 11, 2026</div>
+    <div class="date-sub">Thursday · Shift in progress</div>
+  </div>
 </div>
 
-<div style="padding:28px 36px;max-width:1100px;margin:0 auto">
+<div class="container">
 
-  <!-- ══ LEADERBOARD ══════════════════════════════════════════════════════ -->
-  <div style="margin-bottom:44px">
-    <div style="font-size:1rem;font-weight:700;color:#f1f5f9;margin-bottom:24px;padding-bottom:8px;border-bottom:1px solid #1e293b;display:flex;align-items:center;gap:8px">
-      🏆 Leaderboard <span style="font-size:.8rem;color:#64748b;font-weight:400">— 7-day overall (Login + Logout + Break, off-days excluded)</span>
+  <!-- LEADERBOARD -->
+  <div class="section-title">📊 7-Day Leaderboard <span class="badge in-progress-badge">Jun 4–10</span></div>
+  <div class="leaderboard">
+
+    <div class="card gold">
+      <div class="medal">🥇</div>
+      <div class="va-name">Luis Robleda</div>
+      <div class="va-region">Paris / South of France / Miami</div>
+      <div class="score-big">93%</div>
+      <div class="score-label">Overall Compliance</div>
+      <div class="score-bars">
+        <div class="bar-row"><span class="bar-label">Login</span><div class="bar-track"><div class="bar-fill green" style="width:100%"></div></div><span class="bar-pct">100%</span></div>
+        <div class="bar-row"><span class="bar-label">Logout</span><div class="bar-track"><div class="bar-fill green" style="width:100%"></div></div><span class="bar-pct">100%</span></div>
+        <div class="bar-row"><span class="bar-label">Break</span><div class="bar-track"><div class="bar-fill yellow" style="width:80%"></div></div><span class="bar-pct">80%</span></div>
+      </div>
+      <span class="trend-chip trend-steady">→ Steady</span>
     </div>
-    <div style="display:flex;gap:16px;align-items:stretch;padding-top:18px">
-      
-        <div style="background:rgba(255,215,0,0.08);border:1px solid #FFD700;border-radius:16px;padding:24px 20px;
-                    box-shadow:0 0 24px rgba(255,215,0,0.25);position:relative;flex:1;min-width:0">
-          <!-- rank badge -->
-          <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);
-                      background:#0f172a;border:2px solid #FFD700;border-radius:9999px;
-                      padding:2px 12px;font-size:.72rem;font-weight:700;color:#FFD700;white-space:nowrap">
-            #1 Gold
-          </div>
-          <!-- medal + name -->
-          <div style="text-align:center;margin-bottom:16px;margin-top:4px">
-            <div style="font-size:2.6rem;line-height:1">🥇</div>
-            <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px">
-              <span style="display:inline-flex;align-items:center;justify-content:center;
-                           width:34px;height:34px;border-radius:50%;background:#0ea5e9;
-                           color:white;font-size:.75rem;font-weight:700">LR</span>
-              <span style="font-size:1rem;font-weight:700">Luis Robleda</span>
-            </div>
-            <div style="font-size:.72rem;color:#64748b;margin-top:4px">Off: Wed & Thu</div>
-          </div>
-          <!-- overall score -->
-          <div style="text-align:center;margin-bottom:18px;padding:10px;
-                      background:rgba(15,23,42,0.6);border-radius:10px">
-            <div style="font-size:2rem;font-weight:900;color:#4ade80">93%</div>
-            <div style="font-size:.72rem;color:#64748b">Overall Score (7-day)</div>
-          </div>
-          <!-- stat pills -->
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
-            <div style="text-align:center"><div style="font-size:1.3rem;font-weight:800;color:#4ade80">100%</div><div style="font-size:.7rem;color:#64748b;margin-top:2px">Login<br><span style="color:#475569">5/5</span></div></div>
-            <div style="text-align:center"><div style="font-size:1.3rem;font-weight:800;color:#4ade80">100%</div><div style="font-size:.7rem;color:#64748b;margin-top:2px">Logout<br><span style="color:#475569">5/5</span></div></div>
-            <div style="text-align:center"><div style="font-size:1.3rem;font-weight:800;color:#4ade80">80%</div><div style="font-size:.7rem;color:#64748b;margin-top:2px">Break<br><span style="color:#475569">4/5</span></div></div>
-          </div>
-        </div>
-        <div style="background:rgba(192,192,192,0.06);border:1px solid #C0C0C0;border-radius:16px;padding:24px 20px;
-                    box-shadow:0 0 16px rgba(192,192,192,0.15);position:relative;flex:1;min-width:0">
-          <!-- rank badge -->
-          <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);
-                      background:#0f172a;border:2px solid #C0C0C0;border-radius:9999px;
-                      padding:2px 12px;font-size:.72rem;font-weight:700;color:#C0C0C0;white-space:nowrap">
-            #2 Silver
-          </div>
-          <!-- medal + name -->
-          <div style="text-align:center;margin-bottom:16px;margin-top:4px">
-            <div style="font-size:2.6rem;line-height:1">🥈</div>
-            <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px">
-              <span style="display:inline-flex;align-items:center;justify-content:center;
-                           width:34px;height:34px;border-radius:50%;background:#6366f1;
-                           color:white;font-size:.75rem;font-weight:700">NC</span>
-              <span style="font-size:1rem;font-weight:700">Nicolas Carrasco</span>
-            </div>
-            <div style="font-size:.72rem;color:#64748b;margin-top:4px">Off: Tuesday</div>
-          </div>
-          <!-- overall score -->
-          <div style="text-align:center;margin-bottom:18px;padding:10px;
-                      background:rgba(15,23,42,0.6);border-radius:10px">
-            <div style="font-size:2rem;font-weight:900;color:#4ade80">83%</div>
-            <div style="font-size:.72rem;color:#64748b">Overall Score (7-day)</div>
-          </div>
-          <!-- stat pills -->
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
-            <div style="text-align:center"><div style="font-size:1.3rem;font-weight:800;color:#4ade80">100%</div><div style="font-size:.7rem;color:#64748b;margin-top:2px">Login<br><span style="color:#475569">5/5</span></div></div>
-            <div style="text-align:center"><div style="font-size:1.3rem;font-weight:800;color:#4ade80">100%</div><div style="font-size:.7rem;color:#64748b;margin-top:2px">Logout<br><span style="color:#475569">4/4</span></div></div>
-            <div style="text-align:center"><div style="font-size:1.3rem;font-weight:800;color:#fbbf24">50%</div><div style="font-size:.7rem;color:#64748b;margin-top:2px">Break<br><span style="color:#475569">2/4</span></div></div>
-          </div>
-        </div>
-        <div style="background:rgba(205,127,50,0.06);border:1px solid #CD7F32;border-radius:16px;padding:24px 20px;
-                    box-shadow:0 0 16px rgba(205,127,50,0.15);position:relative;flex:1;min-width:0">
-          <!-- rank badge -->
-          <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);
-                      background:#0f172a;border:2px solid #CD7F32;border-radius:9999px;
-                      padding:2px 12px;font-size:.72rem;font-weight:700;color:#CD7F32;white-space:nowrap">
-            #3 Bronze
-          </div>
-          <!-- medal + name -->
-          <div style="text-align:center;margin-bottom:16px;margin-top:4px">
-            <div style="font-size:2.6rem;line-height:1">🥉</div>
-            <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px">
-              <span style="display:inline-flex;align-items:center;justify-content:center;
-                           width:34px;height:34px;border-radius:50%;background:#ec4899;
-                           color:white;font-size:.75rem;font-weight:700">LP</span>
-              <span style="font-size:1rem;font-weight:700">Luna Proietti</span>
-            </div>
-            <div style="font-size:.72rem;color:#64748b;margin-top:4px">Off: Sun & Mon</div>
-          </div>
-          <!-- overall score -->
-          <div style="text-align:center;margin-bottom:18px;padding:10px;
-                      background:rgba(15,23,42,0.6);border-radius:10px">
-            <div style="font-size:2rem;font-weight:900;color:#fbbf24">78%</div>
-            <div style="font-size:.72rem;color:#64748b">Overall Score (7-day)</div>
-          </div>
-          <!-- stat pills -->
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
-            <div style="text-align:center"><div style="font-size:1.3rem;font-weight:800;color:#4ade80">100%</div><div style="font-size:.7rem;color:#64748b;margin-top:2px">Login<br><span style="color:#475569">4/4</span></div></div>
-            <div style="text-align:center"><div style="font-size:1.3rem;font-weight:800;color:#4ade80">100%</div><div style="font-size:.7rem;color:#64748b;margin-top:2px">Logout<br><span style="color:#475569">4/4</span></div></div>
-            <div style="text-align:center"><div style="font-size:1.3rem;font-weight:800;color:#f87171">33%</div><div style="font-size:.7rem;color:#64748b;margin-top:2px">Break<br><span style="color:#475569">1/3</span></div></div>
-          </div>
-        </div>
+
+    <div class="card silver">
+      <div class="medal">🥈</div>
+      <div class="va-name">Luna Proietti</div>
+      <div class="va-region">Napa Valley &amp; Hawaii</div>
+      <div class="score-big">87%</div>
+      <div class="score-label">Overall Compliance</div>
+      <div class="score-bars">
+        <div class="bar-row"><span class="bar-label">Login</span><div class="bar-track"><div class="bar-fill green" style="width:100%"></div></div><span class="bar-pct">100%</span></div>
+        <div class="bar-row"><span class="bar-label">Logout</span><div class="bar-track"><div class="bar-fill green" style="width:100%"></div></div><span class="bar-pct">100%</span></div>
+        <div class="bar-row"><span class="bar-label">Break</span><div class="bar-track"><div class="bar-fill yellow" style="width:60%"></div></div><span class="bar-pct">60%</span></div>
+      </div>
+      <span class="trend-chip trend-up">↑ Up from 78%</span>
     </div>
+
+    <div class="card bronze">
+      <div class="medal">🥉</div>
+      <div class="va-name">Nicolas Carrasco</div>
+      <div class="va-region">USVI / St. John</div>
+      <div class="score-big">83%</div>
+      <div class="score-label">Overall Compliance</div>
+      <div class="score-bars">
+        <div class="bar-row"><span class="bar-label">Login</span><div class="bar-track"><div class="bar-fill green" style="width:100%"></div></div><span class="bar-pct">100%</span></div>
+        <div class="bar-row"><span class="bar-label">Logout</span><div class="bar-track"><div class="bar-fill yellow" style="width:83%"></div></div><span class="bar-pct">83%</span></div>
+        <div class="bar-row"><span class="bar-label">Break</span><div class="bar-track"><div class="bar-fill yellow" style="width:67%"></div></div><span class="bar-pct">67%</span></div>
+      </div>
+      <span class="trend-chip trend-steady">→ Steady</span>
+    </div>
+
   </div>
 
-  <!-- ══ FLAGS ════════════════════════════════════════════════════════════ -->
-  <div style="margin-bottom:36px">
-    <div style="font-size:1rem;font-weight:700;color:#f1f5f9;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #1e293b">⚠️ Break Flags — Week of June 3–9</div>
-    <div style="background:#1e293b;border-left:3px solid #f59e0b;padding:11px 16px;border-radius:0 8px 8px 0;margin-bottom:8px;font-size:.85rem">
-      <strong>Nicolas Carrasco</strong> <span style="color:#94a3b8">— Break only 31 min on Jun 5 &amp; Jun 8. Appears to be taking a single 30-min break instead of two.</span>
-    </div>
-    <div style="background:#1e293b;border-left:3px solid #ef4444;padding:11px 16px;border-radius:0 8px 8px 0;margin-bottom:8px;font-size:.85rem">
-      <strong>Luna Proietti</strong> <span style="color:#94a3b8">— Break below 60 min on Jun 6 (38m) and Jun 9 (55m). 2 of 3 trackable work days had insufficient break.</span>
-    </div>
-    <div style="background:#1e293b;border-left:3px solid #f59e0b;padding:11px 16px;border-radius:0 8px 8px 0;font-size:.85rem">
-      <strong>Luis Robleda</strong> <span style="color:#94a3b8">— Break 50 min on Jun 8 (below threshold). Early logout Jun 7 flagged by Erwan.</span>
-    </div>
-  </div>
-
-  <!-- ══ YESTERDAY ════════════════════════════════════════════════════════ -->
-  <div style="margin-bottom:36px">
-    <div style="font-size:1rem;font-weight:700;color:#f1f5f9;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #1e293b">Yesterday
-      <span style="font-size:.8rem;color:#64748b;font-weight:400">— June 9, 2026 (Tuesday)</span>
-    </div>
-    <table style="background:#1e293b;border-radius:12px;overflow:hidden">
-      <thead><tr>
-        <th style="padding:12px 16px;background:#0f172a;text-align:left;font-size:.78rem;color:#94a3b8;font-weight:600;text-transform:uppercase;letter-spacing:.05em">VA</th>
-        <th style="padding:12px 16px;background:#0f172a;text-align:center;font-size:.78rem;color:#94a3b8;font-weight:600;text-transform:uppercase">Logged In</th>
-        <th style="padding:12px 16px;background:#0f172a;text-align:center;font-size:.78rem;color:#94a3b8;font-weight:600;text-transform:uppercase">Logged Out</th>
-        <th style="padding:12px 16px;background:#0f172a;text-align:center;font-size:.78rem;color:#94a3b8;font-weight:600;text-transform:uppercase">Break (60–70 min)</th>
-      </tr></thead>
-      <tbody><tr><td style="padding:14px 16px;border-top:1px solid #0f172a"><span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#6366f1;color:white;font-size:.75rem;font-weight:700;flex-shrink:0">NC</span> <span style="vertical-align:middle">Nicolas Carrasco</span></td><td colspan="3" style="padding:14px 16px;border-top:1px solid #0f172a;color:#64748b;text-align:center;font-size:.85rem">📅 Scheduled day off</td></tr><tr><td style="padding:14px 16px;border-top:1px solid #0f172a"><span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#ec4899;color:white;font-size:.75rem;font-weight:700;flex-shrink:0">LP</span> <span style="vertical-align:middle">Luna Proietti</span></td><td style="padding:14px 16px;border-top:1px solid #0f172a;text-align:center">✅</td><td style="padding:14px 16px;border-top:1px solid #0f172a;text-align:center">✅</td><td style="padding:14px 16px;border-top:1px solid #0f172a;text-align:center"><span style="color:#f87171">❌ 55m</span></td></tr><tr><td style="padding:14px 16px;border-top:1px solid #0f172a"><span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#0ea5e9;color:white;font-size:.75rem;font-weight:700;flex-shrink:0">LR</span> <span style="vertical-align:middle">Luis Robleda</span></td><td style="padding:14px 16px;border-top:1px solid #0f172a;text-align:center">✅</td><td style="padding:14px 16px;border-top:1px solid #0f172a;text-align:center">✅</td><td style="padding:14px 16px;border-top:1px solid #0f172a;text-align:center"><span style="color:#4ade80">✅ 63m</span></td></tr></tbody>
+  <!-- TODAY IN PROGRESS -->
+  <div class="section-title">🟡 Today — June 11, 2026 (Thursday) <span class="badge in-progress-badge">Shift in progress</span></div>
+  <div class="table-card">
+    <table>
+      <thead><tr><th>VA</th><th>Login</th><th>Break</th><th>Logout</th><th>Status</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="va-cell">Nicolas Carrasco</td>
+          <td><span class="chip chip-green">✅ 6:45 AM</span></td>
+          <td><span class="chip chip-yellow">🔄 32 min ongoing</span></td>
+          <td><span class="chip chip-gray">Pending</span></td>
+          <td class="status-warn">⚡ In shift</td>
+          <td>Break started 10:03 AM, no return post yet</td>
+        </tr>
+        <tr>
+          <td class="va-cell">Luna Proietti</td>
+          <td><span class="chip chip-green">✅ 11:59 AM</span></td>
+          <td><span class="chip chip-yellow">🔄 On break since 2:23 PM</span></td>
+          <td><span class="chip chip-gray">Pending</span></td>
+          <td class="status-warn">⚡ In shift</td>
+          <td>Break duration TBD</td>
+        </tr>
+        <tr>
+          <td class="va-cell">Luis Robleda</td>
+          <td><span class="chip chip-gray">—</span></td>
+          <td><span class="chip chip-gray">—</span></td>
+          <td><span class="chip chip-gray">—</span></td>
+          <td class="status-off">Day off (Thu) ✅</td>
+          <td>Scheduled day off</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 
-  <!-- ══ LAST 7 DAYS ═══════════════════════════════════════════════════════ -->
-  <div style="margin-bottom:36px">
-    <div style="font-size:1rem;font-weight:700;color:#f1f5f9;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #1e293b">Last 7 Days
-      <span style="font-size:.8rem;color:#64748b;font-weight:400">— June 3–9, 2026</span>
+  <!-- YESTERDAY -->
+  <div class="section-title">📅 Yesterday — June 10, 2026 (Wednesday)</div>
+  <div class="table-card">
+    <table>
+      <thead><tr><th>VA</th><th>Login</th><th>Logout</th><th>Break Total</th><th>Break Detail</th><th>Result</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="va-cell">Nicolas Carrasco</td>
+          <td><span class="chip chip-green">✅ 6:59 AM</span></td>
+          <td><span class="chip chip-green">✅ 6:04 PM</span></td>
+          <td><span class="chip chip-green">62 min</span></td>
+          <td>10:31–11:04 (33m) + 16:55–17:24 (29m)</td>
+          <td class="status-ok">✅ Fully compliant</td>
+        </tr>
+        <tr>
+          <td class="va-cell">Luna Proietti</td>
+          <td><span class="chip chip-green">✅ 12:02 PM</span></td>
+          <td><span class="chip chip-green">✅ 9:13 PM</span></td>
+          <td><span class="chip chip-green">60 min</span></td>
+          <td>16:24–16:55 (31m) + 20:00–20:29 (29m)</td>
+          <td class="status-ok">✅ Fully compliant</td>
+        </tr>
+        <tr>
+          <td class="va-cell">Luis Robleda</td>
+          <td><span class="chip chip-gray">—</span></td>
+          <td><span class="chip chip-gray">—</span></td>
+          <td><span class="chip chip-gray">—</span></td>
+          <td>—</td>
+          <td class="status-off">Day off (Wed) ✅</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 7-DAY GRID -->
+  <div class="section-title">📆 Last 7 Days — June 4–10, 2026</div>
+  <div class="table-card">
+    <div style="overflow-x:auto">
+      <div class="grid-7d">
+        <div class="grid-head left">VA</div>
+        <div class="grid-head">Thu 4</div>
+        <div class="grid-head">Fri 5</div>
+        <div class="grid-head">Sat 6</div>
+        <div class="grid-head">Sun 7</div>
+        <div class="grid-head">Mon 8</div>
+        <div class="grid-head">Tue 9</div>
+        <div class="grid-head">Wed 10</div>
+
+        <!-- Nicolas — Day off: Tue -->
+        <div class="grid-cell left">Nicolas<br><span class="sub-label">Day off: Tue</span></div>
+        <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ ~60m</span></div>
+        <div class="grid-cell"><span class="dot-warn">!</span><br><span class="sub-label">✅✅ 31m⚠</span></div>
+        <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ 61m</span></div>
+        <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ 63m</span></div>
+        <div class="grid-cell"><span class="dot-bad">✗</span><br><span class="sub-label">✅❌ 31m⚠</span></div>
+        <div class="grid-cell off"><span class="dot-off">—</span><br><span class="sub-label">Day off</span></div>
+        <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ 62m</span></div>
+
+        <!-- Luna — Days off: Sun, Mon -->
+        <div class="grid-cell left">Luna<br><span class="sub-label">Day off: Sun/Mon</span></div>
+        <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ 66m</span></div>
+        <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ 63m</span></div>
+        <div class="grid-cell"><span class="dot-warn">!</span><br><span class="sub-label">✅✅ 38m⚠</span></div>
+        <div class="grid-cell off"><span class="dot-off">—</span><br><span class="sub-label">Day off</span></div>
+        <div class="grid-cell off"><span class="dot-off">—</span><br><span class="sub-label">Day off</span></div>
+        <div class="grid-cell"><span class="dot-warn">!</span><br><span class="sub-label">✅✅ 55m⚠</span></div>
+        <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ 60m</span></div>
+
+        <!-- Luis — Days off: Wed, Thu -->
+        <div class="grid-cell left">Luis<br><span class="sub-label">Day off: Wed/Thu</span></div>
+        <div class="grid-cell off"><span class="dot-off">—</span><br><span class="sub-label">Day off</span></div>
+        <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ 61m</span></div>
+        <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ 62m</span></div>
+        <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ 62m</span></div>
+        <div class="grid-cell"><span class="dot-warn">!</span><br><span class="sub-label">✅✅ 50m⚠</span></div>
+        <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ 63m</span></div>
+        <div class="grid-cell off"><span class="dot-off">—</span><br><span class="sub-label">Day off</span></div>
+      </div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px"><div style="background:#1e293b;border-radius:12px;padding:20px;border-top:3px solid #6366f1"><div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #0f172a"><span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#6366f1;color:white;font-size:.75rem;font-weight:700;flex-shrink:0">NC</span><strong style="font-size:.95rem;margin-left:6px">Nicolas Carrasco</strong></div><div style="display:flex;align-items:center;margin-bottom:8px;gap:8px"><span style="font-size:.75rem;color:#94a3b8;width:70px;flex-shrink:0">Login</span><div style="position:relative;height:22px;background:#0f172a;border-radius:4px;overflow:hidden;min-width:100px"><div style="height:100%;width:100%;background:#22c55e"></div><span style="position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:.75rem;font-weight:600;color:white;white-space:nowrap">100% (5/5)</span></div></div><div style="display:flex;align-items:center;margin-bottom:8px;gap:8px"><span style="font-size:.75rem;color:#94a3b8;width:70px;flex-shrink:0">Logout</span><div style="position:relative;height:22px;background:#0f172a;border-radius:4px;overflow:hidden;min-width:100px"><div style="height:100%;width:100%;background:#22c55e"></div><span style="position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:.75rem;font-weight:600;color:white;white-space:nowrap">100% (4/4)</span></div></div><div style="display:flex;align-items:center;gap:8px"><span style="font-size:.75rem;color:#94a3b8;width:70px;flex-shrink:0">Break 60–70m</span><div style="position:relative;height:22px;background:#0f172a;border-radius:4px;overflow:hidden;min-width:100px"><div style="height:100%;width:50%;background:#f59e0b"></div><span style="position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:.75rem;font-weight:600;color:white;white-space:nowrap">50% (2/4)</span></div></div></div><div style="background:#1e293b;border-radius:12px;padding:20px;border-top:3px solid #ec4899"><div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #0f172a"><span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#ec4899;color:white;font-size:.75rem;font-weight:700;flex-shrink:0">LP</span><strong style="font-size:.95rem;margin-left:6px">Luna Proietti</strong></div><div style="display:flex;align-items:center;margin-bottom:8px;gap:8px"><span style="font-size:.75rem;color:#94a3b8;width:70px;flex-shrink:0">Login</span><div style="position:relative;height:22px;background:#0f172a;border-radius:4px;overflow:hidden;min-width:100px"><div style="height:100%;width:100%;background:#22c55e"></div><span style="position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:.75rem;font-weight:600;color:white;white-space:nowrap">100% (4/4)</span></div></div><div style="display:flex;align-items:center;margin-bottom:8px;gap:8px"><span style="font-size:.75rem;color:#94a3b8;width:70px;flex-shrink:0">Logout</span><div style="position:relative;height:22px;background:#0f172a;border-radius:4px;overflow:hidden;min-width:100px"><div style="height:100%;width:100%;background:#22c55e"></div><span style="position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:.75rem;font-weight:600;color:white;white-space:nowrap">100% (4/4)</span></div></div><div style="display:flex;align-items:center;gap:8px"><span style="font-size:.75rem;color:#94a3b8;width:70px;flex-shrink:0">Break 60–70m</span><div style="position:relative;height:22px;background:#0f172a;border-radius:4px;overflow:hidden;min-width:100px"><div style="height:100%;width:33%;background:#ef4444"></div><span style="position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:.75rem;font-weight:600;color:white;white-space:nowrap">33% (1/3)</span></div></div></div><div style="background:#1e293b;border-radius:12px;padding:20px;border-top:3px solid #0ea5e9"><div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #0f172a"><span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#0ea5e9;color:white;font-size:.75rem;font-weight:700;flex-shrink:0">LR</span><strong style="font-size:.95rem;margin-left:6px">Luis Robleda</strong></div><div style="display:flex;align-items:center;margin-bottom:8px;gap:8px"><span style="font-size:.75rem;color:#94a3b8;width:70px;flex-shrink:0">Login</span><div style="position:relative;height:22px;background:#0f172a;border-radius:4px;overflow:hidden;min-width:100px"><div style="height:100%;width:100%;background:#22c55e"></div><span style="position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:.75rem;font-weight:600;color:white;white-space:nowrap">100% (5/5)</span></div></div><div style="display:flex;align-items:center;margin-bottom:8px;gap:8px"><span style="font-size:.75rem;color:#94a3b8;width:70px;flex-shrink:0">Logout</span><div style="position:relative;height:22px;background:#0f172a;border-radius:4px;overflow:hidden;min-width:100px"><div style="height:100%;width:100%;background:#22c55e"></div><span style="position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:.75rem;font-weight:600;color:white;white-space:nowrap">100% (5/5)</span></div></div><div style="display:flex;align-items:center;gap:8px"><span style="font-size:.75rem;color:#94a3b8;width:70px;flex-shrink:0">Break 60–70m</span><div style="position:relative;height:22px;background:#0f172a;border-radius:4px;overflow:hidden;min-width:100px"><div style="height:100%;width:80%;background:#22c55e"></div><span style="position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:.75rem;font-weight:600;color:white;white-space:nowrap">80% (4/5)</span></div></div></div></div>
-    <table style="background:#1e293b;border-radius:12px;overflow:hidden"><tr><th style="padding:10px 12px;text-align:left;background:#0f172a;font-size:.75rem;color:#64748b">VA</th><th style="padding:10px 8px;text-align:center;background:#0f172a;font-size:.75rem;color:#94a3b8;min-width:90px">Wed<br><span style="color:#64748b">Jun 3</span></th><th style="padding:10px 8px;text-align:center;background:#0f172a;font-size:.75rem;color:#94a3b8;min-width:90px">Thu<br><span style="color:#64748b">Jun 4</span></th><th style="padding:10px 8px;text-align:center;background:#0f172a;font-size:.75rem;color:#94a3b8;min-width:90px">Fri<br><span style="color:#64748b">Jun 5</span></th><th style="padding:10px 8px;text-align:center;background:#0f172a;font-size:.75rem;color:#94a3b8;min-width:90px">Sat<br><span style="color:#64748b">Jun 6</span></th><th style="padding:10px 8px;text-align:center;background:#0f172a;font-size:.75rem;color:#94a3b8;min-width:90px">Sun<br><span style="color:#64748b">Jun 7</span></th><th style="padding:10px 8px;text-align:center;background:#0f172a;font-size:.75rem;color:#94a3b8;min-width:90px">Mon<br><span style="color:#64748b">Jun 8</span></th><th style="padding:10px 8px;text-align:center;background:#0f172a;font-size:.75rem;color:#94a3b8;min-width:90px">Tue<br><span style="color:#64748b">Jun 9</span></th></tr><tr><td style="padding:10px 12px;border-top:1px solid #0f172a;white-space:nowrap"><span style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:#6366f1;color:white;font-size:.65rem;font-weight:700;flex-shrink:0">NC</span> <span style="font-size:.82rem;vertical-align:middle">Nicolas</span></td><td style="padding:8px;text-align:center;border-top:1px solid #0f172a;line-height:1.5"><div style="font-size:.78rem">✅ IN</div><div style="font-size:.78rem">✅ OUT</div></td><td style="padding:8px;text-align:center;border-top:1px solid #0f172a;color:#334155;font-size:.72rem">no<br>data</td><td style="padding:8px;text-align:center;border-top:1px solid #0f172a;line-height:1.5"><div style="font-size:.78rem">✅ IN</div><div style="font-size:.78rem">✅ OUT</div><div style="font-size:.72rem;color:#f87171;margin-top:2px">❌ 31m</div></td><td style="padding:8px;text-align:center;border-top:1px solid #0f172a;line-height:1.5"><div style="font-size:.78rem">✅ IN</div><div style="font-size:.78rem">✅ OUT</div><div style="font-size:.72rem;color:#4ade80;margin-top:2px">✅ 65m</div></td><td style="padding:8px;text-align:center;border-top:1px solid #0f172a;line-height:1.5"><div style="font-size:.78rem">✅ IN</div><div style="font-size:.78rem">✅ OUT</div><div style="font-size:.72rem;color:#4ade80;margin-top:2px">✅ 65m</div></td><td style="padding:8px;text-align:center;border-top:1px solid #0f172a;line-height:1.5"><div style="font-size:.78rem">✅ IN</div><div style="font-size:.78rem">❓ OUT</div><div style="font-size:.72rem;color:#f87171;margin-top:2px">❌ 31m</div></td><td style="padding:8px;text-align:center;border-top:1px solid #0f172a;color:#334155;font-size:.72rem">day<br>off</td></tr><tr><td style="padding:10px 12px;border-top:1px solid #0f172a;white-space:nowrap"><span style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:#ec4899;color:white;font-size:.65rem;font-weight:700;flex-shrink:0">LP</span> <span style="font-size:.82rem;vertical-align:middle">Luna</span></td><td style="padding:8px;text-align:center;border-top:1px solid #0f172a;line-height:1.5"><div style="font-size:.78rem">✅ IN</div><div style="font-size:.78rem">✅ OUT</div></td><td style="padding:8px;text-align:center;border-top:1px solid #0f172a;color:#334155;font-size:.72rem">no<br>data</td><td style="padding:8px;text-align:center;border-top:1px solid #0f172a;line-height:1.5"><div style="font-size:.78rem">✅ IN</div><div style="font-size:.78rem">✅ OUT</div><div style="font-size:.72rem;color:#4ade80;margin-top:2px">✅ 63m</div></td><td style="padding:8px;text-align:center;border-top:1px solid #0f172a;line-height:1.5"><div style="font-size:.78rem">✅ IN</div><div style="font-size:.78rem">✅ OUT</div><div style="font-size:.72rem;color:#f87171;margin-top:2px">❌ 38m</div></td><td style="padding:8px;text-align:center;border-top:1px solid #0f172a;color:#334155;font-size:.72rem">day<br>off</td><td style="padding:8px;text-align:center;border-top:1px solid #0f172a;color:#334155;font-size:.72rem">day<br>off</td><td style="padding:8px;text-align:center;border-top:1px solid #0f172a;line-height:1.5"><div style="font-size:.78rem">✅ IN</div><div style="font-size:.78rem">✅ OUT</div><div style="font-size:.72rem;color:#f87171;margin-top:2px">❌ 55m</div></td></tr><tr><td style="padding:10px 12px;border-top:1px solid #0f172a;white-space:nowrap"><span style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:#0ea5e9;color:white;font-size:.65rem;font-weight:700;flex-shrink:0">LR</span> <span style="font-size:.82rem;vertical-align:middle">Luis</span></td><td style="padding:8px;text-align:center;border-top:1px solid #0f172a;color:#334155;font-size:.72rem">day<br>off</td><td style="padding:8px;text-align:center;border-top:1px solid #0f172a;color:#334155;font-size:.72rem">day<br>off</td><td style="padding:8px;text-align:center;border-top:1px solid #0f172a;line-height:1.5"><div style="font-size:.78rem">✅ IN</div><div style="font-size:.78rem">✅ OUT</div><div style="font-size:.72rem;color:#4ade80;margin-top:2px">✅ 61m</div></td><td style="padding:8px;text-align:center;border-top:1px solid #0f172a;line-height:1.5"><div style="font-size:.78rem">✅ IN</div><div style="font-size:.78rem">✅ OUT</div><div style="font-size:.72rem;color:#4ade80;margin-top:2px">✅ 62m</div></td><td style="padding:8px;text-align:center;border-top:1px solid #0f172a;line-height:1.5"><div style="font-size:.78rem">✅ IN</div><div style="font-size:.78rem">✅ OUT</div><div style="font-size:.72rem;color:#4ade80;margin-top:2px">✅ 62m</div></td><td style="padding:8px;text-align:center;border-top:1px solid #0f172a;line-height:1.5"><div style="font-size:.78rem">✅ IN</div><div style="font-size:.78rem">✅ OUT</div><div style="font-size:.72rem;color:#f87171;margin-top:2px">❌ 50m</div></td><td style="padding:8px;text-align:center;border-top:1px solid #0f172a;line-height:1.5"><div style="font-size:.78rem">✅ IN</div><div style="font-size:.78rem">✅ OUT</div><div style="font-size:.72rem;color:#4ade80;margin-top:2px">✅ 63m</div></td></tr></table>
-    <div style="background:#1e293b;border-radius:8px;padding:12px 16px;margin-top:12px;font-size:.78rem;color:#94a3b8">
-      <strong style="color:#e2e8f0">Notes:</strong> "day off" = scheduled (not counted). Jun 4 Nicolas/Luna: no data. Jun 8 Nicolas logout: unconfirmed. ⚠️ = break posted but outside 60–70 min window.
+    <div style="margin-top:12px; font-size:0.72rem; color:#9ca3af; border-top:1px solid #f3f4f6; padding-top:8px;">
+      <strong>Legend:</strong>
+      <span style="background:#10b981;color:white;border-radius:50%;display:inline-block;width:16px;height:16px;text-align:center;line-height:16px;font-size:0.6rem;font-weight:800;">✓</span> Compliant &nbsp;
+      <span style="background:#f59e0b;color:white;border-radius:50%;display:inline-block;width:16px;height:16px;text-align:center;line-height:16px;font-size:0.6rem;font-weight:800;">!</span> Minor issue &nbsp;
+      <span style="background:#ef4444;color:white;border-radius:50%;display:inline-block;width:16px;height:16px;text-align:center;line-height:16px;font-size:0.6rem;font-weight:800;">✗</span> Flag &nbsp;|&nbsp;
+      Sub-labels: Login/Logout ✅❌ · Break duration (⚠ = &lt;60 min)
     </div>
   </div>
 
-  <!-- ══ LAST 30 DAYS ══════════════════════════════════════════════════════ -->
-  <div style="margin-bottom:36px">
-    <div style="font-size:1rem;font-weight:700;color:#f1f5f9;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #1e293b">Last 30 Days
-      <span style="font-size:.8rem;color:#64748b;font-weight:400">— May 11–June 9, 2026</span>
+  <!-- BREAK FLAGS -->
+  <div class="section-title">🚩 Break &amp; Attendance Flags — Jun 4–11</div>
+  <div class="flags-grid">
+    <div class="flag-card yellow-flag">
+      <div class="flag-title">⚠️ Nicolas Carrasco — Break Pattern</div>
+      <div class="flag-item">• <strong>Jun 5:</strong> Only 31 min posted — single break, missing second.</div>
+      <div class="flag-item">• <strong>Jun 8:</strong> 31 min break + <strong>no logout recorded</strong>. Incomplete shift.</div>
+      <div class="flag-item">• <strong>Jun 11 (today):</strong> Break in progress since 10:03 AM.</div>
+      <div class="flag-date">Pattern: tendency to take 1 short break instead of 2×30 min.</div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px"><div style="background:#1e293b;border-radius:12px;padding:20px;border-top:3px solid #6366f1"><div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #0f172a"><span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#6366f1;color:white;font-size:.75rem;font-weight:700;flex-shrink:0">NC</span><strong style="font-size:.95rem;margin-left:6px">Nicolas Carrasco</strong></div><div style="display:flex;align-items:center;margin-bottom:8px;gap:8px"><span style="font-size:.75rem;color:#94a3b8;width:70px;flex-shrink:0">Login</span><div style="position:relative;height:22px;background:#0f172a;border-radius:4px;overflow:hidden;min-width:100px"><div style="height:100%;width:93%;background:#22c55e"></div><span style="position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:.75rem;font-weight:600;color:white;white-space:nowrap">93% (13/14)</span></div></div><div style="display:flex;align-items:center;margin-bottom:8px;gap:8px"><span style="font-size:.75rem;color:#94a3b8;width:70px;flex-shrink:0">Logout</span><div style="position:relative;height:22px;background:#0f172a;border-radius:4px;overflow:hidden;min-width:100px"><div style="height:100%;width:92%;background:#22c55e"></div><span style="position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:.75rem;font-weight:600;color:white;white-space:nowrap">92% (12/13)</span></div></div><div style="display:flex;align-items:center;gap:8px"><span style="font-size:.75rem;color:#94a3b8;width:70px;flex-shrink:0">Break 60–70m</span><div style="position:relative;height:22px;background:#0f172a;border-radius:4px;overflow:hidden;min-width:100px"><div style="height:100%;width:50%;background:#f59e0b"></div><span style="position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:.75rem;font-weight:600;color:white;white-space:nowrap">50% (2/4)</span></div></div></div><div style="background:#1e293b;border-radius:12px;padding:20px;border-top:3px solid #ec4899"><div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #0f172a"><span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#ec4899;color:white;font-size:.75rem;font-weight:700;flex-shrink:0">LP</span><strong style="font-size:.95rem;margin-left:6px">Luna Proietti</strong></div><div style="display:flex;align-items:center;margin-bottom:8px;gap:8px"><span style="font-size:.75rem;color:#94a3b8;width:70px;flex-shrink:0">Login</span><div style="position:relative;height:22px;background:#0f172a;border-radius:4px;overflow:hidden;min-width:100px"><div style="height:100%;width:79%;background:#f59e0b"></div><span style="position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:.75rem;font-weight:600;color:white;white-space:nowrap">79% (11/14)</span></div></div><div style="display:flex;align-items:center;margin-bottom:8px;gap:8px"><span style="font-size:.75rem;color:#94a3b8;width:70px;flex-shrink:0">Logout</span><div style="position:relative;height:22px;background:#0f172a;border-radius:4px;overflow:hidden;min-width:100px"><div style="height:100%;width:79%;background:#f59e0b"></div><span style="position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:.75rem;font-weight:600;color:white;white-space:nowrap">79% (11/14)</span></div></div><div style="display:flex;align-items:center;gap:8px"><span style="font-size:.75rem;color:#94a3b8;width:70px;flex-shrink:0">Break 60–70m</span><div style="position:relative;height:22px;background:#0f172a;border-radius:4px;overflow:hidden;min-width:100px"><div style="height:100%;width:33%;background:#ef4444"></div><span style="position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:.75rem;font-weight:600;color:white;white-space:nowrap">33% (1/3)</span></div></div></div><div style="background:#1e293b;border-radius:12px;padding:20px;border-top:3px solid #0ea5e9"><div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #0f172a"><span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#0ea5e9;color:white;font-size:.75rem;font-weight:700;flex-shrink:0">LR</span><strong style="font-size:.95rem;margin-left:6px">Luis Robleda</strong></div><div style="display:flex;align-items:center;margin-bottom:8px;gap:8px"><span style="font-size:.75rem;color:#94a3b8;width:70px;flex-shrink:0">Login</span><div style="position:relative;height:22px;background:#0f172a;border-radius:4px;overflow:hidden;min-width:100px"><div style="height:100%;width:100%;background:#22c55e"></div><span style="position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:.75rem;font-weight:600;color:white;white-space:nowrap">100% (10/10)</span></div></div><div style="display:flex;align-items:center;margin-bottom:8px;gap:8px"><span style="font-size:.75rem;color:#94a3b8;width:70px;flex-shrink:0">Logout</span><div style="position:relative;height:22px;background:#0f172a;border-radius:4px;overflow:hidden;min-width:100px"><div style="height:100%;width:100%;background:#22c55e"></div><span style="position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:.75rem;font-weight:600;color:white;white-space:nowrap">100% (10/10)</span></div></div><div style="display:flex;align-items:center;gap:8px"><span style="font-size:.75rem;color:#94a3b8;width:70px;flex-shrink:0">Break 60–70m</span><div style="position:relative;height:22px;background:#0f172a;border-radius:4px;overflow:hidden;min-width:100px"><div style="height:100%;width:80%;background:#22c55e"></div><span style="position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:.75rem;font-weight:600;color:white;white-space:nowrap">80% (4/5)</span></div></div></div></div>
-    <div style="background:#1e293b;border-radius:8px;padding:12px 16px;margin-top:12px;font-size:.78rem;color:#94a3b8">
-      <strong style="color:#e2e8f0">Coverage:</strong> May 11–21 confirmed. May 22–Jun 2 partial (known: Luna absent May 22 &amp; 29). Break % based on Jun 5–9 only. Days with no data excluded from %.
+    <div class="flag-card yellow-flag">
+      <div class="flag-title">⚠️ Luna Proietti — Break Duration</div>
+      <div class="flag-item">• <strong>Jun 6:</strong> 38 min only — 22 min short of threshold.</div>
+      <div class="flag-item">• <strong>Jun 9:</strong> 55 min — 5 min short of 60-min minimum.</div>
+      <div class="flag-item">• <strong>Jun 11 (today):</strong> Break started 2:23 PM, TBD.</div>
+      <div class="flag-date">Good trend: Jun 4 (66m ✅), Jun 5 (63m ✅), Jun 10 (60m ✅).</div>
+    </div>
+    <div class="flag-card yellow-flag">
+      <div class="flag-title">⚠️ Luis Robleda — Break &amp; Logout</div>
+      <div class="flag-item">• <strong>Jun 8:</strong> 50 min break — 10 min short.</div>
+      <div class="flag-item">• <strong>Jun 7:</strong> Early logout (~9:30 PM) flagged — both in/out present.</div>
+      <div class="flag-date">All other days fully compliant ✅.</div>
+    </div>
+    <div class="flag-card green-flag">
+      <div class="flag-title">✅ Luna Moves to #2 — Positive Trend</div>
+      <div class="flag-item">Score improved <strong>78% → 87%</strong> this week, now #2 on leaderboard.</div>
+      <div class="flag-item">Jun 10: perfect 2-break structure (31m + 29m = 60m) ✅.</div>
+      <div class="flag-item">Perfect login and logout record for the full 7-day window.</div>
+    </div>
+  </div>
+
+  <!-- OTTER SIGNALS -->
+  <div class="section-title">🎙️ Otter Signals — Daily Meeting Jun 10, 2026</div>
+  <div class="otter-section">
+    <div class="otter-item">
+      <div class="otter-icon">🚨</div>
+      <div class="otter-body">
+        <div class="otter-who">Ruiz (Contractor/Cleaner) — Reliability Concern</div>
+        <div class="otter-what">Flagged by Andrea and Luna for not updating MDC and QC tasks on time. Recurring documentation gap — work not being logged in Monday.com.</div>
+        <div class="otter-meeting">Bijou Daily Meeting · Jun 10, 2026 · via Otter.ai</div>
+      </div>
+    </div>
+    <div class="otter-item">
+      <div class="otter-icon">⚠️</div>
+      <div class="otter-body">
+        <div class="otter-who">Russell (Vendor/Supplier)</div>
+        <div class="otter-what">Failed to purchase required items. Follow-up needed to confirm items are procured.</div>
+        <div class="otter-meeting">Bijou Daily Meeting · Jun 10, 2026 · via Otter.ai</div>
+      </div>
+    </div>
+    <div class="otter-item">
+      <div class="otter-icon">📋</div>
+      <div class="otter-body">
+        <div class="otter-who">Luis Robleda — Availability Note</div>
+        <div class="otter-what">Noted as unavailable Jun 10 — confirmed scheduled day off (Wednesday). No issue.</div>
+        <div class="otter-meeting">Bijou Daily Meeting · Jun 10, 2026 · via Otter.ai</div>
+      </div>
+    </div>
+    <div class="otter-item">
+      <div class="otter-icon">👤</div>
+      <div class="otter-body">
+        <div class="otter-who">Farid Giha — Hiring Pipeline</div>
+        <div class="otter-what">Potential new VA candidate. Interview mentioned. Track hiring decision.</div>
+        <div class="otter-meeting">Bijou Daily Meeting · Jun 10, 2026 · via Otter.ai</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 30-DAY SUMMARY -->
+  <div class="section-title">📊 30-Day Summary — May 12–June 10, 2026</div>
+  <div class="thirty-day">
+    <div class="thirty-card">
+      <div class="thirty-name">🥇 Luis Robleda</div>
+      <div class="stat-row"><span>Login compliance</span><span class="stat-val green">100%</span></div>
+      <div class="stat-row"><span>Logout compliance</span><span class="stat-val green">100%</span></div>
+      <div class="stat-row"><span>Break compliance</span><span class="stat-val yellow">~80%</span></div>
+      <div class="stat-row"><span>Working days (30d)</span><span class="stat-val">~19</span></div>
+      <div class="stat-row"><span>Trend</span><span class="stat-val green">↑ Ramping strong</span></div>
+    </div>
+    <div class="thirty-card">
+      <div class="thirty-name">🥈 Luna Proietti</div>
+      <div class="stat-row"><span>Login compliance</span><span class="stat-val green">~95%</span></div>
+      <div class="stat-row"><span>Logout compliance</span><span class="stat-val green">~95%</span></div>
+      <div class="stat-row"><span>Break compliance</span><span class="stat-val yellow">~65%</span></div>
+      <div class="stat-row"><span>Working days (30d)</span><span class="stat-val">~19</span></div>
+      <div class="stat-row"><span>Trend</span><span class="stat-val green">↑ Improving</span></div>
+    </div>
+    <div class="thirty-card">
+      <div class="thirty-name">🥉 Nicolas Carrasco</div>
+      <div class="stat-row"><span>Login compliance</span><span class="stat-val green">~95%</span></div>
+      <div class="stat-row"><span>Logout compliance</span><span class="stat-val yellow">~88%</span></div>
+      <div class="stat-row"><span>Break compliance</span><span class="stat-val yellow">~70%</span></div>
+      <div class="stat-row"><span>Working days (30d)</span><span class="stat-val">~24</span></div>
+      <div class="stat-row"><span>Trend</span><span class="stat-val">→ Steady</span></div>
+    </div>
+  </div>
+
+  <!-- MONDAY.COM ACTIVITY -->
+  <div class="section-title">📋 Monday.com Text Updates — Last 7 Days (Jun 4–10)</div>
+  <div class="table-card">
+    <table>
+      <thead><tr><th>VA</th><th>7d Updates+Replies</th><th>7d Avg/Day</th><th>30d Total</th><th>30d Avg/Day</th><th>Trend</th></tr></thead>
+      <tbody>
+        <tr><td class="va-cell">Andrea Rodríguez</td><td><span class="chip chip-green">268</span></td><td class="status-ok">38.3</td><td>1,050</td><td>35.0</td><td>→ Consistent high output</td></tr>
+        <tr><td class="va-cell">Luna Proietti</td><td><span class="chip chip-green">117</span></td><td class="status-ok">16.7</td><td>694</td><td>23.1</td><td>↓ Lighter vs 30d avg</td></tr>
+        <tr><td class="va-cell">Luis Robleda</td><td><span class="chip chip-green">54</span></td><td class="status-ok">7.7</td><td>90</td><td>3.0</td><td class="status-ok">↑ Surging — 2.6× his 30d avg</td></tr>
+        <tr><td class="va-cell">Nicolas Carrasco</td><td><span class="chip chip-yellow">37</span></td><td class="status-warn">5.3</td><td>366</td><td>12.2</td><td class="status-warn">↓ Sharp drop vs baseline</td></tr>
+        <tr><td class="va-cell">Baptiste Sarrat</td><td><span class="chip chip-red">6</span></td><td class="status-bad">0.9</td><td>14</td><td>0.5</td><td class="status-bad">⚠ Replies only, no top-level</td></tr>
+        <tr><td class="va-cell">Cristina</td><td><span class="chip chip-red">6</span></td><td class="status-bad">0.9</td><td>6</td><td>0.2</td><td>↑ Was silent, now active</td></tr>
+      </tbody>
+    </table>
+    <div style="margin-top:10px; font-size:0.72rem; color:#9ca3af;">
+      Source: Monday.com GraphQL API — top-level updates + replies across 6 active boards. Ref: May 29–Jun 5 (7d) / May 6–Jun 5 (30d).
     </div>
   </div>
 
 </div>
-</body></html>
+
+<div class="footer">
+  Generated by Bijou Cowork HR Agent · June 11, 2026<br>
+  Data sources: Slack #va-login-logout · Otter.ai · Monday.com<br>
+  <span class="auto-deploy">✅ Auto-deployed via macOS launchd → GitHub Pages</span><br>
+  <a href="https://bijou-web.github.io/bijou-va-dashboard/" class="live-link">🌐 bijou-web.github.io/bijou-va-dashboard</a>
+</div>
+
+</body>
+</html>
