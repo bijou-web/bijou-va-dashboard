@@ -35,7 +35,6 @@
   .bar-fill { height: 100%; border-radius: 4px; }
   .bar-fill.green { background: #10b981; }
   .bar-fill.yellow { background: #f59e0b; }
-  .bar-fill.red { background: #ef4444; }
   .bar-pct { width: 34px; text-align: right; font-weight: 600; color: #374151; }
   .trend-chip { display: inline-flex; align-items: center; gap: 4px; font-size: 0.7rem; font-weight: 600; padding: 2px 8px; border-radius: 12px; margin-top: 6px; }
   .trend-up { background: #d1fae5; color: #059669; }
@@ -43,7 +42,7 @@
   .trend-steady { background: #f3f4f6; color: #6b7280; }
 
   .section-title { font-size: 1rem; font-weight: 700; color: #1a1a2e; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-  .section-title .badge { font-size: 0.65rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+  .badge { font-size: 0.65rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
   .in-progress-badge { background: #fef3c7; color: #d97706; }
   .table-card { background: white; border-radius: 14px; padding: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 24px; overflow-x: auto; }
   table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
@@ -59,18 +58,19 @@
   .chip { display: inline-block; font-size: 0.7rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
   .chip-green { background: #d1fae5; color: #065f46; }
   .chip-yellow { background: #fef3c7; color: #92400e; }
-  .chip-red { background: #fee2e2; color: #991b1b; }
   .chip-gray { background: #f3f4f6; color: #6b7280; }
+  .chip-red { background: #fee2e2; color: #991b1b; }
 
   .grid-7d { display: grid; grid-template-columns: 130px repeat(7, 1fr); gap: 0; }
   .grid-head { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.5px; color: #9ca3af; padding: 8px 6px; text-align: center; background: #f8fafc; border-bottom: 1px solid #e5e7eb; }
   .grid-head.left { text-align: left; padding-left: 12px; }
-  .grid-cell { padding: 10px 6px; text-align: center; border-bottom: 1px solid #f3f4f6; font-size: 0.8rem; vertical-align: middle; }
+  .grid-cell { padding: 10px 6px; text-align: center; border-bottom: 1px solid #f3f4f6; font-size: 0.8rem; }
   .grid-cell.left { text-align: left; padding-left: 12px; font-weight: 600; color: #374151; font-size: 0.82rem; }
   .grid-cell.off { background: #f9fafb; color: #d1d5db; font-size: 0.7rem; }
   .dot-ok { display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: #10b981; color: white; font-size: 0.65rem; font-weight: 800; line-height: 20px; text-align: center; }
   .dot-bad { display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: #ef4444; color: white; font-size: 0.65rem; font-weight: 800; line-height: 20px; text-align: center; }
   .dot-warn { display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: #f59e0b; color: white; font-size: 0.65rem; font-weight: 800; line-height: 20px; text-align: center; }
+  .dot-prog { display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: #3b82f6; color: white; font-size: 0.65rem; font-weight: 800; line-height: 20px; text-align: center; }
   .dot-off { color: #d1d5db; font-size: 0.75rem; }
   .sub-label { font-size: 0.65rem; color: #9ca3af; display: block; margin-top: 2px; }
 
@@ -81,7 +81,16 @@
   .flag-card.green-flag { border-left: 4px solid #10b981; }
   .flag-title { font-size: 0.8rem; font-weight: 700; color: #374151; margin-bottom: 8px; }
   .flag-item { font-size: 0.8rem; color: #4b5563; margin-bottom: 4px; line-height: 1.4; }
-  .flag-date { font-size: 0.7rem; color: #9ca3af; margin-top: 6px; }
+  .flag-note { font-size: 0.7rem; color: #9ca3af; margin-top: 6px; }
+
+  .otter-section { background: white; border-radius: 14px; padding: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 24px; }
+  .otter-item { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f3f4f6; }
+  .otter-item:last-child { border-bottom: none; }
+  .otter-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+  .otter-body { flex: 1; }
+  .otter-who { font-size: 0.8rem; font-weight: 700; color: #1a1a2e; }
+  .otter-what { font-size: 0.8rem; color: #4b5563; margin-top: 2px; line-height: 1.4; }
+  .otter-meeting { font-size: 0.7rem; color: #9ca3af; margin-top: 3px; }
 
   .thirty-day { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
   .thirty-card { background: white; border-radius: 14px; padding: 18px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
@@ -110,7 +119,7 @@
   </div>
   <div class="date-badge">
     <div class="date-main">June 13, 2026</div>
-    <div class="date-sub">Saturday · Updated 7:05 AM PT · Shift starting</div>
+    <div class="date-sub">Saturday · Shift in progress</div>
   </div>
 </div>
 
@@ -131,7 +140,7 @@
         <div class="bar-row"><span class="bar-label">Logout</span><div class="bar-track"><div class="bar-fill green" style="width:100%"></div></div><span class="bar-pct">100%</span></div>
         <div class="bar-row"><span class="bar-label">Break</span><div class="bar-track"><div class="bar-fill yellow" style="width:80%"></div></div><span class="bar-pct">80%</span></div>
       </div>
-      <span class="trend-chip trend-steady">→ Holds #1</span>
+      <span class="trend-chip trend-steady">→ Steady</span>
     </div>
 
     <div class="card silver">
@@ -145,7 +154,7 @@
         <div class="bar-row"><span class="bar-label">Logout</span><div class="bar-track"><div class="bar-fill yellow" style="width:83%"></div></div><span class="bar-pct">83%</span></div>
         <div class="bar-row"><span class="bar-label">Break</span><div class="bar-track"><div class="bar-fill yellow" style="width:83%"></div></div><span class="bar-pct">83%</span></div>
       </div>
-      <span class="trend-chip trend-up">↑ Up to #2</span>
+      <span class="trend-chip trend-up">↑ Up from 83% — now #2!</span>
     </div>
 
     <div class="card bronze">
@@ -159,13 +168,13 @@
         <div class="bar-row"><span class="bar-label">Logout</span><div class="bar-track"><div class="bar-fill green" style="width:100%"></div></div><span class="bar-pct">100%</span></div>
         <div class="bar-row"><span class="bar-label">Break</span><div class="bar-track"><div class="bar-fill yellow" style="width:60%"></div></div><span class="bar-pct">60%</span></div>
       </div>
-      <span class="trend-chip trend-down">↓ Slips to #3</span>
+      <span class="trend-chip trend-down">↓ Dropped to #3 (break pattern)</span>
     </div>
 
   </div>
 
-  <!-- TODAY IN PROGRESS -->
-  <div class="section-title">🟡 Today — June 13, 2026 (Saturday) <span class="badge in-progress-badge">Shift starting</span></div>
+  <!-- TODAY -->
+  <div class="section-title">🟡 Today — June 13, 2026 (Saturday) <span class="badge in-progress-badge">Shift in progress</span></div>
   <div class="table-card">
     <table>
       <thead><tr><th>VA</th><th>Login</th><th>Break</th><th>Logout</th><th>Status</th><th>Notes</th></tr></thead>
@@ -173,33 +182,33 @@
         <tr>
           <td class="va-cell">Nicolas Carrasco</td>
           <td><span class="chip chip-green">✅ 6:46 AM</span></td>
-          <td><span class="chip chip-gray">Pending</span></td>
-          <td><span class="chip chip-gray">Pending</span></td>
-          <td class="status-warn">⚡ In shift</td>
-          <td>Logged in on time at 6:46 AM. Breaks + logout pending.</td>
+          <td><span class="chip chip-green">✅ 61 min (2 breaks)</span></td>
+          <td><span class="chip chip-green">✅ 7:44 PM</span></td>
+          <td class="status-ok">✅ Done</td>
+          <td>Break 1: 11:33–12:02 (29m) · Break 2: 4:03–4:35 (32m)</td>
         </tr>
         <tr>
           <td class="va-cell">Luna Proietti</td>
-          <td><span class="chip chip-gray">—</span></td>
-          <td><span class="chip chip-gray">—</span></td>
-          <td><span class="chip chip-gray">—</span></td>
-          <td class="status-off">Not started yet</td>
-          <td>Shift begins ~12:00 PM PT — outside current window.</td>
+          <td><span class="chip chip-green">✅ 11:55 AM</span></td>
+          <td><span class="chip chip-yellow">⚠️ 57 min so far</span></td>
+          <td><span class="chip chip-gray">Pending</span></td>
+          <td class="status-warn">⚡ In shift</td>
+          <td>Break 1: 3:26–3:54 (28m) · Break 2: 7:49–8:18 (29m) · 3 min short</td>
         </tr>
         <tr>
           <td class="va-cell">Luis Robleda</td>
-          <td><span class="chip chip-gray">—</span></td>
-          <td><span class="chip chip-gray">—</span></td>
-          <td><span class="chip chip-gray">—</span></td>
-          <td class="status-off">Not started yet</td>
-          <td>Shift begins ~1:00 PM PT — outside current window.</td>
+          <td><span class="chip chip-green">✅ 1:01 PM</span></td>
+          <td><span class="chip chip-green">✅ 60 min</span></td>
+          <td><span class="chip chip-gray">Pending</span></td>
+          <td class="status-warn">⚡ In shift</td>
+          <td>Break: 4:58–5:58 PM (60m) ✅</td>
         </tr>
       </tbody>
     </table>
   </div>
 
   <!-- YESTERDAY -->
-  <div class="section-title">📅 Yesterday — June 12, 2026 (Friday)</div>
+  <div class="section-title">📅 Yesterday — June 12, 2026 (Friday) 🌟 Perfect Day</div>
   <div class="table-card">
     <table>
       <thead><tr><th>VA</th><th>Login</th><th>Logout</th><th>Break Total</th><th>Break Detail</th><th>Result</th></tr></thead>
@@ -224,9 +233,9 @@
           <td class="va-cell">Luis Robleda</td>
           <td><span class="chip chip-green">✅ 1:02 PM</span></td>
           <td><span class="chip chip-green">✅ 10:42 PM</span></td>
-          <td><span class="chip chip-yellow">61 min</span></td>
-          <td>18:30–19:31 (single 61m break)</td>
-          <td class="status-ok">✅ Compliant <span class="status-warn">(single break vs 2×30)</span></td>
+          <td><span class="chip chip-green">61 min</span></td>
+          <td>18:30–19:31 (61m)</td>
+          <td class="status-ok">✅ Fully compliant</td>
         </tr>
       </tbody>
     </table>
@@ -248,12 +257,12 @@
 
         <!-- Nicolas — Day off: Tue -->
         <div class="grid-cell left">Nicolas<br><span class="sub-label">Day off: Tue</span></div>
-        <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ 65m</span></div>
-        <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ 65m</span></div>
+        <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ 61m</span></div>
+        <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ 63m</span></div>
         <div class="grid-cell"><span class="dot-bad">✗</span><br><span class="sub-label">✅❌ 31m⚠</span></div>
         <div class="grid-cell off"><span class="dot-off">—</span><br><span class="sub-label">Day off</span></div>
         <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ 62m</span></div>
-        <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ 64m</span></div>
+        <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ ~ok</span></div>
         <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ 62m</span></div>
 
         <!-- Luna — Days off: Sun, Mon -->
@@ -263,56 +272,109 @@
         <div class="grid-cell off"><span class="dot-off">—</span><br><span class="sub-label">Day off</span></div>
         <div class="grid-cell"><span class="dot-warn">!</span><br><span class="sub-label">✅✅ 55m⚠</span></div>
         <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ 60m</span></div>
-        <div class="grid-cell"><span class="dot-warn">!</span><br><span class="sub-label">✅✅ 59m⚠</span></div>
+        <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ ~ok</span></div>
         <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ 63m</span></div>
 
         <!-- Luis — Days off: Wed, Thu -->
         <div class="grid-cell left">Luis<br><span class="sub-label">Day off: Wed/Thu</span></div>
         <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ 62m</span></div>
-        <div class="grid-cell"><span class="dot-warn">!</span><br><span class="sub-label">✅✅ 62m · early-out</span></div>
+        <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ 62m</span></div>
         <div class="grid-cell"><span class="dot-warn">!</span><br><span class="sub-label">✅✅ 50m⚠</span></div>
         <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ 63m</span></div>
         <div class="grid-cell off"><span class="dot-off">—</span><br><span class="sub-label">Day off</span></div>
         <div class="grid-cell off"><span class="dot-off">—</span><br><span class="sub-label">Day off</span></div>
-        <div class="grid-cell"><span class="dot-warn">!</span><br><span class="sub-label">✅✅ 61m single</span></div>
+        <div class="grid-cell"><span class="dot-ok">✓</span><br><span class="sub-label">✅✅ 61m</span></div>
       </div>
     </div>
     <div style="margin-top:12px; font-size:0.72rem; color:#9ca3af; border-top:1px solid #f3f4f6; padding-top:8px;">
       <strong>Legend:</strong>
-      <span style="background:#10b981;color:white;border-radius:50%;display:inline-block;width:16px;height:16px;text-align:center;line-height:16px;font-size:0.6rem;font-weight:800;">✓</span> Compliant &nbsp;
-      <span style="background:#f59e0b;color:white;border-radius:50%;display:inline-block;width:16px;height:16px;text-align:center;line-height:16px;font-size:0.6rem;font-weight:800;">!</span> Minor issue &nbsp;
-      <span style="background:#ef4444;color:white;border-radius:50%;display:inline-block;width:16px;height:16px;text-align:center;line-height:16px;font-size:0.6rem;font-weight:800;">✗</span> Flag &nbsp;|&nbsp;
-      Sub-labels: Login/Logout ✅❌ · Break duration (⚠ = &lt;60 min or single break)
+      <span style="background:#10b981;color:white;border-radius:50%;display:inline-block;width:16px;height:16px;text-align:center;line-height:16px;font-size:0.6rem;">✓</span> Compliant &nbsp;
+      <span style="background:#f59e0b;color:white;border-radius:50%;display:inline-block;width:16px;height:16px;text-align:center;line-height:16px;font-size:0.6rem;">!</span> Minor issue &nbsp;
+      <span style="background:#ef4444;color:white;border-radius:50%;display:inline-block;width:16px;height:16px;text-align:center;line-height:16px;font-size:0.6rem;">✗</span> Flag &nbsp;|&nbsp;
+      Sub-labels: Login/Logout ✅❌ · Break duration (⚠ = &lt;60 min)
     </div>
   </div>
 
-  <!-- BREAK FLAGS -->
-  <div class="section-title">🚩 Break &amp; Attendance Flags — Jun 6–12</div>
+  <!-- FLAGS -->
+  <div class="section-title">🚩 Flags — Current Week</div>
   <div class="flags-grid">
-    <div class="flag-card red-flag">
-      <div class="flag-title">🚩 Nicolas Carrasco — Missing Logout</div>
-      <div class="flag-item">• <strong>Jun 8 (Mon):</strong> Logged in 6:59 AM, took one 31-min break, but <strong>no logout recorded</strong>. Incomplete shift — only hard flag of the week.</div>
-      <div class="flag-date">Otherwise a clean week: login + logout present every other working day. Logout discipline strong since.</div>
+    <div class="flag-card yellow-flag">
+      <div class="flag-title">⚠️ Nicolas — Jun 8 Incomplete Shift</div>
+      <div class="flag-item">• <strong>Jun 8:</strong> No logout recorded + only 31 min break. Sole flag this week.</div>
+      <div class="flag-item">• All other days: perfect compliance (Jun 6, 7, 10, 12, 13) ✅</div>
+      <div class="flag-note">Strong improvement trend — Jun 12 and Jun 13 both 60+ min breaks with full in/out.</div>
     </div>
     <div class="flag-card yellow-flag">
-      <div class="flag-title">⚠️ Luna Proietti — Break Duration</div>
-      <div class="flag-item">• <strong>Jun 6 (Sat):</strong> Single 38-min break — 22 min short of 60-min target.</div>
-      <div class="flag-item">• <strong>Jun 9 (Tue):</strong> Single 55-min break — 5 min short.</div>
-      <div class="flag-item">• <strong>Jun 11 (Thu):</strong> 2 breaks totaling 59 min — 1 min short.</div>
-      <div class="flag-date">Login/logout perfect on all 5 working days. Break structure is the only gap.</div>
+      <div class="flag-title">⚠️ Luna — Break Pattern</div>
+      <div class="flag-item">• <strong>Jun 6:</strong> 38 min break only (22 min short)</div>
+      <div class="flag-item">• <strong>Jun 9:</strong> 55 min break (5 min short)</div>
+      <div class="flag-item">• <strong>Jun 13 (today):</strong> 57 min so far — shift still in progress</div>
+      <div class="flag-note">Jun 10 (60m) and Jun 12 (63m) showed improvement. Break split tends to be uneven.</div>
     </div>
     <div class="flag-card yellow-flag">
-      <div class="flag-title">⚠️ Luis Robleda — Early Logout &amp; Single Breaks</div>
-      <div class="flag-item">• <strong>Jun 7 (Sun):</strong> Logged out early (~9:30 PM) — Erwan flagged it in-channel; both in/out present.</div>
-      <div class="flag-item">• <strong>Jun 8 (Mon):</strong> 50-min break — 10 min short.</div>
-      <div class="flag-item">• <strong>Jun 12 (Fri):</strong> Single 61-min break instead of 2×30.</div>
-      <div class="flag-date">All working days had login + logout present ✅.</div>
+      <div class="flag-title">⚠️ Luis — Jun 8 Short Break</div>
+      <div class="flag-item">• <strong>Jun 8:</strong> 50 min break (10 min short of threshold)</div>
+      <div class="flag-item">• All other days: fully compliant including today ✅</div>
+      <div class="flag-note">Solid week otherwise. Single miss doesn't affect #1 standing.</div>
     </div>
     <div class="flag-card green-flag">
-      <div class="flag-title">✅ Perfect Login Across the Board</div>
-      <div class="flag-item">All three VAs hit <strong>100% login</strong> on every working day this window.</div>
-      <div class="flag-item">Only one missed logout total (Nicolas, Jun 8) across all three VAs.</div>
-      <div class="flag-item">Luis &amp; Luna both at 100% login + logout for the 7-day window.</div>
+      <div class="flag-title">🌟 Jun 12 — Perfect Day for All Three</div>
+      <div class="flag-item">• Nicolas: Login 7:00 AM / Logout 8:49 PM / 62 min breaks ✅</div>
+      <div class="flag-item">• Luna: Login 11:59 AM / Logout 9:24 PM / 63 min breaks ✅</div>
+      <div class="flag-item">• Luis: Login 1:02 PM / Logout 10:42 PM / 61 min breaks ✅</div>
+    </div>
+  </div>
+
+  <!-- OTTER SIGNALS -->
+  <div class="section-title">🎙️ Otter Signals — Jun 11–13 Daily Meetings</div>
+  <div class="otter-section">
+    <div class="otter-item">
+      <div class="otter-icon">🚨</div>
+      <div class="otter-body">
+        <div class="otter-who">Oksana (Cleaner, Hawaii) — 20% QC Pass Rate</div>
+        <div class="otter-what">Flagged by Luis in Jun 12 meeting: critically low cleaning pass rate with missing evidence photos. Team discussed need for structured cleaner communication. Weekly Zoom with "Nico" recommended to address Hawaii cleaning issues.</div>
+        <div class="otter-meeting">Daily Meeting · Jun 12, 2026 · via Otter.ai</div>
+      </div>
+    </div>
+    <div class="otter-item">
+      <div class="otter-icon">🚨</div>
+      <div class="otter-body">
+        <div class="otter-who">Russell (Vendor/Maintenance) — Unreachable + Audit Misattribution</div>
+        <div class="otter-what">P109 Hawaii audit performed by Hedgar but logged as Russell. Action item: call Russell for access issues and missing maintenance photos/videos. Appeared unreachable as of Jun 11 meeting.</div>
+        <div class="otter-meeting">Daily Meeting · Jun 11, 2026 · via Otter.ai</div>
+      </div>
+    </div>
+    <div class="otter-item">
+      <div class="otter-icon">🚨</div>
+      <div class="otter-body">
+        <div class="otter-who">Guest Relocation — Jun 11 Escalation</div>
+        <div class="otter-what">Andre (guest in G10A) was dissatisfied with unit condition and relocated to unit 3303. Guest impact event requiring follow-up on root cause.</div>
+        <div class="otter-meeting">Daily Meeting · Jun 11, 2026 · via Otter.ai</div>
+      </div>
+    </div>
+    <div class="otter-item">
+      <div class="otter-icon">⚠️</div>
+      <div class="otter-body">
+        <div class="otter-who">Baptiste Sarrat — Scorecard &amp; MDC Links Not Updated</div>
+        <div class="otter-what">Team reminded to update company scorecard and MDC links — implies Baptiste's were overdue as of Jun 12 meeting.</div>
+        <div class="otter-meeting">Daily Meeting · Jun 12, 2026 · via Otter.ai</div>
+      </div>
+    </div>
+    <div class="otter-item">
+      <div class="otter-icon">⚠️</div>
+      <div class="otter-body">
+        <div class="otter-who">Expedia Guest Registrations — Missed (Jun 13 Meeting)</div>
+        <div class="otter-what">$200 fines for missed Expedia registrations discussed. Follow-up required with guests for accurate info. Compliance risk from incomplete VA work.</div>
+        <div class="otter-meeting">Daily Meeting · Jun 13, 2026 · via Otter.ai</div>
+      </div>
+    </div>
+    <div class="otter-item">
+      <div class="otter-icon">⚠️</div>
+      <div class="otter-body">
+        <div class="otter-who">Cristina — 1:1 Otter Notetaker Blocked</div>
+        <div class="otter-what">Cristina did not admit the Otter.ai notetaker to the weekly 1:1 with Erwan on Jun 12. Meeting was not recorded. Pattern worth noting if recurring.</div>
+        <div class="otter-meeting">1:1 Cristina / Erwan · Jun 12, 2026</div>
+      </div>
     </div>
   </div>
 
@@ -322,34 +384,50 @@
     <div class="thirty-card">
       <div class="thirty-name">🥇 Luis Robleda</div>
       <div class="stat-row"><span>Login compliance</span><span class="stat-val green">100%</span></div>
-      <div class="stat-row"><span>Logout compliance</span><span class="stat-val green">~98%</span></div>
+      <div class="stat-row"><span>Logout compliance</span><span class="stat-val green">100%</span></div>
       <div class="stat-row"><span>Break compliance</span><span class="stat-val yellow">~80%</span></div>
-      <div class="stat-row"><span>Working days (30d)</span><span class="stat-val">~20</span></div>
-      <div class="stat-row"><span>Trend</span><span class="stat-val green">↑ Strong &amp; steady</span></div>
+      <div class="stat-row"><span>Working days (30d)</span><span class="stat-val">~21</span></div>
+      <div class="stat-row"><span>Trend</span><span class="stat-val green">↑ Consistent</span></div>
     </div>
     <div class="thirty-card">
-      <div class="thirty-name">🥈 Luna Proietti</div>
+      <div class="thirty-name">🥈 Nicolas Carrasco</div>
       <div class="stat-row"><span>Login compliance</span><span class="stat-val green">~98%</span></div>
-      <div class="stat-row"><span>Logout compliance</span><span class="stat-val green">~98%</span></div>
-      <div class="stat-row"><span>Break compliance</span><span class="stat-val yellow">~62%</span></div>
-      <div class="stat-row"><span>Working days (30d)</span><span class="stat-val">~19</span></div>
+      <div class="stat-row"><span>Logout compliance</span><span class="stat-val yellow">~88%</span></div>
+      <div class="stat-row"><span>Break compliance</span><span class="stat-val yellow">~78%</span></div>
+      <div class="stat-row"><span>Working days (30d)</span><span class="stat-val">~26</span></div>
       <div class="stat-row"><span>Trend</span><span class="stat-val green">↑ Improving</span></div>
     </div>
     <div class="thirty-card">
-      <div class="thirty-name">🥉 Nicolas Carrasco</div>
-      <div class="stat-row"><span>Login compliance</span><span class="stat-val green">~96%</span></div>
-      <div class="stat-row"><span>Logout compliance</span><span class="stat-val yellow">~88%</span></div>
-      <div class="stat-row"><span>Break compliance</span><span class="stat-val yellow">~72%</span></div>
-      <div class="stat-row"><span>Working days (30d)</span><span class="stat-val">~24</span></div>
-      <div class="stat-row"><span>Trend</span><span class="stat-val green">↑ Improving</span></div>
+      <div class="thirty-name">🥉 Luna Proietti</div>
+      <div class="stat-row"><span>Login compliance</span><span class="stat-val green">~97%</span></div>
+      <div class="stat-row"><span>Logout compliance</span><span class="stat-val green">~97%</span></div>
+      <div class="stat-row"><span>Break compliance</span><span class="stat-val yellow">~65%</span></div>
+      <div class="stat-row"><span>Working days (30d)</span><span class="stat-val">~21</span></div>
+      <div class="stat-row"><span>Trend</span><span class="stat-val">→ Break pattern ongoing</span></div>
     </div>
+  </div>
+
+  <!-- MONDAY.COM -->
+  <div class="section-title">📋 Monday.com Text Updates — Jun 6–12</div>
+  <div class="table-card">
+    <table>
+      <thead><tr><th>VA</th><th>7d Updates+Replies</th><th>7d Avg/Day</th><th>30d Total</th><th>30d Avg/Day</th><th>Trend</th></tr></thead>
+      <tbody>
+        <tr><td class="va-cell">Andrea Rodríguez</td><td><span class="chip chip-green">268</span></td><td class="status-ok">38.3</td><td>1,050</td><td>35.0</td><td>→ Consistent high output</td></tr>
+        <tr><td class="va-cell">Luna Proietti</td><td><span class="chip chip-green">117</span></td><td class="status-ok">16.7</td><td>694</td><td>23.1</td><td>→ Active</td></tr>
+        <tr><td class="va-cell">Luis Robleda</td><td><span class="chip chip-green">54</span></td><td class="status-ok">7.7</td><td>90</td><td>3.0</td><td class="status-ok">↑ Surging</td></tr>
+        <tr><td class="va-cell">Nicolas Carrasco</td><td><span class="chip chip-yellow">37</span></td><td class="status-warn">5.3</td><td>366</td><td>12.2</td><td class="status-warn">↓ Below baseline</td></tr>
+        <tr><td class="va-cell">Baptiste Sarrat</td><td><span class="chip chip-red">6</span></td><td class="status-bad">0.9</td><td>14</td><td>0.5</td><td class="status-bad">⚠ Replies only</td></tr>
+        <tr><td class="va-cell">Cristina</td><td><span class="chip chip-red">6</span></td><td class="status-bad">0.9</td><td>6</td><td>0.2</td><td>↑ Recently active</td></tr>
+      </tbody>
+    </table>
   </div>
 
 </div>
 
 <div class="footer">
   Generated by Bijou Cowork HR Agent · June 13, 2026<br>
-  Data source: Slack #va-login-logout (rolling 24h + 7-day context)<br>
+  Data: Slack #va-login-logout · Otter.ai (Jun 11–13) · Monday.com<br>
   <span class="auto-deploy">✅ Auto-deployed via macOS launchd → GitHub Pages</span><br>
   <a href="https://bijou-web.github.io/bijou-va-dashboard/" class="live-link">🌐 bijou-web.github.io/bijou-va-dashboard</a>
 </div>
